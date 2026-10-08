@@ -1,0 +1,91 @@
+{
+  "static_checks": "PASS",
+  "runtime": "NOT TESTED",
+  "native_patch": {
+    "input_sha256": "b8095e7d005c6b8c9b140a92968d9474a9963bee8ea96e491b4844e2a286b411",
+    "original_sha256": "2ee486729d9fb12599c6b56070c935b7a24757463191ce725a28592aef8df401",
+    "output_sha256": "6a0ab3ca5dce5ea76f806c92671f45224b394792adc8ab18f7d94c4f69ee1743",
+    "fuel": "exact existing patch preserved",
+    "duplicates": false,
+    "changes": [
+      {
+        "symbol": "_ZN6Weapon7subAmmoEi",
+        "virtual_address": "0x9482e0",
+        "file_offset": "0x9482e0",
+        "original": "c0035fd6",
+        "replacement": "ff4301d1",
+        "purpose": "Restore complete stock subtraction and integer return",
+        "assembly": null,
+        "calling_convention": "AAPCS64; x0=this; w0=count for ammo getters"
+      },
+      {
+        "symbol": "_ZN6Weapon7getClipEv",
+        "virtual_address": "0x947954",
+        "file_offset": "0x947954",
+        "original": "ff0302d1fd7b07a9fdc30191a84300d1a96300d1aa5300d14bd03bd56b1540f9ab831ff8e00b00f9eb0b40f9bfc31eb86cc5c679ac831eb8ea1700f9e91300f9e91740f9ea1340f9ec634039ac031f38e91f00f9ea1b00f9e91f40f9ea1b40f9a8031ef8a9831df8aa031df8a8835df80c0140b9a8035df80d0140b99f010d6b8a000054e81b40f9e80700f903000014e81f40f9e80700f9e80740f9090140b948d03bd5081540f9aa835ff81f010aebe90700b9a1000054e00740b9fd7b47a9ff030291c0035fd6f54cee97",
+        "replacement": "f37bbfa9f30300aaa85300f0084146f9080140f9680200b409e540f93f0113ebe000005409e940f93f0113eb8000005409ed40f93f0113eb41010054680240f908c942f9e00313aa00013fd6003c00131f0000716d00005460c606790400001460c6c6791f00007100c09f1af37bc1a8c0035fd61f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d5",
+        "purpose": "Refill only local equipped instances to positive type capacity; stock clamped read otherwise",
+        "assembly": "\n stp x19, x30, [sp, #-16]!\n mov x19, x0\n adrp x8, 20701184\n ldr x8, [x8, #3200]\n ldr x8, [x8]\n cbz x8, stock\n ldr x9, [x8, #0x1c8]\n cmp x9, x19\n b.eq refill\n ldr x9, [x8, #0x1d0]\n cmp x9, x19\n b.eq refill\n ldr x9, [x8, #0x1d8]\n cmp x9, x19\n b.ne stock\nrefill:\n ldr x8, [x19]\n ldr x8, [x8, #1424]\n mov x0, x19\n blr x8\n sxth w0, w0\n cmp w0, #0\n b.le stock\n strh w0, [x19, #866]\n b done\nstock:\n ldrsh w0, [x19, #866]\n cmp w0, #0\n csel w0, w0, wzr, gt\n done:\n ldp x19, x30, [sp], #16\n ret\n",
+        "calling_convention": "AAPCS64; x0=this; w0=count for ammo getters"
+      },
+      {
+        "symbol": "_ZN6Weapon7getAmmoEv",
+        "virtual_address": "0x947a20",
+        "file_offset": "0x947a20",
+        "original": "ff0302d1fd7b07a9fdc30191a84300d1a96300d1aa5300d14bd03bd56b1540f9ab831ff8e00b00f9eb0b40f9bfc31eb86cc1c679ac831eb8ea1700f9e91300f9e91740f9ea1340f9ec634039ac031f38e91f00f9ea1b00f9e91f40f9ea1b40f9a8031ef8a9831df8aa031df8a8835df80c0140b9a8035df80d0140b99f010d6b8a000054e81b40f9e80700f903000014e81f40f9e80700f9e80740f9090140b948d03bd5081540f9aa835ff81f010aebe90700b9a1000054e00740b9fd7b47a9ff030291c0035fd6c24cee97",
+        "replacement": "f37bbfa9f30300aaa85300f0084146f9080140f9680200b409e540f93f0113ebe000005409e940f93f0113eb8000005409ed40f93f0113eb41010054680240f908c542f9e00313aa00013fd6003c00131f0000716d00005460c206790400001460c2c6791f00007100c09f1af37bc1a8c0035fd61f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d5",
+        "purpose": "Refill only local equipped instances to positive type capacity; stock clamped read otherwise",
+        "assembly": "\n stp x19, x30, [sp, #-16]!\n mov x19, x0\n adrp x8, 20701184\n ldr x8, [x8, #3200]\n ldr x8, [x8]\n cbz x8, stock\n ldr x9, [x8, #0x1c8]\n cmp x9, x19\n b.eq refill\n ldr x9, [x8, #0x1d0]\n cmp x9, x19\n b.eq refill\n ldr x9, [x8, #0x1d8]\n cmp x9, x19\n b.ne stock\nrefill:\n ldr x8, [x19]\n ldr x8, [x8, #1416]\n mov x0, x19\n blr x8\n sxth w0, w0\n cmp w0, #0\n b.le stock\n strh w0, [x19, #864]\n b done\nstock:\n ldrsh w0, [x19, #864]\n cmp w0, #0\n csel w0, w0, wzr, gt\n done:\n ldp x19, x30, [sp], #16\n ret\n",
+        "calling_convention": "AAPCS64; x0=this; w0=count for ammo getters"
+      }
+    ],
+    "status": "Experimental until physical gameplay verification"
+  },
+  "splits": [
+    {
+      "apk": "base.apk",
+      "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    },
+    {
+      "apk": "split_config.arm64_v8a.apk",
+      "sha256": "a961319883413db3d7c310627bc60a227e70453d211c82fe4d1fec4bef799636",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    },
+    {
+      "apk": "split_config.xxhdpi.apk",
+      "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    },
+    {
+      "apk": "split_config.en.apk",
+      "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    }
+  ],
+  "standalone": {
+    "apk": "mmc-fixed-ammo-jetpack.apk",
+    "sha256": "161a118b5ffc0f867cac7d98fc7d1358258378e5340d71796066c3e8c2c3af1b",
+    "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+    "signature": "PASS",
+    "alignment": "PASS",
+    "crc": "PASS",
+    "non_native_application_payloads": "identical"
+  }
+}

@@ -1,0 +1,2074 @@
+
+WeaponStateObject::reload(short) VA=0x87bcbc FILE=0x87bcbc SIZE=480
+0087bcbc ffc303d1 sub      sp, sp, #0xf0                            
+0087bcc0 fd7b0ea9 stp      x29, x30, [sp, #0xe0]                    
+0087bcc4 fd830391 add      x29, sp, #0xe0                           
+0087bcc8 a86300d1 sub      x8, x29, #0x18                           
+0087bccc a97300d1 sub      x9, x29, #0x1c                           
+0087bcd0 4ad03bd5 mrs      x10, tpidr_el0                           
+0087bcd4 4a1540f9 ldr      x10, [x10, #0x28]                        
+0087bcd8 aa831ff8 stur     x10, [x29, #-8]                          
+0087bcdc e01300f9 str      x0, [sp, #0x20]                          
+0087bce0 e13b0079 strh     w1, [sp, #0x1c]                          
+0087bce4 ea1340f9 ldr      x10, [sp, #0x20]                         
+0087bce8 e0030aaa mov      x0, x10                                  
+0087bcec 4155c079 ldrsh    w1, [x10, #0x2a]                         
+0087bcf0 eb031f2a mov      w11, wzr                                 
+0087bcf4 eb2f00b9 str      w11, [sp, #0x2c]                         
+0087bcf8 e1530079 strh     w1, [sp, #0x28]                          
+0087bcfc e02f40bd ldr      s0, [sp, #0x2c]                          
+0087bd00 011ca04e mov      v1.16b, v0.16b                           
+0087bd04 22a4200f sshll    v2.2d, v1.2s, #0                         
+0087bd08 411ca24e mov      v1.16b, v2.16b                           
+0087bd0c 21d8615e scvtf    d1, d1                                   
+0087bd10 2300621e scvtf    d3, w1                                   
+0087bd14 2168631e fmaxnm   d1, d1, d3                               
+0087bd18 2100781e fcvtzs   w1, d1                                   
+0087bd1c 41550079 strh     w1, [x10, #0x2a]                         
+0087bd20 e13bc079 ldrsh    w1, [sp, #0x1c]                          
+0087bd24 4c55c079 ldrsh    w12, [x10, #0x2a]                        
+0087bd28 2c000c6b subs     w12, w1, w12                             
+0087bd2c eb3700b9 str      w11, [sp, #0x34]                         
+0087bd30 ec3300b9 str      w12, [sp, #0x30]                         
+0087bd34 e03740bd ldr      s0, [sp, #0x34]                          
+0087bd38 011ca04e mov      v1.16b, v0.16b                           
+0087bd3c 22a4200f sshll    v2.2d, v1.2s, #0                         
+0087bd40 411ca24e mov      v1.16b, v2.16b                           
+0087bd44 21d8615e scvtf    d1, d1                                   
+0087bd48 8301621e scvtf    d3, w12                                  
+0087bd4c 2168631e fmaxnm   d1, d1, d3                               
+0087bd50 2b00781e fcvtzs   w11, d1                                  
+0087bd54 ab431e78 sturh    w11, [x29, #-0x1c]                       
+0087bd58 0aa00091 add      x10, x0, #0x28                           
+0087bd5c e92700f9 str      x9, [sp, #0x48]                          
+0087bd60 ea2300f9 str      x10, [sp, #0x40]                         
+0087bd64 e92740f9 ldr      x9, [sp, #0x48]                          
+0087bd68 ea2340f9 ldr      x10, [sp, #0x40]                         
+0087bd6c ebe34039 ldrb     w11, [sp, #0x38]                         
+0087bd70 ab831e38 sturb    w11, [x29, #-0x18]                       
+0087bd74 e92f00f9 str      x9, [sp, #0x58]                          
+0087bd78 ea2b00f9 str      x10, [sp, #0x50]                         
+0087bd7c e92b40f9 ldr      x9, [sp, #0x50]                          
+0087bd80 ea2f40f9 ldr      x10, [sp, #0x58]                         
+0087bd84 e83b00f9 str      x8, [sp, #0x70]                          
+0087bd88 e93700f9 str      x9, [sp, #0x68]                          
+0087bd8c ea3300f9 str      x10, [sp, #0x60]                         
+0087bd90 e83740f9 ldr      x8, [sp, #0x68]                          
+0087bd94 0b01c079 ldrsh    w11, [x8]                                
+0087bd98 e83340f9 ldr      x8, [sp, #0x60]                          
+0087bd9c 0c01c079 ldrsh    w12, [x8]                                
+0087bda0 7f010c6b cmp      w11, w12                                 
+0087bda4 e00b00f9 str      x0, [sp, #0x10]                          
+0087bda8 8a000054 b.ge     #0x87bdb8                                
+0087bdac e82b40f9 ldr      x8, [sp, #0x50]                          
+0087bdb0 e80700f9 str      x8, [sp, #8]                             
+0087bdb4 03000014 b        #0x87bdc0                                
+0087bdb8 e82f40f9 ldr      x8, [sp, #0x58]                          
+0087bdbc e80700f9 str      x8, [sp, #8]                             
+0087bdc0 e80740f9 ldr      x8, [sp, #8]                             
+0087bdc4 a94300d1 sub      x9, x29, #0x10                           
+0087bdc8 aa9300d1 sub      x10, x29, #0x24                          
+0087bdcc ab8300d1 sub      x11, x29, #0x20                          
+0087bdd0 0c014079 ldrh     w12, [x8]                                
+0087bdd4 ec330079 strh     w12, [sp, #0x18]                         
+0087bdd8 e80b40f9 ldr      x8, [sp, #0x10]                          
+0087bddc 0c55c079 ldrsh    w12, [x8, #0x2a]                         
+0087bde0 ed33c079 ldrsh    w13, [sp, #0x18]                         
+0087bde4 8c010d0b add      w12, w12, w13                            
+0087bde8 0c550079 strh     w12, [x8, #0x2a]                         
+0087bdec bf031eb8 stur     wzr, [x29, #-0x20]                       
+0087bdf0 0c51c079 ldrsh    w12, [x8, #0x28]                         
+0087bdf4 ed33c079 ldrsh    w13, [sp, #0x18]                         
+0087bdf8 8c010d4b sub      w12, w12, w13                            
+0087bdfc acc31db8 stur     w12, [x29, #-0x24]                       
+0087be00 ab831af8 stur     x11, [x29, #-0x58]                       
+0087be04 aa031af8 stur     x10, [x29, #-0x60]                       
+0087be08 aa835af8 ldur     x10, [x29, #-0x58]                       
+0087be0c ab035af8 ldur     x11, [x29, #-0x60]                       
+0087be10 ac835938 ldurb    w12, [x29, #-0x68]                       
+0087be14 ac031f38 sturb    w12, [x29, #-0x10]                       
+0087be18 aa831bf8 stur     x10, [x29, #-0x48]                       
+0087be1c ab031bf8 stur     x11, [x29, #-0x50]                       
+0087be20 aa835bf8 ldur     x10, [x29, #-0x48]                       
+0087be24 ab035bf8 ldur     x11, [x29, #-0x50]                       
+0087be28 a9031df8 stur     x9, [x29, #-0x30]                        
+0087be2c aa831cf8 stur     x10, [x29, #-0x38]                       
+0087be30 ab031cf8 stur     x11, [x29, #-0x40]                       
+0087be34 a9835cf8 ldur     x9, [x29, #-0x38]                        
+0087be38 2c0140b9 ldr      w12, [x9]                                
+0087be3c a9035cf8 ldur     x9, [x29, #-0x40]                        
+0087be40 2d0140b9 ldr      w13, [x9]                                
+0087be44 9f010d6b cmp      w12, w13                                 
+0087be48 8a000054 b.ge     #0x87be58                                
+0087be4c a8035bf8 ldur     x8, [x29, #-0x50]                        
+0087be50 e80300f9 str      x8, [sp]                                 
+0087be54 03000014 b        #0x87be60                                
+0087be58 a8835bf8 ldur     x8, [x29, #-0x48]                        
+0087be5c e80300f9 str      x8, [sp]                                 
+0087be60 e80340f9 ldr      x8, [sp]                                 
+0087be64 090140b9 ldr      w9, [x8]                                 
+0087be68 e80b40f9 ldr      x8, [sp, #0x10]                          
+0087be6c 09510079 strh     w9, [x8, #0x28]                          
+0087be70 09554079 ldrh     w9, [x8, #0x2a]                          
+0087be74 09590079 strh     w9, [x8, #0x2c]                          
+0087be78 4ad03bd5 mrs      x10, tpidr_el0                           
+0087be7c 4a1540f9 ldr      x10, [x10, #0x28]                        
+0087be80 ab835ff8 ldur     x11, [x29, #-8]                          
+0087be84 5f010beb cmp      x10, x11                                 
+0087be88 81000054 b.ne     #0x87be98                                
+0087be8c fd7b4ea9 ldp      x29, x30, [sp, #0xe0]                    
+0087be90 ffc30391 add      sp, sp, #0xf0                            
+0087be94 c0035fd6 ret                                               
+0087be98 d67bf197 bl       #0x4dadf0                                __stack_chk_fail
+
+HUD::onReload(cocos2d::CCObject*) VA=0x667ccc FILE=0x667ccc SIZE=212
+00667ccc ffc300d1 sub      sp, sp, #0x30                            
+00667cd0 fd7b02a9 stp      x29, x30, [sp, #0x20]                    
+00667cd4 fd830091 add      x29, sp, #0x20                           
+00667cd8 a0831ff8 stur     x0, [x29, #-8]                           
+00667cdc e10b00f9 str      x1, [sp, #0x10]                          
+00667ce0 a0835ff8 ldur     x0, [x29, #-8]                           
+00667ce4 011041f9 ldr      x1, [x0, #0x220]                         
+00667ce8 e20301aa mov      x2, x1                                   
+00667cec 210040f9 ldr      x1, [x1]                                 
+00667cf0 219440f9 ldr      x1, [x1, #0x128]                         
+00667cf4 e00300f9 str      x0, [sp]                                 
+00667cf8 e00302aa mov      x0, x2                                   
+00667cfc 20003fd6 blr      x1                                       
+00667d00 40000037 tbnz     w0, #0, #0x667d08                        
+00667d04 24000014 b        #0x667d94                                
+00667d08 a86a00f0 adrp     x8, #0x13be000                           
+00667d0c 084146f9 ldr      x8, [x8, #0xc80]                         
+00667d10 080140f9 ldr      x8, [x8]                                 
+00667d14 e00308aa mov      x0, x8                                   
+00667d18 080140f9 ldr      x8, [x8]                                 
+00667d1c 086d42f9 ldr      x8, [x8, #0x4d8]                         
+00667d20 00013fd6 blr      x8                                       
+00667d24 80030037 tbnz     w0, #0, #0x667d94                        
+00667d28 00102e1e fmov     s0, #1.00000000                          
+00667d2c e80340f9 ldr      x8, [sp]                                 
+00667d30 015943bd ldr      s1, [x8, #0x358]                         
+00667d34 2020201e fcmp     s1, s0                                   
+00667d38 ed020054 b.le     #0x667d94                                
+00667d3c a1018052 mov      w1, #0xd                                 
+00667d40 c86a0090 adrp     x8, #0x13bf000                           
+00667d44 086942f9 ldr      x8, [x8, #0x4d0]                         
+00667d48 000140f9 ldr      x0, [x8]                                 
+00667d4c e563f997 bl       #0x4c0ce0                                Sound::playSound(int)
+00667d50 a86a00f0 adrp     x8, #0x13be000                           
+00667d54 084146f9 ldr      x8, [x8, #0xc80]                         
+00667d58 080140f9 ldr      x8, [x8]                                 
+00667d5c e00308aa mov      x0, x8                                   
+00667d60 080140f9 ldr      x8, [x8]                                 
+00667d64 08f941f9 ldr      x8, [x8, #0x3f0]                         
+00667d68 00013fd6 blr      x8                                       
+00667d6c e00700f9 str      x0, [sp, #8]                             
+00667d70 e80740f9 ldr      x8, [sp, #8]                             
+00667d74 c80000b4 cbz      x8, #0x667d8c                            
+00667d78 e80740f9 ldr      x8, [sp, #8]                             
+00667d7c 090140f9 ldr      x9, [x8]                                 
+00667d80 29a142f9 ldr      x9, [x9, #0x540]                         
+00667d84 e00308aa mov      x0, x8                                   
+00667d88 20013fd6 blr      x9                                       
+00667d8c e80340f9 ldr      x8, [sp]                                 
+00667d90 1f5903b9 str      wzr, [x8, #0x358]                        
+00667d94 fd7b42a9 ldp      x29, x30, [sp, #0x20]                    
+00667d98 ffc30091 add      sp, sp, #0x30                            
+00667d9c c0035fd6 ret                                               
+
+Weapon::getAmmo() VA=0x947a20 FILE=0x947a20 SIZE=204
+00947a20 ff0302d1 sub      sp, sp, #0x80                            
+00947a24 fd7b07a9 stp      x29, x30, [sp, #0x70]                    
+00947a28 fdc30191 add      x29, sp, #0x70                           
+00947a2c a84300d1 sub      x8, x29, #0x10                           
+00947a30 a96300d1 sub      x9, x29, #0x18                           
+00947a34 aa5300d1 sub      x10, x29, #0x14                          
+00947a38 4bd03bd5 mrs      x11, tpidr_el0                           
+00947a3c 6b1540f9 ldr      x11, [x11, #0x28]                        
+00947a40 ab831ff8 stur     x11, [x29, #-8]                          
+00947a44 e00b00f9 str      x0, [sp, #0x10]                          
+00947a48 eb0b40f9 ldr      x11, [sp, #0x10]                         
+00947a4c bfc31eb8 stur     wzr, [x29, #-0x14]                       
+00947a50 6cc1c679 ldrsh    w12, [x11, #0x360]                       
+00947a54 ac831eb8 stur     w12, [x29, #-0x18]                       
+00947a58 ea1700f9 str      x10, [sp, #0x28]                         
+00947a5c e91300f9 str      x9, [sp, #0x20]                          
+00947a60 e91740f9 ldr      x9, [sp, #0x28]                          
+00947a64 ea1340f9 ldr      x10, [sp, #0x20]                         
+00947a68 ec634039 ldrb     w12, [sp, #0x18]                         
+00947a6c ac031f38 sturb    w12, [x29, #-0x10]                       
+00947a70 e91f00f9 str      x9, [sp, #0x38]                          
+00947a74 ea1b00f9 str      x10, [sp, #0x30]                         
+00947a78 e91f40f9 ldr      x9, [sp, #0x38]                          
+00947a7c ea1b40f9 ldr      x10, [sp, #0x30]                         
+00947a80 a8031ef8 stur     x8, [x29, #-0x20]                        
+00947a84 a9831df8 stur     x9, [x29, #-0x28]                        
+00947a88 aa031df8 stur     x10, [x29, #-0x30]                       
+00947a8c a8835df8 ldur     x8, [x29, #-0x28]                        
+00947a90 0c0140b9 ldr      w12, [x8]                                
+00947a94 a8035df8 ldur     x8, [x29, #-0x30]                        
+00947a98 0d0140b9 ldr      w13, [x8]                                
+00947a9c 9f010d6b cmp      w12, w13                                 
+00947aa0 8a000054 b.ge     #0x947ab0                                
+00947aa4 e81b40f9 ldr      x8, [sp, #0x30]                          
+00947aa8 e80700f9 str      x8, [sp, #8]                             
+00947aac 03000014 b        #0x947ab8                                
+00947ab0 e81f40f9 ldr      x8, [sp, #0x38]                          
+00947ab4 e80700f9 str      x8, [sp, #8]                             
+00947ab8 e80740f9 ldr      x8, [sp, #8]                             
+00947abc 090140b9 ldr      w9, [x8]                                 
+00947ac0 48d03bd5 mrs      x8, tpidr_el0                            
+00947ac4 081540f9 ldr      x8, [x8, #0x28]                          
+00947ac8 aa835ff8 ldur     x10, [x29, #-8]                          
+00947acc 1f010aeb cmp      x8, x10                                  
+00947ad0 e90700b9 str      w9, [sp, #4]                             
+00947ad4 a1000054 b.ne     #0x947ae8                                
+00947ad8 e00740b9 ldr      w0, [sp, #4]                             
+00947adc fd7b47a9 ldp      x29, x30, [sp, #0x70]                    
+00947ae0 ff030291 add      sp, sp, #0x80                            
+00947ae4 c0035fd6 ret                                               
+00947ae8 c24cee97 bl       #0x4dadf0                                __stack_chk_fail
+
+Weapon::basicTriggerPull(float, bool) VA=0x9477b8 FILE=0x9477b8 SIZE=412
+009477b8 ff0301d1 sub      sp, sp, #0x40                            
+009477bc fd7b03a9 stp      x29, x30, [sp, #0x30]                    
+009477c0 fdc30091 add      x29, sp, #0x30                           
+009477c4 a0831ff8 stur     x0, [x29, #-8]                           
+009477c8 a0431fbc stur     s0, [x29, #-0xc]                         
+009477cc 21000012 and      w1, w1, #1                               
+009477d0 a1031f38 sturb    w1, [x29, #-0x10]                        
+009477d4 a0835ff8 ldur     x0, [x29, #-8]                           
+009477d8 a0435fbc ldur     s0, [x29, #-0xc]                         
+009477dc e00700f9 str      x0, [sp, #8]                             
+009477e0 6c46ee97 bl       #0x4d9190                                Weapon::triggerPull(float)
+009477e4 e00740f9 ldr      x0, [sp, #8]                             
+009477e8 009041bd ldr      s0, [x0, #0x190]                         
+009477ec 012443bd ldr      s1, [x0, #0x324]                         
+009477f0 0020211e fcmp     s0, s1                                   
+009477f4 0d080054 b.le     #0x9478f4                                
+009477f8 e80740f9 ldr      x8, [sp, #8]                             
+009477fc 09c5c679 ldrsh    w9, [x8, #0x362]                         
+00947800 3f010071 cmp      w9, #0                                   
+00947804 ad040054 b.le     #0x947898                                
+00947808 e80740f9 ldr      x8, [sp, #8]                             
+0094780c 090140f9 ldr      x9, [x8]                                 
+00947810 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+00947814 e00308aa mov      x0, x8                                   
+00947818 20013fd6 blr      x9                                       
+0094781c e0030037 tbnz     w0, #0, #0x947898                        
+00947820 e8030032 mov      w8, #1                                   
+00947824 e90740f9 ldr      x9, [sp, #8]                             
+00947828 28110a39 strb     w8, [x9, #0x284]                         
+0094782c 3f8102b9 str      wzr, [x9, #0x280]                        
+00947830 2a0140f9 ldr      x10, [x9]                                
+00947834 4ab142f9 ldr      x10, [x10, #0x560]                       
+00947838 e00309aa mov      x0, x9                                   
+0094783c 40013fd6 blr      x10                                      
+00947840 e90740f9 ldr      x9, [sp, #8]                             
+00947844 2a0140f9 ldr      x10, [x9]                                
+00947848 4a1943f9 ldr      x10, [x10, #0x630]                       
+0094784c e00309aa mov      x0, x9                                   
+00947850 40013fd6 blr      x10                                      
+00947854 a8035f38 ldurb    w8, [x29, #-0x10]                        
+00947858 c8000036 tbz      w8, #0, #0x947870                        
+0094785c e80740f9 ldr      x8, [sp, #8]                             
+00947860 090140f9 ldr      x9, [x8]                                 
+00947864 291d43f9 ldr      x9, [x9, #0x638]                         
+00947868 e00308aa mov      x0, x8                                   
+0094786c 20013fd6 blr      x9                                       
+00947870 e80740f9 ldr      x8, [sp, #8]                             
+00947874 09554a39 ldrb     w9, [x8, #0x295]                         
+00947878 291d0013 sxtb     w9, w9                                   
+0094787c 29050011 add      w9, w9, #1                               
+00947880 09550a39 strb     w9, [x8, #0x295]                         
+00947884 09c54679 ldrh     w9, [x8, #0x362]                         
+00947888 293d0013 sxth     w9, w9                                   
+0094788c 29050051 sub      w9, w9, #1                               
+00947890 09c50679 strh     w9, [x8, #0x362]                         
+00947894 16000014 b        #0x9478ec                                
+00947898 e80740f9 ldr      x8, [sp, #8]                             
+0094789c 090140f9 ldr      x9, [x8]                                 
+009478a0 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+009478a4 e00308aa mov      x0, x8                                   
+009478a8 20013fd6 blr      x9                                       
+009478ac 00020037 tbnz     w0, #0, #0x9478ec                        
+009478b0 c8530090 adrp     x8, #0x13bf000                           
+009478b4 086942f9 ldr      x8, [x8, #0x4d0]                         
+009478b8 080140f9 ldr      x8, [x8]                                 
+009478bc e90740f9 ldr      x9, [sp, #8]                             
+009478c0 2a0140f9 ldr      x10, [x9]                                
+009478c4 4a3943f9 ldr      x10, [x10, #0x670]                       
+009478c8 e00309aa mov      x0, x9                                   
+009478cc e80300f9 str      x8, [sp]                                 
+009478d0 40013fd6 blr      x10                                      
+009478d4 e00b00fd str      d0, [sp, #0x10]                          
+009478d8 e10f00fd str      d1, [sp, #0x18]                          
+009478dc e00b40fd ldr      d0, [sp, #0x10]                          
+009478e0 e1031f2a mov      w1, wzr                                  
+009478e4 e00340f9 ldr      x0, [sp]                                 
+009478e8 9672ee97 bl       #0x4e4340                                Sound::playSoundPosition(int, cpVect)
+009478ec e80740f9 ldr      x8, [sp, #8]                             
+009478f0 1f9101b9 str      wzr, [x8, #0x190]                        
+009478f4 e80740f9 ldr      x8, [sp, #8]                             
+009478f8 090140f9 ldr      x9, [x8]                                 
+009478fc 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+00947900 e00308aa mov      x0, x8                                   
+00947904 20013fd6 blr      x9                                       
+00947908 00020037 tbnz     w0, #0, #0x947948                        
+0094790c e00740f9 ldr      x0, [sp, #8]                             
+00947910 a42dee97 bl       #0x4d2fa0                                Weapon::getClip()
+00947914 003c0013 sxth     w0, w0                                   
+00947918 1f000071 cmp      w0, #0                                   
+0094791c 6c010054 b.gt     #0x947948                                
+00947920 e00740f9 ldr      x0, [sp, #8]                             
+00947924 e7faed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00947928 003c0013 sxth     w0, w0                                   
+0094792c 1f000071 cmp      w0, #0                                   
+00947930 cd000054 b.le     #0x947948                                
+00947934 e80740f9 ldr      x8, [sp, #8]                             
+00947938 090140f9 ldr      x9, [x8]                                 
+0094793c 29a142f9 ldr      x9, [x9, #0x540]                         
+00947940 e00308aa mov      x0, x8                                   
+00947944 20013fd6 blr      x9                                       
+00947948 fd7b43a9 ldp      x29, x30, [sp, #0x30]                    
+0094794c ff030191 add      sp, sp, #0x40                            
+00947950 c0035fd6 ret                                               
+
+Weapon::reloadAllowed() VA=0x94937c FILE=0x94937c SIZE=160
+0094937c ffc300d1 sub      sp, sp, #0x30                            
+00949380 fd7b02a9 stp      x29, x30, [sp, #0x20]                    
+00949384 fd830091 add      x29, sp, #0x20                           
+00949388 e00b00f9 str      x0, [sp, #0x10]                          
+0094938c e00b40f9 ldr      x0, [sp, #0x10]                          
+00949390 e00700f9 str      x0, [sp, #8]                             
+00949394 4bf4ed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00949398 003c0013 sxth     w0, w0                                   
+0094939c 1f000071 cmp      w0, #0                                   
+009493a0 ed020054 b.le     #0x9493fc                                
+009493a4 e80740f9 ldr      x8, [sp, #8]                             
+009493a8 090140f9 ldr      x9, [x8]                                 
+009493ac 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+009493b0 e00308aa mov      x0, x8                                   
+009493b4 20013fd6 blr      x9                                       
+009493b8 20020037 tbnz     w0, #0, #0x9493fc                        
+009493bc e00740f9 ldr      x0, [sp, #8]                             
+009493c0 f826ee97 bl       #0x4d2fa0                                Weapon::getClip()
+009493c4 003c0013 sxth     w0, w0                                   
+009493c8 fe0740f9 ldr      x30, [sp, #8]                            
+009493cc c80340f9 ldr      x8, [x30]                                
+009493d0 08c942f9 ldr      x8, [x8, #0x590]                         
+009493d4 e00700b9 str      w0, [sp, #4]                             
+009493d8 e0031eaa mov      x0, x30                                  
+009493dc 00013fd6 blr      x8                                       
+009493e0 e90740b9 ldr      w9, [sp, #4]                             
+009493e4 3f01006b cmp      w9, w0                                   
+009493e8 aa000054 b.ge     #0x9493fc                                
+009493ec e8030032 mov      w8, #1                                   
+009493f0 08010012 and      w8, w8, #1                               
+009493f4 a8f31f38 sturb    w8, [x29, #-1]                           
+009493f8 02000014 b        #0x949400                                
+009493fc bff31f38 sturb    wzr, [x29, #-1]                          
+00949400 a8f35f38 ldurb    w8, [x29, #-1]                           
+00949404 e003082a mov      w0, w8                                   
+00949408 e00300b9 str      w0, [sp]                                 
+0094940c e003082a mov      w0, w8                                   
+00949410 fd7b42a9 ldp      x29, x30, [sp, #0x20]                    
+00949414 ffc30091 add      sp, sp, #0x30                            
+00949418 c0035fd6 ret                                               
+
+WeaponManager::weaponProximity(Weapon*) VA=0x9576c0 FILE=0x9576c0 SIZE=1360
+009576c0 ff0303d1 sub      sp, sp, #0xc0                            
+009576c4 fd7b0ba9 stp      x29, x30, [sp, #0xb0]                    
+009576c8 fdc30291 add      x29, sp, #0xb0                           
+009576cc a84300d1 sub      x8, x29, #0x10                           
+009576d0 0090621e fmov     d0, #5.00000000                          
+009576d4 295300f0 adrp     x9, #0x13be000                           
+009576d8 294146f9 ldr      x9, [x9, #0xc80]                         
+009576dc 4ad03bd5 mrs      x10, tpidr_el0                           
+009576e0 4a1540f9 ldr      x10, [x10, #0x28]                        
+009576e4 aa831ff8 stur     x10, [x29, #-8]                          
+009576e8 a0831df8 stur     x0, [x29, #-0x28]                        
+009576ec a1031df8 stur     x1, [x29, #-0x30]                        
+009576f0 aa835df8 ldur     x10, [x29, #-0x28]                       
+009576f4 290140f9 ldr      x9, [x9]                                 
+009576f8 a9831cf8 stur     x9, [x29, #-0x38]                        
+009576fc a9835cf8 ldur     x9, [x29, #-0x38]                        
+00957700 29d540f9 ldr      x9, [x9, #0x1a8]                         
+00957704 211940fd ldr      d1, [x9, #0x30]                          
+00957708 2240621e fcvt     s2, d1                                   
+0095770c a9835cf8 ldur     x9, [x29, #-0x38]                        
+00957710 29d540f9 ldr      x9, [x9, #0x1a8]                         
+00957714 211d40fd ldr      d1, [x9, #0x38]                          
+00957718 2028601e fadd     d0, d1, d0                               
+0095771c 0140621e fcvt     s1, d0                                   
+00957720 e00308aa mov      x0, x8                                   
+00957724 401ca24e mov      v0.16b, v2.16b                           
+00957728 ea2300f9 str      x10, [sp, #0x40]                         
+0095772c 4dc1ed97 bl       #0x4c7c60                                cocos2d::CCPoint::CCPoint(float, float)
+00957730 bf431c38 sturb    wzr, [x29, #-0x3c]                       
+00957734 ab435c38 ldurb    w11, [x29, #-0x3c]                       
+00957738 2b010037 tbnz     w11, #0, #0x95775c                       
+0095773c 285300f0 adrp     x8, #0x13be000                           
+00957740 084146f9 ldr      x8, [x8, #0xc80]                         
+00957744 080140f9 ldr      x8, [x8]                                 
+00957748 e00308aa mov      x0, x8                                   
+0095774c 080140f9 ldr      x8, [x8]                                 
+00957750 086d42f9 ldr      x8, [x8, #0x4d8]                         
+00957754 00013fd6 blr      x8                                       
+00957758 60010036 tbz      w0, #0, #0x957784                        
+0095775c a14cee97 bl       #0x4ea9e0                                cocos2d::CCNotificationCenter::sharedNotificationCenter()
+00957760 7e3900d0 adrp     x30, #0x1085000                          
+00957764 c1ef3e91 add      x1, x30, #0xfbb                          
+00957768 fe031faa mov      x30, xzr                                 
+0095776c e2031eaa mov      x2, x30                                  
+00957770 f8e0ed97 bl       #0x4cfb50                                cocos2d::CCNotificationCenter::postNotification(char const*, cocos2d::CCObject*)
+00957774 e0031faa mov      x0, xzr                                  
+00957778 e12340f9 ldr      x1, [sp, #0x40]                          
+0095777c 201400f9 str      x0, [x1, #0x28]                          
+00957780 1b010014 b        #0x957bec                                
+00957784 bf031cb8 stur     wzr, [x29, #-0x40]                       
+00957788 e82340f9 ldr      x8, [sp, #0x40]                          
+0095778c 091540f9 ldr      x9, [x8, #0x28]                          
+00957790 890300b4 cbz      x9, #0x957800                            
+00957794 e82340f9 ldr      x8, [sp, #0x40]                          
+00957798 091540f9 ldr      x9, [x8, #0x28]                          
+0095779c e00309aa mov      x0, x9                                   
+009577a0 290140f9 ldr      x9, [x9]                                 
+009577a4 295140f9 ldr      x9, [x9, #0xa0]                          
+009577a8 20013fd6 blr      x9                                       
+009577ac a86300d1 sub      x8, x29, #0x18                           
+009577b0 a14300d1 sub      x1, x29, #0x10                           
+009577b4 39080094 bl       #0x959898                                
+009577b8 a06300d1 sub      x0, x29, #0x18                           
+009577bc 25baed97 bl       #0x4c6050                                cocos2d::ccpLength(cocos2d::CCPoint const&)
+009577c0 a0031cbc stur     s0, [x29, #-0x40]                        
+009577c4 a0035cbc ldur     s0, [x29, #-0x40]                        
+009577c8 e82340f9 ldr      x8, [sp, #0x40]                          
+009577cc 091540f9 ldr      x9, [x8, #0x28]                          
+009577d0 215941bd ldr      s1, [x9, #0x158]                         
+009577d4 0020211e fcmp     s0, s1                                   
+009577d8 4d010054 b.le     #0x957800                                
+009577dc 814cee97 bl       #0x4ea9e0                                cocos2d::CCNotificationCenter::sharedNotificationCenter()
+009577e0 7e3900d0 adrp     x30, #0x1085000                          
+009577e4 c1ef3e91 add      x1, x30, #0xfbb                          
+009577e8 fe031faa mov      x30, xzr                                 
+009577ec e2031eaa mov      x2, x30                                  
+009577f0 d8e0ed97 bl       #0x4cfb50                                cocos2d::CCNotificationCenter::postNotification(char const*, cocos2d::CCObject*)
+009577f4 e0031faa mov      x0, xzr                                  
+009577f8 e12340f9 ldr      x1, [sp, #0x40]                          
+009577fc 201400f9 str      x0, [x1, #0x28]                          
+00957800 a8035df8 ldur     x8, [x29, #-0x30]                        
+00957804 e00308aa mov      x0, x8                                   
+00957808 080140f9 ldr      x8, [x8]                                 
+0095780c 085140f9 ldr      x8, [x8, #0xa0]                          
+00957810 00013fd6 blr      x8                                       
+00957814 a88300d1 sub      x8, x29, #0x20                           
+00957818 a14300d1 sub      x1, x29, #0x10                           
+0095781c 1f080094 bl       #0x959898                                
+00957820 a08300d1 sub      x0, x29, #0x20                           
+00957824 0bbaed97 bl       #0x4c6050                                cocos2d::ccpLength(cocos2d::CCPoint const&)
+00957828 a0c31bbc stur     s0, [x29, #-0x44]                        
+0095782c a0c35bbc ldur     s0, [x29, #-0x44]                        
+00957830 a8035df8 ldur     x8, [x29, #-0x30]                        
+00957834 015941bd ldr      s1, [x8, #0x158]                         
+00957838 0020211e fcmp     s0, s1                                   
+0095783c 851d0054 b.pl     #0x957bec                                
+00957840 a8835cf8 ldur     x8, [x29, #-0x38]                        
+00957844 e00308aa mov      x0, x8                                   
+00957848 080140f9 ldr      x8, [x8]                                 
+0095784c 08f941f9 ldr      x8, [x8, #0x3f0]                         
+00957850 00013fd6 blr      x8                                       
+00957854 a0031bf8 stur     x0, [x29, #-0x50]                        
+00957858 a8835cf8 ldur     x8, [x29, #-0x38]                        
+0095785c e00308aa mov      x0, x8                                   
+00957860 080140f9 ldr      x8, [x8]                                 
+00957864 08fd41f9 ldr      x8, [x8, #0x3f8]                         
+00957868 00013fd6 blr      x8                                       
+0095786c e02f00f9 str      x0, [sp, #0x58]                          
+00957870 a8835cf8 ldur     x8, [x29, #-0x38]                        
+00957874 e00308aa mov      x0, x8                                   
+00957878 080140f9 ldr      x8, [x8]                                 
+0095787c 080142f9 ldr      x8, [x8, #0x400]                         
+00957880 00013fd6 blr      x8                                       
+00957884 e02b00f9 str      x0, [sp, #0x50]                          
+00957888 ff330139 strb     wzr, [sp, #0x4c]                         
+0095788c a8035bf8 ldur     x8, [x29, #-0x50]                        
+00957890 a80500b4 cbz      x8, #0x957944                            
+00957894 a8035bf8 ldur     x8, [x29, #-0x50]                        
+00957898 090140f9 ldr      x9, [x8]                                 
+0095789c 299142f9 ldr      x9, [x9, #0x520]                         
+009578a0 e00308aa mov      x0, x8                                   
+009578a4 20013fd6 blr      x9                                       
+009578a8 a8035df8 ldur     x8, [x29, #-0x30]                        
+009578ac 090140f9 ldr      x9, [x8]                                 
+009578b0 299142f9 ldr      x9, [x9, #0x520]                         
+009578b4 e03f00b9 str      w0, [sp, #0x3c]                          
+009578b8 e00308aa mov      x0, x8                                   
+009578bc 20013fd6 blr      x9                                       
+009578c0 ea3f40b9 ldr      w10, [sp, #0x3c]                         
+009578c4 5f01006b cmp      w10, w0                                  
+009578c8 e1030054 b.ne     #0x957944                                
+009578cc e8030032 mov      w8, #1                                   
+009578d0 e8330139 strb     w8, [sp, #0x4c]                          
+009578d4 a0035bf8 ldur     x0, [x29, #-0x50]                        
+009578d8 fabaed97 bl       #0x4c64c0                                Weapon::getAmmo()
+009578dc 083c0013 sxth     w8, w0                                   
+009578e0 be035bf8 ldur     x30, [x29, #-0x50]                       
+009578e4 c90340f9 ldr      x9, [x30]                                
+009578e8 29c542f9 ldr      x9, [x9, #0x588]                         
+009578ec e0031eaa mov      x0, x30                                  
+009578f0 e83b00b9 str      w8, [sp, #0x38]                          
+009578f4 20013fd6 blr      x9                                       
+009578f8 e83b40b9 ldr      w8, [sp, #0x38]                          
+009578fc 1f01006b cmp      w8, w0                                   
+00957900 4a010054 b.ge     #0x957928                                
+00957904 a8035bf8 ldur     x8, [x29, #-0x50]                        
+00957908 09154a39 ldrb     w9, [x8, #0x285]                         
+0095790c e9000037 tbnz     w9, #0, #0x957928                        
+00957910 a1035df8 ldur     x1, [x29, #-0x30]                        
+00957914 a2035bf8 ldur     x2, [x29, #-0x50]                        
+00957918 e02340f9 ldr      x0, [sp, #0x40]                          
+0095791c a1e9ed97 bl       #0x4d1fa0                                WeaponManager::transferAmmoRequest(Weapon*, Weapon*)
+00957920 40000036 tbz      w0, #0, #0x957928                        
+00957924 b2000014 b        #0x957bec                                
+00957928 a8035df8 ldur     x8, [x29, #-0x30]                        
+0095792c 090140f9 ldr      x9, [x8]                                 
+00957930 29fd42f9 ldr      x9, [x9, #0x5f8]                         
+00957934 e00308aa mov      x0, x8                                   
+00957938 20013fd6 blr      x9                                       
+0095793c 40000037 tbnz     w0, #0, #0x957944                        
+00957940 ab000014 b        #0x957bec                                
+00957944 e82f40f9 ldr      x8, [sp, #0x58]                          
+00957948 680500b4 cbz      x8, #0x9579f4                            
+0095794c e82f40f9 ldr      x8, [sp, #0x58]                          
+00957950 090140f9 ldr      x9, [x8]                                 
+00957954 299142f9 ldr      x9, [x9, #0x520]                         
+00957958 e00308aa mov      x0, x8                                   
+0095795c 20013fd6 blr      x9                                       
+00957960 a8035df8 ldur     x8, [x29, #-0x30]                        
+00957964 090140f9 ldr      x9, [x8]                                 
+00957968 299142f9 ldr      x9, [x9, #0x520]                         
+0095796c e03700b9 str      w0, [sp, #0x34]                          
+00957970 e00308aa mov      x0, x8                                   
+00957974 20013fd6 blr      x9                                       
+00957978 ea3740b9 ldr      w10, [sp, #0x34]                         
+0095797c 5f01006b cmp      w10, w0                                  
+00957980 a1030054 b.ne     #0x9579f4                                
+00957984 e02f40f9 ldr      x0, [sp, #0x58]                          
+00957988 cebaed97 bl       #0x4c64c0                                Weapon::getAmmo()
+0095798c 003c0013 sxth     w0, w0                                   
+00957990 fe2f40f9 ldr      x30, [sp, #0x58]                         
+00957994 c80340f9 ldr      x8, [x30]                                
+00957998 08c542f9 ldr      x8, [x8, #0x588]                         
+0095799c e03300b9 str      w0, [sp, #0x30]                          
+009579a0 e0031eaa mov      x0, x30                                  
+009579a4 00013fd6 blr      x8                                       
+009579a8 e93340b9 ldr      w9, [sp, #0x30]                          
+009579ac 3f01006b cmp      w9, w0                                   
+009579b0 4a010054 b.ge     #0x9579d8                                
+009579b4 e82f40f9 ldr      x8, [sp, #0x58]                          
+009579b8 09154a39 ldrb     w9, [x8, #0x285]                         
+009579bc e9000037 tbnz     w9, #0, #0x9579d8                        
+009579c0 a1035df8 ldur     x1, [x29, #-0x30]                        
+009579c4 e22f40f9 ldr      x2, [sp, #0x58]                          
+009579c8 e02340f9 ldr      x0, [sp, #0x40]                          
+009579cc 75e9ed97 bl       #0x4d1fa0                                WeaponManager::transferAmmoRequest(Weapon*, Weapon*)
+009579d0 40000036 tbz      w0, #0, #0x9579d8                        
+009579d4 86000014 b        #0x957bec                                
+009579d8 a8035df8 ldur     x8, [x29, #-0x30]                        
+009579dc 090140f9 ldr      x9, [x8]                                 
+009579e0 29fd42f9 ldr      x9, [x9, #0x5f8]                         
+009579e4 e00308aa mov      x0, x8                                   
+009579e8 20013fd6 blr      x9                                       
+009579ec 40000037 tbnz     w0, #0, #0x9579f4                        
+009579f0 7f000014 b        #0x957bec                                
+009579f4 ff230139 strb     wzr, [sp, #0x48]                         
+009579f8 e82b40f9 ldr      x8, [sp, #0x50]                          
+009579fc c80400b4 cbz      x8, #0x957a94                            
+00957a00 e82b40f9 ldr      x8, [sp, #0x50]                          
+00957a04 090140f9 ldr      x9, [x8]                                 
+00957a08 299142f9 ldr      x9, [x9, #0x520]                         
+00957a0c e00308aa mov      x0, x8                                   
+00957a10 20013fd6 blr      x9                                       
+00957a14 a8035df8 ldur     x8, [x29, #-0x30]                        
+00957a18 090140f9 ldr      x9, [x8]                                 
+00957a1c 299142f9 ldr      x9, [x9, #0x520]                         
+00957a20 e02f00b9 str      w0, [sp, #0x2c]                          
+00957a24 e00308aa mov      x0, x8                                   
+00957a28 20013fd6 blr      x9                                       
+00957a2c ea2f40b9 ldr      w10, [sp, #0x2c]                         
+00957a30 5f01006b cmp      w10, w0                                  
+00957a34 01030054 b.ne     #0x957a94                                
+00957a38 e8030032 mov      w8, #1                                   
+00957a3c e8230139 strb     w8, [sp, #0x48]                          
+00957a40 e02b40f9 ldr      x0, [sp, #0x50]                          
+00957a44 9fbaed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00957a48 083c0013 sxth     w8, w0                                   
+00957a4c fe2b40f9 ldr      x30, [sp, #0x50]                         
+00957a50 c90340f9 ldr      x9, [x30]                                
+00957a54 29c542f9 ldr      x9, [x9, #0x588]                         
+00957a58 e0031eaa mov      x0, x30                                  
+00957a5c e82b00b9 str      w8, [sp, #0x28]                          
+00957a60 20013fd6 blr      x9                                       
+00957a64 e82b40b9 ldr      w8, [sp, #0x28]                          
+00957a68 1f01006b cmp      w8, w0                                   
+00957a6c 4a010054 b.ge     #0x957a94                                
+00957a70 e82b40f9 ldr      x8, [sp, #0x50]                          
+00957a74 09154a39 ldrb     w9, [x8, #0x285]                         
+00957a78 e9000037 tbnz     w9, #0, #0x957a94                        
+00957a7c a1035df8 ldur     x1, [x29, #-0x30]                        
+00957a80 e22b40f9 ldr      x2, [sp, #0x50]                          
+00957a84 e02340f9 ldr      x0, [sp, #0x40]                          
+00957a88 46e9ed97 bl       #0x4d1fa0                                WeaponManager::transferAmmoRequest(Weapon*, Weapon*)
+00957a8c 40000036 tbz      w0, #0, #0x957a94                        
+00957a90 57000014 b        #0x957bec                                
+00957a94 e8234139 ldrb     w8, [sp, #0x48]                          
+00957a98 88000036 tbz      w8, #0, #0x957aa8                        
+00957a9c e8334139 ldrb     w8, [sp, #0x4c]                          
+00957aa0 48000036 tbz      w8, #0, #0x957aa8                        
+00957aa4 52000014 b        #0x957bec                                
+00957aa8 a62cee97 bl       #0x4e2d40                                WeaponStructures::getInstance()
+00957aac be035df8 ldur     x30, [x29, #-0x30]                       
+00957ab0 c80340f9 ldr      x8, [x30]                                
+00957ab4 089142f9 ldr      x8, [x8, #0x520]                         
+00957ab8 e01300f9 str      x0, [sp, #0x20]                          
+00957abc e0031eaa mov      x0, x30                                  
+00957ac0 00013fd6 blr      x8                                       
+00957ac4 e81340f9 ldr      x8, [sp, #0x20]                          
+00957ac8 e01f00b9 str      w0, [sp, #0x1c]                          
+00957acc e00308aa mov      x0, x8                                   
+00957ad0 e11f40b9 ldr      w1, [sp, #0x1c]                          
+00957ad4 3ff3ed97 bl       #0x4d47d0                                WeaponStructures::isThrowableWeapon(ItemType)
+00957ad8 40010036 tbz      w0, #0, #0x957b00                        
+00957adc 285300f0 adrp     x8, #0x13be000                           
+00957ae0 084146f9 ldr      x8, [x8, #0xc80]                         
+00957ae4 080140f9 ldr      x8, [x8]                                 
+00957ae8 090140f9 ldr      x9, [x8]                                 
+00957aec 292542f9 ldr      x9, [x9, #0x448]                         
+00957af0 a1035df8 ldur     x1, [x29, #-0x30]                        
+00957af4 e00308aa mov      x0, x8                                   
+00957af8 20013fd6 blr      x9                                       
+00957afc 3c000014 b        #0x957bec                                
+00957b00 a8035df8 ldur     x8, [x29, #-0x30]                        
+00957b04 e00308aa mov      x0, x8                                   
+00957b08 080140f9 ldr      x8, [x8]                                 
+00957b0c 084542f9 ldr      x8, [x8, #0x488]                         
+00957b10 00013fd6 blr      x8                                       
+00957b14 20020036 tbz      w0, #0, #0x957b58                        
+00957b18 a8035df8 ldur     x8, [x29, #-0x30]                        
+00957b1c e00308aa mov      x0, x8                                   
+00957b20 080140f9 ldr      x8, [x8]                                 
+00957b24 084142f9 ldr      x8, [x8, #0x480]                         
+00957b28 00013fd6 blr      x8                                       
+00957b2c 40010036 tbz      w0, #0, #0x957b54                        
+00957b30 285300f0 adrp     x8, #0x13be000                           
+00957b34 084146f9 ldr      x8, [x8, #0xc80]                         
+00957b38 080140f9 ldr      x8, [x8]                                 
+00957b3c 090140f9 ldr      x9, [x8]                                 
+00957b40 291d43f9 ldr      x9, [x9, #0x638]                         
+00957b44 aa035df8 ldur     x10, [x29, #-0x30]                       
+00957b48 e00308aa mov      x0, x8                                   
+00957b4c e1030aaa mov      x1, x10                                  
+00957b50 20013fd6 blr      x9                                       
+00957b54 26000014 b        #0x957bec                                
+00957b58 285300f0 adrp     x8, #0x13be000                           
+00957b5c 084146f9 ldr      x8, [x8, #0xc80]                         
+00957b60 a9035df8 ldur     x9, [x29, #-0x30]                        
+00957b64 2a0140f9 ldr      x10, [x9]                                
+00957b68 4a5d43f9 ldr      x10, [x10, #0x6b8]                       
+00957b6c 080140f9 ldr      x8, [x8]                                 
+00957b70 e00308aa mov      x0, x8                                   
+00957b74 080140f9 ldr      x8, [x8]                                 
+00957b78 08c941f9 ldr      x8, [x8, #0x390]                         
+00957b7c ea0b00f9 str      x10, [sp, #0x10]                         
+00957b80 e90700f9 str      x9, [sp, #8]                             
+00957b84 00013fd6 blr      x8                                       
+00957b88 e80740f9 ldr      x8, [sp, #8]                             
+00957b8c e00700b9 str      w0, [sp, #4]                             
+00957b90 e00308aa mov      x0, x8                                   
+00957b94 e10740b9 ldr      w1, [sp, #4]                             
+00957b98 e90b40f9 ldr      x9, [sp, #0x10]                          
+00957b9c 20013fd6 blr      x9                                       
+00957ba0 40000037 tbnz     w0, #0, #0x957ba8                        
+00957ba4 12000014 b        #0x957bec                                
+00957ba8 e82340f9 ldr      x8, [sp, #0x40]                          
+00957bac 091540f9 ldr      x9, [x8, #0x28]                          
+00957bb0 a90000b4 cbz      x9, #0x957bc4                            
+00957bb4 a0c35bbc ldur     s0, [x29, #-0x44]                        
+00957bb8 a1035cbc ldur     s1, [x29, #-0x40]                        
+00957bbc 0020211e fcmp     s0, s1                                   
+00957bc0 65010054 b.pl     #0x957bec                                
+00957bc4 a8035df8 ldur     x8, [x29, #-0x30]                        
+00957bc8 e92340f9 ldr      x9, [sp, #0x40]                          
+00957bcc 281500f9 str      x8, [x9, #0x28]                          
+00957bd0 844bee97 bl       #0x4ea9e0                                cocos2d::CCNotificationCenter::sharedNotificationCenter()
+00957bd4 683900d0 adrp     x8, #0x1085000                           
+00957bd8 01993e91 add      x1, x8, #0xfa6                           
+00957bdc e82340f9 ldr      x8, [sp, #0x40]                          
+00957be0 091540f9 ldr      x9, [x8, #0x28]                          
+00957be4 e20309aa mov      x2, x9                                   
+00957be8 dadfed97 bl       #0x4cfb50                                cocos2d::CCNotificationCenter::postNotification(char const*, cocos2d::CCObject*)
+00957bec 48d03bd5 mrs      x8, tpidr_el0                            
+00957bf0 081540f9 ldr      x8, [x8, #0x28]                          
+00957bf4 a9835ff8 ldur     x9, [x29, #-8]                           
+00957bf8 1f0109eb cmp      x8, x9                                   
+00957bfc 81000054 b.ne     #0x957c0c                                
+00957c00 fd7b4ba9 ldp      x29, x30, [sp, #0xb0]                    
+00957c04 ff030391 add      sp, sp, #0xc0                            
+00957c08 c0035fd6 ret                                               
+00957c0c 790cee97 bl       #0x4dadf0                                __stack_chk_fail
+
+Weapon::completeReloadWeapon() VA=0x947f68 FILE=0x947f68 SIZE=412
+00947f68 ff4301d1 sub      sp, sp, #0x50                            
+00947f6c fd7b04a9 stp      x29, x30, [sp, #0x40]                    
+00947f70 fd030191 add      x29, sp, #0x40                           
+00947f74 a0831ff8 stur     x0, [x29, #-8]                           
+00947f78 a0835ff8 ldur     x0, [x29, #-8]                           
+00947f7c 1f140a39 strb     wzr, [x0, #0x285]                        
+00947f80 1f9001b9 str      wzr, [x0, #0x190]                        
+00947f84 080040f9 ldr      x8, [x0]                                 
+00947f88 08c942f9 ldr      x8, [x8, #0x590]                         
+00947f8c a0831ef8 stur     x0, [x29, #-0x18]                        
+00947f90 00013fd6 blr      x8                                       
+00947f94 a8835ef8 ldur     x8, [x29, #-0x18]                        
+00947f98 a0431eb8 stur     w0, [x29, #-0x1c]                        
+00947f9c e00308aa mov      x0, x8                                   
+00947fa0 002cee97 bl       #0x4d2fa0                                Weapon::getClip()
+00947fa4 e9031f2a mov      w9, wzr                                  
+00947fa8 003c0013 sxth     w0, w0                                   
+00947fac aa435eb8 ldur     w10, [x29, #-0x1c]                       
+00947fb0 4a01004b sub      w10, w10, w0                             
+00947fb4 3f010a6b cmp      w9, w10                                  
+00947fb8 ea010054 b.ge     #0x947ff4                                
+00947fbc a8835ef8 ldur     x8, [x29, #-0x18]                        
+00947fc0 090140f9 ldr      x9, [x8]                                 
+00947fc4 29c942f9 ldr      x9, [x9, #0x590]                         
+00947fc8 e00308aa mov      x0, x8                                   
+00947fcc 20013fd6 blr      x9                                       
+00947fd0 a8835ef8 ldur     x8, [x29, #-0x18]                        
+00947fd4 e02300b9 str      w0, [sp, #0x20]                          
+00947fd8 e00308aa mov      x0, x8                                   
+00947fdc f12bee97 bl       #0x4d2fa0                                Weapon::getClip()
+00947fe0 003c0013 sxth     w0, w0                                   
+00947fe4 ea2340b9 ldr      w10, [sp, #0x20]                         
+00947fe8 4a01004b sub      w10, w10, w0                             
+00947fec ea1f00b9 str      w10, [sp, #0x1c]                         
+00947ff0 04000014 b        #0x948000                                
+00947ff4 e8031f2a mov      w8, wzr                                  
+00947ff8 e81f00b9 str      w8, [sp, #0x1c]                          
+00947ffc 01000014 b        #0x948000                                
+00948000 e81f40b9 ldr      w8, [sp, #0x1c]                          
+00948004 a8431fb8 stur     w8, [x29, #-0xc]                         
+00948008 a8435fb8 ldur     w8, [x29, #-0xc]                         
+0094800c a0835ef8 ldur     x0, [x29, #-0x18]                        
+00948010 e81b00b9 str      w8, [sp, #0x18]                          
+00948014 2bf9ed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00948018 083c0013 sxth     w8, w0                                   
+0094801c e01b40b9 ldr      w0, [sp, #0x18]                          
+00948020 1f00086b cmp      w0, w8                                   
+00948024 cd000054 b.le     #0x94803c                                
+00948028 a0835ef8 ldur     x0, [x29, #-0x18]                        
+0094802c 25f9ed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00948030 003c0013 sxth     w0, w0                                   
+00948034 e01700b9 str      w0, [sp, #0x14]                          
+00948038 03000014 b        #0x948044                                
+0094803c a8435fb8 ldur     w8, [x29, #-0xc]                         
+00948040 e81700b9 str      w8, [sp, #0x14]                          
+00948044 e81740b9 ldr      w8, [sp, #0x14]                          
+00948048 a8031fb8 stur     w8, [x29, #-0x10]                        
+0094804c a0835ef8 ldur     x0, [x29, #-0x18]                        
+00948050 d42bee97 bl       #0x4d2fa0                                Weapon::getClip()
+00948054 083c0013 sxth     w8, w0                                   
+00948058 a0035fb8 ldur     w0, [x29, #-0x10]                        
+0094805c 0101000b add      w1, w8, w0                               
+00948060 a0835ef8 ldur     x0, [x29, #-0x18]                        
+00948064 27acee97 bl       #0x4f3100                                Weapon::setClip(int)
+00948068 a0835ef8 ldur     x0, [x29, #-0x18]                        
+0094806c 15f9ed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00948070 e8031f2a mov      w8, wzr                                  
+00948074 003c0013 sxth     w0, w0                                   
+00948078 a1035fb8 ldur     w1, [x29, #-0x10]                        
+0094807c 0000014b sub      w0, w0, w1                               
+00948080 1f01006b cmp      w8, w0                                   
+00948084 0a010054 b.ge     #0x9480a4                                
+00948088 a0835ef8 ldur     x0, [x29, #-0x18]                        
+0094808c 0df9ed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00948090 003c0013 sxth     w0, w0                                   
+00948094 a8035fb8 ldur     w8, [x29, #-0x10]                        
+00948098 0800084b sub      w8, w0, w8                               
+0094809c e81300b9 str      w8, [sp, #0x10]                          
+009480a0 04000014 b        #0x9480b0                                
+009480a4 e8031f2a mov      w8, wzr                                  
+009480a8 e81300b9 str      w8, [sp, #0x10]                          
+009480ac 01000014 b        #0x9480b0                                
+009480b0 e01340b9 ldr      w0, [sp, #0x10]                          
+009480b4 e8031f2a mov      w8, wzr                                  
+009480b8 a9835ef8 ldur     x9, [x29, #-0x18]                        
+009480bc e00f00b9 str      w0, [sp, #0xc]                           
+009480c0 e00309aa mov      x0, x9                                   
+009480c4 e10f40b9 ldr      w1, [sp, #0xc]                           
+009480c8 02010012 and      w2, w8, #1                               
+009480cc 41c3ee97 bl       #0x4f8dd0                                Weapon::setAmmo(int, bool)
+009480d0 a9835ef8 ldur     x9, [x29, #-0x18]                        
+009480d4 206541f9 ldr      x0, [x9, #0x2c8]                         
+009480d8 000100b4 cbz      x0, #0x9480f8                            
+009480dc a8835ef8 ldur     x8, [x29, #-0x18]                        
+009480e0 096541f9 ldr      x9, [x8, #0x2c8]                         
+009480e4 2a0140f9 ldr      x10, [x9]                                
+009480e8 4a1140f9 ldr      x10, [x10, #0x20]                        
+009480ec e00309aa mov      x0, x9                                   
+009480f0 e10308aa mov      x1, x8                                   
+009480f4 40013fd6 blr      x10                                      
+009480f8 fd7b44a9 ldp      x29, x30, [sp, #0x40]                    
+009480fc ff430191 add      sp, sp, #0x50                            
+00948100 c0035fd6 ret                                               
+
+Weapon::getAmmoCapacity() VA=0x9485f4 FILE=0x9485f4 SIZE=24
+009485f4 ff4300d1 sub      sp, sp, #0x10                            
+009485f8 e00700f9 str      x0, [sp, #8]                             
+009485fc e00740f9 ldr      x0, [sp, #8]                             
+00948600 00604679 ldrh     w0, [x0, #0x330]                         
+00948604 ff430091 add      sp, sp, #0x10                            
+00948608 c0035fd6 ret                                               
+
+Weapon::getClip() VA=0x947954 FILE=0x947954 SIZE=204
+00947954 ff0302d1 sub      sp, sp, #0x80                            
+00947958 fd7b07a9 stp      x29, x30, [sp, #0x70]                    
+0094795c fdc30191 add      x29, sp, #0x70                           
+00947960 a84300d1 sub      x8, x29, #0x10                           
+00947964 a96300d1 sub      x9, x29, #0x18                           
+00947968 aa5300d1 sub      x10, x29, #0x14                          
+0094796c 4bd03bd5 mrs      x11, tpidr_el0                           
+00947970 6b1540f9 ldr      x11, [x11, #0x28]                        
+00947974 ab831ff8 stur     x11, [x29, #-8]                          
+00947978 e00b00f9 str      x0, [sp, #0x10]                          
+0094797c eb0b40f9 ldr      x11, [sp, #0x10]                         
+00947980 bfc31eb8 stur     wzr, [x29, #-0x14]                       
+00947984 6cc5c679 ldrsh    w12, [x11, #0x362]                       
+00947988 ac831eb8 stur     w12, [x29, #-0x18]                       
+0094798c ea1700f9 str      x10, [sp, #0x28]                         
+00947990 e91300f9 str      x9, [sp, #0x20]                          
+00947994 e91740f9 ldr      x9, [sp, #0x28]                          
+00947998 ea1340f9 ldr      x10, [sp, #0x20]                         
+0094799c ec634039 ldrb     w12, [sp, #0x18]                         
+009479a0 ac031f38 sturb    w12, [x29, #-0x10]                       
+009479a4 e91f00f9 str      x9, [sp, #0x38]                          
+009479a8 ea1b00f9 str      x10, [sp, #0x30]                         
+009479ac e91f40f9 ldr      x9, [sp, #0x38]                          
+009479b0 ea1b40f9 ldr      x10, [sp, #0x30]                         
+009479b4 a8031ef8 stur     x8, [x29, #-0x20]                        
+009479b8 a9831df8 stur     x9, [x29, #-0x28]                        
+009479bc aa031df8 stur     x10, [x29, #-0x30]                       
+009479c0 a8835df8 ldur     x8, [x29, #-0x28]                        
+009479c4 0c0140b9 ldr      w12, [x8]                                
+009479c8 a8035df8 ldur     x8, [x29, #-0x30]                        
+009479cc 0d0140b9 ldr      w13, [x8]                                
+009479d0 9f010d6b cmp      w12, w13                                 
+009479d4 8a000054 b.ge     #0x9479e4                                
+009479d8 e81b40f9 ldr      x8, [sp, #0x30]                          
+009479dc e80700f9 str      x8, [sp, #8]                             
+009479e0 03000014 b        #0x9479ec                                
+009479e4 e81f40f9 ldr      x8, [sp, #0x38]                          
+009479e8 e80700f9 str      x8, [sp, #8]                             
+009479ec e80740f9 ldr      x8, [sp, #8]                             
+009479f0 090140b9 ldr      w9, [x8]                                 
+009479f4 48d03bd5 mrs      x8, tpidr_el0                            
+009479f8 081540f9 ldr      x8, [x8, #0x28]                          
+009479fc aa835ff8 ldur     x10, [x29, #-8]                          
+00947a00 1f010aeb cmp      x8, x10                                  
+00947a04 e90700b9 str      w9, [sp, #4]                             
+00947a08 a1000054 b.ne     #0x947a1c                                
+00947a0c e00740b9 ldr      w0, [sp, #4]                             
+00947a10 fd7b47a9 ldp      x29, x30, [sp, #0x70]                    
+00947a14 ff030291 add      sp, sp, #0x80                            
+00947a18 c0035fd6 ret                                               
+00947a1c f54cee97 bl       #0x4dadf0                                __stack_chk_fail
+
+Weapon::defaultTriggerPull(float) VA=0x947aec FILE=0x947aec SIZE=732
+00947aec ff8301d1 sub      sp, sp, #0x60                            
+00947af0 fd7b05a9 stp      x29, x30, [sp, #0x50]                    
+00947af4 fd430191 add      x29, sp, #0x50                           
+00947af8 a0831ff8 stur     x0, [x29, #-8]                           
+00947afc a0431fbc stur     s0, [x29, #-0xc]                         
+00947b00 a0835ff8 ldur     x0, [x29, #-8]                           
+00947b04 009041bd ldr      s0, [x0, #0x190]                         
+00947b08 012443bd ldr      s1, [x0, #0x324]                         
+00947b0c 0020211e fcmp     s0, s1                                   
+00947b10 e00f00f9 str      x0, [sp, #0x18]                          
+00947b14 cd070054 b.le     #0x947c0c                                
+00947b18 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947b1c 09c5c679 ldrsh    w9, [x8, #0x362]                         
+00947b20 3f010071 cmp      w9, #0                                   
+00947b24 6d040054 b.le     #0x947bb0                                
+00947b28 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947b2c 090140f9 ldr      x9, [x8]                                 
+00947b30 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+00947b34 e00308aa mov      x0, x8                                   
+00947b38 20013fd6 blr      x9                                       
+00947b3c a0030037 tbnz     w0, #0, #0x947bb0                        
+00947b40 e8030032 mov      w8, #1                                   
+00947b44 e90f40f9 ldr      x9, [sp, #0x18]                          
+00947b48 28110a39 strb     w8, [x9, #0x284]                         
+00947b4c 3f8102b9 str      wzr, [x9, #0x280]                        
+00947b50 2a0140f9 ldr      x10, [x9]                                
+00947b54 4ab142f9 ldr      x10, [x10, #0x560]                       
+00947b58 e00309aa mov      x0, x9                                   
+00947b5c 40013fd6 blr      x10                                      
+00947b60 e90f40f9 ldr      x9, [sp, #0x18]                          
+00947b64 2a0140f9 ldr      x10, [x9]                                
+00947b68 4a1943f9 ldr      x10, [x10, #0x630]                       
+00947b6c e00309aa mov      x0, x9                                   
+00947b70 40013fd6 blr      x10                                      
+00947b74 e90f40f9 ldr      x9, [sp, #0x18]                          
+00947b78 2a0140f9 ldr      x10, [x9]                                
+00947b7c 4a1d43f9 ldr      x10, [x10, #0x638]                       
+00947b80 e00309aa mov      x0, x9                                   
+00947b84 40013fd6 blr      x10                                      
+00947b88 e90f40f9 ldr      x9, [sp, #0x18]                          
+00947b8c 28554a39 ldrb     w8, [x9, #0x295]                         
+00947b90 081d0013 sxtb     w8, w8                                   
+00947b94 08050011 add      w8, w8, #1                               
+00947b98 28550a39 strb     w8, [x9, #0x295]                         
+00947b9c 28c54679 ldrh     w8, [x9, #0x362]                         
+00947ba0 083d0013 sxth     w8, w8                                   
+00947ba4 08050051 sub      w8, w8, #1                               
+00947ba8 28c50679 strh     w8, [x9, #0x362]                         
+00947bac 16000014 b        #0x947c04                                
+00947bb0 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947bb4 090140f9 ldr      x9, [x8]                                 
+00947bb8 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+00947bbc e00308aa mov      x0, x8                                   
+00947bc0 20013fd6 blr      x9                                       
+00947bc4 00020037 tbnz     w0, #0, #0x947c04                        
+00947bc8 c8530090 adrp     x8, #0x13bf000                           
+00947bcc 086942f9 ldr      x8, [x8, #0x4d0]                         
+00947bd0 080140f9 ldr      x8, [x8]                                 
+00947bd4 e90f40f9 ldr      x9, [sp, #0x18]                          
+00947bd8 2a0140f9 ldr      x10, [x9]                                
+00947bdc 4a3943f9 ldr      x10, [x10, #0x670]                       
+00947be0 e00309aa mov      x0, x9                                   
+00947be4 e80b00f9 str      x8, [sp, #0x10]                          
+00947be8 40013fd6 blr      x10                                      
+00947bec a0031efc stur     d0, [x29, #-0x20]                        
+00947bf0 a1831efc stur     d1, [x29, #-0x18]                        
+00947bf4 a0035efc ldur     d0, [x29, #-0x20]                        
+00947bf8 e1031f2a mov      w1, wzr                                  
+00947bfc e00b40f9 ldr      x0, [sp, #0x10]                          
+00947c00 d071ee97 bl       #0x4e4340                                Sound::playSoundPosition(int, cpVect)
+00947c04 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947c08 1f9101b9 str      wzr, [x8, #0x190]                        
+00947c0c e80f40f9 ldr      x8, [sp, #0x18]                          
+00947c10 090140f9 ldr      x9, [x8]                                 
+00947c14 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+00947c18 e00308aa mov      x0, x8                                   
+00947c1c 20013fd6 blr      x9                                       
+00947c20 00020037 tbnz     w0, #0, #0x947c60                        
+00947c24 e00f40f9 ldr      x0, [sp, #0x18]                          
+00947c28 de2cee97 bl       #0x4d2fa0                                Weapon::getClip()
+00947c2c 003c0013 sxth     w0, w0                                   
+00947c30 1f000071 cmp      w0, #0                                   
+00947c34 6c010054 b.gt     #0x947c60                                
+00947c38 e00f40f9 ldr      x0, [sp, #0x18]                          
+00947c3c 21faed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00947c40 003c0013 sxth     w0, w0                                   
+00947c44 1f000071 cmp      w0, #0                                   
+00947c48 cd000054 b.le     #0x947c60                                
+00947c4c e80f40f9 ldr      x8, [sp, #0x18]                          
+00947c50 090140f9 ldr      x9, [x8]                                 
+00947c54 29a142f9 ldr      x9, [x9, #0x540]                         
+00947c58 e00308aa mov      x0, x8                                   
+00947c5c 20013fd6 blr      x9                                       
+00947c60 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947c64 009141bd ldr      s0, [x8, #0x190]                         
+00947c68 012543bd ldr      s1, [x8, #0x324]                         
+00947c6c 0020211e fcmp     s0, s1                                   
+00947c70 cd070054 b.le     #0x947d68                                
+00947c74 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947c78 09c5c679 ldrsh    w9, [x8, #0x362]                         
+00947c7c 3f010071 cmp      w9, #0                                   
+00947c80 6d040054 b.le     #0x947d0c                                
+00947c84 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947c88 090140f9 ldr      x9, [x8]                                 
+00947c8c 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+00947c90 e00308aa mov      x0, x8                                   
+00947c94 20013fd6 blr      x9                                       
+00947c98 a0030037 tbnz     w0, #0, #0x947d0c                        
+00947c9c e8030032 mov      w8, #1                                   
+00947ca0 e90f40f9 ldr      x9, [sp, #0x18]                          
+00947ca4 28110a39 strb     w8, [x9, #0x284]                         
+00947ca8 3f8102b9 str      wzr, [x9, #0x280]                        
+00947cac 2a0140f9 ldr      x10, [x9]                                
+00947cb0 4ab142f9 ldr      x10, [x10, #0x560]                       
+00947cb4 e00309aa mov      x0, x9                                   
+00947cb8 40013fd6 blr      x10                                      
+00947cbc e90f40f9 ldr      x9, [sp, #0x18]                          
+00947cc0 2a0140f9 ldr      x10, [x9]                                
+00947cc4 4a1943f9 ldr      x10, [x10, #0x630]                       
+00947cc8 e00309aa mov      x0, x9                                   
+00947ccc 40013fd6 blr      x10                                      
+00947cd0 e90f40f9 ldr      x9, [sp, #0x18]                          
+00947cd4 2a0140f9 ldr      x10, [x9]                                
+00947cd8 4a1d43f9 ldr      x10, [x10, #0x638]                       
+00947cdc e00309aa mov      x0, x9                                   
+00947ce0 40013fd6 blr      x10                                      
+00947ce4 e90f40f9 ldr      x9, [sp, #0x18]                          
+00947ce8 28554a39 ldrb     w8, [x9, #0x295]                         
+00947cec 081d0013 sxtb     w8, w8                                   
+00947cf0 08050011 add      w8, w8, #1                               
+00947cf4 28550a39 strb     w8, [x9, #0x295]                         
+00947cf8 28c54679 ldrh     w8, [x9, #0x362]                         
+00947cfc 083d0013 sxth     w8, w8                                   
+00947d00 08050051 sub      w8, w8, #1                               
+00947d04 28c50679 strh     w8, [x9, #0x362]                         
+00947d08 16000014 b        #0x947d60                                
+00947d0c e80f40f9 ldr      x8, [sp, #0x18]                          
+00947d10 090140f9 ldr      x9, [x8]                                 
+00947d14 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+00947d18 e00308aa mov      x0, x8                                   
+00947d1c 20013fd6 blr      x9                                       
+00947d20 00020037 tbnz     w0, #0, #0x947d60                        
+00947d24 c8530090 adrp     x8, #0x13bf000                           
+00947d28 086942f9 ldr      x8, [x8, #0x4d0]                         
+00947d2c 080140f9 ldr      x8, [x8]                                 
+00947d30 e90f40f9 ldr      x9, [sp, #0x18]                          
+00947d34 2a0140f9 ldr      x10, [x9]                                
+00947d38 4a3943f9 ldr      x10, [x10, #0x670]                       
+00947d3c e00309aa mov      x0, x9                                   
+00947d40 e80700f9 str      x8, [sp, #8]                             
+00947d44 40013fd6 blr      x10                                      
+00947d48 e01300fd str      d0, [sp, #0x20]                          
+00947d4c e11700fd str      d1, [sp, #0x28]                          
+00947d50 e01340fd ldr      d0, [sp, #0x20]                          
+00947d54 e1031f2a mov      w1, wzr                                  
+00947d58 e00740f9 ldr      x0, [sp, #8]                             
+00947d5c 7971ee97 bl       #0x4e4340                                Sound::playSoundPosition(int, cpVect)
+00947d60 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947d64 1f9101b9 str      wzr, [x8, #0x190]                        
+00947d68 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947d6c 090140f9 ldr      x9, [x8]                                 
+00947d70 29dd42f9 ldr      x9, [x9, #0x5b8]                         
+00947d74 e00308aa mov      x0, x8                                   
+00947d78 20013fd6 blr      x9                                       
+00947d7c 00020037 tbnz     w0, #0, #0x947dbc                        
+00947d80 e00f40f9 ldr      x0, [sp, #0x18]                          
+00947d84 872cee97 bl       #0x4d2fa0                                Weapon::getClip()
+00947d88 003c0013 sxth     w0, w0                                   
+00947d8c 1f000071 cmp      w0, #0                                   
+00947d90 6c010054 b.gt     #0x947dbc                                
+00947d94 e00f40f9 ldr      x0, [sp, #0x18]                          
+00947d98 caf9ed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00947d9c 003c0013 sxth     w0, w0                                   
+00947da0 1f000071 cmp      w0, #0                                   
+00947da4 cd000054 b.le     #0x947dbc                                
+00947da8 e80f40f9 ldr      x8, [sp, #0x18]                          
+00947dac 090140f9 ldr      x9, [x8]                                 
+00947db0 29a142f9 ldr      x9, [x9, #0x540]                         
+00947db4 e00308aa mov      x0, x8                                   
+00947db8 20013fd6 blr      x9                                       
+00947dbc fd7b45a9 ldp      x29, x30, [sp, #0x50]                    
+00947dc0 ff830191 add      sp, sp, #0x60                            
+00947dc4 c0035fd6 ret                                               
+
+ClientEntry::startReload(WeaponStateObject*) VA=0x874b38 FILE=0x874b38 SIZE=1656
+00874b38 fc0f1ef8 str      x28, [sp, #-0x20]!                       
+00874b3c fd7b01a9 stp      x29, x30, [sp, #0x10]                    
+00874b40 fd430091 add      x29, sp, #0x10                           
+00874b44 ffc30fd1 sub      sp, sp, #0x3f0                           
+00874b48 e8030591 add      x8, sp, #0x140                           
+00874b4c 49d03bd5 mrs      x9, tpidr_el0                            
+00874b50 291540f9 ldr      x9, [x9, #0x28]                          
+00874b54 095501f9 str      x9, [x8, #0x2a8]                         
+00874b58 e06b00f9 str      x0, [sp, #0xd0]                          
+00874b5c e16700f9 str      x1, [sp, #0xc8]                          
+00874b60 e96b40f9 ldr      x9, [sp, #0xd0]                          
+00874b64 20010e91 add      x0, x9, #0x380                           
+00874b68 e07300f9 str      x0, [sp, #0xe0]                          
+00874b6c e07340f9 ldr      x0, [sp, #0xe0]                          
+00874b70 010440f9 ldr      x1, [x0, #8]                             
+00874b74 000040f9 ldr      x0, [x0]                                 
+00874b78 200000cb sub      x0, x1, x0                               
+00874b7c 010580d2 mov      x1, #0x28                                
+00874b80 000cc19a sdiv     x0, x0, x1                               
+00874b84 1f0400f1 cmp      x0, #1                                   
+00874b88 e85700f9 str      x8, [sp, #0xa8]                          
+00874b8c e95300f9 str      x9, [sp, #0xa0]                          
+00874b90 69000054 b.ls     #0x874b9c                                
+00874b94 ff7f0339 strb     wzr, [sp, #0xdf]                         
+00874b98 74010014 b        #0x875168                                
+00874b9c e85340f9 ldr      x8, [sp, #0xa0]                          
+00874ba0 09010e91 add      x9, x8, #0x380                           
+00874ba4 e97700f9 str      x9, [sp, #0xe8]                          
+00874ba8 e97740f9 ldr      x9, [sp, #0xe8]                          
+00874bac 2a0540f9 ldr      x10, [x9, #8]                            
+00874bb0 290140f9 ldr      x9, [x9]                                 
+00874bb4 490109cb sub      x9, x10, x9                              
+00874bb8 0a0580d2 mov      x10, #0x28                               
+00874bbc 290dca9a sdiv     x9, x9, x10                              
+00874bc0 3f0100f1 cmp      x9, #0                                   
+00874bc4 691f0054 b.ls     #0x874fb0                                
+00874bc8 e85340f9 ldr      x8, [sp, #0xa0]                          
+00874bcc 09010e91 add      x9, x8, #0x380                           
+00874bd0 e97f00f9 str      x9, [sp, #0xf8]                          
+00874bd4 ff7b00f9 str      xzr, [sp, #0xf0]                         
+00874bd8 e97f40f9 ldr      x9, [sp, #0xf8]                          
+00874bdc ea7b40f9 ldr      x10, [sp, #0xf0]                         
+00874be0 290140f9 ldr      x9, [x9]                                 
+00874be4 0b0580d2 mov      x11, #0x28                               
+00874be8 4a7d0b9b mul      x10, x10, x11                            
+00874bec 29010a8b add      x9, x9, x10                              
+00874bf0 ea6740f9 ldr      x10, [sp, #0xc8]                         
+00874bf4 4a210091 add      x10, x10, #8                             
+00874bf8 eb5740f9 ldr      x11, [sp, #0xa8]                         
+00874bfc 694900f9 str      x9, [x11, #0x90]                         
+00874c00 6a4500f9 str      x10, [x11, #0x88]                        
+00874c04 694940f9 ldr      x9, [x11, #0x90]                         
+00874c08 695100f9 str      x9, [x11, #0xa0]                         
+00874c0c 6a5140f9 ldr      x10, [x11, #0xa0]                        
+00874c10 6a5500f9 str      x10, [x11, #0xa8]                        
+00874c14 6c5540f9 ldr      x12, [x11, #0xa8]                        
+00874c18 6c5900f9 str      x12, [x11, #0xb0]                        
+00874c1c 6c5940f9 ldr      x12, [x11, #0xb0]                        
+00874c20 6c5d00f9 str      x12, [x11, #0xb8]                        
+00874c24 6c5d40f9 ldr      x12, [x11, #0xb8]                        
+00874c28 8d014039 ldrb     w13, [x12]                               
+00874c2c e94f00f9 str      x9, [sp, #0x98]                          
+00874c30 ea4b00f9 str      x10, [sp, #0x90]                         
+00874c34 8d010036 tbz      w13, #0, #0x874c64                       
+00874c38 e84b40f9 ldr      x8, [sp, #0x90]                          
+00874c3c e95740f9 ldr      x9, [sp, #0xa8]                          
+00874c40 286d00f9 str      x8, [x9, #0xd8]                          
+00874c44 2a6d40f9 ldr      x10, [x9, #0xd8]                         
+00874c48 2a7100f9 str      x10, [x9, #0xe0]                         
+00874c4c 2a7140f9 ldr      x10, [x9, #0xe0]                         
+00874c50 2a7500f9 str      x10, [x9, #0xe8]                         
+00874c54 2a7540f9 ldr      x10, [x9, #0xe8]                         
+00874c58 4a0540f9 ldr      x10, [x10, #8]                           
+00874c5c ea4700f9 str      x10, [sp, #0x88]                         
+00874c60 0e000014 b        #0x874c98                                
+00874c64 e84b40f9 ldr      x8, [sp, #0x90]                          
+00874c68 e95740f9 ldr      x9, [sp, #0xa8]                          
+00874c6c 286100f9 str      x8, [x9, #0xc0]                          
+00874c70 2a6140f9 ldr      x10, [x9, #0xc0]                         
+00874c74 2a6500f9 str      x10, [x9, #0xc8]                         
+00874c78 2a6540f9 ldr      x10, [x9, #0xc8]                         
+00874c7c 2a6900f9 str      x10, [x9, #0xd0]                         
+00874c80 2a6940f9 ldr      x10, [x9, #0xd0]                         
+00874c84 4b014039 ldrb     w11, [x10]                               
+00874c88 6b7d0113 asr      w11, w11, #1                             
+00874c8c ea030b2a mov      w10, w11                                 
+00874c90 4a7d4093 sxtw     x10, w10                                 
+00874c94 ea4700f9 str      x10, [sp, #0x88]                         
+00874c98 e84740f9 ldr      x8, [sp, #0x88]                          
+00874c9c e95740f9 ldr      x9, [sp, #0xa8]                          
+00874ca0 283901f9 str      x8, [x9, #0x270]                         
+00874ca4 284540f9 ldr      x8, [x9, #0x88]                          
+00874ca8 287900f9 str      x8, [x9, #0xf0]                          
+00874cac 287940f9 ldr      x8, [x9, #0xf0]                          
+00874cb0 287d00f9 str      x8, [x9, #0xf8]                          
+00874cb4 2a7d40f9 ldr      x10, [x9, #0xf8]                         
+00874cb8 2a8100f9 str      x10, [x9, #0x100]                        
+00874cbc 2a8140f9 ldr      x10, [x9, #0x100]                        
+00874cc0 2a8500f9 str      x10, [x9, #0x108]                        
+00874cc4 2a8540f9 ldr      x10, [x9, #0x108]                        
+00874cc8 4b014039 ldrb     w11, [x10]                               
+00874ccc e84300f9 str      x8, [sp, #0x80]                          
+00874cd0 8b010036 tbz      w11, #0, #0x874d00                       
+00874cd4 e84340f9 ldr      x8, [sp, #0x80]                          
+00874cd8 e95740f9 ldr      x9, [sp, #0xa8]                          
+00874cdc 289500f9 str      x8, [x9, #0x128]                         
+00874ce0 2a9540f9 ldr      x10, [x9, #0x128]                        
+00874ce4 2a9900f9 str      x10, [x9, #0x130]                        
+00874ce8 2a9940f9 ldr      x10, [x9, #0x130]                        
+00874cec 2a9d00f9 str      x10, [x9, #0x138]                        
+00874cf0 2a9d40f9 ldr      x10, [x9, #0x138]                        
+00874cf4 4a0540f9 ldr      x10, [x10, #8]                           
+00874cf8 ea3f00f9 str      x10, [sp, #0x78]                         
+00874cfc 0e000014 b        #0x874d34                                
+00874d00 e84340f9 ldr      x8, [sp, #0x80]                          
+00874d04 e95740f9 ldr      x9, [sp, #0xa8]                          
+00874d08 288900f9 str      x8, [x9, #0x110]                         
+00874d0c 2a8940f9 ldr      x10, [x9, #0x110]                        
+00874d10 2a8d00f9 str      x10, [x9, #0x118]                        
+00874d14 2a8d40f9 ldr      x10, [x9, #0x118]                        
+00874d18 2a9100f9 str      x10, [x9, #0x120]                        
+00874d1c 2a9140f9 ldr      x10, [x9, #0x120]                        
+00874d20 4b014039 ldrb     w11, [x10]                               
+00874d24 6b7d0113 asr      w11, w11, #1                             
+00874d28 ea030b2a mov      w10, w11                                 
+00874d2c 4a7d4093 sxtw     x10, w10                                 
+00874d30 ea3f00f9 str      x10, [sp, #0x78]                         
+00874d34 e83f40f9 ldr      x8, [sp, #0x78]                          
+00874d38 e95740f9 ldr      x9, [sp, #0xa8]                          
+00874d3c 283501f9 str      x8, [x9, #0x268]                         
+00874d40 e84f40f9 ldr      x8, [sp, #0x98]                          
+00874d44 28a100f9 str      x8, [x9, #0x140]                         
+00874d48 2aa140f9 ldr      x10, [x9, #0x140]                        
+00874d4c 2aa500f9 str      x10, [x9, #0x148]                        
+00874d50 2aa540f9 ldr      x10, [x9, #0x148]                        
+00874d54 2aa900f9 str      x10, [x9, #0x150]                        
+00874d58 2ba940f9 ldr      x11, [x9, #0x150]                        
+00874d5c 2bad00f9 str      x11, [x9, #0x158]                        
+00874d60 2bad40f9 ldr      x11, [x9, #0x158]                        
+00874d64 2bb100f9 str      x11, [x9, #0x160]                        
+00874d68 2bb140f9 ldr      x11, [x9, #0x160]                        
+00874d6c 6c014039 ldrb     w12, [x11]                               
+00874d70 ea3b00f9 str      x10, [sp, #0x70]                         
+00874d74 8c010036 tbz      w12, #0, #0x874da4                       
+00874d78 e83b40f9 ldr      x8, [sp, #0x70]                          
+00874d7c e95740f9 ldr      x9, [sp, #0xa8]                          
+00874d80 28c900f9 str      x8, [x9, #0x190]                         
+00874d84 2ac940f9 ldr      x10, [x9, #0x190]                        
+00874d88 2acd00f9 str      x10, [x9, #0x198]                        
+00874d8c 2acd40f9 ldr      x10, [x9, #0x198]                        
+00874d90 2ad100f9 str      x10, [x9, #0x1a0]                        
+00874d94 2ad140f9 ldr      x10, [x9, #0x1a0]                        
+00874d98 4a0940f9 ldr      x10, [x10, #0x10]                        
+00874d9c ea3700f9 str      x10, [sp, #0x68]                         
+00874da0 0f000014 b        #0x874ddc                                
+00874da4 e83b40f9 ldr      x8, [sp, #0x70]                          
+00874da8 e95740f9 ldr      x9, [sp, #0xa8]                          
+00874dac 28b500f9 str      x8, [x9, #0x168]                         
+00874db0 2ab540f9 ldr      x10, [x9, #0x168]                        
+00874db4 2ab900f9 str      x10, [x9, #0x170]                        
+00874db8 2ab940f9 ldr      x10, [x9, #0x170]                        
+00874dbc 2abd00f9 str      x10, [x9, #0x178]                        
+00874dc0 2abd40f9 ldr      x10, [x9, #0x178]                        
+00874dc4 4a050091 add      x10, x10, #1                             
+00874dc8 2ac100f9 str      x10, [x9, #0x180]                        
+00874dcc 2ac140f9 ldr      x10, [x9, #0x180]                        
+00874dd0 2ac500f9 str      x10, [x9, #0x188]                        
+00874dd4 2ac540f9 ldr      x10, [x9, #0x188]                        
+00874dd8 ea3700f9 str      x10, [sp, #0x68]                         
+00874ddc e83740f9 ldr      x8, [sp, #0x68]                          
+00874de0 e95740f9 ldr      x9, [sp, #0xa8]                          
+00874de4 28d500f9 str      x8, [x9, #0x1a8]                         
+00874de8 20d540f9 ldr      x0, [x9, #0x1a8]                         
+00874dec 284540f9 ldr      x8, [x9, #0x88]                          
+00874df0 28f900f9 str      x8, [x9, #0x1f0]                         
+00874df4 28f940f9 ldr      x8, [x9, #0x1f0]                         
+00874df8 28fd00f9 str      x8, [x9, #0x1f8]                         
+00874dfc 28fd40f9 ldr      x8, [x9, #0x1f8]                         
+00874e00 280101f9 str      x8, [x9, #0x200]                         
+00874e04 2a0141f9 ldr      x10, [x9, #0x200]                        
+00874e08 2a0501f9 str      x10, [x9, #0x208]                        
+00874e0c 2a0541f9 ldr      x10, [x9, #0x208]                        
+00874e10 2a0901f9 str      x10, [x9, #0x210]                        
+00874e14 2a0941f9 ldr      x10, [x9, #0x210]                        
+00874e18 4b014039 ldrb     w11, [x10]                               
+00874e1c e03300f9 str      x0, [sp, #0x60]                          
+00874e20 e82f00f9 str      x8, [sp, #0x58]                          
+00874e24 8b010036 tbz      w11, #0, #0x874e54                       
+00874e28 e82f40f9 ldr      x8, [sp, #0x58]                          
+00874e2c e95740f9 ldr      x9, [sp, #0xa8]                          
+00874e30 282101f9 str      x8, [x9, #0x240]                         
+00874e34 2a2141f9 ldr      x10, [x9, #0x240]                        
+00874e38 2a2501f9 str      x10, [x9, #0x248]                        
+00874e3c 2a2541f9 ldr      x10, [x9, #0x248]                        
+00874e40 2a2901f9 str      x10, [x9, #0x250]                        
+00874e44 2a2941f9 ldr      x10, [x9, #0x250]                        
+00874e48 4a0940f9 ldr      x10, [x10, #0x10]                        
+00874e4c ea2b00f9 str      x10, [sp, #0x50]                         
+00874e50 0f000014 b        #0x874e8c                                
+00874e54 e82f40f9 ldr      x8, [sp, #0x58]                          
+00874e58 e95740f9 ldr      x9, [sp, #0xa8]                          
+00874e5c 280d01f9 str      x8, [x9, #0x218]                         
+00874e60 2a0d41f9 ldr      x10, [x9, #0x218]                        
+00874e64 2a1101f9 str      x10, [x9, #0x220]                        
+00874e68 2a1141f9 ldr      x10, [x9, #0x220]                        
+00874e6c 2a1501f9 str      x10, [x9, #0x228]                        
+00874e70 2a1541f9 ldr      x10, [x9, #0x228]                        
+00874e74 4a050091 add      x10, x10, #1                             
+00874e78 2a1901f9 str      x10, [x9, #0x230]                        
+00874e7c 2a1941f9 ldr      x10, [x9, #0x230]                        
+00874e80 2a1d01f9 str      x10, [x9, #0x238]                        
+00874e84 2a1d41f9 ldr      x10, [x9, #0x238]                        
+00874e88 ea2b00f9 str      x10, [sp, #0x50]                         
+00874e8c e82b40f9 ldr      x8, [sp, #0x50]                          
+00874e90 a92301d1 sub      x9, x29, #0x48                           
+00874e94 aa6301d1 sub      x10, x29, #0x58                          
+00874e98 ab4301d1 sub      x11, x29, #0x50                          
+00874e9c ec5740f9 ldr      x12, [sp, #0xa8]                         
+00874ea0 882d01f9 str      x8, [x12, #0x258]                        
+00874ea4 812d41f9 ldr      x1, [x12, #0x258]                        
+00874ea8 8be100f9 str      x11, [x12, #0x1c0]                       
+00874eac 8add00f9 str      x10, [x12, #0x1b8]                       
+00874eb0 88e140f9 ldr      x8, [x12, #0x1c0]                        
+00874eb4 8add40f9 ldr      x10, [x12, #0x1b8]                       
+00874eb8 edc34b39 ldrb     w13, [sp, #0x2f0]                        
+00874ebc ad831b38 sturb    w13, [x29, #-0x48]                       
+00874ec0 88e900f9 str      x8, [x12, #0x1d0]                        
+00874ec4 8ae500f9 str      x10, [x12, #0x1c8]                       
+00874ec8 88e540f9 ldr      x8, [x12, #0x1c8]                        
+00874ecc 8ae940f9 ldr      x10, [x12, #0x1d0]                       
+00874ed0 89f500f9 str      x9, [x12, #0x1e8]                        
+00874ed4 88f100f9 str      x8, [x12, #0x1e0]                        
+00874ed8 8aed00f9 str      x10, [x12, #0x1d8]                       
+00874edc 88f140f9 ldr      x8, [x12, #0x1e0]                        
+00874ee0 080140f9 ldr      x8, [x8]                                 
+00874ee4 89ed40f9 ldr      x9, [x12, #0x1d8]                        
+00874ee8 290140f9 ldr      x9, [x9]                                 
+00874eec 1f0109eb cmp      x8, x9                                   
+00874ef0 e12700f9 str      x1, [sp, #0x48]                          
+00874ef4 a2000054 b.hs     #0x874f08                                
+00874ef8 e85740f9 ldr      x8, [sp, #0xa8]                          
+00874efc 09e540f9 ldr      x9, [x8, #0x1c8]                         
+00874f00 e92300f9 str      x9, [sp, #0x40]                          
+00874f04 04000014 b        #0x874f14                                
+00874f08 e85740f9 ldr      x8, [sp, #0xa8]                          
+00874f0c 09e940f9 ldr      x9, [x8, #0x1d0]                         
+00874f10 e92300f9 str      x9, [sp, #0x40]                          
+00874f14 e82340f9 ldr      x8, [sp, #0x40]                          
+00874f18 020140f9 ldr      x2, [x8]                                 
+00874f1c e03340f9 ldr      x0, [sp, #0x60]                          
+00874f20 e12740f9 ldr      x1, [sp, #0x48]                          
+00874f24 4f3af197 bl       #0x4c3860                                std::__ndk1::char_traits<char>::compare(char const*, char const*, unsigned long)
+00874f28 e03f00b9 str      w0, [sp, #0x3c]                          
+00874f2c 01000014 b        #0x874f30                                
+00874f30 e83f40b9 ldr      w8, [sp, #0x3c]                          
+00874f34 e8c701b9 str      w8, [sp, #0x1c4]                         
+00874f38 e9c741b9 ldr      w9, [sp, #0x1c4]                         
+00874f3c 89000034 cbz      w9, #0x874f4c                            
+00874f40 e8c741b9 ldr      w8, [sp, #0x1c4]                         
+00874f44 e8df01b9 str      w8, [sp, #0x1dc]                         
+00874f48 16000014 b        #0x874fa0                                
+00874f4c e85740f9 ldr      x8, [sp, #0xa8]                          
+00874f50 093941f9 ldr      x9, [x8, #0x270]                         
+00874f54 0a3541f9 ldr      x10, [x8, #0x268]                        
+00874f58 3f010aeb cmp      x9, x10                                  
+00874f5c 82000054 b.hs     #0x874f6c                                
+00874f60 08008012 mov      w8, #-1                                  
+00874f64 e8df01b9 str      w8, [sp, #0x1dc]                         
+00874f68 0e000014 b        #0x874fa0                                
+00874f6c e85740f9 ldr      x8, [sp, #0xa8]                          
+00874f70 093941f9 ldr      x9, [x8, #0x270]                         
+00874f74 0a3541f9 ldr      x10, [x8, #0x268]                        
+00874f78 3f010aeb cmp      x9, x10                                  
+00874f7c 89000054 b.ls     #0x874f8c                                
+00874f80 e8030032 mov      w8, #1                                   
+00874f84 e8df01b9 str      w8, [sp, #0x1dc]                         
+00874f88 06000014 b        #0x874fa0                                
+00874f8c ffdf01b9 str      wzr, [sp, #0x1dc]                        
+00874f90 04000014 b        #0x874fa0                                
+00874f94 e203012a mov      w2, w1                                   
+00874f98 e23b00b9 str      w2, [sp, #0x38]                          
+00874f9c 3564f397 bl       #0x54e070                                
+00874fa0 e8df41b9 ldr      w8, [sp, #0x1dc]                         
+00874fa4 68000035 cbnz     w8, #0x874fb0                            
+00874fa8 ff7f0339 strb     wzr, [sp, #0xdf]                         
+00874fac 6f000014 b        #0x875168                                
+00874fb0 a80301d1 sub      x8, x29, #0x40                           
+00874fb4 e00308aa mov      x0, x8                                   
+00874fb8 e81b00f9 str      x8, [sp, #0x30]                          
+00874fbc 8151f197 bl       #0x4c95c0                                PlayerReloadEvent::PlayerReloadEvent()
+00874fc0 e86740f9 ldr      x8, [sp, #0xc8]                          
+00874fc4 01210091 add      x1, x8, #8                               
+00874fc8 e01b40f9 ldr      x0, [sp, #0x30]                          
+00874fcc b518f297 bl       #0x4fb2a0                                std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::operator=(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)
+00874fd0 e01700f9 str      x0, [sp, #0x28]                          
+00874fd4 01000014 b        #0x874fd8                                
+00874fd8 23e6fe97 bl       #0x82e864                                
+00874fdc e01300fd str      d0, [sp, #0x20]                          
+00874fe0 01000014 b        #0x874fe4                                
+00874fe4 e01340fd ldr      d0, [sp, #0x20]                          
+00874fe8 e85740f9 ldr      x8, [sp, #0xa8]                          
+00874fec 004d01fd str      d0, [x8, #0x298]                         
+00874ff0 54b7f197 bl       #0x4e2d40                                WeaponStructures::getInstance()
+00874ff4 e00f00f9 str      x0, [sp, #0x18]                          
+00874ff8 01000014 b        #0x874ffc                                
+00874ffc e86740f9 ldr      x8, [sp, #0xc8]                          
+00875000 010140b9 ldr      w1, [x8]                                 
+00875004 e85340f9 ldr      x8, [sp, #0xa0]                          
+00875008 008942bd ldr      s0, [x8, #0x288]                         
+0087500c e00f40f9 ldr      x0, [sp, #0x18]                          
+00875010 607ff197 bl       #0x4d4d90                                WeaponStructures::getReloadTime(ItemType, float)
+00875014 e01700bd str      s0, [sp, #0x14]                          
+00875018 01000014 b        #0x87501c                                
+0087501c a80301d1 sub      x8, x29, #0x40                           
+00875020 e01740bd ldr      s0, [sp, #0x14]                          
+00875024 a0031ebc stur     s0, [x29, #-0x20]                        
+00875028 e95340f9 ldr      x9, [sp, #0xa0]                          
+0087502c 2a010e91 add      x10, x9, #0x380                          
+00875030 ea8700f9 str      x10, [sp, #0x108]                        
+00875034 e88300f9 str      x8, [sp, #0x100]                         
+00875038 e88740f9 ldr      x8, [sp, #0x108]                         
+0087503c 0a0540f9 ldr      x10, [x8, #8]                            
+00875040 eb0308aa mov      x11, x8                                  
+00875044 eb8b00f9 str      x11, [sp, #0x110]                        
+00875048 eb8b40f9 ldr      x11, [sp, #0x110]                        
+0087504c 6b410091 add      x11, x11, #0x10                          
+00875050 eb8f00f9 str      x11, [sp, #0x118]                        
+00875054 eb8f40f9 ldr      x11, [sp, #0x118]                        
+00875058 eb9300f9 str      x11, [sp, #0x120]                        
+0087505c eb9340f9 ldr      x11, [sp, #0x120]                        
+00875060 6b0140f9 ldr      x11, [x11]                               
+00875064 5f010beb cmp      x10, x11                                 
+00875068 e80700f9 str      x8, [sp, #8]                             
+0087506c 80050054 b.eq     #0x87511c                                
+00875070 e8030032 mov      w8, #1                                   
+00875074 e203082a mov      w2, w8                                   
+00875078 a08301d1 sub      x0, x29, #0x60                           
+0087507c e10740f9 ldr      x1, [sp, #8]                             
+00875080 bc5ef197 bl       #0x4ccb70                                std::__ndk1::vector<PlayerReloadEvent, std::__ndk1::allocator<PlayerReloadEvent> >::__RAII_IncreaseAnnotator::__RAII_IncreaseAnnotator(std::__ndk1::vector<PlayerReloadEvent, std::__ndk1::allocator<PlayerReloadEvent> > const&, unsigned long)
+00875084 e00740f9 ldr      x0, [sp, #8]                             
+00875088 e09700f9 str      x0, [sp, #0x128]                         
+0087508c 01400091 add      x1, x0, #0x10                            
+00875090 e19b00f9 str      x1, [sp, #0x130]                         
+00875094 e19f00f9 str      x1, [sp, #0x138]                         
+00875098 020440f9 ldr      x2, [x0, #8]                             
+0087509c fe5740f9 ldr      x30, [sp, #0xa8]                         
+008750a0 c20300f9 str      x2, [x30]                                
+008750a4 e98340f9 ldr      x9, [sp, #0x100]                         
+008750a8 c11700f9 str      x1, [x30, #0x28]                         
+008750ac c21300f9 str      x2, [x30, #0x20]                         
+008750b0 c90f00f9 str      x9, [x30, #0x18]                         
+008750b4 c11740f9 ldr      x1, [x30, #0x28]                         
+008750b8 c21340f9 ldr      x2, [x30, #0x20]                         
+008750bc c91b00f9 str      x9, [x30, #0x30]                         
+008750c0 e8434539 ldrb     w8, [sp, #0x150]                         
+008750c4 e8430639 strb     w8, [sp, #0x190]                         
+008750c8 c12700f9 str      x1, [x30, #0x48]                         
+008750cc c22300f9 str      x2, [x30, #0x40]                         
+008750d0 c91f00f9 str      x9, [x30, #0x38]                         
+008750d4 c12740f9 ldr      x1, [x30, #0x48]                         
+008750d8 c22340f9 ldr      x2, [x30, #0x40]                         
+008750dc c92f00f9 str      x9, [x30, #0x58]                         
+008750e0 c13b00f9 str      x1, [x30, #0x70]                         
+008750e4 c23700f9 str      x2, [x30, #0x68]                         
+008750e8 c93300f9 str      x9, [x30, #0x60]                         
+008750ec c03740f9 ldr      x0, [x30, #0x68]                         
+008750f0 c93f00f9 str      x9, [x30, #0x78]                         
+008750f4 e10309aa mov      x1, x9                                   
+008750f8 0a89f197 bl       #0x4d7520                                PlayerReloadEvent::PlayerReloadEvent(PlayerReloadEvent const&)
+008750fc 01000014 b        #0x875100                                
+00875100 a08301d1 sub      x0, x29, #0x60                           
+00875104 3782f197 bl       #0x4d59e0                                std::__ndk1::vector<PlayerReloadEvent, std::__ndk1::allocator<PlayerReloadEvent> >::__RAII_IncreaseAnnotator::__done()
+00875108 e00740f9 ldr      x0, [sp, #8]                             
+0087510c 1e0440f9 ldr      x30, [x0, #8]                            
+00875110 dea30091 add      x30, x30, #0x28                          
+00875114 1e0400f9 str      x30, [x0, #8]                            
+00875118 06000014 b        #0x875130                                
+0087511c e18340f9 ldr      x1, [sp, #0x100]                         
+00875120 e00740f9 ldr      x0, [sp, #8]                             
+00875124 67f8f197 bl       #0x4f32c0                                void std::__ndk1::vector<PlayerReloadEvent, std::__ndk1::allocator<PlayerReloadEvent> >::__push_back_slow_path<PlayerReloadEvent const&>(PlayerReloadEvent const&)
+00875128 01000014 b        #0x87512c                                
+0087512c 01000014 b        #0x875130                                
+00875130 01000014 b        #0x875134                                
+00875134 a00301d1 sub      x0, x29, #0x40                           
+00875138 e8030032 mov      w8, #1                                   
+0087513c 08010012 and      w8, w8, #1                               
+00875140 e87f0339 strb     w8, [sp, #0xdf]                          
+00875144 df0ef297 bl       #0x4f8cc0                                PlayerReloadEvent::~PlayerReloadEvent()
+00875148 08000014 b        #0x875168                                
+0087514c a80301d1 sub      x8, x29, #0x40                           
+00875150 e903012a mov      w9, w1                                   
+00875154 e06300f9 str      x0, [sp, #0xc0]                          
+00875158 e9bf00b9 str      w9, [sp, #0xbc]                          
+0087515c e00308aa mov      x0, x8                                   
+00875160 d80ef297 bl       #0x4f8cc0                                PlayerReloadEvent::~PlayerReloadEvent()
+00875164 10000014 b        #0x8751a4                                
+00875168 e87f4339 ldrb     w8, [sp, #0xdf]                          
+0087516c 08010012 and      w8, w8, #1                               
+00875170 49d03bd5 mrs      x9, tpidr_el0                            
+00875174 291540f9 ldr      x9, [x9, #0x28]                          
+00875178 ea5740f9 ldr      x10, [sp, #0xa8]                         
+0087517c 4b5541f9 ldr      x11, [x10, #0x2a8]                       
+00875180 3f010beb cmp      x9, x11                                  
+00875184 e80700b9 str      w8, [sp, #4]                             
+00875188 21010054 b.ne     #0x8751ac                                
+0087518c e80740b9 ldr      w8, [sp, #4]                             
+00875190 00010012 and      w0, w8, #1                               
+00875194 ffc30f91 add      sp, sp, #0x3f0                           
+00875198 fd7b41a9 ldp      x29, x30, [sp, #0x10]                    
+0087519c fc0742f8 ldr      x28, [sp], #0x20                         
+008751a0 c0035fd6 ret                                               
+008751a4 e06340f9 ldr      x0, [sp, #0xc0]                          
+008751a8 4637f197 bl       #0x4c2ec0                                _Unwind_Resume
+008751ac 1197f197 bl       #0x4dadf0                                __stack_chk_fail
+
+Weapon::triggerPull(float) VA=0x947790 FILE=0x947790 SIZE=20
+00947790 ff4300d1 sub      sp, sp, #0x10                            
+00947794 e00700f9 str      x0, [sp, #8]                             
+00947798 e00700bd str      s0, [sp, #4]                             
+0094779c ff430091 add      sp, sp, #0x10                            
+009477a0 c0035fd6 ret                                               
+
+SoldierLocalController::weaponOnReload(Item*) VA=0x8ee95c FILE=0x8ee95c SIZE=116
+008ee95c ffc300d1 sub      sp, sp, #0x30                            
+008ee960 fd7b02a9 stp      x29, x30, [sp, #0x20]                    
+008ee964 fd830091 add      x29, sp, #0x20                           
+008ee968 a0831ff8 stur     x0, [x29, #-8]                           
+008ee96c e10b00f9 str      x1, [sp, #0x10]                          
+008ee970 e00b40f9 ldr      x0, [sp, #0x10]                          
+008ee974 400000b5 cbnz     x0, #0x8ee97c                            
+008ee978 13000014 b        #0x8ee9c4                                
+008ee97c e8031f2a mov      w8, wzr                                  
+008ee980 e90b40f9 ldr      x9, [sp, #0x10]                          
+008ee984 e90700f9 str      x9, [sp, #8]                             
+008ee988 e003082a mov      w0, w8                                   
+008ee98c 754def97 bl       #0x4c1f60                                cocos2d::CCInteger::create(int)
+008ee990 e10740f9 ldr      x1, [sp, #8]                             
+008ee994 e9031faa mov      x9, xzr                                  
+008ee998 e20309aa mov      x2, x9                                   
+008ee99c fdd8ef97 bl       #0x4e4d90                                cocos2d::CCArray::create(cocos2d::CCObject*, ...)
+008ee9a0 e00300f9 str      x0, [sp]                                 
+008ee9a4 e90740f9 ldr      x9, [sp, #8]                             
+008ee9a8 e90000b4 cbz      x9, #0x8ee9c4                            
+008ee9ac 0df0ef97 bl       #0x4ea9e0                                cocos2d::CCNotificationCenter::sharedNotificationCenter()
+008ee9b0 de3c00d0 adrp     x30, #0x1088000                          
+008ee9b4 c1671691 add      x1, x30, #0x599                          
+008ee9b8 fe0340f9 ldr      x30, [sp]                                
+008ee9bc e2031eaa mov      x2, x30                                  
+008ee9c0 6484ef97 bl       #0x4cfb50                                cocos2d::CCNotificationCenter::postNotification(char const*, cocos2d::CCObject*)
+008ee9c4 fd7b42a9 ldp      x29, x30, [sp, #0x20]                    
+008ee9c8 ffc30091 add      sp, sp, #0x30                            
+008ee9cc c0035fd6 ret                                               
+
+Weapon::getClipCapacity() VA=0x94860c FILE=0x94860c SIZE=88
+0094860c ffc300d1 sub      sp, sp, #0x30                            
+00948610 fd7b02a9 stp      x29, x30, [sp, #0x20]                    
+00948614 fd830091 add      x29, sp, #0x20                           
+00948618 a0831ff8 stur     x0, [x29, #-8]                           
+0094861c a0835ff8 ldur     x0, [x29, #-8]                           
+00948620 e00b00f9 str      x0, [sp, #0x10]                          
+00948624 c769ee97 bl       #0x4e2d40                                WeaponStructures::getInstance()
+00948628 fe0b40f9 ldr      x30, [sp, #0x10]                         
+0094862c e00700f9 str      x0, [sp, #8]                             
+00948630 e0031eaa mov      x0, x30                                  
+00948634 5fd3ee97 bl       #0x4fd3b0                                Weapon::getAmmoType()
+00948638 fe0b40f9 ldr      x30, [sp, #0x10]                         
+0094863c c07b42bd ldr      s0, [x30, #0x278]                        
+00948640 e10740f9 ldr      x1, [sp, #8]                             
+00948644 e00700b9 str      w0, [sp, #4]                             
+00948648 e00301aa mov      x0, x1                                   
+0094864c e10740b9 ldr      w1, [sp, #4]                             
+00948650 d09cee97 bl       #0x4ef990                                WeaponStructures::getMagCap(ItemType, float)
+00948654 003c0013 sxth     w0, w0                                   
+00948658 fd7b42a9 ldp      x29, x30, [sp, #0x20]                    
+0094865c ffc30091 add      sp, sp, #0x30                            
+00948660 c0035fd6 ret                                               
+
+HUD::onPressReloadButton(cocos2d::CCObject*) VA=0x66aacc FILE=0x66aacc SIZE=48
+0066aacc ff8300d1 sub      sp, sp, #0x20                            
+0066aad0 fd7b01a9 stp      x29, x30, [sp, #0x10]                    
+0066aad4 fd430091 add      x29, sp, #0x10                           
+0066aad8 e8031faa mov      x8, xzr                                  
+0066aadc e00700f9 str      x0, [sp, #8]                             
+0066aae0 e10300f9 str      x1, [sp]                                 
+0066aae4 e00740f9 ldr      x0, [sp, #8]                             
+0066aae8 e10308aa mov      x1, x8                                   
+0066aaec fd65f997 bl       #0x4c42e0                                HUD::onReload(cocos2d::CCObject*)
+0066aaf0 fd7b41a9 ldp      x29, x30, [sp, #0x10]                    
+0066aaf4 ff830091 add      sp, sp, #0x20                            
+0066aaf8 c0035fd6 ret                                               
+
+Weapon::startReloadWeapon() VA=0x947ee8 FILE=0x947ee8 SIZE=96
+00947ee8 ff8300d1 sub      sp, sp, #0x20                            
+00947eec fd7b01a9 stp      x29, x30, [sp, #0x10]                    
+00947ef0 fd430091 add      x29, sp, #0x10                           
+00947ef4 e00700f9 str      x0, [sp, #8]                             
+00947ef8 e00740f9 ldr      x0, [sp, #8]                             
+00947efc 08144a39 ldrb     w8, [x0, #0x285]                         
+00947f00 e00300f9 str      x0, [sp]                                 
+00947f04 c8010037 tbnz     w8, #0, #0x947f3c                        
+00947f08 e8030032 mov      w8, #1                                   
+00947f0c e90340f9 ldr      x9, [sp]                                 
+00947f10 28150a39 strb     w8, [x9, #0x285]                         
+00947f14 3fbd03b9 str      wzr, [x9, #0x3bc]                        
+00947f18 2a6541f9 ldr      x10, [x9, #0x2c8]                        
+00947f1c 0a0100b4 cbz      x10, #0x947f3c                           
+00947f20 e80340f9 ldr      x8, [sp]                                 
+00947f24 096541f9 ldr      x9, [x8, #0x2c8]                         
+00947f28 2a0140f9 ldr      x10, [x9]                                
+00947f2c 4a0d40f9 ldr      x10, [x10, #0x18]                        
+00947f30 e00309aa mov      x0, x9                                   
+00947f34 e10308aa mov      x1, x8                                   
+00947f38 40013fd6 blr      x10                                      
+00947f3c fd7b41a9 ldp      x29, x30, [sp, #0x10]                    
+00947f40 ff830091 add      sp, sp, #0x20                            
+00947f44 c0035fd6 ret                                               
+
+SoldierLocalController::weaponDidFire(Item*) VA=0x8ee648 FILE=0x8ee648 SIZE=700
+008ee648 ffc304d1 sub      sp, sp, #0x130                           
+008ee64c fc8b00f9 str      x28, [sp, #0x110]                        
+008ee650 fd7b12a9 stp      x29, x30, [sp, #0x120]                   
+008ee654 fd830491 add      x29, sp, #0x120                          
+008ee658 a84301d1 sub      x8, x29, #0x50                           
+008ee65c 49d03bd5 mrs      x9, tpidr_el0                            
+008ee660 291540f9 ldr      x9, [x9, #0x28]                          
+008ee664 091d00f9 str      x9, [x8, #0x38]                          
+008ee668 e04700f9 str      x0, [sp, #0x88]                          
+008ee66c e14300f9 str      x1, [sp, #0x80]                          
+008ee670 e94740f9 ldr      x9, [sp, #0x88]                          
+008ee674 e04340f9 ldr      x0, [sp, #0x80]                          
+008ee678 e82300f9 str      x8, [sp, #0x40]                          
+008ee67c e91f00f9 str      x9, [sp, #0x38]                          
+008ee680 400000b5 cbnz     x0, #0x8ee688                            
+008ee684 8d000014 b        #0x8ee8b8                                
+008ee688 e84340f9 ldr      x8, [sp, #0x80]                          
+008ee68c e83f00f9 str      x8, [sp, #0x78]                          
+008ee690 e81f40f9 ldr      x8, [sp, #0x38]                          
+008ee694 090140f9 ldr      x9, [x8]                                 
+008ee698 294142f9 ldr      x9, [x9, #0x480]                         
+008ee69c e00308aa mov      x0, x8                                   
+008ee6a0 20013fd6 blr      x9                                       
+008ee6a4 e07700bd str      s0, [sp, #0x74]                          
+008ee6a8 e83f40f9 ldr      x8, [sp, #0x78]                          
+008ee6ac 00f942bd ldr      s0, [x8, #0x2f8]                         
+008ee6b0 0820201e fcmp     s0, #0.0                                 
+008ee6b4 2d050054 b.le     #0x8ee758                                
+008ee6b8 e07740bd ldr      s0, [sp, #0x74]                          
+008ee6bc a83c00d0 adrp     x8, #0x1084000                           
+008ee6c0 01194abd ldr      s1, [x8, #0xa18]                         
+008ee6c4 0008211e fmul     s0, s0, s1                               
+008ee6c8 e07300bd str      s0, [sp, #0x70]                          
+008ee6cc e09300bd str      s0, [sp, #0x90]                          
+008ee6d0 c058ef97 bl       #0x4c49d0                                cosf
+008ee6d4 00c0221e fcvt     d0, s0                                   
+008ee6d8 e17340bd ldr      s1, [sp, #0x70]                          
+008ee6dc a14317bc stur     s1, [x29, #-0x8c]                        
+008ee6e0 e01b00fd str      d0, [sp, #0x30]                          
+008ee6e4 201ca14e mov      v0.16b, v1.16b                           
+008ee6e8 8e79ef97 bl       #0x4ccd20                                sinf
+008ee6ec 01c0221e fcvt     d1, s0                                   
+008ee6f0 e01b40fd ldr      d0, [sp, #0x30]                          
+008ee6f4 3ad7ff97 bl       #0x8e43dc                                
+008ee6f8 e03300fd str      d0, [sp, #0x60]                          
+008ee6fc e13700fd str      d1, [sp, #0x68]                          
+008ee700 e83f40f9 ldr      x8, [sp, #0x78]                          
+008ee704 02f942bd ldr      s2, [x8, #0x2f8]                         
+008ee708 4240211e fneg     s2, s2                                   
+008ee70c 42c0221e fcvt     d2, s2                                   
+008ee710 e03340fd ldr      d0, [sp, #0x60]                          
+008ee714 74dfff97 bl       #0x8e64e4                                
+008ee718 e82340f9 ldr      x8, [sp, #0x40]                          
+008ee71c 001500fd str      d0, [x8, #0x28]                          
+008ee720 011900fd str      d1, [x8, #0x30]                          
+008ee724 fe1f40f9 ldr      x30, [sp, #0x38]                         
+008ee728 c9d740f9 ldr      x9, [x30, #0x1a8]                        
+008ee72c 0381c23c ldur     q3, [x8, #0x28]                          
+008ee730 0305803d str      q3, [x8, #0x10]                          
+008ee734 8a3c0090 adrp     x10, #0x107e000                          
+008ee738 43ddc23d ldr      q3, [x10, #0xb70]                        
+008ee73c a3039b3c stur     q3, [x29, #-0x50]                        
+008ee740 010d40fd ldr      d1, [x8, #0x18]                          
+008ee744 000940fd ldr      d0, [x8, #0x10]                          
+008ee748 030540fd ldr      d3, [x8, #8]                             
+008ee74c a2035bfc ldur     d2, [x29, #-0x50]                        
+008ee750 e00309aa mov      x0, x9                                   
+008ee754 ebdfff97 bl       #0x8e6700                                
+008ee758 e81f40f9 ldr      x8, [sp, #0x38]                          
+008ee75c e91f40f9 ldr      x9, [sp, #0x38]                          
+008ee760 2a0140f9 ldr      x10, [x9]                                
+008ee764 4a0142f9 ldr      x10, [x10, #0x400]                       
+008ee768 e00308aa mov      x0, x8                                   
+008ee76c 40013fd6 blr      x10                                      
+008ee770 800300b4 cbz      x0, #0x8ee7e0                            
+008ee774 e83f40f9 ldr      x8, [sp, #0x78]                          
+008ee778 e91f40f9 ldr      x9, [sp, #0x38]                          
+008ee77c ea1f40f9 ldr      x10, [sp, #0x38]                         
+008ee780 4b0140f9 ldr      x11, [x10]                               
+008ee784 6b0142f9 ldr      x11, [x11, #0x400]                       
+008ee788 e00309aa mov      x0, x9                                   
+008ee78c e81700f9 str      x8, [sp, #0x28]                          
+008ee790 60013fd6 blr      x11                                      
+008ee794 e81740f9 ldr      x8, [sp, #0x28]                          
+008ee798 1f0100eb cmp      x8, x0                                   
+008ee79c 21020054 b.ne     #0x8ee7e0                                
+008ee7a0 e81f40f9 ldr      x8, [sp, #0x38]                          
+008ee7a4 090140f9 ldr      x9, [x8]                                 
+008ee7a8 29dd41f9 ldr      x9, [x9, #0x3b8]                         
+008ee7ac e00308aa mov      x0, x8                                   
+008ee7b0 20013fd6 blr      x9                                       
+008ee7b4 e83f40f9 ldr      x8, [sp, #0x78]                          
+008ee7b8 007542bd ldr      s0, [x8, #0x274]                         
+008ee7bc 00c0221e fcvt     d0, s0                                   
+008ee7c0 2cf3ef97 bl       #0x4eb470                                SoldierView::setDualRecoilRotation(double)
+008ee7c4 e81f40f9 ldr      x8, [sp, #0x38]                          
+008ee7c8 090140f9 ldr      x9, [x8]                                 
+008ee7cc 298d42f9 ldr      x9, [x9, #0x518]                         
+008ee7d0 e00308aa mov      x0, x8                                   
+008ee7d4 20013fd6 blr      x9                                       
+008ee7d8 e07700bd str      s0, [sp, #0x74]                          
+008ee7dc 10000014 b        #0x8ee81c                                
+008ee7e0 e81f40f9 ldr      x8, [sp, #0x38]                          
+008ee7e4 090140f9 ldr      x9, [x8]                                 
+008ee7e8 29dd41f9 ldr      x9, [x9, #0x3b8]                         
+008ee7ec e00308aa mov      x0, x8                                   
+008ee7f0 20013fd6 blr      x9                                       
+008ee7f4 e83f40f9 ldr      x8, [sp, #0x78]                          
+008ee7f8 007542bd ldr      s0, [x8, #0x274]                         
+008ee7fc 00c0221e fcvt     d0, s0                                   
+008ee800 d4fcef97 bl       #0x4edb50                                SoldierView::setPrimaryRecoilRotation(double)
+008ee804 e81f40f9 ldr      x8, [sp, #0x38]                          
+008ee808 090140f9 ldr      x9, [x8]                                 
+008ee80c 294142f9 ldr      x9, [x9, #0x480]                         
+008ee810 e00308aa mov      x0, x8                                   
+008ee814 20013fd6 blr      x9                                       
+008ee818 e07700bd str      s0, [sp, #0x74]                          
+008ee81c e83f40f9 ldr      x8, [sp, #0x78]                          
+008ee820 090140f9 ldr      x9, [x8]                                 
+008ee824 292143f9 ldr      x9, [x9, #0x640]                         
+008ee828 e07740bd ldr      s0, [sp, #0x74]                          
+008ee82c ea1f40f9 ldr      x10, [sp, #0x38]                         
+008ee830 4bd540f9 ldr      x11, [x10, #0x1a8]                       
+008ee834 610dc03d ldr      q1, [x11, #0x30]                         
+008ee838 a1039a3c stur     q1, [x29, #-0x60]                        
+008ee83c 4bd540f9 ldr      x11, [x10, #0x1a8]                       
+008ee840 6111c03d ldr      q1, [x11, #0x40]                         
+008ee844 a103993c stur     q1, [x29, #-0x70]                        
+008ee848 4b0140f9 ldr      x11, [x10]                               
+008ee84c 6bc541f9 ldr      x11, [x11, #0x388]                       
+008ee850 ac2302d1 sub      x12, x29, #0x88                          
+008ee854 e81300f9 str      x8, [sp, #0x20]                          
+008ee858 e8030caa mov      x8, x12                                  
+008ee85c e0030aaa mov      x0, x10                                  
+008ee860 ec0f00f9 str      x12, [sp, #0x18]                         
+008ee864 e90b00f9 str      x9, [sp, #0x10]                          
+008ee868 e00f00bd str      s0, [sp, #0xc]                           
+008ee86c 60013fd6 blr      x11                                      
+008ee870 a2835afc ldur     d2, [x29, #-0x58]                        
+008ee874 a1035afc ldur     d1, [x29, #-0x60]                        
+008ee878 a48359fc ldur     d4, [x29, #-0x68]                        
+008ee87c a30359fc ldur     d3, [x29, #-0x70]                        
+008ee880 e1031632 mov      w1, #0x400                               
+008ee884 e01340f9 ldr      x0, [sp, #0x20]                          
+008ee888 e00f40bd ldr      s0, [sp, #0xc]                           
+008ee88c e20f40f9 ldr      x2, [sp, #0x18]                          
+008ee890 e80b40f9 ldr      x8, [sp, #0x10]                          
+008ee894 00013fd6 blr      x8                                       
+008ee898 01000014 b        #0x8ee89c                                
+008ee89c a02302d1 sub      x0, x29, #0x88                           
+008ee8a0 7807f097 bl       #0x4f0680                                std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::~basic_string()
+008ee8a4 e01f40f9 ldr      x0, [sp, #0x38]                          
+008ee8a8 1e0040f9 ldr      x30, [x0]                                
+008ee8ac dedf41f9 ldr      x30, [x30, #0x3b8]                       
+008ee8b0 c0033fd6 blr      x30                                      
+008ee8b4 c3e9ef97 bl       #0x4e8fc0                                SoldierView::showLabel()
+008ee8b8 48d03bd5 mrs      x8, tpidr_el0                            
+008ee8bc 081540f9 ldr      x8, [x8, #0x28]                          
+008ee8c0 e92340f9 ldr      x9, [sp, #0x40]                          
+008ee8c4 2a1d40f9 ldr      x10, [x9, #0x38]                         
+008ee8c8 1f010aeb cmp      x8, x10                                  
+008ee8cc a1010054 b.ne     #0x8ee900                                
+008ee8d0 fd7b52a9 ldp      x29, x30, [sp, #0x120]                   
+008ee8d4 fc8b40f9 ldr      x28, [sp, #0x110]                        
+008ee8d8 ffc30491 add      sp, sp, #0x130                           
+008ee8dc c0035fd6 ret                                               
+008ee8e0 a82302d1 sub      x8, x29, #0x88                           
+008ee8e4 e903012a mov      w9, w1                                   
+008ee8e8 e02f00f9 str      x0, [sp, #0x58]                          
+008ee8ec e95700b9 str      w9, [sp, #0x54]                          
+008ee8f0 e00308aa mov      x0, x8                                   
+008ee8f4 6307f097 bl       #0x4f0680                                std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::~basic_string()
+008ee8f8 e02f40f9 ldr      x0, [sp, #0x58]                          
+008ee8fc 7151ef97 bl       #0x4c2ec0                                _Unwind_Resume
+008ee900 3cb1ef97 bl       #0x4dadf0                                __stack_chk_fail
+
+ClientEntry::completeReload(WeaponStateObject*) VA=0x87b42c FILE=0x87b42c SIZE=276
+0087b42c ffc302d1 sub      sp, sp, #0xb0                            
+0087b430 fd7b0aa9 stp      x29, x30, [sp, #0xa0]                    
+0087b434 fd830291 add      x29, sp, #0xa0                           
+0087b438 48d03bd5 mrs      x8, tpidr_el0                            
+0087b43c 081540f9 ldr      x8, [x8, #0x28]                          
+0087b440 a8831ff8 stur     x8, [x29, #-8]                           
+0087b444 e02300f9 str      x0, [sp, #0x40]                          
+0087b448 e11f00f9 str      x1, [sp, #0x38]                          
+0087b44c e82340f9 ldr      x8, [sp, #0x40]                          
+0087b450 200040b9 ldr      w0, [x1]                                 
+0087b454 a10301d1 sub      x1, x29, #0x40                           
+0087b458 e80f00f9 str      x8, [sp, #0x18]                          
+0087b45c e80301aa mov      x8, x1                                   
+0087b460 20ceff97 bl       #0x86ece0                                
+0087b464 379ef197 bl       #0x4e2d40                                WeaponStructures::getInstance()
+0087b468 e00b00f9 str      x0, [sp, #0x10]                          
+0087b46c 01000014 b        #0x87b470                                
+0087b470 e81f40f9 ldr      x8, [sp, #0x38]                          
+0087b474 010140b9 ldr      w1, [x8]                                 
+0087b478 e80f40f9 ldr      x8, [sp, #0x18]                          
+0087b47c 008542bd ldr      s0, [x8, #0x284]                         
+0087b480 e00b40f9 ldr      x0, [sp, #0x10]                          
+0087b484 43d1f197 bl       #0x4ef990                                WeaponStructures::getMagCap(ItemType, float)
+0087b488 e00f00b9 str      w0, [sp, #0xc]                           
+0087b48c 01000014 b        #0x87b490                                
+0087b490 e80f40b9 ldr      w8, [sp, #0xc]                           
+0087b494 093d0013 sxth     w9, w8                                   
+0087b498 2001221e scvtf    s0, w9                                   
+0087b49c e03700bd str      s0, [sp, #0x34]                          
+0087b4a0 e01f40f9 ldr      x0, [sp, #0x38]                          
+0087b4a4 e103082a mov      w1, w8                                   
+0087b4a8 5e21f197 bl       #0x4c3a20                                WeaponStateObject::reload(short)
+0087b4ac 01000014 b        #0x87b4b0                                
+0087b4b0 e81f40f9 ldr      x8, [sp, #0x38]                          
+0087b4b4 01210091 add      x1, x8, #8                               
+0087b4b8 e0230191 add      x0, sp, #0x48                            
+0087b4bc 1112f197 bl       #0x4bfd00                                std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)
+0087b4c0 01000014 b        #0x87b4c4                                
+0087b4c4 e1230191 add      x1, sp, #0x48                            
+0087b4c8 e00f40f9 ldr      x0, [sp, #0x18]                          
+0087b4cc 656ef197 bl       #0x4d6e60                                ClientEntry::cancelReload(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)
+0087b4d0 01000014 b        #0x87b4d4                                
+0087b4d4 e0230191 add      x0, sp, #0x48                            
+0087b4d8 6ad4f197 bl       #0x4f0680                                std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::~basic_string()
+0087b4dc a00301d1 sub      x0, x29, #0x40                           
+0087b4e0 50eaf197 bl       #0x4f5e20                                WeaponAttributeModel::~WeaponAttributeModel()
+0087b4e4 40d03bd5 mrs      x0, tpidr_el0                            
+0087b4e8 001440f9 ldr      x0, [x0, #0x28]                          
+0087b4ec be835ff8 ldur     x30, [x29, #-8]                          
+0087b4f0 1f001eeb cmp      x0, x30                                  
+0087b4f4 41020054 b.ne     #0x87b53c                                
+0087b4f8 fd7b4aa9 ldp      x29, x30, [sp, #0xa0]                    
+0087b4fc ffc30291 add      sp, sp, #0xb0                            
+0087b500 c0035fd6 ret                                               
+0087b504 e803012a mov      w8, w1                                   
+0087b508 e01700f9 str      x0, [sp, #0x28]                          
+0087b50c e82700b9 str      w8, [sp, #0x24]                          
+0087b510 07000014 b        #0x87b52c                                
+0087b514 e8230191 add      x8, sp, #0x48                            
+0087b518 e903012a mov      w9, w1                                   
+0087b51c e01700f9 str      x0, [sp, #0x28]                          
+0087b520 e92700b9 str      w9, [sp, #0x24]                          
+0087b524 e00308aa mov      x0, x8                                   
+0087b528 56d4f197 bl       #0x4f0680                                std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::~basic_string()
+0087b52c a00301d1 sub      x0, x29, #0x40                           
+0087b530 3ceaf197 bl       #0x4f5e20                                WeaponAttributeModel::~WeaponAttributeModel()
+0087b534 e01740f9 ldr      x0, [sp, #0x28]                          
+0087b538 621ef197 bl       #0x4c2ec0                                _Unwind_Resume
+0087b53c 2d7ef197 bl       #0x4dadf0                                __stack_chk_fail
+
+Weapon::setClip(int) VA=0x948104 FILE=0x948104 SIZE=220
+00948104 ff0302d1 sub      sp, sp, #0x80                            
+00948108 fd7b07a9 stp      x29, x30, [sp, #0x70]                    
+0094810c fdc30191 add      x29, sp, #0x70                           
+00948110 48d03bd5 mrs      x8, tpidr_el0                            
+00948114 081540f9 ldr      x8, [x8, #0x28]                          
+00948118 a8831ff8 stur     x8, [x29, #-8]                           
+0094811c e00b00f9 str      x0, [sp, #0x10]                          
+00948120 a1c31eb8 stur     w1, [x29, #-0x14]                        
+00948124 e80b40f9 ldr      x8, [sp, #0x10]                          
+00948128 a1c35eb8 ldur     w1, [x29, #-0x14]                        
+0094812c e80700f9 str      x8, [sp, #8]                             
+00948130 6100f836 tbz      w1, #0x1f, #0x94813c                     
+00948134 01000014 b        #0x948138                                
+00948138 01000014 b        #0x94813c                                
+0094813c a84300d1 sub      x8, x29, #0x10                           
+00948140 a95300d1 sub      x9, x29, #0x14                           
+00948144 aa6300d1 sub      x10, x29, #0x18                          
+00948148 bf831eb8 stur     wzr, [x29, #-0x18]                       
+0094814c ea1700f9 str      x10, [sp, #0x28]                         
+00948150 e91300f9 str      x9, [sp, #0x20]                          
+00948154 e91740f9 ldr      x9, [sp, #0x28]                          
+00948158 ea1340f9 ldr      x10, [sp, #0x20]                         
+0094815c eb634039 ldrb     w11, [sp, #0x18]                         
+00948160 ab031f38 sturb    w11, [x29, #-0x10]                       
+00948164 e91f00f9 str      x9, [sp, #0x38]                          
+00948168 ea1b00f9 str      x10, [sp, #0x30]                         
+0094816c e91f40f9 ldr      x9, [sp, #0x38]                          
+00948170 ea1b40f9 ldr      x10, [sp, #0x30]                         
+00948174 a8031ef8 stur     x8, [x29, #-0x20]                        
+00948178 a9831df8 stur     x9, [x29, #-0x28]                        
+0094817c aa031df8 stur     x10, [x29, #-0x30]                       
+00948180 a8835df8 ldur     x8, [x29, #-0x28]                        
+00948184 0b0140b9 ldr      w11, [x8]                                
+00948188 a8035df8 ldur     x8, [x29, #-0x30]                        
+0094818c 0c0140b9 ldr      w12, [x8]                                
+00948190 7f010c6b cmp      w11, w12                                 
+00948194 8a000054 b.ge     #0x9481a4                                
+00948198 e81b40f9 ldr      x8, [sp, #0x30]                          
+0094819c e80300f9 str      x8, [sp]                                 
+009481a0 03000014 b        #0x9481ac                                
+009481a4 e81f40f9 ldr      x8, [sp, #0x38]                          
+009481a8 e80300f9 str      x8, [sp]                                 
+009481ac e80340f9 ldr      x8, [sp]                                 
+009481b0 090140b9 ldr      w9, [x8]                                 
+009481b4 e80740f9 ldr      x8, [sp, #8]                             
+009481b8 09c50679 strh     w9, [x8, #0x362]                         
+009481bc 4ad03bd5 mrs      x10, tpidr_el0                           
+009481c0 4a1540f9 ldr      x10, [x10, #0x28]                        
+009481c4 ab835ff8 ldur     x11, [x29, #-8]                          
+009481c8 5f010beb cmp      x10, x11                                 
+009481cc 81000054 b.ne     #0x9481dc                                
+009481d0 fd7b47a9 ldp      x29, x30, [sp, #0x70]                    
+009481d4 ff030291 add      sp, sp, #0x80                            
+009481d8 c0035fd6 ret                                               
+009481dc 054bee97 bl       #0x4dadf0                                __stack_chk_fail
+
+SoldierLocalController::weaponDidReload(Item*) VA=0x8ee9ec FILE=0x8ee9ec SIZE=100
+008ee9ec ffc300d1 sub      sp, sp, #0x30                            
+008ee9f0 fd7b02a9 stp      x29, x30, [sp, #0x20]                    
+008ee9f4 fd830091 add      x29, sp, #0x20                           
+008ee9f8 a0831ff8 stur     x0, [x29, #-8]                           
+008ee9fc e10b00f9 str      x1, [sp, #0x10]                          
+008eea00 e00b40f9 ldr      x0, [sp, #0x10]                          
+008eea04 400000b5 cbnz     x0, #0x8eea0c                            
+008eea08 0f000014 b        #0x8eea44                                
+008eea0c e80b40f9 ldr      x8, [sp, #0x10]                          
+008eea10 e80700f9 str      x8, [sp, #8]                             
+008eea14 e80740f9 ldr      x8, [sp, #8]                             
+008eea18 680100b4 cbz      x8, #0x8eea44                            
+008eea1c e00740f9 ldr      x0, [sp, #8]                             
+008eea20 6091ef97 bl       #0x4d2fa0                                Weapon::getClip()
+008eea24 003c0013 sxth     w0, w0                                   
+008eea28 1f000071 cmp      w0, #0                                   
+008eea2c cd000054 b.le     #0x8eea44                                
+008eea30 e1031e32 mov      w1, #4                                   
+008eea34 885600b0 adrp     x8, #0x13bf000                           
+008eea38 086942f9 ldr      x8, [x8, #0x4d0]                         
+008eea3c 000140f9 ldr      x0, [x8]                                 
+008eea40 a848ef97 bl       #0x4c0ce0                                Sound::playSound(int)
+008eea44 fd7b42a9 ldp      x29, x30, [sp, #0x20]                    
+008eea48 ffc30091 add      sp, sp, #0x30                            
+008eea4c c0035fd6 ret                                               
+
+Weapon::subAmmo(int) VA=0x9482e0 FILE=0x9482e0 SIZE=344
+009482e0 ff4301d1 sub      sp, sp, #0x50                            
+009482e4 fd7b04a9 stp      x29, x30, [sp, #0x40]                    
+009482e8 fd030191 add      x29, sp, #0x40                           
+009482ec a0831ff8 stur     x0, [x29, #-8]                           
+009482f0 a1431fb8 stur     w1, [x29, #-0xc]                         
+009482f4 a0835ff8 ldur     x0, [x29, #-8]                           
+009482f8 e01300f9 str      x0, [sp, #0x20]                          
+009482fc 71f8ed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00948300 003c0013 sxth     w0, w0                                   
+00948304 a1435fb8 ldur     w1, [x29, #-0xc]                         
+00948308 1f00016b cmp      w0, w1                                   
+0094830c 8d000054 b.le     #0x94831c                                
+00948310 a8435fb8 ldur     w8, [x29, #-0xc]                         
+00948314 e81f00b9 str      w8, [sp, #0x1c]                          
+00948318 05000014 b        #0x94832c                                
+0094831c e01340f9 ldr      x0, [sp, #0x20]                          
+00948320 68f8ed97 bl       #0x4c64c0                                Weapon::getAmmo()
+00948324 003c0013 sxth     w0, w0                                   
+00948328 e01f00b9 str      w0, [sp, #0x1c]                          
+0094832c e01f40b9 ldr      w0, [sp, #0x1c]                          
+00948330 a0031f78 sturh    w0, [x29, #-0x10]                        
+00948334 e01340f9 ldr      x0, [sp, #0x20]                          
+00948338 62f8ed97 bl       #0x4c64c0                                Weapon::getAmmo()
+0094833c e8031f2a mov      w8, wzr                                  
+00948340 003c0013 sxth     w0, w0                                   
+00948344 a903df78 ldursh   w9, [x29, #-0x10]                        
+00948348 1f01096b cmp      w8, w9                                   
+0094834c e01b00b9 str      w0, [sp, #0x18]                          
+00948350 8a000054 b.ge     #0x948360                                
+00948354 a803df78 ldursh   w8, [x29, #-0x10]                        
+00948358 e81700b9 str      w8, [sp, #0x14]                          
+0094835c 04000014 b        #0x94836c                                
+00948360 e8031f2a mov      w8, wzr                                  
+00948364 e81700b9 str      w8, [sp, #0x14]                          
+00948368 01000014 b        #0x94836c                                
+0094836c e81740b9 ldr      w8, [sp, #0x14]                          
+00948370 e9031f2a mov      w9, wzr                                  
+00948374 ea1b40b9 ldr      w10, [sp, #0x18]                         
+00948378 4101084b sub      w1, w10, w8                              
+0094837c e01340f9 ldr      x0, [sp, #0x20]                          
+00948380 22010012 and      w2, w9, #1                               
+00948384 93c2ee97 bl       #0x4f8dd0                                Weapon::setAmmo(int, bool)
+00948388 a8435fb8 ldur     w8, [x29, #-0xc]                         
+0094838c a903df78 ldursh   w9, [x29, #-0x10]                        
+00948390 0801094b sub      w8, w8, w9                               
+00948394 a8431fb8 stur     w8, [x29, #-0xc]                         
+00948398 e01340f9 ldr      x0, [sp, #0x20]                          
+0094839c 012bee97 bl       #0x4d2fa0                                Weapon::getClip()
+009483a0 083c0013 sxth     w8, w0                                   
+009483a4 a9435fb8 ldur     w9, [x29, #-0xc]                         
+009483a8 1f01096b cmp      w8, w9                                   
+009483ac 8d000054 b.le     #0x9483bc                                
+009483b0 a8435fb8 ldur     w8, [x29, #-0xc]                         
+009483b4 e81300b9 str      w8, [sp, #0x10]                          
+009483b8 05000014 b        #0x9483cc                                
+009483bc e01340f9 ldr      x0, [sp, #0x20]                          
+009483c0 f82aee97 bl       #0x4d2fa0                                Weapon::getClip()
+009483c4 003c0013 sxth     w0, w0                                   
+009483c8 e01300b9 str      w0, [sp, #0x10]                          
+009483cc e01340b9 ldr      w0, [sp, #0x10]                          
+009483d0 a0c31e78 sturh    w0, [x29, #-0x14]                        
+009483d4 e01340f9 ldr      x0, [sp, #0x20]                          
+009483d8 f22aee97 bl       #0x4d2fa0                                Weapon::getClip()
+009483dc e8031f2a mov      w8, wzr                                  
+009483e0 003c0013 sxth     w0, w0                                   
+009483e4 a9c3de78 ldursh   w9, [x29, #-0x14]                        
+009483e8 1f01096b cmp      w8, w9                                   
+009483ec e00f00b9 str      w0, [sp, #0xc]                           
+009483f0 8a000054 b.ge     #0x948400                                
+009483f4 a8c3de78 ldursh   w8, [x29, #-0x14]                        
+009483f8 e80b00b9 str      w8, [sp, #8]                             
+009483fc 04000014 b        #0x94840c                                
+00948400 e8031f2a mov      w8, wzr                                  
+00948404 e80b00b9 str      w8, [sp, #8]                             
+00948408 01000014 b        #0x94840c                                
+0094840c e80b40b9 ldr      w8, [sp, #8]                             
+00948410 e90f40b9 ldr      w9, [sp, #0xc]                           
+00948414 2101084b sub      w1, w9, w8                               
+00948418 e01340f9 ldr      x0, [sp, #0x20]                          
+0094841c 39abee97 bl       #0x4f3100                                Weapon::setClip(int)
+00948420 a803df78 ldursh   w8, [x29, #-0x10]                        
+00948424 a9c3de78 ldursh   w9, [x29, #-0x14]                        
+00948428 0001090b add      w0, w8, w9                               
+0094842c fd7b44a9 ldp      x29, x30, [sp, #0x40]                    
+00948430 ff430191 add      sp, sp, #0x50                            
+00948434 c0035fd6 ret                                               
+
+Weapon::setAmmo(int, bool) VA=0x9481e0 FILE=0x9481e0 SIZE=256
+009481e0 ff4302d1 sub      sp, sp, #0x90                            
+009481e4 fd7b08a9 stp      x29, x30, [sp, #0x80]                    
+009481e8 fd030291 add      x29, sp, #0x80                           
+009481ec 48d03bd5 mrs      x8, tpidr_el0                            
+009481f0 081540f9 ldr      x8, [x8, #0x28]                          
+009481f4 a8831ff8 stur     x8, [x29, #-8]                           
+009481f8 e01300f9 str      x0, [sp, #0x20]                          
+009481fc a1c31eb8 stur     w1, [x29, #-0x14]                        
+00948200 41000012 and      w1, w2, #1                               
+00948204 e1730039 strb     w1, [sp, #0x1c]                          
+00948208 e81340f9 ldr      x8, [sp, #0x20]                          
+0094820c a1c35eb8 ldur     w1, [x29, #-0x14]                        
+00948210 e80b00f9 str      x8, [sp, #0x10]                          
+00948214 6100f836 tbz      w1, #0x1f, #0x948220                     
+00948218 01000014 b        #0x94821c                                
+0094821c 01000014 b        #0x948220                                
+00948220 a84300d1 sub      x8, x29, #0x10                           
+00948224 a95300d1 sub      x9, x29, #0x14                           
+00948228 aa6300d1 sub      x10, x29, #0x18                          
+0094822c bf831eb8 stur     wzr, [x29, #-0x18]                       
+00948230 ea1f00f9 str      x10, [sp, #0x38]                         
+00948234 e91b00f9 str      x9, [sp, #0x30]                          
+00948238 e91f40f9 ldr      x9, [sp, #0x38]                          
+0094823c ea1b40f9 ldr      x10, [sp, #0x30]                         
+00948240 eba34039 ldrb     w11, [sp, #0x28]                         
+00948244 ab031f38 sturb    w11, [x29, #-0x10]                       
+00948248 a9831cf8 stur     x9, [x29, #-0x38]                        
+0094824c ea2300f9 str      x10, [sp, #0x40]                         
+00948250 a9835cf8 ldur     x9, [x29, #-0x38]                        
+00948254 ea2340f9 ldr      x10, [sp, #0x40]                         
+00948258 a8031ef8 stur     x8, [x29, #-0x20]                        
+0094825c a9831df8 stur     x9, [x29, #-0x28]                        
+00948260 aa031df8 stur     x10, [x29, #-0x30]                       
+00948264 a8835df8 ldur     x8, [x29, #-0x28]                        
+00948268 0b0140b9 ldr      w11, [x8]                                
+0094826c a8035df8 ldur     x8, [x29, #-0x30]                        
+00948270 0c0140b9 ldr      w12, [x8]                                
+00948274 7f010c6b cmp      w11, w12                                 
+00948278 8a000054 b.ge     #0x948288                                
+0094827c e82340f9 ldr      x8, [sp, #0x40]                          
+00948280 e80700f9 str      x8, [sp, #8]                             
+00948284 03000014 b        #0x948290                                
+00948288 a8835cf8 ldur     x8, [x29, #-0x38]                        
+0094828c e80700f9 str      x8, [sp, #8]                             
+00948290 e80740f9 ldr      x8, [sp, #8]                             
+00948294 090140b9 ldr      w9, [x8]                                 
+00948298 e80b40f9 ldr      x8, [sp, #0x10]                          
+0094829c 09c10679 strh     w9, [x8, #0x360]                         
+009482a0 e9734039 ldrb     w9, [sp, #0x1c]                          
+009482a4 c9000036 tbz      w9, #0, #0x9482bc                        
+009482a8 21028052 mov      w1, #0x11                                
+009482ac a85300f0 adrp     x8, #0x13bf000                           
+009482b0 086942f9 ldr      x8, [x8, #0x4d0]                         
+009482b4 000140f9 ldr      x0, [x8]                                 
+009482b8 8ae2ed97 bl       #0x4c0ce0                                Sound::playSound(int)
+009482bc 48d03bd5 mrs      x8, tpidr_el0                            
+009482c0 081540f9 ldr      x8, [x8, #0x28]                          
+009482c4 a9835ff8 ldur     x9, [x29, #-8]                           
+009482c8 1f0109eb cmp      x8, x9                                   
+009482cc 81000054 b.ne     #0x9482dc                                
+009482d0 fd7b48a9 ldp      x29, x30, [sp, #0x80]                    
+009482d4 ff430291 add      sp, sp, #0x90                            
+009482d8 c0035fd6 ret                                               
+009482dc c54aee97 bl       #0x4dadf0                                __stack_chk_fail

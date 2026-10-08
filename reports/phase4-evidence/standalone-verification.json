@@ -1,0 +1,34 @@
+{
+  "status": "EXPERIMENTAL; installation and gameplay NOT TESTED",
+  "source_apk": "builds/standalone/mmc-standalone-combined-signed.apk",
+  "source_sha256": "c6622bf1a2d8c376a199d148aa7128ee83ce25f98220c3931b255ccfce5bc30c",
+  "apk_sha256": "064f17fa505a2f05ea9705089d95b056ae9842786a29623bc5605fbfca108559",
+  "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+  "native_patch": {
+    "status": "EXPERIMENTAL \u2014 runtime NOT TESTED",
+    "input_sha256": "b8095e7d005c6b8c9b140a92968d9474a9963bee8ea96e491b4844e2a286b411",
+    "output_sha256": "b2d4f97e79a2006a7a29b3747f15d35f86b9862ad7811bd14b292dd565d6545b",
+    "patches": [
+      {
+        "symbol": "_ZN11LoadoutMenu9onPrimaryEPN7cocos2d8CCObjectE",
+        "va": "0x69f3d4",
+        "file_offset": "0x69f3d4",
+        "original": "a1000054",
+        "replacement": "05000014",
+        "destination": "0x69f3e8"
+      },
+      {
+        "symbol": "_ZN11LoadoutMenu11onSecondaryEPN7cocos2d8CCObjectE",
+        "va": "0x69f514",
+        "file_offset": "0x69f514",
+        "original": "a1000054",
+        "replacement": "05000014",
+        "destination": "0x69f528"
+      }
+    ]
+  },
+  "signature": "PASS",
+  "zip_alignment": "PASS",
+  "zip_crc": "PASS",
+  "application_payload_preservation": "PASS"
+}

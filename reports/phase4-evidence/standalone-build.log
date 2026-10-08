@@ -1,0 +1,4 @@
+[+] Updated unsigned.apk with native library from libcocos2dcpp.so
+Built: /home/vaishnavkm/Projects/MiniMilitiaMod/builds/phase4-standalone/mmc-phase4-duplicates-experimental.apk
+SHA256: 064f17fa505a2f05ea9705089d95b056ae9842786a29623bc5605fbfca108559
+PASS: static signature, alignment, native patch and payload preservation

@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "backup_integrity": "PASS",
+  "files": [
+    {
+      "path": "native-analysis/libcocos2dcpp.so",
+      "sha256": "2ee486729d9fb12599c6b56070c935b7a24757463191ce725a28592aef8df401",
+      "preserved": true
+    },
+    {
+      "path": "builds/combined_mod_splits/base.apk",
+      "sha256": "c29cbcd4606daa80eef4301e4afaa30c76485a6902ac51e0803a7a76cbf1da2d",
+      "preserved": true
+    },
+    {
+      "path": "builds/combined_mod_splits/base.apk.idsig",
+      "sha256": "3b0d5ad75a13faf1a0d6977865b618f5c93c7f6708e818ad1aa57873b9afe731",
+      "preserved": true
+    },
+    {
+      "path": "builds/combined_mod_splits/split_config.arm64_v8a.apk",
+      "sha256": "0ee0eece0c15ca105dad9e40bceb18dee68e64e7bcc43b85d31a90815f16ec25",
+      "preserved": true
+    },
+    {
+      "path": "builds/combined_mod_splits/split_config.arm64_v8a.apk.idsig",
+      "sha256": "7a20ec01f028c317e189d192772ccd0887c835b9b6161cd39fe3d368f2407fb7",
+      "preserved": true
+    },
+    {
+      "path": "builds/combined_mod_splits/split_config.xxhdpi.apk",
+      "sha256": "0b12effd590efe111811f44ad22d63157d612835a2a5630bcc9014514c71ae35",
+      "preserved": true
+    },
+    {
+      "path": "builds/combined_mod_splits/split_config.xxhdpi.apk.idsig",
+      "sha256": "d3b1a9e245f6e6dbe8ba80efa301ef2914d142b492194cf8f68e7795464e109c",
+      "preserved": true
+    },
+    {
+      "path": "builds/combined_mod_splits/split_config.en.apk",
+      "sha256": "26fc08c0b2b0e795c2fcd4c52942d74d239307eab3d01df6609719dddd69be21",
+      "preserved": true
+    },
+    {
+      "path": "builds/combined_mod_splits/split_config.en.apk.idsig",
+      "sha256": "d0b32420c0febe7acf49fab8fe00e1c551a9918c3609e372bbd2e3bbffeecb58",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4_duplicate_experimental_splits/base.apk",
+      "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4_duplicate_experimental_splits/base.apk.idsig",
+      "sha256": "1526614a6ddfa861b584817a0cfa5cb8f13aabe416e7094cefe79b3fb3526363",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4_duplicate_experimental_splits/split_config.arm64_v8a.apk",
+      "sha256": "7110b31063823ce335fe4a8ef633dc73b7d7e2e9baced37c4f14994782397b99",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4_duplicate_experimental_splits/split_config.arm64_v8a.apk.idsig",
+      "sha256": "c8a23515577cfbb5c07bdffa250ea1e09bf210c7b7de0153828e1931c6cea291",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4_duplicate_experimental_splits/split_config.xxhdpi.apk",
+      "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4_duplicate_experimental_splits/split_config.xxhdpi.apk.idsig",
+      "sha256": "627e46386a00fa2d807cab2a72c6c1e6c98701f2ace9bc25b2a09bc868eec37a",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4_duplicate_experimental_splits/split_config.en.apk",
+      "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4_duplicate_experimental_splits/split_config.en.apk.idsig",
+      "sha256": "73a15a88bf9c68c37ac0cf77a3e177c966f103b533d8fc9462161cf1395ad733",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4_duplicate_experimental_splits/phase4-manifest.json",
+      "sha256": "159a9989c0d3d9926c138657ca0b5e7886f847e2cd34e3f424651b9f41d500e5",
+      "preserved": true
+    },
+    {
+      "path": "builds/standalone/mmc-standalone-baseline-signed.apk",
+      "sha256": "ebad66ece1c797d92e5dcb65031ddfbcb9af098744cc8c065420e73531733c40",
+      "preserved": true
+    },
+    {
+      "path": "builds/standalone/mmc-standalone-baseline-signed.apk.idsig",
+      "sha256": "bc8526ecd85face5b44c825526cb6c02283bf86c8fcc59da9babbfcb6d11e7ec",
+      "preserved": true
+    },
+    {
+      "path": "builds/standalone/mmc-standalone-combined-signed.apk",
+      "sha256": "c6622bf1a2d8c376a199d148aa7128ee83ce25f98220c3931b255ccfce5bc30c",
+      "preserved": true
+    },
+    {
+      "path": "builds/standalone/mmc-standalone-combined-signed.apk.idsig",
+      "sha256": "f89f864017288af011ce8806f18e2e504d009347c8b37c992f3fdd354c378930",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4-standalone/mmc-phase4-duplicates-experimental.apk",
+      "sha256": "064f17fa505a2f05ea9705089d95b056ae9842786a29623bc5605fbfca108559",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4-standalone/mmc-phase4-duplicates-experimental.apk.idsig",
+      "sha256": "218a66f3ec9963b0a83e00d58d769895af95c6e30418f853d4c39d7a1b5eeef4",
+      "preserved": true
+    },
+    {
+      "path": "builds/phase4-standalone/mmc-phase4-duplicates-experimental.verification.json",
+      "sha256": "4d7603c7a3beb8af862ab309242ae62a75e8ed20e866fa27fbe39e667eb15d18",
+      "preserved": true
+    }
+  ]
+}

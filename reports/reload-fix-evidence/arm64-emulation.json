@@ -1,0 +1,717 @@
+{
+  "status": "ARM64 emulation PASS; synthetic fixtures, not device gameplay",
+  "cases": 105,
+  "native_sha256": "6a0ab3ca5dce5ea76f806c92671f45224b394792adc8ab18f7d94c4f69ee1743",
+  "records": [
+    {
+      "slot": 0,
+      "capacity": 1,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 1,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 1,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 1,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 1,
+      "clip": 0,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 2,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 2,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 2,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 2,
+      "clip": 2,
+      "reserve": 2,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 2,
+      "clip": 1,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 6,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 6,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 6,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 6,
+      "clip": 6,
+      "reserve": 6,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 6,
+      "clip": 5,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 30,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 30,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 30,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 30,
+      "clip": 30,
+      "reserve": 30,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 30,
+      "clip": 29,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 100,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 100,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 100,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 100,
+      "clip": 100,
+      "reserve": 100,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 100,
+      "clip": 99,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 32767,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 32767,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 32767,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 32767,
+      "clip": 32767,
+      "reserve": 32767,
+      "status": "PASS"
+    },
+    {
+      "slot": 0,
+      "capacity": 32767,
+      "clip": 32766,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 1,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 1,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 1,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 1,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 1,
+      "clip": 0,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 2,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 2,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 2,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 2,
+      "clip": 2,
+      "reserve": 2,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 2,
+      "clip": 1,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 6,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 6,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 6,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 6,
+      "clip": 6,
+      "reserve": 6,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 6,
+      "clip": 5,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 30,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 30,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 30,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 30,
+      "clip": 30,
+      "reserve": 30,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 30,
+      "clip": 29,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 100,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 100,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 100,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 100,
+      "clip": 100,
+      "reserve": 100,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 100,
+      "clip": 99,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 32767,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 32767,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 32767,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 32767,
+      "clip": 32767,
+      "reserve": 32767,
+      "status": "PASS"
+    },
+    {
+      "slot": 1,
+      "capacity": 32767,
+      "clip": 32766,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 1,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 1,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 1,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 1,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 1,
+      "clip": 0,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 2,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 2,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 2,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 2,
+      "clip": 2,
+      "reserve": 2,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 2,
+      "clip": 1,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 6,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 6,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 6,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 6,
+      "clip": 6,
+      "reserve": 6,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 6,
+      "clip": 5,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 30,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 30,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 30,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 30,
+      "clip": 30,
+      "reserve": 30,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 30,
+      "clip": 29,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 100,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 100,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 100,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 100,
+      "clip": 100,
+      "reserve": 100,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 100,
+      "clip": 99,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 32767,
+      "clip": 0,
+      "reserve": 0,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 32767,
+      "clip": 1,
+      "reserve": 1,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 32767,
+      "clip": -5,
+      "reserve": -4,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 32767,
+      "clip": 32767,
+      "reserve": 32767,
+      "status": "PASS"
+    },
+    {
+      "slot": 2,
+      "capacity": 32767,
+      "clip": 32766,
+      "reserve": 5,
+      "status": "PASS"
+    },
+    {
+      "local": false,
+      "equipped": false,
+      "value": -32768,
+      "status": "PASS"
+    },
+    {
+      "local": false,
+      "equipped": false,
+      "value": -1,
+      "status": "PASS"
+    },
+    {
+      "local": false,
+      "equipped": false,
+      "value": 0,
+      "status": "PASS"
+    },
+    {
+      "local": false,
+      "equipped": false,
+      "value": 1,
+      "status": "PASS"
+    },
+    {
+      "local": false,
+      "equipped": false,
+      "value": 32767,
+      "status": "PASS"
+    },
+    {
+      "local": true,
+      "equipped": false,
+      "value": -32768,
+      "status": "PASS"
+    },
+    {
+      "local": true,
+      "equipped": false,
+      "value": -1,
+      "status": "PASS"
+    },
+    {
+      "local": true,
+      "equipped": false,
+      "value": 0,
+      "status": "PASS"
+    },
+    {
+      "local": true,
+      "equipped": false,
+      "value": 1,
+      "status": "PASS"
+    },
+    {
+      "local": true,
+      "equipped": false,
+      "value": 32767,
+      "status": "PASS"
+    },
+    {
+      "invalid_capacity": 0,
+      "status": "PASS"
+    },
+    {
+      "invalid_capacity": -1,
+      "status": "PASS"
+    },
+    {
+      "invalid_capacity": -32768,
+      "status": "PASS"
+    },
+    {
+      "stock_reload": "3+7 -> clip10,reserve0",
+      "status": "PASS"
+    },
+    {
+      "simulated_raw_decrements": 1000,
+      "status": "PASS"
+    }
+  ]
+}

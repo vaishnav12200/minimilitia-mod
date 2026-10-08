@@ -1,94 +1,78 @@
-# Mini Militia Classic — Modification & Analysis Project
+# Mini Militia Classic — personal gameplay test build
 
-**Package Name:** `com.appsomniacs.mmc`  
-**Version Code:** `88` (v0.14.4)  
-**Architecture:** ARM64 v8-A  
-**Target Binary:** `libcocos2dcpp.so`  
-**Location:** `/home/vaishnavkm/Projects/MiniMilitiaMod`  
+Package `com.appsomniacs.mmc`, version 0.14.4 (88), ARM64. Updated 2026-10-08.
 
----
+The corrected combined build **installed successfully over USB** on the connected Xiaomi M2010J19CI (Android 12) and launches to “Touch to Start.” It replaces the incomplete ammunition patch, preserves the user-confirmed fuel patch exactly, and adds duplicate choices and same-type ordinary weapon pickup. Gameplay remains experimental. MIUI denied automated ADB taps, and the user elected to test gameplay manually. Reload, all weapon combinations, fuel regression and private LAN need manual validation. Earlier claims of working unlimited ammo/LAN are superseded by the latest reload-bug report.
 
-## Executive Summary
+## Downloadable APK
 
-This repository contains the complete reverse engineering, Ghidra disassembly, ARM64 patch tooling, and split-APK build environment for modifying Mini Militia Classic (`v0.14.4`).
+[mmc-fixed-ammo-dual-weapon.apk](builds/fixed_ammo_dual_weapon_standalone/mmc-fixed-ammo-dual-weapon.apk)
 
-All 4 technical native modification objectives have been analyzed, mapped to exact ELF file offsets, verified with pre-check validation scripts, and built into isolated, signed split-APK installation packages.
+SHA-256: `3c01bda3d733c64a5e8913af72f8224a666dd502fc8a40c882e2e1ae9411fff1`.
 
----
+The matching four-split package is in [fixed_ammo_dual_weapon_splits](builds/fixed_ammo_dual_weapon_splits/). Base alone cannot install the game. Both forms contain identical patched ARM64 native code and the existing test certificate. The standalone preserves the earlier standalone manifest/resources; the split set preserves original split application payloads. Artifacts are local for personal/private tests; do not redistribute proprietary game binaries without rights.
 
-## Verified Objectives & ARM64 Function Offsets
+## Changes and limits
 
-| Feature / Target | ELF Symbol Address | ELF File Offset | Verified Original Bytes | ARM64 Patch Applied |
-|---|---|---|---|---|
-| **1. Unlimited Ammunition** | `0x009482e0` | `0x009482e0` | `ff4301d1fd7b04a9` | `RET` (`0xC0035FD6`) at `Weapon::subAmmo(int)` |
-| **2. Unlimited Jetpack Fuel** | `0x008e68e4` | `0x008e68e4` | `ff4300d1e00700f9` | `fmov s0, #1.0; ret` (`0x1E2E1000C0035FD6`) at `SoldierLocalController::getPower()` |
-| **3. Inventory & Duplicates** | `0x008e6934` | `0x008e6934` | `a1031ff8a0835ff8` | `SoldierLocalController::addWeapon` slots at `+0x1C8`, `+0x1D0`, `+0x1D8`. `validateLoadout` returns 1. |
-| **4. Offline & Private LAN Sync** | `0x008596ac` | `0x008596ac` | `e10700f9ff830091` | `ClientRoom::validateLoadout` & `ClientRoomLAN` host authority without remote server checks. |
+Ammo now refills local equipped instances through `getClip` / `getAmmo` using each weapon's own capacity, including physical clip/reserve fields. Stock `subAmmo` and reload completion are restored/preserved. Weapon damage, cadence, projectiles, initialization, ownership and network validation stay under stock code. A 105-case ARM64 emulation suite passes, including the original reload-completion body; this is not a device gameplay test.
 
----
+Duplicate primary/secondary choices and ordinary same-type pickups follow existing instance-creation and inventory paths. Special dual-only utilities, throwables, objective items and paid access retain existing restrictions. Successful duplicate gameplay for every ordinary gun is not yet demonstrated. Local refill does not establish host/client ammo synchronization.
 
-## Directory Structure & Key Files
+Ads remain unchanged. Advertising SDKs, rewards, purchases, entitlements and licensing were not bypassed.
 
-```
-/home/vaishnavkm/Projects/MiniMilitiaMod/
-├── builds/
-│   ├── baseline_splits/      # Unmodified baseline split-APK set (Signed)
-│   ├── ammo_mod_splits/      # Unlimited Ammunition split-APK set (Signed)
-│   ├── fuel_mod_splits/      # Unlimited Jetpack Fuel split-APK set (Signed)
-│   └── combined_mod_splits/  # Combined Ammo + Jetpack Fuel split-APK set (Signed)
-├── extracted-apks/           # Original extracted split APKs (Preserved untouched)
-├── native-analysis/
-│   ├── backup/               # Baseline libcocos2dcpp.so backup (SHA-256 verified)
-│   ├── libcocos2dcpp.so      # Working native binary
-│   └── decompiled_functions.txt # 832 decompiled C++ functions from Ghidra
-├── reports/
-│   ├── modification-report.md # C++ logic & function specification report
-│   ├── verification-report.md # Independent ELF offset vs Ghidra RAM analysis
-│   ├── split-package-report.md# Split APK build output & signature verification
-│   └── test-results.md       # Empirical verification log
-├── scripts/
-│   ├── verify_findings.py    # Automated ELF offset & Capstone disassembly check
-│   ├── patch_unlimited_ammo.py# Strict pre-check ammo patcher
-│   ├── patch_unlimited_fuel.py# Strict pre-check fuel patcher
-│   ├── restore_baseline.py   # Baseline native library rollback tool
-│   ├── build_split_package.py# Zip-align, sign, and verify split-APK package sets
-│   └── deploy_test.sh        # Deployment helper using adb install-multiple
-└── signing/                  # Unified PKCS12 test keystore (mmc-test.keystore)
-```
+## Install/update
 
----
+The connected phone already has the complete corrected split set. To reinstall/update later, unlock it and approve the USB installation prompt:
 
-## How to Build and Deploy Split Packages
-
-### 1. Run Automated Verification & Build Workflow:
 ```bash
-# Verify ELF offsets and instruction bytes
-./scripts/verify_findings.py
-
-# Rebuild all split package sets (baseline, ammo, fuel, combined)
-./scripts/build_split_package.py
+./scripts/deploy_fixed_gameplay.sh 241266d60c20
 ```
 
-### 2. Deploy Split Package Sets to Connected Android Device:
+Or install the standalone APK:
+
 ```bash
-# Deploy Unmodified Baseline Split Set:
-./scripts/deploy_test.sh baseline
-
-# Deploy Unlimited Ammunition Mod Package:
-./scripts/deploy_test.sh ammo
-
-# Deploy Unlimited Jetpack Fuel Mod Package:
-./scripts/deploy_test.sh fuel
-
-# Deploy Combined Mod Package (Ammo + Fuel):
-./scripts/deploy_test.sh combined
+adb install --no-incremental -r builds/fixed_ammo_dual_weapon_standalone/mmc-fixed-ammo-dual-weapon.apk
 ```
 
----
+You can also copy the standalone APK to the phone and open it with Android's installer. Never uninstall or clear app data to work around a signing/install error. Retain the existing app and record the error. Automated ADB gameplay on MIUI requires its separate “USB debugging (Security settings)” input permission; installation does not grant that permission.
 
-## Safety, Rollback & Testing Guardrails
+## Reproduce and verify
 
-1. **Original APK Preservation:** Original extracted APKs remain untouched in `extracted-apks/`.
-2. **Rollback:** Restoring baseline binary is performed instantly via `./scripts/restore_baseline.py` or installing `./scripts/deploy_test.sh baseline`.
-3. **Multiplayer Isolation:** Testing is strictly restricted to offline solo play and local private LAN games (`ClientRoomLAN`). Public cloud multiplayer services are not touched.
-4. **Security & Integrity:** Authentication, billing, account security, and public anti-cheat mechanisms are strictly untouched.
+Python dependencies: pyelftools, Capstone, Keystone; Unicorn is needed only for emulation tests. Existing Android SDK Build Tools 35.0.0 and local signing keystore are used. Builders refuse to overwrite outputs; move an existing output aside before rebuilding.
+
+```bash
+# Phase B first: corrected ammo + existing fuel
+python3 scripts/build_fixed_gameplay.py
+python3 scripts/verify_fixed_gameplay.py
+
+# Phase D only after Phase B structural verification
+python3 scripts/build_fixed_gameplay.py --duplicates
+python3 scripts/verify_fixed_gameplay.py --duplicates
+
+# Native-only output; original analysis/backup are protected
+python3 scripts/patch_fixed_gameplay.py --duplicates --output /tmp/mmc-fixed-native.so
+
+# ARM64 synthetic execution (if Unicorn installed)
+python3 scripts/test_fixed_ammo_arm64.py
+```
+
+In this session Unicorn was installed in `/tmp/mmc-unicorn-tests`; the exact test command was `PYTHONPATH=/tmp/mmc-unicorn-tests:scripts python3 scripts/test_fixed_ammo_arm64.py`. No dependencies are silently downloaded by tests/builders.
+
+Each build has `verification.json` with full patch bytes, independent VA/file mappings, original/native/APK hashes and signature checks. Native ZIP compression/alignment is verified separately: the inherited packager compressed the game library while the split manifest disallowed extraction, causing an actual install failure; the new builder stores and page-aligns it.
+
+Use the new scripts above. Historical `patch_unlimited_ammo.py` is buggy and its CLI now refuses execution. Historical build workflows overwrite older variants and must not reproduce this correction. Earlier combined/picker-only builds remain preserved but retain the reported ammunition bug. Copies of initial new outputs under `*_packaging_v1` are diagnostic, not recommended install packages.
+
+## Tests and rollback
+
+Follow [test-results.md](reports/test-results.md) for the offline and two-phone private LAN matrix, including continuous fire, manual reload, switching, matching pickups, drops, respawn, all duplicate pairs and boost regression.
+
+Use [mmc-fixed-ammo-jetpack.apk](builds/fixed_ammo_jetpack_standalone/mmc-fixed-ammo-jetpack.apk) to isolate ammo/fuel without inventory changes. It uses the same signer/version for updating while retaining app data. Pre-change snapshots are at `backup/reload-fix-20261008/` and `backup/phase4-working-20261008/`, with SHA-256 manifests. The original analysis library and all previous working outputs are intact. Switching between standalone and split forms should be checked for install errors without uninstalling.
+
+## Reports
+
+- [Root-cause analysis](reports/reload-root-cause.md): actual firing/reload paths, correction and unresolved runtime cause.
+- [Modification report](reports/modification-report.md): scope, scripts, artifacts and limits.
+- [Verification report](reports/verification-report.md): exact sites, hashes and evidence.
+- [Weapon analysis](reports/weapon-system-analysis.md): allocations, lifetime, serialization, restrictions and pickup routing.
+- [Gameplay/LAN test report](reports/test-results.md): performed checks and pending manual tests.
+- [Ad inspection](reports/ad-integration-analysis.md): unchanged ad/access behavior.

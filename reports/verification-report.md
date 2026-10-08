@@ -1,78 +1,34 @@
-# Mini Militia Classic — Native Analysis Independent Verification Report
+# Verification — 2026-10-08
 
-**Target Binary:** `libcocos2dcpp.so` (ARM64 v8-A, 64-bit ELF)  
-**File SHA-256:** `2ee486729d9fb12599c6b56070c935b7a24757463191ce725a28592aef8df401`  
-**Verification Date:** 2026-10-08  
-**Tools Used:** Python `pyelftools`, Capstone 5.0.9, Keystone 0.9.2, Ghidra 12.1.4  
+Both corrected Phase B and combined builds pass signature, alignment, CRC, ELF mutation-scope, original-byte checks and non-native application payload preservation. Verification separately checks native ZIP storage and 4096-byte ZIP data alignment. These structural checks do not establish gameplay success.
 
----
+| Function/site | ELF VA | File offset | Change |
+| --- | --- | --- | --- |
+| Weapon::subAmmo(int) entry | 0x9482e0 | 0x9482e0 | c0035fd6 → ff4301d1 (restore stock) |
+| Weapon::getClip() | 0x947954 | 0x947954 | Original 204 bytes → 116-byte routine + NOP padding |
+| Weapon::getAmmo() | 0x947a20 | 0x947a20 | Original 204 bytes → 116-byte routine + NOP padding |
+| LoadoutMenu::onPrimary | 0x69f3d4 | 0x69f3d4 | a1000054 → 05000014; destination 0x69f3e8 |
+| LoadoutMenu::onSecondary | 0x69f514 | 0x69f514 | a1000054 → 05000014; destination 0x69f528 |
+| WeaponManager::weaponProximity primary type | 0x9578c8 | 0x9578c8 | e1030054 → 1f000014; destination 0x957944 |
+| WeaponManager::weaponProximity secondary type | 0x957980 | 0x957980 | a1030054 → 1d000014; destination 0x9579f4 |
+| SoldierLocalController::getPower() | 0x8e68e4 | 0x8e68e4 | 00102e1ec0035fd6 preserved exactly |
 
-## 1. Address Resolution & ELF Mapping (Requirement 1 & 2)
+Virtual addresses are mapped through PT_LOAD independently; equality with file offsets here is verified, not assumed. Ghidra displays these addresses plus 0x100000. Patched getters use AAPCS64 x0=this, w0=count, preserve x19/LR, and restore aligned SP. Existing capacity virtual dispatch and dynamic GOT relocation are validated. Full original/replacement bytes and assembly are in each `verification.json`.
 
-In ARM64 ELF shared objects (`libcocos2dcpp.so`), Ghidra applies a default image base offset of `0x00100000` (or `0x00400000`) to memory virtual addresses. When patching binary files directly on disk, **ELF File Offsets** must be used instead of Ghidra RAM addresses to avoid patching incorrect instructions.
+Original ELF: `2ee486729d9fb12599c6b56070c935b7a24757463191ce725a28592aef8df401`.
 
-| Target Function | Ghidra RAM Address | ELF Symbol Address (`st_value`) | ELF File Offset | Original Instruction Bytes | Return Type |
-|---|---|---|---|---|---|
-| `Weapon::subAmmo(int)` | `0x00A482e0` | `0x009482e0` | **`0x009482e0`** | `a1431fb8a0835ff8` | `int` |
-| `Weapon::setAmmo(int, bool)` | `0x00A481e0` | `0x009481e0` | **`0x009481e0`** | `081540f9a8831ff8` | `ulong` |
-| `Weapon::setClip(int)` | `0x00A48104` | `0x00948104` | **`0x00948104`** | `081540f9a8831ff8` | `ulong` |
-| `SoldierLocalController::setPower(float)` | `0x009E68c4` | `0x008e68c4` | **`0x008e68c4`** | `e00740bd007802bd` | `void` |
-| `SoldierLocalController::getPower()` | `0x009E68e4` | `0x008e68e4` | **`0x008e68e4`** | `ff430091c0035fd6` | `float` (in `s0`) |
-| `SoldierLocalController::hasPower()` | `0x009EC7b8` | `0x008ec7b8` | **`0x008ec7b8`** | `080040f908cd42f9` | `bool` |
-| `SoldierLocalController::addWeapon(Weapon*)` | `0x009E6934` | `0x008e6934` | **`0x008e6934`** | `a1031ff8a0835ff8` | `void` |
-| `ClientRoom::validateLoadout(...)` | **`0x009596ac`** | **`0x008596ac`** | **`0x008596ac`** | `e10700f9ff830091` | `undefined8` (bool) |
+Phase B ELF: `6a0ab3ca5dce5ea76f806c92671f45224b394792adc8ab18f7d94c4f69ee1743`.
 
-> [!CRITICAL]
-> Note the discrepancy for `ClientRoom::validateLoadout`: Its ELF File Offset is `0x008596ac`. Using the Ghidra RAM address `0x009596ac` as a file offset would incorrectly write to `ClientRoomLAN::validateBallistics` (`0x008596c8`)!
+Combined ELF: `8cac1bfb7c7c523bbfbb2c33ea3c446acb2d8db24d0a639799b04d74b8026f60`.
 
----
+Signing certificate SHA-256: `a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e`, identical to preserved test builds across all four splits and standalone. Original distribution certificate is not claimed.
 
-## 2. Caller Analysis for `Weapon::subAmmo(int)` (Requirement 3)
+Combined standalone APK SHA-256: `3c01bda3d733c64a5e8913af72f8224a666dd502fc8a40c882e2e1ae9411fff1`.
 
-- `Weapon::subAmmo(int param_2)` subtracts `param_2` from current clip (`+0x362`) and reserve ammo (`+0x360`).
-- Callers (such as `Weapon::weaponDidFire` and `SoldierLocalController::fire`) call `subAmmo` during weapon discharge.
-- **Return Value Analysis:** `subAmmo` returns the total amount of ammunition actually subtracted (`int`). However, main firing loops do not check the return integer value to grant/deny shots; shot permission is validated prior to firing via `getClip()` / `getAmmo()`.
-- **Patch Plan:** Returning early from `subAmmo` with `RET` (`0xC0035FD6`) prevents clip and reserve ammo from being subtracted.
+ARM64 emulation: 105 synthetic cases PASS. Includes original reload-completion instructions with stub capacities, setters and callback, register/stack preservation, invalid capacities, local three-slot matching, nonlocal/null/dropped behavior, and 1000 simulated direct clip decrements with intervening getter reads. It does not exercise actual projectile creation, game UI, networking or Android scheduling.
 
----
+Machine-readable outputs: [ammo/fuel package](reload-fix-evidence/fixed_ammo_jetpack-verification.json), [combined package](reload-fix-evidence/fixed_ammo_dual_weapon-verification.json), [emulation](reload-fix-evidence/arm64-emulation.json). APK signature verbose logs are beside those files. Original call/store audit and disassembly are in the same evidence directory.
 
-## 3. Jetpack Fuel Consumption Call Path (Requirement 4)
+First install attempt found the inherited packaging bug: compressed native entry cannot satisfy the split base manifest's extractNativeLibs=false. The current packager corrects it without changing the manifest. Subsequent attempts were blocked by the phone's USB installation prompt; final device outcome is recorded in test-results.md.
 
-- Fuel / jetpack power is stored as a 32-bit single-precision float (`float`) at offset `+0x278` in `SoldierLocalController`.
-- **Call Chain:**
-  1. `SoldierLocalController::updateStep(...)` updates flight physics when jetpack thrust is active.
-  2. `SoldierLocalController::hasPower()` verifies if jetpack power remains by calling `getPower()` via vtable slot `0x598`.
-  3. `SoldierLocalController::getPower()` reads `*(float *)(this + 0x278)` and returns it in ARM64 float register `s0`.
-  4. `SoldierLocalController::setPower(float)` writes to `*(float *)(this + 0x278)`.
-- **Patch Plan:** Modifying `SoldierLocalController::getPower()` to return `1.0f` (`fmov s0, #1.0` -> `0x1E2E1000`, `ret` -> `0xD65F03C0`) guarantees `hasPower()` always evaluates to `true` and HUD/flight physics receive full power.
-
----
-
-## 4. Duplicate Weapon & Loadout Serialization (Requirement 5)
-
-- **Inventory Slot Layout in `SoldierLocalController`:**
-  - Primary Weapon: `*(Weapon**)(this + 0x1C8)`
-  - Secondary Weapon: `*(Weapon**)(this + 0x1D0)`
-  - Dual Wield Weapon: `*(Weapon**)(this + 0x1D8)`
-- **Serialization & Host Sync:**
-  - Host validation in LAN games: `ClientRoom::validateLoadout(...)` @ ELF `0x008596ac` unconditionally returns `1` (true).
-  - LAN network synchronization via `ClientRoomLAN` and `RakNet` transmits `LoadoutObject` payloads without server-side duplicate weapon restrictions.
-
----
-
-## 5. Summary of Distinctions: Confirmed Findings vs. Assumptions
-
-| Feature / Area | Confirmed Finding | Assumption / Unverified Hypothesis |
-|---|---|---|
-| **Ammunition Subtraction** | Confirmed: `subAmmo` @ `0x009482e0` modifies clip (`+0x362`) and reserve (`+0x360`). | Assumption: Patching `subAmmo` alone is sufficient for infinite reload-less firing (requires runtime testing to confirm no secondary check exists in `weaponDidFire`). |
-| **Jetpack Power** | Confirmed: Offset `+0x278` holds jetpack power; `getPower` @ `0x008e68e4` loads it into `s0`. | Assumption: `fmov s0, #1.0` in `getPower` overrides all power depletion without causing visual glitches in HUD meter. |
-| **Loadout Sync** | Confirmed: `ClientRoom::validateLoadout` @ `0x008596ac` returns 1. | Assumption: Client-side UI loadout picker allows selecting duplicate weapons without Smali/Java level UI adjustment. |
-| **Runtime Execution** | Confirmed: Baseline build compiles and signs clean (`base-signed.apk`). | Assumption: Game behavior verified (CANNOT be declared complete until ADB runtime testing on actual Android hardware). |
-
----
-
-## 6. Safety, Integrity & Rollback Plan (Requirements 7, 9, 10)
-
-- **Rollback Plan:** Unmodified baseline library preserved at `native-analysis/backup/libcocos2dcpp.so`. Re-copying backup restores exact baseline.
-- **Scope Limitation:** Modifications apply ONLY to gameplay logic (`libcocos2dcpp.so`) for personal testing and private LAN matches.
-- **Security & Integrity Guardrails:** No changes to authentication, billing, account services, public server APIs, or app integrity verification mechanisms.
+Physical deployment PASS: the final split set installed over USB and launched. The installed ARM64 split was pulled back and compared byte-for-byte with the build. Gameplay input was blocked by MIUI; the user chose manual tests. See [device-installation.json](reload-fix-evidence/device-installation.json).

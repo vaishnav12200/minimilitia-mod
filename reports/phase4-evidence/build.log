@@ -1,0 +1,11 @@
+[+] Updated split_config.arm64_v8a.apk with native library from libcocos2dcpp.so
+
+============================================================
+Processing Split Set in: signed
+============================================================
+[OK] ZipAligned, Signed & Verified: base.apk (61409338 bytes)
+[OK] ZipAligned, Signed & Verified: split_config.arm64_v8a.apk (9736984 bytes)
+[OK] ZipAligned, Signed & Verified: split_config.xxhdpi.apk (280889 bytes)
+[OK] ZipAligned, Signed & Verified: split_config.en.apk (37210 bytes)
+Built: /home/vaishnavkm/Projects/MiniMilitiaMod/builds/phase4_duplicate_experimental_splits
+EXPERIMENTAL: no device gameplay or LAN results available

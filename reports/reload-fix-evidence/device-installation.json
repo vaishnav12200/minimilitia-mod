@@ -1,0 +1,21 @@
+{
+  "device": "241266d60c20",
+  "model": "M2010J19CI",
+  "android": "12",
+  "architecture": "arm64-v8a",
+  "package": "com.appsomniacs.mmc",
+  "installation": "PASS: adb install-multiple --no-incremental -r returned Success",
+  "launcher": "com.appsomniacs.mmc/.MmcActivity",
+  "launch": "PASS: splash and Touch to Start visible",
+  "running_pid": 22766,
+  "installed_arm64_split_sha256": "75a4a261154227b00f0f7a4b0b2f68edb644e362c51063ded679290c677cfe5d",
+  "readback_matches_build": true,
+  "input_test": "BLOCKED: SecurityException INJECT_EVENTS permission",
+  "gameplay": "User elected to test manually; NOT TESTED by agent",
+  "lan": "NOT TESTED; one connected device",
+  "data": "No uninstall/clear performed",
+  "previous_install_errors": [
+    "Compressed native packaging: INSTALL_FAILED_INVALID_APK; fixed by ZIP_STORED + page alignment",
+    "Phone approval: INSTALL_FAILED_USER_RESTRICTED; resolved after user unlocked/approved"
+  ]
+}

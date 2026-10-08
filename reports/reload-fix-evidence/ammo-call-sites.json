@@ -1,0 +1,371 @@
+{
+  "calls": [
+    {
+      "va": "0x76ca0c",
+      "function": "NetworkMessageDispatcher::updatePeerWeaponCreate(cocos2d::extension::CCData*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x76ca18",
+      "function": "NetworkMessageDispatcher::updatePeerWeaponCreate(cocos2d::extension::CCData*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x76ce5c",
+      "function": "NetworkMessageDispatcher::updateServerWeaponEvent(cocos2d::extension::CCData*)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x76ce7c",
+      "function": "NetworkMessageDispatcher::updateServerWeaponEvent(cocos2d::extension::CCData*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x8dfcd8",
+      "function": "SoldierAIController::fire(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x8dfd28",
+      "function": "SoldierAIController::fire(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x91d778",
+      "function": "SurvivalStage::onAmmoTaken(cocos2d::CCObject*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x91de04",
+      "function": "SurvivalStage::updateSarge(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x91de28",
+      "function": "SurvivalStage::updateSarge(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x91efd4",
+      "function": "SurvivalStage::playRound(float)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x91f510",
+      "function": "SurvivalStage::onItemPickup(cocos2d::CCObject*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x91f520",
+      "function": "SurvivalStage::onItemPickup(cocos2d::CCObject*)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x935224",
+      "function": "TrainingStage::onAmmoTaken(cocos2d::CCObject*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x936c1c",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x936c2c",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x936dd4",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x936df4",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x937e64",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x937e84",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x937e9c",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x937eb4",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x938378",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x938390",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x9383ac",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x9383c0",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x938a4c",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x938a6c",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x938e18",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x9393d8",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x9393f8",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x939410",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x939430",
+      "function": "TrainingStage::doLesson(float)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x93f098",
+      "function": "TrainingStage::onItemPickup(cocos2d::CCObject*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x93f0a8",
+      "function": "TrainingStage::onItemPickup(cocos2d::CCObject*)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x948064",
+      "function": "Weapon::completeReloadWeapon()",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x9480cc",
+      "function": "Weapon::completeReloadWeapon()",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x948384",
+      "function": "Weapon::subAmmo(int)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x94841c",
+      "function": "Weapon::subAmmo(int)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x956094",
+      "function": "WeaponManager::onPickUpWeapon(cocos2d::CCObject*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x9560a8",
+      "function": "WeaponManager::onPickUpWeapon(cocos2d::CCObject*)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x956820",
+      "function": "WeaponManager::onTranfserAmmo(cocos2d::CCObject*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x956848",
+      "function": "WeaponManager::onTranfserAmmo(cocos2d::CCObject*)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x95690c",
+      "function": "WeaponManager::onTranfserAmmo(cocos2d::CCObject*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x956d10",
+      "function": "WeaponManager::onUpdateAmmo(cocos2d::CCObject*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x956d38",
+      "function": "WeaponManager::onUpdateAmmo(cocos2d::CCObject*)",
+      "target": "Weapon::setClip(int)"
+    },
+    {
+      "va": "0x959994",
+      "function": "WeaponManager::transferAmmoRequest(Weapon*, Weapon*)",
+      "target": "Weapon::setAmmo(int, bool)"
+    },
+    {
+      "va": "0x9599b4",
+      "function": "WeaponManager::transferAmmoRequest(Weapon*, Weapon*)",
+      "target": "Weapon::setClip(int)"
+    }
+  ],
+  "stores": [
+    {
+      "va": "0x609eac",
+      "file_offset": "0x609eac",
+      "field": "0x362",
+      "function": "EMP::triggerPull(float)",
+      "context": [
+        "0x609e9c 0b550a39 strb w11, [x8, #0x295]",
+        "0x609ea0 0bc54679 ldrh w11, [x8, #0x362]",
+        "0x609ea4 6b3d0013 sxth w11, w11",
+        "0x609ea8 6b050051 sub w11, w11, #1",
+        "0x609eac 0bc50679 strh w11, [x8, #0x362]"
+      ]
+    },
+    {
+      "va": "0x6ba890",
+      "file_offset": "0x6ba890",
+      "field": "0x362",
+      "function": "M16::updateItemStep(float)",
+      "context": [
+        "0x6ba880 3fd503b9 str wzr, [x9, #0x3d4]",
+        "0x6ba884 28c54679 ldrh w8, [x9, #0x362]",
+        "0x6ba888 083d0013 sxth w8, w8",
+        "0x6ba88c 08050051 sub w8, w8, #1",
+        "0x6ba890 28c50679 strh w8, [x9, #0x362]"
+      ]
+    },
+    {
+      "va": "0x6cc560",
+      "file_offset": "0x6cc560",
+      "field": "0x362",
+      "function": "MINIGUN::triggerPull(float)",
+      "context": [
+        "0x6cc550 28550a39 strb w8, [x9, #0x295]",
+        "0x6cc554 28c54679 ldrh w8, [x9, #0x362]",
+        "0x6cc558 083d0013 sxth w8, w8",
+        "0x6cc55c 08050051 sub w8, w8, #1",
+        "0x6cc560 28c50679 strh w8, [x9, #0x362]"
+      ]
+    },
+    {
+      "va": "0x792834",
+      "file_offset": "0x792834",
+      "field": "0x362",
+      "function": "PHASR::updateLaserDistance(float)",
+      "context": [
+        "0x792824 09810f39 strb w9, [x8, #0x3e0]",
+        "0x792828 09c54679 ldrh w9, [x8, #0x362]",
+        "0x79282c 293d0013 sxth w9, w9",
+        "0x792830 29050051 sub w9, w9, #1",
+        "0x792834 09c50679 strh w9, [x8, #0x362]"
+      ]
+    },
+    {
+      "va": "0x8a00dc",
+      "file_offset": "0x8a00dc",
+      "field": "0x362",
+      "function": "SAWGUN::triggerPull(float)",
+      "context": [
+        "0x8a00cc 0b550a39 strb w11, [x8, #0x295]",
+        "0x8a00d0 0bc54679 ldrh w11, [x8, #0x362]",
+        "0x8a00d4 6b3d0013 sxth w11, w11",
+        "0x8a00d8 6b050051 sub w11, w11, #1",
+        "0x8a00dc 0bc50679 strh w11, [x8, #0x362]"
+      ]
+    },
+    {
+      "va": "0x947890",
+      "file_offset": "0x947890",
+      "field": "0x362",
+      "function": "Weapon::basicTriggerPull(float, bool)",
+      "context": [
+        "0x947880 09550a39 strb w9, [x8, #0x295]",
+        "0x947884 09c54679 ldrh w9, [x8, #0x362]",
+        "0x947888 293d0013 sxth w9, w9",
+        "0x94788c 29050051 sub w9, w9, #1",
+        "0x947890 09c50679 strh w9, [x8, #0x362]"
+      ]
+    },
+    {
+      "va": "0x947ba8",
+      "file_offset": "0x947ba8",
+      "field": "0x362",
+      "function": "Weapon::defaultTriggerPull(float)",
+      "context": [
+        "0x947b98 28550a39 strb w8, [x9, #0x295]",
+        "0x947b9c 28c54679 ldrh w8, [x9, #0x362]",
+        "0x947ba0 083d0013 sxth w8, w8",
+        "0x947ba4 08050051 sub w8, w8, #1",
+        "0x947ba8 28c50679 strh w8, [x9, #0x362]"
+      ]
+    },
+    {
+      "va": "0x947d04",
+      "file_offset": "0x947d04",
+      "field": "0x362",
+      "function": "Weapon::defaultTriggerPull(float)",
+      "context": [
+        "0x947cf4 28550a39 strb w8, [x9, #0x295]",
+        "0x947cf8 28c54679 ldrh w8, [x9, #0x362]",
+        "0x947cfc 083d0013 sxth w8, w8",
+        "0x947d00 08050051 sub w8, w8, #1",
+        "0x947d04 28c50679 strh w8, [x9, #0x362]"
+      ]
+    },
+    {
+      "va": "0x9481b8",
+      "file_offset": "0x9481b8",
+      "field": "0x362",
+      "function": "Weapon::setClip(int)",
+      "context": [
+        "0x9481a8 e80300f9 str x8, [sp]",
+        "0x9481ac e80340f9 ldr x8, [sp]",
+        "0x9481b0 090140b9 ldr w9, [x8]",
+        "0x9481b4 e80740f9 ldr x8, [sp, #8]",
+        "0x9481b8 09c50679 strh w9, [x8, #0x362]"
+      ]
+    },
+    {
+      "va": "0x94829c",
+      "file_offset": "0x94829c",
+      "field": "0x360",
+      "function": "Weapon::setAmmo(int, bool)",
+      "context": [
+        "0x94828c e80700f9 str x8, [sp, #8]",
+        "0x948290 e80740f9 ldr x8, [sp, #8]",
+        "0x948294 090140b9 ldr w9, [x8]",
+        "0x948298 e80b40f9 ldr x8, [sp, #0x10]",
+        "0x94829c 09c10679 strh w9, [x8, #0x360]"
+      ]
+    }
+  ]
+}

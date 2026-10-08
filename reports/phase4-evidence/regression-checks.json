@@ -1,0 +1,7 @@
+{
+  "reproducible_native_output": "PASS",
+  "reject_wrong_and_already_patched_input": "PASS",
+  "backup_hashes": "PASS",
+  "working_split_files_unchanged": "PASS",
+  "original_working_library_unchanged": "PASS"
+}

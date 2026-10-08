@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """
+OBSOLETE / BUGGY historical patch: do not use for new builds.
+Use patch_fixed_gameplay.py and build_fixed_gameplay.py.
 Isolated Native Patch: Unlimited Ammunition
 Target: Weapon::subAmmo(int)
 ELF File Offset: 0x009482e0
@@ -46,4 +48,4 @@ def apply_patch(target_so_path=SO_NATIVE_PATH):
         return True
 
 if __name__ == "__main__":
-    apply_patch()
+    raise SystemExit("Obsolete subAmmo RET patch is buggy. Use scripts/build_fixed_gameplay.py instead.")
