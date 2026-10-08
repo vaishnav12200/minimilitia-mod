@@ -1,5 +1,40 @@
-base.apk
-backup/
+# =============================================================================
+# .gitignore for MiniMilitiaMod — keeps only scripts, reports, and documentation
+# =============================================================================
+
+# Proprietary APK files (original and derived)
+*.apk
+*.xapk
+
+# Native shared libraries
+*.so
+
+# Large build outputs
 builds/
-scripts/jadx.zip
+decoded/
+extracted-apks/
+
+# Native analysis project (Ghidra, decompiled output, large binaries)
+native-analysis/
+
+# Signing materials — keep the pattern but never commit keystore files
+signing/*.keystore
+signing/*.jks
+
+# Java artifacts
+*.jar
+!scripts/apktool.jar
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE and OS artifacts
+.DS_Store
+*.swp
+.idea/
+*.iml
+jadx.zip
 scripts/jadx-bin/
+backup/
