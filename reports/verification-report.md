@@ -1,3 +1,9 @@
+USB installation update: the user-requested retry succeeded. The new duplicate inventory build is installed; its ARM64 split was read back and matches the verified build exactly. The launch command succeeded. Gameplay and LAN remain pending manual verification. Earlier storage failures below are historical.
+
+# Latest inventory-only verification — 2026-10-08
+
+The current candidate is `builds/duplicate_weapon_fixed_splits/`. Only addWeapon branch 0x8e698c and ordinary block 0x8e6d50–0x8e6e53 change relative to the exact user-tested corrected-ammo ELF. Working ammo/reload/fuel bytes and all other application payloads are preserved. Signatures, native storage/alignment, CRC, exact mutation scope and 128 ARM64 slot/ownership cases pass. See [duplicate-inventory-verification.md](duplicate-inventory-verification.md). Device duplicate gameplay and LAN remain pending. Prior build evidence follows as history.
+
 # Verification — 2026-10-08
 
 Both corrected Phase B and combined builds pass signature, alignment, CRC, ELF mutation-scope, original-byte checks and non-native application payload preservation. Verification separately checks native ZIP storage and 4096-byte ZIP data alignment. These structural checks do not establish gameplay success.
@@ -32,3 +38,8 @@ Machine-readable outputs: [ammo/fuel package](reload-fix-evidence/fixed_ammo_jet
 First install attempt found the inherited packaging bug: compressed native entry cannot satisfy the split base manifest's extractNativeLibs=false. The current packager corrects it without changing the manifest. Subsequent attempts were blocked by the phone's USB installation prompt; final device outcome is recorded in test-results.md.
 
 Physical deployment PASS: the final split set installed over USB and launched. The installed ARM64 split was pulled back and compared byte-for-byte with the build. Gameplay input was blocked by MIUI; the user chose manual tests. See [device-installation.json](reload-fix-evidence/device-installation.json).
+
+
+## Phase 5 pickup action separation — 2026-10-08
+
+The preceding SPAS held pair is user-confirmed. The new two-action SPAS UI candidate is signed, installed and launched; 176 ARM64 cases and package checks pass. Physical SPAS action-selection PASS: user confirms both actions, both guns firing and buttons hiding. Broader regression is pending. A shared pair-policy sniper candidate passes 428 ARM64 cases and package checks; its installation was blocked by the disconnected phone. See [sniper extension](dual-wield-ui-sniper.md). Other gun classes/mixed pairs and LAN remain pending. See [Phase 5 evidence and manual checklist](dual-wield-ui-phase5.md).

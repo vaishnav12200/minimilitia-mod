@@ -1,0 +1,12 @@
+{
+  "install": "SUCCESS",
+  "launch": "am start SUCCESS",
+  "device": "241266d60c20",
+  "installed_arm64_sha256": "243cad45523142c92cad4294f53661d2868137a6c3869ae441ba16cc7334d623",
+  "installed_split_matches_build": true,
+  "app_data_clear_or_uninstall": false,
+  "physical_tests": "Test A PASS: user confirms both actions, both guns fire, buttons hide",
+  "baseline_user_confirmation": "SPAS pair held simultaneously; Phase 5 handover confirms this",
+  "universal_pairs": "Next: sniper same-class candidate; mixed pairs remain disabled",
+  "user_reply": "Both actions work; both guns fire; buttons hide"
+}

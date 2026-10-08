@@ -1,3 +1,9 @@
+USB installation update: the user-requested retry succeeded. The new duplicate inventory build is installed; its ARM64 split was read back and matches the verified build exactly. The launch command succeeded. Gameplay and LAN remain pending manual verification. Earlier storage failures below are historical.
+
+# Current split deployment — 2026-10-08
+
+The legacy RET-ammo build descriptions below are obsolete for reproduction/rollback. Use `duplicate_weapon_fixed_splits` for the new inventory candidate and preserve `fixed_ammo_dual_weapon_splits` as the latest user-tested working ammo/reload/fuel build. All new split native libraries are stored uncompressed and page-aligned, fixing the historical installer extraction bug. All four splits have matching test certificates. Latest first install was refused for insufficient device storage. No public-server code was disabled by these patches; testing must be confined to offline/private modes by the user. The old statement about disabled public connection APIs below is not supported by the current patch audit. See [inventory verification](duplicate-inventory-verification.md) and [device tests](duplicate-inventory-tests.md).
+
 # Mini Militia Classic — Split-APK Testing & Installation Report
 
 **Project Directory:** `/home/vaishnavkm/Projects/MiniMilitiaMod`  
@@ -113,3 +119,8 @@ adb install-multiple -r \
 1. **Original Extraction Rollback:** Original extracted APKs are preserved untouched in `extracted-apks/`.
 2. **Baseline Rollback:** Running Command A reinstalls the signed baseline package.
 3. **Private LAN Isolation:** All testing is restricted to offline local matches and private LAN sessions (`ClientRoomLAN`). Public server connection APIs are disabled during test sessions.
+
+
+## Phase 5 pickup action separation — 2026-10-08
+
+The preceding SPAS held pair is user-confirmed. The new two-action SPAS UI candidate is signed, installed and launched; 176 ARM64 cases and package checks pass. Physical SPAS action-selection PASS: user confirms both actions, both guns firing and buttons hiding. Broader regression is pending. A shared pair-policy sniper candidate passes 428 ARM64 cases and package checks; its installation was blocked by the disconnected phone. See [sniper extension](dual-wield-ui-sniper.md). Other gun classes/mixed pairs and LAN remain pending. See [Phase 5 evidence and manual checklist](dual-wield-ui-phase5.md).

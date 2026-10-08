@@ -1,0 +1,15 @@
+{
+  "usb_device": "241266d60c20",
+  "install": "SUCCESS on third attempt after user requested retry",
+  "runtime": "Manual gameplay pending",
+  "previous_app_preserved": "Workspace APK backup verified; device pm path and pm list packages -u return no package; device app/data preservation cannot be confirmed",
+  "manual_stage": "Phase A separate hand visibility before expansion",
+  "native_sha256": "b6f87aed1e1898c55b726720d6cb45d0796d54177ce94ed0be2c64d889262102",
+  "apk_sha256": "2c0f9ab0fb6d76a13688f8efd9094b7dd2ab0424506df1330ca121770d41ad57",
+  "attempts": 3,
+  "available_data": "591 MB after second attempt",
+  "uninstall_or_data_clear_issued": false,
+  "launch": "am start SUCCESS",
+  "installed_arm64_sha256": "ad0ddc56e7394cd85cab5eccb59e5a044139ebbac5c1b19def508f90789c6c5e",
+  "installed_split_matches_build": true
+}

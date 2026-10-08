@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "backup_integrity": "PASS",
+  "working_build_files": [
+    {
+      "path": "builds/fixed_ammo_dual_weapon_splits/base.apk",
+      "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_splits/base.apk.idsig",
+      "sha256": "1526614a6ddfa861b584817a0cfa5cb8f13aabe416e7094cefe79b3fb3526363",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_splits/split_config.arm64_v8a.apk",
+      "sha256": "75a4a261154227b00f0f7a4b0b2f68edb644e362c51063ded679290c677cfe5d",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_splits/split_config.arm64_v8a.apk.idsig",
+      "sha256": "e15a19705d7b0c66d99ff67c5c3607513290c63586d7b9bc9181ead9107ba991",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_splits/split_config.xxhdpi.apk",
+      "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_splits/split_config.xxhdpi.apk.idsig",
+      "sha256": "627e46386a00fa2d807cab2a72c6c1e6c98701f2ace9bc25b2a09bc868eec37a",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_splits/split_config.en.apk",
+      "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_splits/split_config.en.apk.idsig",
+      "sha256": "73a15a88bf9c68c37ac0cf77a3e177c966f103b533d8fc9462161cf1395ad733",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_splits/verification.json",
+      "sha256": "f26148d0ba28172640478233252806593778501cc97b29495c8c7d123f97a5c8",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_standalone/mmc-fixed-ammo-dual-weapon.apk",
+      "sha256": "3c01bda3d733c64a5e8913af72f8224a666dd502fc8a40c882e2e1ae9411fff1",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_standalone/mmc-fixed-ammo-dual-weapon.apk.idsig",
+      "sha256": "52c755499ab1cca678b2a73f356d59a4b7663f685684064cfec7648b3c4f83dc",
+      "preserved": true
+    },
+    {
+      "path": "builds/fixed_ammo_dual_weapon_standalone/verification.json",
+      "sha256": "f26148d0ba28172640478233252806593778501cc97b29495c8c7d123f97a5c8",
+      "preserved": true
+    }
+  ],
+  "original_native": "preserved",
+  "previous_patch_script": "preserved"
+}

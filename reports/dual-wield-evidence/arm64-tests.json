@@ -1,0 +1,1157 @@
+{
+  "status": "PASS",
+  "scope": "ARM64 pickup/ownership fixtures and original dual fire dispatch; rendering/projectiles/Android not tested",
+  "cases": 127,
+  "records": [
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 0,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 0,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33562624,
+      "secondary": 33566720,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 9,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 11,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 9,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": false,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": false,
+      "status": "PASS"
+    },
+    {
+      "primary": 33566720,
+      "secondary": 33562624,
+      "incoming_type": 17,
+      "primary_type": 11,
+      "dual_flag": true,
+      "pickup_flag": true,
+      "status": "PASS"
+    },
+    {
+      "alias_guard": 33562624,
+      "status": "PASS"
+    },
+    {
+      "alias_guard": 33566720,
+      "status": "PASS"
+    },
+    {
+      "alias_guard": 33570816,
+      "status": "PASS"
+    },
+    {
+      "occupied_dual_fallback": 9,
+      "status": "PASS"
+    },
+    {
+      "occupied_dual_fallback": 11,
+      "status": "PASS"
+    }
+  ],
+  "fire_callbacks": [
+    [
+      33562624,
+      1015580809
+    ],
+    [
+      33566720,
+      1015580809
+    ]
+  ],
+  "native_patch": {
+    "input_sha256": "46e01584ccf9aafafe09c7d1601364ddc4d6158d762e14554830139550d23db4",
+    "output_sha256": "b6f87aed1e1898c55b726720d6cb45d0796d54177ce94ed0be2c64d889262102",
+    "changes": [
+      {
+        "file_offset": "0x8e698c",
+        "original": "c8000014",
+        "replacement": "01000014",
+        "reason": "Enter SPAS pair guard before retained ordinary routing",
+        "function": "_ZN22SoldierLocalController9addWeaponEP6Weapon",
+        "elf_virtual_address": "0x8e698c"
+      },
+      {
+        "file_offset": "0x8e6990",
+        "original": "a8035ff8090140f929fd42f9e00308aa20013fd640180036a8035ff8090140f9290543f9e00308aa20013fd6000c0036a8835ef809ed40f9a90100b4a8835ef8090140f9290d42f9e00308aa20013fd6a8835ef8090140f9291942f9a1035ff8e00308aa20013fd64b000014a8835ef809e540f9690300b4a8835ef809e540f92a0140f94afd42f9e00309aa40013fd680020036a8835ef809e540f9",
+        "replacement": "a8835ef8aa035ff809e540f93f010aeb2004005409e940f93f010aebc003005409ed40f93f010aeb60030054690300b509e540f9290300b4e0030aaa080040f9089142f900013fd61f24007161020054a8835ef800e540f9080040f9089142f900013fd61f24007181010054a0835ef8080040f9082142f9a1035ff800013fd681008052c85600b0086942f9000140f9b068ef970c010014a1000014",
+        "reason": "Distinct SPAS+SPAS with empty dual slot uses stock addDualWeapon; every other pickup falls back to working carried routing",
+        "function": "_ZN22SoldierLocalController9addWeaponEP6Weapon",
+        "elf_virtual_address": "0x8e6990",
+        "assembly": "\n ldur x8, [x29, #-0x18]\n ldur x10, [x29, #-0x10]\n ldr x9, [x8, #0x1c8]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d0]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d8]\n cmp x9, x10\n b.eq done\n cbnz x9, fallback\n ldr x9, [x8, #0x1c8]\n cbz x9, fallback\n mov x0, x10\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n cmp w0, #9\n b.ne fallback\n ldur x8, [x29, #-0x18]\n ldr x0, [x8, #0x1c8]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n cmp w0, #9\n b.ne fallback\nldur x0, [x29, #-0x18]\nldr x8, [x0]\nldr x8, [x8, #1088]\nldur x1, [x29, #-0x10]\nblr x8\n\n mov w1, #4\n adrp x8, 0x13bf000\n ldr x8, [x8, #0x4d0]\n ldr x0, [x8]\n bl 0x4c0ce0\n done:\n b 0x8e6e54\n fallback:\n b 0x8e6cac\n"
+      },
+      {
+        "file_offset": "0x39fd28",
+        "original": "01010000920c0000",
+        "replacement": "010100002d350000",
+        "reason": "Dynamic relocation changes SHOTGUN dual-configuration vtable slot to its held transform; ownership untouched",
+        "function": "_ZN4Item24setHostDualConfigurationEv -> SHOTGUN::setPrimaryConfiguration",
+        "elf_virtual_address": "0x134f9c8",
+        "relocation_target": "_ZN7SHOTGUN23setPrimaryConfigurationEv"
+      }
+    ],
+    "stage": "Phase A SPAS-only hand-attachment candidate; device visual confirmation pending",
+    "affected_types": [
+      9
+    ],
+    "stub_bytes": 156,
+    "ownership": "Stock addDualWeapon retains distinct incoming instance exactly once; primary and secondary untouched; occupied dual slot falls back to existing inventory behavior",
+    "firing": "No firing, projectile, reload, network or fuel code changes",
+    "compatibility": "Other classes retain working carried behavior; universal expansion requires physical SPAS verification"
+  }
+}

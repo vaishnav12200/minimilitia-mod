@@ -1,0 +1,20 @@
+{
+  "device": "241266d60c20",
+  "model": "M2010J19CI",
+  "android": "12",
+  "new_build": "duplicate_weapon_fixed_splits",
+  "installation": "PASS: installation retry returned Success",
+  "error": "java.io.IOException: Requested internal only, but not enough space",
+  "free_storage": [
+    "631 MB at first check",
+    "572 MB at follow-up"
+  ],
+  "working_package": "Existing user-confirmed build retained; no uninstall/data clear/cache deletion",
+  "inventory_gameplay": "NOT TESTED; user manual tests pending",
+  "ammo_reload_fuel": "User confirms working on input build; new-build runtime regression pending",
+  "lan": "NOT TESTED; local success first, two consenting phones required",
+  "previous_installation": "BLOCKED: adb install-create refused update; internal storage insufficient",
+  "launch": "PASS: am start com.appsomniacs.mmc/.MmcActivity accepted",
+  "installed_arm64_split_sha256": "0acebd0a2ea786551f3b41f81cfb3ccb10ac5fb0fa921e3bfa3dc4cb1abf070f",
+  "installed_split_matches_build": true
+}

@@ -1,0 +1,11 @@
+{
+  "install": "NOT INSTALLED: adb device 241266d60c20 not found",
+  "launch": "NOT ATTEMPTED",
+  "physical_test": "Pending sniper same-class test",
+  "current_confirmed_build": "universal_dual_wield_ui_splits: user confirmed SPAS action selection / both guns firing / buttons hide",
+  "static_checks": "PASS",
+  "arm64_cases": 428,
+  "native_sha256": "a7a01b33290e7de4c8e0d799c310edf00e886b470bd8b745cbc2bdf3dfc2555f",
+  "apk_sha256": "4f5223272bb4205f5c7dcdac45b4aa9858f0a531227752e71a33754efd16687b",
+  "uninstall_or_clear_data": false
+}

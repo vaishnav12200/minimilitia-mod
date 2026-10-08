@@ -1,0 +1,148 @@
+{
+  "input_sha256": "8cac1bfb7c7c523bbfbb2c33ea3c446acb2d8db24d0a639799b04d74b8026f60",
+  "output_sha256": "46e01584ccf9aafafe09c7d1601364ddc4d6158d762e14554830139550d23db4",
+  "functions": [
+    {
+      "symbol": "_ZN22SoldierLocalController9addWeaponEP6Weapon",
+      "va": "0x8e6934",
+      "file_offset": "0x8e6934",
+      "size": 1324,
+      "sha256": "cddfa947c405d38be8e0fde0ad9ec6f5c6ee7cbaf146021b53eec8c54bfe9322",
+      "unchanged_by_new_patch": false
+    },
+    {
+      "symbol": "_ZN22SoldierLocalController16addPrimaryWeaponEP6Weapon",
+      "va": "0x8e6ebc",
+      "file_offset": "0x8e6ebc",
+      "size": 500,
+      "sha256": "bdd11b686cb9c5f9ff99a0b1c14280678e78ae9531546532ec12cbec6bbe19bb",
+      "unchanged_by_new_patch": true
+    },
+    {
+      "symbol": "_ZN22SoldierLocalController18addSecondaryWeaponEP6Weapon",
+      "va": "0x8e70b0",
+      "file_offset": "0x8e70b0",
+      "size": 412,
+      "sha256": "d9e0fb6d9690d3a39767e5d1a506c1eb8b054e0a320fbe8a2101fde17e59d265",
+      "unchanged_by_new_patch": true
+    },
+    {
+      "symbol": "_ZN22SoldierLocalController19removePrimaryWeaponEv",
+      "va": "0x8eade4",
+      "file_offset": "0x8eade4",
+      "size": 840,
+      "sha256": "f4a6b5c4636f46c19fac04c8f4d0aee1d76c1833fbabc74938c2c5119380bd84",
+      "unchanged_by_new_patch": true
+    },
+    {
+      "symbol": "_ZN22SoldierLocalController21removeSecondaryWeaponEv",
+      "va": "0x8eb12c",
+      "file_offset": "0x8eb12c",
+      "size": 732,
+      "sha256": "ad311a5f9831f0e3f039431e2cbb2ed83af1d454bdb0dd9f43ff2e3b85a887bd",
+      "unchanged_by_new_patch": true
+    },
+    {
+      "symbol": "_ZN22SoldierLocalController26addPrimaryWeaponRemoveDualEP6Weapon",
+      "va": "0x8e6e60",
+      "file_offset": "0x8e6e60",
+      "size": 92,
+      "sha256": "0b4028bbc44dfe9ae09ab591931309a8a66846eda7d389e25f26a4e41e12b821",
+      "unchanged_by_new_patch": true
+    },
+    {
+      "symbol": "_ZN22SoldierLocalController13switchWeaponsEv",
+      "va": "0x8ebea0",
+      "file_offset": "0x8ebea0",
+      "size": 588,
+      "sha256": "1cab30fdbffdb77e408fa9d4e83200d67ab56ef52ad8feaeaf012e8133b200f8",
+      "unchanged_by_new_patch": true
+    },
+    {
+      "symbol": "_ZN14SoldierManager11spawnPlayerEv",
+      "va": "0x8f11a4",
+      "file_offset": "0x8f11a4",
+      "size": 1668,
+      "sha256": "e896bd5fab1b4ff6cb4e461e60bf35b2c0012066d417399cd41a61090233606c",
+      "unchanged_by_new_patch": true
+    },
+    {
+      "symbol": "_ZN6Weapon11getAmmoTypeEv",
+      "va": "0x948438",
+      "file_offset": "0x948438",
+      "size": 24,
+      "sha256": "8ad916249c65749eaf943cff6fdc7b0c83a8125f592750d1ac450e889fd747f8",
+      "unchanged_by_new_patch": true
+    },
+    {
+      "symbol": "_ZN6Weapon7getTypeEv",
+      "va": "0x947ed0",
+      "file_offset": "0x947ed0",
+      "size": 24,
+      "sha256": "8ad916249c65749eaf943cff6fdc7b0c83a8125f592750d1ac450e889fd747f8",
+      "unchanged_by_new_patch": true
+    },
+    {
+      "symbol": "_ZN13WeaponManager14onPickUpWeaponEPN7cocos2d8CCObjectE",
+      "va": "0x955ef4",
+      "file_offset": "0x955ef4",
+      "size": 648,
+      "sha256": "751493d5d61e563b9097d2c347f9a0a700f5648ab08f2e274ae586af05d434f6",
+      "unchanged_by_new_patch": true
+    }
+  ],
+  "patch": {
+    "input_sha256": "8cac1bfb7c7c523bbfbb2c33ea3c446acb2d8db24d0a639799b04d74b8026f60",
+    "output_sha256": "46e01584ccf9aafafe09c7d1601364ddc4d6158d762e14554830139550d23db4",
+    "changes": [
+      {
+        "function": "_ZN22SoldierLocalController9addWeaponEP6Weapon",
+        "elf_virtual_address": "0x8e698c",
+        "file_offset": "0x8e698c",
+        "original": "00190036",
+        "replacement": "c8000014",
+        "purpose": "Route ordinary dual-capable pickups through retained dual-only guard to two-slot block",
+        "assembly": null
+      },
+      {
+        "function": "_ZN22SoldierLocalController9addWeaponEP6Weapon",
+        "elf_virtual_address": "0x8e6d50",
+        "file_offset": "0x8e6d50",
+        "original": "a8835ef809e540f9a90100b5a8835ef8090140f9294943f9a1035ff8e00308aa20013fd6e1031e32c85600b0086942f9000140f9d767ef9733000014a8835ef809e540f9290300b4a8835ef809e940f9c90200b5e1031e32c85600b0086942f9000140f9cb67ef97a8835ef8000140f9001c42f9a1035ff8e00f00f9e00308aafe0f40f9c0033fd6a8835ef8000140f900dc42f9e00b00f9e00308aae10b40f920003fd618000014a8835ef809e540f9a90200b4e1031e32c85600b0086942f9000140f9b367ef97a8835ef8000140f9000c42f9e00700f9e00308aafe0740f9c0033fd6a8835ef8000140f9004843f9a1035ff8e00300f9e00308aafe0340f9c0033fd6",
+        "replacement": "a8835ef8aa035ff809e540f93f010aeb8006005409e940f93f010aeb2006005409ed40f93f010aebc005005409e540f9090300b409e940f9890300b4a0035ff8080040f9089142f900013fd6e00300b9a8835ef800e540f9080040f9089142f900013fd6e90340b91f00096ba1000054a0835ef8080040f908dd42f900013fd6a0835ef8080040f9080d42f900013fd6a0835ef8080040f9084943f9a1035ff800013fd60a000014a0835ef8080040f9081d42f9a1035ff800013fd6a0835ef8080040f908dd42f900013fd681008052c85600b0086942f9000140f9ad67ef97090000141f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d5",
+        "purpose": "Preserve matching primary when full; distinct pointers; stock add/remove/switch callbacks",
+        "assembly": "\n ldur x8, [x29, #-0x18]\n ldur x10, [x29, #-0x10]\n ldr x9, [x8, #0x1c8]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d0]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d8]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1c8]\n cbz x9, add_primary\n ldr x9, [x8, #0x1d0]\n cbz x9, add_secondary\n ldur x0, [x29, #-0x10]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n str w0, [sp]\n ldur x8, [x29, #-0x18]\n ldr x0, [x8, #0x1c8]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n ldr w9, [sp]\n cmp w0, w9\n b.ne replace_primary\nldur x0, [x29, #-0x18]\nldr x8, [x0]\nldr x8, [x8, #1464]\nblr x8\nreplace_primary:\nldur x0, [x29, #-0x18]\nldr x8, [x0]\nldr x8, [x8, #1048]\nblr x8\nadd_primary:\nldur x0, [x29, #-0x18]\nldr x8, [x0]\nldr x8, [x8, #1680]\nldur x1, [x29, #-0x10]\nblr x8\nb sound\nadd_secondary:\nldur x0, [x29, #-0x18]\nldr x8, [x0]\nldr x8, [x8, #1080]\nldur x1, [x29, #-0x10]\nblr x8\nldur x0, [x29, #-0x18]\nldr x8, [x0]\nldr x8, [x8, #1464]\nblr x8\nsound:\n mov w1, #4\n adrp x8, 0x13bf000\n ldr x8, [x8, #0x4d0]\n ldr x0, [x8]\n bl 0x4c0ce0\n done:\n b 0x8e6e54\n"
+      }
+    ],
+    "slot_code_bytes": 228,
+    "protected_gameplay": [
+      {
+        "symbol": "_ZN6Weapon7getClipEv",
+        "va": "0x947954",
+        "bytes": 204,
+        "sha256": "5e482434c2908fd24f56be2811526dddee1f3cc1c82e3e4528c22edb96e0af04"
+      },
+      {
+        "symbol": "_ZN6Weapon7getAmmoEv",
+        "va": "0x947a20",
+        "bytes": 204,
+        "sha256": "b4e5dbdd338224a52136c32a8c3bd6fd7a9b1da72ee662eb0b485239fa7684fa"
+      },
+      {
+        "symbol": "_ZN6Weapon7subAmmoEi",
+        "va": "0x9482e0",
+        "bytes": 344,
+        "sha256": "a0b92ed50c837ff0be186ef5ae78f50aca0ef16777ffe1aa159392c2937e4590"
+      },
+      {
+        "symbol": "_ZN22SoldierLocalController8getPowerEv",
+        "va": "0x8e68e4",
+        "bytes": 8,
+        "sha256": "4be95efdfa62b814a282a0fbcc71ff61edddf338b2a4363ec4681091a6761699"
+      }
+    ],
+    "calling_convention": "Existing AAPCS64 frame: x0=controller, x1=incoming Weapon*, void return; only caller-saved registers used; original saved x29/x30 and epilogue retained",
+    "status": "Experimental inventory patch; gameplay verification pending"
+  },
+  "type_virtual": "Weapon +0x520 -> getType (ItemType field +0x338)"
+}

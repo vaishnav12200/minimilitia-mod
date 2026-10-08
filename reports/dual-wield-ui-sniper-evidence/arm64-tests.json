@@ -1,0 +1,7642 @@
+{
+  "status": "PASS",
+  "cases": 428,
+  "scope": "Real ARM64 inventory/visibility/reset/layout instructions with mocked stock callbacks; touch hit testing, physics and rendering require physical testing",
+  "native_sha256": "a7a01b33290e7de4c8e0d799c310edf00e886b470bd8b745cbc2bdf3dfc2555f",
+  "records": [
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 0,
+      "secondary": 33562624,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 33566720,
+      "dual": 0,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 9,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 9,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 9,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 9,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 10,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 10,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 10,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 10,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 11,
+      "incoming_type": 9,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 11,
+      "incoming_type": 10,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 11,
+      "incoming_type": 11,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "pickup",
+      "primary": 33562624,
+      "secondary": 0,
+      "dual": 33566720,
+      "primary_type": 11,
+      "incoming_type": 17,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "alias",
+      "slot": 33562624,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "alias",
+      "slot": 33566720,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "alias",
+      "slot": 33570816,
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "alias",
+      "slot": 33562624,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "alias",
+      "slot": 33566720,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "alias",
+      "slot": 33570816,
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "null",
+      "explicit_dual": false,
+      "status": "PASS"
+    },
+    {
+      "test": "null",
+      "explicit_dual": true,
+      "status": "PASS"
+    },
+    {
+      "test": "utility",
+      "status": "PASS"
+    },
+    {
+      "test": "utility",
+      "status": "PASS"
+    },
+    {
+      "test": "utility",
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 0,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          319.0,
+          200.0
+        ],
+        "dual_position": [
+          281.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          338.0,
+          200.0
+        ],
+        "dual_position": [
+          262.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          357.0,
+          200.0
+        ],
+        "dual_position": [
+          243.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": true,
+        "swap_position": [
+          319.0,
+          200.0
+        ],
+        "dual_position": [
+          281.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": true,
+        "swap_position": [
+          338.0,
+          200.0
+        ],
+        "dual_position": [
+          262.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": true,
+        "swap_position": [
+          357.0,
+          200.0
+        ],
+        "dual_position": [
+          243.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          319.0,
+          200.0
+        ],
+        "dual_position": [
+          281.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          338.0,
+          200.0
+        ],
+        "dual_position": [
+          262.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          357.0,
+          200.0
+        ],
+        "dual_position": [
+          243.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": true,
+        "swap_position": [
+          319.0,
+          200.0
+        ],
+        "dual_position": [
+          281.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": true,
+        "swap_position": [
+          338.0,
+          200.0
+        ],
+        "dual_position": [
+          262.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": true,
+        "swap_position": [
+          357.0,
+          200.0
+        ],
+        "dual_position": [
+          243.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 0,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 9,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 10,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 9,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 10,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 11,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 0.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.0,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": false,
+      "scale": 1.5,
+      "result": {
+        "swap": false,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 0.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.0,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD",
+      "primary": 33562624,
+      "dual": 33566720,
+      "pt": 11,
+      "it": 17,
+      "enabled": true,
+      "scale": 1.5,
+      "result": {
+        "swap": true,
+        "dual": false,
+        "swap_position": [
+          300.0,
+          200.0
+        ],
+        "dual_position": [
+          300.0,
+          200.0
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "test": "HUD stale/null",
+      "incoming": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "HUD stale/null",
+      "incoming": 33562624,
+      "status": "PASS"
+    },
+    {
+      "test": "HUD stale/null",
+      "incoming": 33566720,
+      "status": "PASS"
+    },
+    {
+      "test": "HUD stale/null",
+      "incoming": 33570816,
+      "status": "PASS"
+    },
+    {
+      "test": "utility HUD",
+      "status": "PASS"
+    },
+    {
+      "test": "utility HUD",
+      "status": "PASS"
+    },
+    {
+      "test": "utility HUD",
+      "status": "PASS"
+    },
+    {
+      "test": "utility HUD",
+      "status": "PASS"
+    },
+    {
+      "test": "custom HUD positions preserved",
+      "status": "PASS"
+    }
+  ]
+}

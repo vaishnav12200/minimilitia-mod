@@ -1,0 +1,10 @@
+{
+  "status": "PASS: no external direct branch enters overwritten block interior",
+  "references": [
+    {
+      "source": "0x8e6cc0",
+      "destination": "0x8e6d50",
+      "bytes": "80040036"
+    }
+  ]
+}

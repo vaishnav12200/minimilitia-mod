@@ -1,0 +1,100 @@
+{
+  "static_checks": "PASS",
+  "runtime_visual": "NOT TESTED",
+  "stage": "Phase 5 sniper same-class Test B",
+  "native_patch": {
+    "input_sha256": "77f075ede045373df1f631b2cea0f0ce421bab0f971214e9c38e235de5a87191",
+    "output_sha256": "a7a01b33290e7de4c8e0d799c310edf00e886b470bd8b745cbc2bdf3dfc2555f",
+    "changes": [
+      {
+        "file_offset": "0x8e6990",
+        "original": "e00700b9a8835ef8aa035ff809e540f93f010aeb4005005409e940f93f010aebe004005409ed40f93f010aeb80040054e90740b969040036e0030aaa080040f9080143f900013fd6c0030037a8835ef809ed40f9490300b509e540f9090300b4a0035ff8080040f9089142f900013fd61f24007141020054a8835ef800e540f9080040f9089142f900013fd61f24007161010054a0835ef8080040f9082142f9a1035ff800013fd681008052c85600b0086942f9000140f9a668ef970201001497000014a8835ef8090140f9291942f9a1035ff8e00308aa20013fd62e000014",
+        "replacement": "e00700b9a8835ef8aa035ff809e540f93f010aeb2006005409e940f93f010aebc005005409ed40f93f010aeb60050054e90740b949050036e0030aaa080040f9080143f900013fd6a0040037a8835ef809ed40f9290400b509e540f9e90300b4a0035ff8080040f9089142f900013fd6e00b00b9a8835ef800e540f9080040f9089142f900013fd6e90b40b91f240071610000543f250071c00000541f280071610000543f290071400000540b000014a0835ef8080040f9082142f9a1035ff800013fd681008052c85600b0086942f9000140f99f68ef97fb00001490000014",
+        "reason": "Compile same explicit pair matrix into inventory and HUD; independent source-class trigger/projectile paths preserved",
+        "function": "_ZN22SoldierLocalController9addWeaponEP6Weapon",
+        "elf_virtual_address": "0x8e6990",
+        "assembly": "\n str w0, [sp, #4]\n ldur x8, [x29, #-0x18]\n ldur x10, [x29, #-0x10]\n ldr x9, [x8, #0x1c8]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d0]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d8]\n cmp x9, x10\n b.eq done\n ldr w9, [sp, #4]\n tbz w9, #0, normal\n mov x0, x10\n ldr x8, [x0]\n ldr x8, [x8, #0x600]\n blr x8\n tbnz w0, #0, normal\n ldur x8, [x29, #-0x18]\n ldr x9, [x8, #0x1d8]\n cbnz x9, done\n ldr x9, [x8, #0x1c8]\n cbz x9, done\n ldur x0, [x29, #-0x10]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n str w0, [sp, #8]\n ldur x8, [x29, #-0x18]\n ldr x0, [x8, #0x1c8]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n ldr w9, [sp, #8]\ncmp w0, #9\nb.ne pickup_pair_0\ncmp w9, #9\nb.eq pickup_pair_ok\npickup_pair_0:\ncmp w0, #10\nb.ne pickup_pair_1\ncmp w9, #10\nb.eq pickup_pair_ok\npickup_pair_1:\nb done\npickup_pair_ok:\nldur x0, [x29, #-0x18]\nldr x8, [x0]\nldr x8, [x8, #1088]\nldur x1, [x29, #-0x10]\nblr x8\n\n mov w1, #4\n adrp x8, 0x13bf000\n ldr x8, [x8, #0x4d0]\n ldr x0, [x8]\n bl 0x4c0ce0\n done:\n b 0x8e6e54\n normal:\n b 0x8e6cac\n"
+      },
+      {
+        "file_offset": "0x669d00",
+        "original": "a00359f8a00500b4a98358f81f0009eb40050054a90358f81f0009ebe0040054a98357f81f0009eb80040054080040f9080143f900013fd640020037a98358f8a90300b4a98357f8690300b5a00359f8080040f9089142f900013fd61f240071a1020054a08358f8080040f9089142f900013fd61f240071e101005482000014a08358f8a00000b4080040f908fd42f900013fd6e0000037a00358f8e00000b4080040f908fd42f900013fd660000036c9ffff17f400001441010014a80359f8090140f9299142f9e0a300b9e00308aa20013fd6eaa340b9",
+        "replacement": "a00359f8800600b4a98358f81f0009eb20060054a90358f81f0009ebc0050054a98357f81f0009eb60050054080040f9080143f900013fd620030037a98358f8890400b4a98357f8490400b5a00359f8080040f9089142f900013fd6e0af00b9a08358f8080040f9089142f900013fd6e9af40b91f240071610000543f250071c00000541f280071610000543f290071400000540f0000147b000014a08358f8a00000b4080040f908fd42f900013fd6e0000037a00358f8e00000b4080040f908fd42f900013fd660000036c2ffff17ed0000143a010014",
+        "reason": "Compile same explicit pair matrix into inventory and HUD; independent source-class trigger/projectile paths preserved",
+        "function": "_ZN3HUD16weaponProxyStartEPN7cocos2d8CCObjectE",
+        "elf_virtual_address": "0x669d00",
+        "assembly": "\n ldur x0, [x29, #-0x70]\n cbz x0, hidden\n ldur x9, [x29, #-0x78]\n cmp x0, x9\n b.eq hidden\n ldur x9, [x29, #-0x80]\n cmp x0, x9\n b.eq hidden\n ldur x9, [x29, #-0x88]\n cmp x0, x9\n b.eq hidden\n ldr x8, [x0]\n ldr x8, [x8, #0x600]\n blr x8\n tbnz w0, #0, utility\n ldur x9, [x29, #-0x78]\n cbz x9, single\n ldur x9, [x29, #-0x88]\n cbnz x9, single\n ldur x0, [x29, #-0x70]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n str w0, [sp, #172]\n ldur x0, [x29, #-0x78]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n ldr w9, [sp, #172]\ncmp w0, #9\nb.ne ui_pair_0\ncmp w9, #9\nb.eq ui_pair_ok\nui_pair_0:\ncmp w0, #10\nb.ne ui_pair_1\ncmp w9, #10\nb.eq ui_pair_ok\nui_pair_1:\nb single\nui_pair_ok:\n b 0x669f84\n utility:\n ldur x0, [x29, #-0x78]\n cbz x0, secondary_utility\n ldr x8, [x0]\n ldr x8, [x8, #0x5f8]\n blr x8\n tbnz w0, #0, utility_visible\n secondary_utility:\n ldur x0, [x29, #-0x80]\n cbz x0, hidden\n ldr x8, [x0]\n ldr x8, [x8, #0x5f8]\n blr x8\n tbz w0, #0, hidden\n utility_visible:\n b 0x669cd4\n single:\n b 0x66a184\n hidden:\n b 0x66a2bc\n"
+      },
+      {
+        "file_offset": "0x39fbf0",
+        "original": "01010000920c0000",
+        "replacement": "01010000c94b0000",
+        "reason": "Replace only this gun class empty dual configuration with its existing held transform",
+        "function": "M93BA::dual configuration vtable",
+        "elf_virtual_address": "0x133a328",
+        "target": "_ZN5M93BA23setPrimaryConfigurationEv",
+        "item_type": 10
+      }
+    ],
+    "pair_policy": [
+      {
+        "primary": 9,
+        "incoming": 9
+      },
+      {
+        "primary": 10,
+        "incoming": 10
+      }
+    ],
+    "stage": "Physical SPAS UI PASS; same-class sniper candidate pending physical test",
+    "firing": "No ammo/reload/fuel/trigger/projectile/network changes; per-instance methods preserved",
+    "ownership": "Same confirmed explicit actions and pointer/occupied-slot guards; shared policy drives HUD and inventory"
+  },
+  "splits": [
+    {
+      "apk": "base.apk",
+      "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    },
+    {
+      "apk": "split_config.arm64_v8a.apk",
+      "sha256": "91536555b5a8e60854d08f5be5f0f4abcb06365b414b166f62a9f9a3d071e06a",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    },
+    {
+      "apk": "split_config.xxhdpi.apk",
+      "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    },
+    {
+      "apk": "split_config.en.apk",
+      "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    }
+  ],
+  "standalone": {
+    "apk": "mmc-two-action-sniper-experimental.apk",
+    "sha256": "4f5223272bb4205f5c7dcdac45b4aa9858f0a531227752e71a33754efd16687b",
+    "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+    "signature": "PASS",
+    "alignment": "PASS",
+    "crc": "PASS",
+    "non_native_application_payloads": "identical"
+  },
+  "source_build": "universal_dual_wield_ui_splits; physical SPAS action selection/fire/hide PASS"
+}

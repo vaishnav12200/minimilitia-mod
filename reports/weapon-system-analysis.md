@@ -1,3 +1,7 @@
+# Latest equipment-routing findings — 2026-10-08
+
+The preceding selector/proximity patch failed to guarantee two actual slots. Stock addWeapon replaces primary when both slots are full, discarding the matching active gun, and may route dual-capable ordinary guns to +0x1d8 instead of switchable secondary +0x1d0. The new patch is confined to addWeapon: ordinary two-slot routing, preserving matching primary before full replacement, and guarding identical pointers. Factory/retain/release/rendering/UUID/spawn logic are unchanged. Client/host/database parsers read pw/sw separately; spawn independently creates both instances. See [root cause](duplicate-inventory-root-cause.md) and [native audit](duplicate-inventory-evidence/native-audit.json). Earlier investigations below are historical and superseded where they describe picker-only/current build status.
+
 # Current correction status — 2026-10-08
 
 The historical picker-only experiment below is superseded by `scripts/patch_fixed_gameplay.py --duplicates`. The new combined build also changes same-type pickup branches at ELF VA `0x9578c8` and `0x957980` to unconditional branches to the existing next-check blocks (`0x957944`, `0x9579f4`). Original comparisons and branch bytes are strictly validated. Primary/secondary same-type incoming guns now follow ordinary pickup instead of the ammo-transfer exit. Allocation, ownership, UUID creation, switching, host validation and simultaneous dual restrictions are untouched. Picker branches remain those previously audited. This supports ordinary listed guns structurally; actual duplicate gameplay still requires testing. Dual-only utilities, throwables, objective objects and paid loadout access remain under existing rules.
@@ -125,3 +129,8 @@ Use compatible experimental packages on **both consenting devices** on an isolat
 - `native-analysis/ghidra_scripts/ExportPhase4*.java`: reproducible read-only exports.
 
 The Ghidra project is the original unmodified library. The combined and experimental images are checked separately by full-file comparison against that library plus the explicit patch set.
+
+
+## Phase 5 pickup action separation — 2026-10-08
+
+The preceding SPAS held pair is user-confirmed. The new two-action SPAS UI candidate is signed, installed and launched; 176 ARM64 cases and package checks pass. Physical SPAS action-selection PASS: user confirms both actions, both guns firing and buttons hiding. Broader regression is pending. A shared pair-policy sniper candidate passes 428 ARM64 cases and package checks; its installation was blocked by the disconnected phone. See [sniper extension](dual-wield-ui-sniper.md). Other gun classes/mixed pairs and LAN remain pending. See [Phase 5 evidence and manual checklist](dual-wield-ui-phase5.md).

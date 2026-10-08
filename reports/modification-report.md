@@ -1,3 +1,9 @@
+USB installation update: the user-requested retry succeeded. The new duplicate inventory build is installed; its ARM64 split was read back and matches the verified build exactly. The launch command succeeded. Gameplay and LAN remain pending manual verification. Earlier storage failures below are historical.
+
+# Latest inventory correction — 2026-10-08
+
+The user now confirms the preceding corrected-ammo build works for ammunition, post-reload shooting, boost and offline play; duplicates remain broken. The new inventory-only candidate changes two ranges inside addWeapon, preserving all working gameplay bytes. It corrects full-inventory matching pickup replacement and ordinary dual-capable routing. Static checks and 128 ARM64 ownership/control-flow fixtures pass. Initial USB update was refused for insufficient internal storage; new gameplay remains unverified. See [inventory root cause](duplicate-inventory-root-cause.md), [verification](duplicate-inventory-verification.md) and [device/manual tests](duplicate-inventory-tests.md). Prior-stage detail follows as history.
+
 # Current gameplay correction — 2026-10-08
 
 Status: native correction implemented; static checks and ARM64 emulation pass. Physical gameplay and private LAN require recorded device results. Earlier unlimited-ammo success claims are superseded by the latest user report of depletion after reload. Working fuel was preserved.
@@ -28,3 +34,8 @@ Ordinary supported gun types are the target. Dual-only utilities, throwables, ob
 Ads are unchanged. The earlier [advertisement inspection](ad-integration-analysis.md) found an existing access-level gate and native/Java ad SDK paths; no supported ad-free setting was demonstrated. No rewarded callback, entitlement or licensing bypass was added. Gameplay stability is a prerequisite for additional advertising changes.
 
 Root-cause details: [reload-root-cause.md](reload-root-cause.md). Runtime results and remaining matrix: [test-results.md](test-results.md). Package evidence: [verification-report.md](verification-report.md).
+
+
+## Phase 5 pickup action separation — 2026-10-08
+
+The preceding SPAS held pair is user-confirmed. The new two-action SPAS UI candidate is signed, installed and launched; 176 ARM64 cases and package checks pass. Physical SPAS action-selection PASS: user confirms both actions, both guns firing and buttons hiding. Broader regression is pending. A shared pair-policy sniper candidate passes 428 ARM64 cases and package checks; its installation was blocked by the disconnected phone. See [sniper extension](dual-wield-ui-sniper.md). Other gun classes/mixed pairs and LAN remain pending. See [Phase 5 evidence and manual checklist](dual-wield-ui-phase5.md).

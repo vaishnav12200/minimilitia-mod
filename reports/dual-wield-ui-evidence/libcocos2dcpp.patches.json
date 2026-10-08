@@ -1,0 +1,480 @@
+{
+  "input_sha256": "b6f87aed1e1898c55b726720d6cb45d0796d54177ce94ed0be2c64d889262102",
+  "output_sha256": "77f075ede045373df1f631b2cea0f0ce421bab0f971214e9c38e235de5a87191",
+  "changes": [
+    {
+      "function": "_ZN22SoldierLocalController9addWeaponEP6Weapon",
+      "elf_virtual_address": "0x8e6990",
+      "file_offset": "0x8e6990",
+      "original": "a8835ef8aa035ff809e540f93f010aeb2004005409e940f93f010aebc003005409ed40f93f010aeb60030054690300b509e540f9290300b4e0030aaa080040f9089142f900013fd61f24007161020054a8835ef800e540f9080040f9089142f900013fd61f24007181010054a0835ef8080040f9082142f9a1035ff800013fd681008052c85600b0086942f9000140f9b068ef970c010014a10000142a0140f94a0543f9e00309aa40013fd6a0010037a8835ef8090140f9293d43f9e00308aa20013fd6",
+      "replacement": "e00700b9a8835ef8aa035ff809e540f93f010aeb4005005409e940f93f010aebe004005409ed40f93f010aeb80040054e90740b969040036e0030aaa080040f9080143f900013fd6c0030037a8835ef809ed40f9490300b509e540f9090300b4a0035ff8080040f9089142f900013fd61f24007141020054a8835ef800e540f9080040f9089142f900013fd61f24007161010054a0835ef8080040f9082142f9a1035ff800013fd681008052c85600b0086942f9000140f9a668ef970201001497000014",
+      "reason": "Separate actions using original pickupAsDual result: normal uses retained inventory; explicit Dual accepts only supported distinct SPAS pair with empty dual slot; rejects unsupported Dual without normal swap",
+      "assembly": "\n str w0, [sp, #4]\n ldur x8, [x29, #-0x18]\n ldur x10, [x29, #-0x10]\n ldr x9, [x8, #0x1c8]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d0]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d8]\n cmp x9, x10\n b.eq done\n ldr w9, [sp, #4]\n tbz w9, #0, normal\n mov x0, x10\n ldr x8, [x0]\n ldr x8, [x8, #0x600]\n blr x8\n tbnz w0, #0, normal\n ldur x8, [x29, #-0x18]\n ldr x9, [x8, #0x1d8]\n cbnz x9, done\n ldr x9, [x8, #0x1c8]\n cbz x9, done\n ldur x0, [x29, #-0x10]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n cmp w0, #9\n b.ne done\n ldur x8, [x29, #-0x18]\n ldr x0, [x8, #0x1c8]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n cmp w0, #9\n b.ne done\nldur x0, [x29, #-0x18]\nldr x8, [x0]\nldr x8, [x8, #1088]\nldur x1, [x29, #-0x10]\nblr x8\n\n mov w1, #4\n adrp x8, 0x13bf000\n ldr x8, [x8, #0x4d0]\n ldr x0, [x8]\n bl 0x4c0ce0\n done:\n b 0x8e6e54\n normal:\n b 0x8e6cac\n",
+      "disassembly": [
+        {
+          "address": "0x8e6990",
+          "instruction": "str w0, [sp, #4]"
+        },
+        {
+          "address": "0x8e6994",
+          "instruction": "ldur x8, [x29, #-0x18]"
+        },
+        {
+          "address": "0x8e6998",
+          "instruction": "ldur x10, [x29, #-0x10]"
+        },
+        {
+          "address": "0x8e699c",
+          "instruction": "ldr x9, [x8, #0x1c8]"
+        },
+        {
+          "address": "0x8e69a0",
+          "instruction": "cmp x9, x10"
+        },
+        {
+          "address": "0x8e69a4",
+          "instruction": "b.eq #0x8e6a4c"
+        },
+        {
+          "address": "0x8e69a8",
+          "instruction": "ldr x9, [x8, #0x1d0]"
+        },
+        {
+          "address": "0x8e69ac",
+          "instruction": "cmp x9, x10"
+        },
+        {
+          "address": "0x8e69b0",
+          "instruction": "b.eq #0x8e6a4c"
+        },
+        {
+          "address": "0x8e69b4",
+          "instruction": "ldr x9, [x8, #0x1d8]"
+        },
+        {
+          "address": "0x8e69b8",
+          "instruction": "cmp x9, x10"
+        },
+        {
+          "address": "0x8e69bc",
+          "instruction": "b.eq #0x8e6a4c"
+        },
+        {
+          "address": "0x8e69c0",
+          "instruction": "ldr w9, [sp, #4]"
+        },
+        {
+          "address": "0x8e69c4",
+          "instruction": "tbz w9, #0, #0x8e6a50"
+        },
+        {
+          "address": "0x8e69c8",
+          "instruction": "mov x0, x10"
+        },
+        {
+          "address": "0x8e69cc",
+          "instruction": "ldr x8, [x0]"
+        },
+        {
+          "address": "0x8e69d0",
+          "instruction": "ldr x8, [x8, #0x600]"
+        },
+        {
+          "address": "0x8e69d4",
+          "instruction": "blr x8"
+        },
+        {
+          "address": "0x8e69d8",
+          "instruction": "tbnz w0, #0, #0x8e6a50"
+        },
+        {
+          "address": "0x8e69dc",
+          "instruction": "ldur x8, [x29, #-0x18]"
+        },
+        {
+          "address": "0x8e69e0",
+          "instruction": "ldr x9, [x8, #0x1d8]"
+        },
+        {
+          "address": "0x8e69e4",
+          "instruction": "cbnz x9, #0x8e6a4c"
+        },
+        {
+          "address": "0x8e69e8",
+          "instruction": "ldr x9, [x8, #0x1c8]"
+        },
+        {
+          "address": "0x8e69ec",
+          "instruction": "cbz x9, #0x8e6a4c"
+        },
+        {
+          "address": "0x8e69f0",
+          "instruction": "ldur x0, [x29, #-0x10]"
+        },
+        {
+          "address": "0x8e69f4",
+          "instruction": "ldr x8, [x0]"
+        },
+        {
+          "address": "0x8e69f8",
+          "instruction": "ldr x8, [x8, #0x520]"
+        },
+        {
+          "address": "0x8e69fc",
+          "instruction": "blr x8"
+        },
+        {
+          "address": "0x8e6a00",
+          "instruction": "cmp w0, #9"
+        },
+        {
+          "address": "0x8e6a04",
+          "instruction": "b.ne #0x8e6a4c"
+        },
+        {
+          "address": "0x8e6a08",
+          "instruction": "ldur x8, [x29, #-0x18]"
+        },
+        {
+          "address": "0x8e6a0c",
+          "instruction": "ldr x0, [x8, #0x1c8]"
+        },
+        {
+          "address": "0x8e6a10",
+          "instruction": "ldr x8, [x0]"
+        },
+        {
+          "address": "0x8e6a14",
+          "instruction": "ldr x8, [x8, #0x520]"
+        },
+        {
+          "address": "0x8e6a18",
+          "instruction": "blr x8"
+        },
+        {
+          "address": "0x8e6a1c",
+          "instruction": "cmp w0, #9"
+        },
+        {
+          "address": "0x8e6a20",
+          "instruction": "b.ne #0x8e6a4c"
+        },
+        {
+          "address": "0x8e6a24",
+          "instruction": "ldur x0, [x29, #-0x18]"
+        },
+        {
+          "address": "0x8e6a28",
+          "instruction": "ldr x8, [x0]"
+        },
+        {
+          "address": "0x8e6a2c",
+          "instruction": "ldr x8, [x8, #0x440]"
+        },
+        {
+          "address": "0x8e6a30",
+          "instruction": "ldur x1, [x29, #-0x10]"
+        },
+        {
+          "address": "0x8e6a34",
+          "instruction": "blr x8"
+        },
+        {
+          "address": "0x8e6a38",
+          "instruction": "mov w1, #4"
+        },
+        {
+          "address": "0x8e6a3c",
+          "instruction": "adrp x8, #0x13bf000"
+        },
+        {
+          "address": "0x8e6a40",
+          "instruction": "ldr x8, [x8, #0x4d0]"
+        },
+        {
+          "address": "0x8e6a44",
+          "instruction": "ldr x0, [x8]"
+        },
+        {
+          "address": "0x8e6a48",
+          "instruction": "bl #0x4c0ce0"
+        },
+        {
+          "address": "0x8e6a4c",
+          "instruction": "b #0x8e6e54"
+        },
+        {
+          "address": "0x8e6a50",
+          "instruction": "b #0x8e6cac"
+        }
+      ]
+    },
+    {
+      "function": "_ZN3HUD16weaponProxyStartEPN7cocos2d8CCObjectE",
+      "elf_virtual_address": "0x669c14",
+      "file_offset": "0x669c14",
+      "original": "ea031f2a",
+      "replacement": "3b000014",
+      "reason": "Enter explicit compatible-pair UI policy after stock hide/reset and slot caching",
+      "assembly": "b 0x669d00",
+      "disassembly": [
+        {
+          "address": "0x669c14",
+          "instruction": "b #0x669d00"
+        }
+      ]
+    },
+    {
+      "function": "_ZN3HUD16weaponProxyStartEPN7cocos2d8CCObjectE",
+      "elf_virtual_address": "0x669d00",
+      "file_offset": "0x669d00",
+      "original": "a80359f8090140f929fd42f9e00308aa20013fd6c0070036a80359f8090140f9290543f9e00308aa20013fd600070037a88358f8a80200b4a88358f8090140f929fd42f9e00308aa20013fd6e0010036a88358f8090140f9299142f9e00308aa20013fd6a80359f8090140f9299142f9e0a700b9e00308aa20013fd6eaa740b95f01006be0020054a80358f8080400b4a80358f8090140f929fd42f9e00308aa20013fd640030036a80358f8090140f9299142f9e00308aa20013fd6",
+      "replacement": "a00359f8a00500b4a98358f81f0009eb40050054a90358f81f0009ebe0040054a98357f81f0009eb80040054080040f9080143f900013fd640020037a98358f8a90300b4a98357f8690300b5a00359f8080040f9089142f900013fd61f240071a1020054a08358f8080040f9089142f900013fd61f240071e101005482000014a08358f8a00000b4080040f908fd42f900013fd6e0000037a00358f8e00000b4080040f908fd42f900013fd660000036c9ffff17f400001441010014",
+      "reason": "SPAS pair exposes both stock buttons; no primary or incompatible/occupied dual exposes normal only; dual-only utility keeps original display path",
+      "assembly": "\n ldur x0, [x29, #-0x70]\n cbz x0, hidden\n ldur x9, [x29, #-0x78]\n cmp x0, x9\n b.eq hidden\n ldur x9, [x29, #-0x80]\n cmp x0, x9\n b.eq hidden\n ldur x9, [x29, #-0x88]\n cmp x0, x9\n b.eq hidden\n ldr x8, [x0]\n ldr x8, [x8, #0x600]\n blr x8\n tbnz w0, #0, utility\n ldur x9, [x29, #-0x78]\n cbz x9, single\n ldur x9, [x29, #-0x88]\n cbnz x9, single\n ldur x0, [x29, #-0x70]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n cmp w0, #9\n b.ne single\n ldur x0, [x29, #-0x78]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n cmp w0, #9\n b.ne single\n b 0x669f84\n utility:\n ldur x0, [x29, #-0x78]\n cbz x0, secondary_utility\n ldr x8, [x0]\n ldr x8, [x8, #0x5f8]\n blr x8\n tbnz w0, #0, utility_visible\n secondary_utility:\n ldur x0, [x29, #-0x80]\n cbz x0, hidden\n ldr x8, [x0]\n ldr x8, [x8, #0x5f8]\n blr x8\n tbz w0, #0, hidden\n utility_visible:\n b 0x669cd4\n single:\n b 0x66a184\n hidden:\n b 0x66a2bc\n",
+      "disassembly": [
+        {
+          "address": "0x669d00",
+          "instruction": "ldur x0, [x29, #-0x70]"
+        },
+        {
+          "address": "0x669d04",
+          "instruction": "cbz x0, #0x669db8"
+        },
+        {
+          "address": "0x669d08",
+          "instruction": "ldur x9, [x29, #-0x78]"
+        },
+        {
+          "address": "0x669d0c",
+          "instruction": "cmp x0, x9"
+        },
+        {
+          "address": "0x669d10",
+          "instruction": "b.eq #0x669db8"
+        },
+        {
+          "address": "0x669d14",
+          "instruction": "ldur x9, [x29, #-0x80]"
+        },
+        {
+          "address": "0x669d18",
+          "instruction": "cmp x0, x9"
+        },
+        {
+          "address": "0x669d1c",
+          "instruction": "b.eq #0x669db8"
+        },
+        {
+          "address": "0x669d20",
+          "instruction": "ldur x9, [x29, #-0x88]"
+        },
+        {
+          "address": "0x669d24",
+          "instruction": "cmp x0, x9"
+        },
+        {
+          "address": "0x669d28",
+          "instruction": "b.eq #0x669db8"
+        },
+        {
+          "address": "0x669d2c",
+          "instruction": "ldr x8, [x0]"
+        },
+        {
+          "address": "0x669d30",
+          "instruction": "ldr x8, [x8, #0x600]"
+        },
+        {
+          "address": "0x669d34",
+          "instruction": "blr x8"
+        },
+        {
+          "address": "0x669d38",
+          "instruction": "tbnz w0, #0, #0x669d80"
+        },
+        {
+          "address": "0x669d3c",
+          "instruction": "ldur x9, [x29, #-0x78]"
+        },
+        {
+          "address": "0x669d40",
+          "instruction": "cbz x9, #0x669db4"
+        },
+        {
+          "address": "0x669d44",
+          "instruction": "ldur x9, [x29, #-0x88]"
+        },
+        {
+          "address": "0x669d48",
+          "instruction": "cbnz x9, #0x669db4"
+        },
+        {
+          "address": "0x669d4c",
+          "instruction": "ldur x0, [x29, #-0x70]"
+        },
+        {
+          "address": "0x669d50",
+          "instruction": "ldr x8, [x0]"
+        },
+        {
+          "address": "0x669d54",
+          "instruction": "ldr x8, [x8, #0x520]"
+        },
+        {
+          "address": "0x669d58",
+          "instruction": "blr x8"
+        },
+        {
+          "address": "0x669d5c",
+          "instruction": "cmp w0, #9"
+        },
+        {
+          "address": "0x669d60",
+          "instruction": "b.ne #0x669db4"
+        },
+        {
+          "address": "0x669d64",
+          "instruction": "ldur x0, [x29, #-0x78]"
+        },
+        {
+          "address": "0x669d68",
+          "instruction": "ldr x8, [x0]"
+        },
+        {
+          "address": "0x669d6c",
+          "instruction": "ldr x8, [x8, #0x520]"
+        },
+        {
+          "address": "0x669d70",
+          "instruction": "blr x8"
+        },
+        {
+          "address": "0x669d74",
+          "instruction": "cmp w0, #9"
+        },
+        {
+          "address": "0x669d78",
+          "instruction": "b.ne #0x669db4"
+        },
+        {
+          "address": "0x669d7c",
+          "instruction": "b #0x669f84"
+        },
+        {
+          "address": "0x669d80",
+          "instruction": "ldur x0, [x29, #-0x78]"
+        },
+        {
+          "address": "0x669d84",
+          "instruction": "cbz x0, #0x669d98"
+        },
+        {
+          "address": "0x669d88",
+          "instruction": "ldr x8, [x0]"
+        },
+        {
+          "address": "0x669d8c",
+          "instruction": "ldr x8, [x8, #0x5f8]"
+        },
+        {
+          "address": "0x669d90",
+          "instruction": "blr x8"
+        },
+        {
+          "address": "0x669d94",
+          "instruction": "tbnz w0, #0, #0x669db0"
+        },
+        {
+          "address": "0x669d98",
+          "instruction": "ldur x0, [x29, #-0x80]"
+        },
+        {
+          "address": "0x669d9c",
+          "instruction": "cbz x0, #0x669db8"
+        },
+        {
+          "address": "0x669da0",
+          "instruction": "ldr x8, [x0]"
+        },
+        {
+          "address": "0x669da4",
+          "instruction": "ldr x8, [x8, #0x5f8]"
+        },
+        {
+          "address": "0x669da8",
+          "instruction": "blr x8"
+        },
+        {
+          "address": "0x669dac",
+          "instruction": "tbz w0, #0, #0x669db8"
+        },
+        {
+          "address": "0x669db0",
+          "instruction": "b #0x669cd4"
+        },
+        {
+          "address": "0x669db4",
+          "instruction": "b #0x66a184"
+        },
+        {
+          "address": "0x669db8",
+          "instruction": "b #0x66a2bc"
+        }
+      ]
+    },
+    {
+      "function": "_ZN13WeaponManager15weaponProximityEP6Weapon",
+      "elf_virtual_address": "0x957aa4",
+      "file_offset": "0x957aa4",
+      "original": "52000014",
+      "replacement": "1f2003d5",
+      "reason": "Do not suppress nearby third matching gun when both hands have matching instances; stock availability/range checks still run, allowing normal Swap while Dual is disabled",
+      "assembly": "nop",
+      "disassembly": [
+        {
+          "address": "0x957aa4",
+          "instruction": "nop "
+        }
+      ]
+    }
+  ],
+  "preserved_functions": [
+    {
+      "function": "_ZN6Weapon7getClipEv",
+      "sha256": "5e482434c2908fd24f56be2811526dddee1f3cc1c82e3e4528c22edb96e0af04"
+    },
+    {
+      "function": "_ZN6Weapon7getAmmoEv",
+      "sha256": "b4e5dbdd338224a52136c32a8c3bd6fd7a9b1da72ee662eb0b485239fa7684fa"
+    },
+    {
+      "function": "_ZN6Weapon7subAmmoEi",
+      "sha256": "a0b92ed50c837ff0be186ef5ae78f50aca0ef16777ffe1aa159392c2937e4590"
+    },
+    {
+      "function": "_ZN22SoldierLocalController8getPowerEv",
+      "sha256": "337ae57d719a7577009787a1899b95bf8813cb52e5d3343ec2b46bd480b250cd"
+    },
+    {
+      "function": "_ZN22SoldierLocalController4fireEf",
+      "sha256": "64aea3515e8f23c2c32f6948530e79b838761b7f226a35dbcb61f703242badd3"
+    },
+    {
+      "function": "_ZN7SHOTGUN11triggerPullEf",
+      "sha256": "43166623edf29dd035f9ff5fada8b3938ee612da79948b108c72bb37b778c1a6"
+    },
+    {
+      "function": "_ZN3HUD14onPickUpWeaponEPN7cocos2d8CCObjectE",
+      "sha256": "0e118366ea52ec34d46a9e02a9479d322436ab885e3250ed4ed6a15c9615a8e8"
+    },
+    {
+      "function": "_ZN3HUD18onPickUpDualWeaponEPN7cocos2d8CCObjectE",
+      "sha256": "3eeebd8324385513dcdf30b886de3cd803b7cb06893d798614157322c9c52f01"
+    }
+  ],
+  "compatibility_stage": "SPAS two-action physical Test A pending; other gun combinations not enabled until this gate passes",
+  "dual_occupied": "Dedicated Dual button hidden, explicit stale Dual rejected. Normal swap follows stock retained inventory/drop routing.",
+  "ownership": "Distinct pointer checks; stock retain/release callbacks; no new ownership or cached pickup pointers",
+  "assets": "Existing wepChangeBtn.png and dualBtn.png; stock scaling/positions/opacity/touch menus preserved"
+}

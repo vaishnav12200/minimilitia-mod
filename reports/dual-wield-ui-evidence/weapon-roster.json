@@ -1,0 +1,821 @@
+{
+  "baseline_sha256": "b6f87aed1e1898c55b726720d6cb45d0796d54177ce94ed0be2c64d889262102",
+  "candidate_sha256": "77f075ede045373df1f631b2cea0f0ce421bab0f971214e9c38e235de5a87191",
+  "roster": [
+    {
+      "item_type": 1,
+      "factory_branch": "0x950004",
+      "create_plt": "0x4da930",
+      "create_got": "0x13a97e8",
+      "create": "MACHETE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x6c5764",
+          "symbol": "MACHETE::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x6c53b8",
+          "symbol": "MACHETE::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6c5334",
+          "symbol": "MACHETE::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 2,
+      "factory_branch": "0x950040",
+      "create_plt": "0x4cb040",
+      "create_got": "0x13a1b70",
+      "create": "FRAGNADE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x62fcfc",
+          "symbol": "FRAGNADE::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x947790",
+          "symbol": "Weapon::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 3,
+      "factory_branch": "0x94ff08",
+      "create_plt": "0x4ee880",
+      "create_got": "0x13b3790",
+      "create": "DEAGLE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x5f3190",
+          "symbol": "DEAGLE::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x5f2d70",
+          "symbol": "DEAGLE::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x5f28f0",
+          "symbol": "DEAGLE::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 4,
+      "factory_branch": "0x94fefc",
+      "create_plt": "0x4d8ac0",
+      "create_got": "0x13a88b0",
+      "create": "MAGNUM::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x6c8d20",
+          "symbol": "MAGNUM::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x6c8900",
+          "symbol": "MAGNUM::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6c8518",
+          "symbol": "MAGNUM::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 5,
+      "factory_branch": "0x94ff14",
+      "create_plt": "0x4d5ff0",
+      "create_got": "0x13a7348",
+      "create": "UZI::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x944ce0",
+          "symbol": "UZI::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x9448c8",
+          "symbol": "UZI::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x9444c4",
+          "symbol": "UZI::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 6,
+      "factory_branch": "0x94ff38",
+      "create_plt": "0x4cb300",
+      "create_got": "0x13a1cd0",
+      "create": "MP5::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x6d7274",
+          "symbol": "MP5::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6d6e6c",
+          "symbol": "MP5::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 7,
+      "factory_branch": "0x94ff50",
+      "create_plt": "0x4d2230",
+      "create_got": "0x13a5468",
+      "create": "AK47::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x557614",
+          "symbol": "AK47::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x55720c",
+          "symbol": "AK47::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 8,
+      "factory_branch": "0x94ff44",
+      "create_plt": "0x4fda10",
+      "create_got": "0x13bb058",
+      "create": "M16::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x6bad78",
+          "symbol": "M16::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6ba6b4",
+          "symbol": "M16::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 9,
+      "factory_branch": "0x94ff68",
+      "create_plt": "0x4dd0f0",
+      "create_got": "0x13aabc8",
+      "create": "SHOTGUN::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x8a3ca4",
+          "symbol": "SHOTGUN::setPrimaryConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x8a3ca4",
+          "symbol": "SHOTGUN::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x8a3920",
+          "symbol": "SHOTGUN::triggerPull(float)"
+        }
+      },
+      "phase5_status": "SPAS held-pair user confirmed; action UI pending"
+    },
+    {
+      "item_type": 10,
+      "factory_branch": "0x94ff98",
+      "create_plt": "0x4bf4d0",
+      "create_got": "0x139bdb8",
+      "create": "M93BA::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x6c2064",
+          "symbol": "M93BA::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6c1c5c",
+          "symbol": "M93BA::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 11,
+      "factory_branch": "0x94ffec",
+      "create_plt": "0x4fd260",
+      "create_got": "0x13bac80",
+      "create": "SMAW::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x8a7368",
+          "symbol": "SMAW::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x8a7000",
+          "symbol": "SMAW::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 12,
+      "factory_branch": "0x94ffa4",
+      "create_plt": "0x4f9370",
+      "create_got": "0x13b8d08",
+      "create": "ROCKET::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x815ab0",
+          "symbol": "ROCKET::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x947790",
+          "symbol": "Weapon::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 13,
+      "factory_branch": "0x94fff8",
+      "create_plt": "0x4d89d0",
+      "create_got": "0x13a8838",
+      "create": "RIOTSHIELD::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x811a0c",
+          "symbol": "RIOTSHIELD::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x8119d0",
+          "symbol": "RIOTSHIELD::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x811850",
+          "symbol": "RIOTSHIELD::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 14,
+      "factory_branch": "0x950064",
+      "create_plt": "0x4e8f60",
+      "create_got": "0x13b0b00",
+      "create": "POWERUP::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x67dcd4",
+          "symbol": "Item::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x947790",
+          "symbol": "Weapon::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 15,
+      "factory_branch": "0x950070",
+      "create_plt": "0x4e8f60",
+      "create_got": "0x13b0b00",
+      "create": "POWERUP::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x67dcd4",
+          "symbol": "Item::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x947790",
+          "symbol": "Weapon::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 16,
+      "factory_branch": "0x94ff8c",
+      "create_plt": "0x4de540",
+      "create_got": "0x13ab5f0",
+      "create": "M14::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x6b72c0",
+          "symbol": "M14::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6b6eb8",
+          "symbol": "M14::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 17,
+      "factory_branch": "0x94ff5c",
+      "create_plt": "0x4c3780",
+      "create_got": "0x139df10",
+      "create": "PHASR::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x794368",
+          "symbol": "PHASR::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x791f0c",
+          "symbol": "PHASR::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 18,
+      "factory_branch": "0x94ff2c",
+      "create_plt": "0x4d2870",
+      "create_got": "0x13a5788",
+      "create": "GDEAGLE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x64f038",
+          "symbol": "GDEAGLE::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x64ec18",
+          "symbol": "GDEAGLE::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x64e798",
+          "symbol": "GDEAGLE::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 19,
+      "factory_branch": "0x94ffe0",
+      "create_plt": "0x4e4e80",
+      "create_got": "0x13aea90",
+      "create": "FLAMETHROWER::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x62be4c",
+          "symbol": "FLAMETHROWER::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x62b664",
+          "symbol": "FLAMETHROWER::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 20,
+      "factory_branch": "0x94ffbc",
+      "create_plt": "0x4f76c0",
+      "create_got": "0x13b7eb0",
+      "create": "GASNADE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x64b3d0",
+          "symbol": "GASNADE::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x947790",
+          "symbol": "Weapon::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 21,
+      "factory_branch": "0x94ffc8",
+      "create_plt": "0x4ca710",
+      "create_got": "0x13a16d8",
+      "create": "EMP::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x60a460",
+          "symbol": "EMP::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x609cd8",
+          "symbol": "EMP::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 23,
+      "factory_branch": "0x94ffd4",
+      "create_plt": "0x4fbc60",
+      "create_got": "0x13ba180",
+      "create": "PROXYNADE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x79f888",
+          "symbol": "PROXYNADE::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x947790",
+          "symbol": "Weapon::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 24,
+      "factory_branch": "0x950058",
+      "create_plt": "0x4f7820",
+      "create_got": "0x13b7f60",
+      "create": "SAW::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x89cd84",
+          "symbol": "SAW::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x947790",
+          "symbol": "Weapon::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 25,
+      "factory_branch": "0x95004c",
+      "create_plt": "0x4c6b10",
+      "create_got": "0x139f8d8",
+      "create": "SAWGUN::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x8a08b8",
+          "symbol": "SAWGUN::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x89ff38",
+          "symbol": "SAWGUN::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 26,
+      "factory_branch": "0x95007c",
+      "create_plt": "0x4f87c0",
+      "create_got": "0x13b8730",
+      "create": "TAVOR::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x924d58",
+          "symbol": "TAVOR::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x924954",
+          "symbol": "TAVOR::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 27,
+      "factory_branch": "0x950088",
+      "create_plt": "0x4c1190",
+      "create_got": "0x139cc18",
+      "create": "MINIGUN::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x6ccd04",
+          "symbol": "MINIGUN::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6cc3f0",
+          "symbol": "MINIGUN::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 28,
+      "factory_branch": "0x94ff20",
+      "create_plt": "0x4f9940",
+      "create_got": "0x13b8ff0",
+      "create": "TEC9::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x928974",
+          "symbol": "TEC9::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x928560",
+          "symbol": "TEC9::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x928158",
+          "symbol": "TEC9::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 29,
+      "factory_branch": "0x950094",
+      "create_plt": "0x4d39b0",
+      "create_got": "0x13a6028",
+      "create": "RG6::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x80dba8",
+          "symbol": "RG6::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x80d924",
+          "symbol": "RG6::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 30,
+      "factory_branch": "0x9500a0",
+      "create_plt": "0x4ff640",
+      "create_got": "0x13bbe70",
+      "create": "EMPNADE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x60c27c",
+          "symbol": "EMPNADE::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x947790",
+          "symbol": "Weapon::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 31,
+      "factory_branch": "0x9500ac",
+      "create_plt": "0x4c03a0",
+      "create_got": "0x139c520",
+      "create": "XM8::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x961848",
+          "symbol": "XM8::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x961444",
+          "symbol": "XM8::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 32,
+      "factory_branch": "0x94ffb0",
+      "create_plt": "0x4ef580",
+      "create_got": "0x13b3e10",
+      "create": "MORTAR::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x6d1998",
+          "symbol": "MORTAR::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x947790",
+          "symbol": "Weapon::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 33,
+      "factory_branch": "0x950010",
+      "create_plt": "0x4d5a80",
+      "create_got": "0x13a7090",
+      "create": "FLAGBLUE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x62171c",
+          "symbol": "FLAG::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x62136c",
+          "symbol": "FLAG::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6211c0",
+          "symbol": "FLAG::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 34,
+      "factory_branch": "0x95001c",
+      "create_plt": "0x4da470",
+      "create_got": "0x13a9588",
+      "create": "FLAGORANGE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x62171c",
+          "symbol": "FLAG::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x62136c",
+          "symbol": "FLAG::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6211c0",
+          "symbol": "FLAG::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 35,
+      "factory_branch": "0x950028",
+      "create_plt": "0x4ec390",
+      "create_got": "0x13b2518",
+      "create": "BOMBBLUE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x5abeb8",
+          "symbol": "BOMB::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x5abc20",
+          "symbol": "BOMB::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x5ab8a8",
+          "symbol": "BOMB::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 36,
+      "factory_branch": "0x950034",
+      "create_plt": "0x4d0ca0",
+      "create_got": "0x13a49a0",
+      "create": "BOMBORANGE::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x5abeb8",
+          "symbol": "BOMB::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x5abc20",
+          "symbol": "BOMB::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x5ab8a8",
+          "symbol": "BOMB::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 37,
+      "factory_branch": "0x94ff74",
+      "create_plt": "0x4fe630",
+      "create_got": "0x13bb668",
+      "create": "AA12::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x67dcf4",
+          "symbol": "Item::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x551c80",
+          "symbol": "AA12::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x551884",
+          "symbol": "AA12::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    },
+    {
+      "item_type": 39,
+      "factory_branch": "0x94ff80",
+      "create_plt": "0x4c3df0",
+      "create_got": "0x139e248",
+      "create": "M1881::create()",
+      "virtuals": {
+        "dual_configuration": {
+          "va": "0x6be968",
+          "symbol": "M1881::setDualConfiguration()"
+        },
+        "primary_configuration": {
+          "va": "0x6be548",
+          "symbol": "M1881::setPrimaryConfiguration()"
+        },
+        "triggerPull": {
+          "va": "0x6be150",
+          "symbol": "M1881::triggerPull(float)"
+        }
+      },
+      "phase5_status": "NOT enabled/verified for generalized dual pairing"
+    }
+  ],
+  "limits": "Factory classes and virtual targets verified; classifications/render/fire/network correctness must be checked per class. Shared fire dispatcher does not prove class compatibility."
+}

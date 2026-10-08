@@ -1,0 +1,122 @@
+{
+  "status": "Baseline failure reproduced in synthetic ARM64 control flow",
+  "scope": "Real addWeapon machine code; virtual callbacks/ownership modelled",
+  "records": [
+    {
+      "case": "matching active with full inventory",
+      "result": {
+        "primary": 33570816,
+        "secondary": 33566720,
+        "dual": 0,
+        "events": [
+          "stop_actions",
+          "pickup_dual",
+          "dual_only",
+          "remove_primary",
+          "add_primary_remove_dual"
+        ],
+        "dropped": [
+          33562624
+        ],
+        "retains": {
+          "33562624": 0,
+          "33566720": 1,
+          "33570816": 1
+        }
+      }
+    },
+    {
+      "case": "matching stowed with full inventory",
+      "result": {
+        "primary": 33570816,
+        "secondary": 33562624,
+        "dual": 0,
+        "events": [
+          "stop_actions",
+          "pickup_dual",
+          "dual_only",
+          "remove_primary",
+          "add_primary_remove_dual"
+        ],
+        "dropped": [
+          33566720
+        ],
+        "retains": {
+          "33566720": 0,
+          "33562624": 1,
+          "33570816": 1
+        }
+      }
+    },
+    {
+      "case": "empty secondary ordinary",
+      "result": {
+        "primary": 33570816,
+        "secondary": 33562624,
+        "dual": 0,
+        "events": [
+          "stop_actions",
+          "pickup_dual",
+          "dual_only",
+          "add_secondary",
+          "switch"
+        ],
+        "dropped": [],
+        "retains": {
+          "33562624": 1,
+          "33570816": 1
+        }
+      }
+    },
+    {
+      "case": "dual capable incoming with nondual-compatible two-slot expectation",
+      "result": {
+        "primary": 33562624,
+        "secondary": 33566720,
+        "dual": 33570816,
+        "events": [
+          "stop_actions",
+          "pickup_dual",
+          "is_dual",
+          "primary_only",
+          "is_dual",
+          "add_dual"
+        ],
+        "dropped": [],
+        "retains": {
+          "33562624": 1,
+          "33566720": 1,
+          "33570816": 1
+        }
+      }
+    },
+    {
+      "case": "dual primary only",
+      "result": {
+        "primary": 33570816,
+        "secondary": 33566720,
+        "dual": 0,
+        "events": [
+          "stop_actions",
+          "pickup_dual",
+          "is_dual",
+          "primary_only",
+          "is_dual",
+          "primary_only",
+          "is_dual",
+          "primary_only",
+          "remove_primary",
+          "add_primary"
+        ],
+        "dropped": [
+          33562624
+        ],
+        "retains": {
+          "33562624": 0,
+          "33566720": 1,
+          "33570816": 1
+        }
+      }
+    }
+  ]
+}
