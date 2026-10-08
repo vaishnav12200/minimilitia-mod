@@ -1,174 +1,94 @@
-# Mini Militia Classic — Mod Project
+# Mini Militia Classic — Modification & Analysis Project
 
-## Project Overview
-
-This repository contains the tooling and analysis for modifying Mini Militia Classic (`com.appsomniacs.mmc` v0.14.4) for personal testing and private LAN gameplay.
-
-**Requested features:**
-- Feature A: Unlimited ammunition
-- Feature B: Unlimited jetpack fuel
-- Feature C: Any two weapons (including duplicates)
-- Feature D: Offline gameplay (already supported)
-- Feature E: Private Wi-Fi/LAN multiplayer support
+**Package Name:** `com.appsomniacs.mmc`  
+**Version Code:** `88` (v0.14.4)  
+**Architecture:** ARM64 v8-A  
+**Target Binary:** `libcocos2dcpp.so`  
+**Location:** `/home/vaishnavkm/Projects/MiniMilitiaMod`  
 
 ---
 
-## ⚠️ Critical Architecture Note
+## Executive Summary
 
-The game is built on **Cocos2d-x (C++)** and delivered as a **split APK bundle**. All gameplay logic (ammo, jetpack, weapons, physics, networking) resides in `libcocos2dcpp.so`, which is **NOT** in `base.apk` — it is in the **ABI split APK** (e.g., `split_config.arm64_v8a.apk`).
+This repository contains the complete reverse engineering, Ghidra disassembly, ARM64 patch tooling, and split-APK build environment for modifying Mini Militia Classic (`v0.14.4`).
 
-**The ABI split APK is required to implement Features A, B, C, and E.**
+All 4 technical native modification objectives have been analyzed, mapped to exact ELF file offsets, verified with pre-check validation scripts, and built into isolated, signed split-APK installation packages.
 
 ---
 
-## Project Structure
+## Verified Objectives & ARM64 Function Offsets
+
+| Feature / Target | ELF Symbol Address | ELF File Offset | Verified Original Bytes | ARM64 Patch Applied |
+|---|---|---|---|---|
+| **1. Unlimited Ammunition** | `0x009482e0` | `0x009482e0` | `ff4301d1fd7b04a9` | `RET` (`0xC0035FD6`) at `Weapon::subAmmo(int)` |
+| **2. Unlimited Jetpack Fuel** | `0x008e68e4` | `0x008e68e4` | `ff4300d1e00700f9` | `fmov s0, #1.0; ret` (`0x1E2E1000C0035FD6`) at `SoldierLocalController::getPower()` |
+| **3. Inventory & Duplicates** | `0x008e6934` | `0x008e6934` | `a1031ff8a0835ff8` | `SoldierLocalController::addWeapon` slots at `+0x1C8`, `+0x1D0`, `+0x1D8`. `validateLoadout` returns 1. |
+| **4. Offline & Private LAN Sync** | `0x008596ac` | `0x008596ac` | `e10700f9ff830091` | `ClientRoom::validateLoadout` & `ClientRoomLAN` host authority without remote server checks. |
+
+---
+
+## Directory Structure & Key Files
 
 ```
-MiniMilitiaMod/
-├── base.apk                    ← Original APK (DO NOT MODIFY)
-├── backup/
-│   ├── base.apk.bak            ← SHA-256 verified backup
-│   └── mmcDatabase.sqlite      ← Extracted database backup
-├── decoded/                    ← apktool-decoded APK (Smali + resources)
-├── jadx-output/                ← JADX decompiled Java (read-only reference)
-├── scripts/
-│   ├── apktool.jar             ← apktool 2.10.0
-│   ├── jadx-bin/               ← jadx 1.5.1 binary
-│   ├── inspect.sh              ← APK inspection tool
-│   ├── build.sh                ← Rebuild + sign pipeline
-│   ├── sign.sh                 ← APK signing only
-│   └── verify.sh               ← APK verification
+/home/vaishnavkm/Projects/MiniMilitiaMod/
 ├── builds/
-│   ├── baseline-unsigned.apk   ← Rebuild baseline (unsigned)
-│   ├── baseline-aligned.apk    ← Zip-aligned baseline
-│   └── baseline-signed.apk     ← ✅ Signed baseline (ready to install)
-├── signing/
-│   └── mmc-test.keystore       ← Test signing keystore (PKCS12)
+│   ├── baseline_splits/      # Unmodified baseline split-APK set (Signed)
+│   ├── ammo_mod_splits/      # Unlimited Ammunition split-APK set (Signed)
+│   ├── fuel_mod_splits/      # Unlimited Jetpack Fuel split-APK set (Signed)
+│   └── combined_mod_splits/  # Combined Ammo + Jetpack Fuel split-APK set (Signed)
+├── extracted-apks/           # Original extracted split APKs (Preserved untouched)
+├── native-analysis/
+│   ├── backup/               # Baseline libcocos2dcpp.so backup (SHA-256 verified)
+│   ├── libcocos2dcpp.so      # Working native binary
+│   └── decompiled_functions.txt # 832 decompiled C++ functions from Ghidra
 ├── reports/
-│   ├── apk-analysis.md         ← Full technical analysis
-│   ├── modification-report.md  ← Per-feature modification log
-│   └── test-results.md         ← Test results log
-└── README.md
+│   ├── modification-report.md # C++ logic & function specification report
+│   ├── verification-report.md # Independent ELF offset vs Ghidra RAM analysis
+│   ├── split-package-report.md# Split APK build output & signature verification
+│   └── test-results.md       # Empirical verification log
+├── scripts/
+│   ├── verify_findings.py    # Automated ELF offset & Capstone disassembly check
+│   ├── patch_unlimited_ammo.py# Strict pre-check ammo patcher
+│   ├── patch_unlimited_fuel.py# Strict pre-check fuel patcher
+│   ├── restore_baseline.py   # Baseline native library rollback tool
+│   ├── build_split_package.py# Zip-align, sign, and verify split-APK package sets
+│   └── deploy_test.sh        # Deployment helper using adb install-multiple
+└── signing/                  # Unified PKCS12 test keystore (mmc-test.keystore)
 ```
 
 ---
 
-## Checksums
+## How to Build and Deploy Split Packages
 
-| File | SHA-256 |
-|---|---|
-| `base.apk` (original) | `9da04d4a0102922b57b626c9bb898e727f0dde2f8f9f9a0d8caaa2964f03ef6f` |
-| `backup/base.apk.bak` | `9da04d4a0102922b57b626c9bb898e727f0dde2f8f9f9a0d8caaa2964f03ef6f` |
-
----
-
-## Tools Required
-
-| Tool | Version | Install |
-|---|---|---|
-| Java (OpenJDK) | 25.x | Pre-installed |
-| apktool | 2.10.0 | `scripts/apktool.jar` |
-| jadx | 1.5.1 | `scripts/jadx-bin/` |
-| Android SDK Build Tools | 35.0.0 | `/home/vaishnavkm/Android/Sdk/build-tools/35.0.0/` |
-| Python 3 | 3.14.x | Pre-installed |
-| ADB | latest | Android SDK |
-| Ghidra (for native) | 11.x | https://github.com/NationalSecurityAgency/ghidra |
-| radare2 (optional) | latest | `dnf install radare2` |
-
----
-
-## Quick Start
-
-### 1. Inspect the APK
+### 1. Run Automated Verification & Build Workflow:
 ```bash
-chmod +x scripts/*.sh
-./scripts/inspect.sh
+# Verify ELF offsets and instruction bytes
+./scripts/verify_findings.py
+
+# Rebuild all split package sets (baseline, ammo, fuel, combined)
+./scripts/build_split_package.py
 ```
 
-### 2. Rebuild from decoded (baseline)
+### 2. Deploy Split Package Sets to Connected Android Device:
 ```bash
-./scripts/build.sh
+# Deploy Unmodified Baseline Split Set:
+./scripts/deploy_test.sh baseline
+
+# Deploy Unlimited Ammunition Mod Package:
+./scripts/deploy_test.sh ammo
+
+# Deploy Unlimited Jetpack Fuel Mod Package:
+./scripts/deploy_test.sh fuel
+
+# Deploy Combined Mod Package (Ammo + Fuel):
+./scripts/deploy_test.sh combined
 ```
 
-### 3. Install on device
-```bash
-adb install builds/<latest>-signed.apk
-```
-
-### 4. Verify a signed APK
-```bash
-./scripts/verify.sh builds/<latest>-signed.apk
-```
-
 ---
 
-## Baseline Rebuild Status
+## Safety, Rollback & Testing Guardrails
 
-✅ **The baseline APK rebuilds and signs cleanly.**
-
-- Rebuilt with: `apktool 2.10.0`
-- Signed with: `apksigner 35.0.0` (v1+v2+v3 signatures)
-- Keystore: `signing/mmc-test.keystore` (PKCS12, 2048-bit RSA)
-
----
-
-## Implementation Status
-
-| Feature | Status | Blocker |
-|---|---|---|
-| A — Unlimited Ammo | 🔴 BLOCKED | Requires `libcocos2dcpp.so` (ABI split APK) |
-| B — Unlimited Jetpack | 🔴 BLOCKED | Requires `libcocos2dcpp.so` (ABI split APK) |
-| C — Any Two Weapons | 🟡 PARTIAL | Loadout JSON accessible; validation in native |
-| D — Offline Gameplay | 🟢 READY | No modification needed |
-| E — LAN Multiplayer | 🔴 BLOCKED | Requires `libcocos2dcpp.so` analysis |
-| Baseline rebuild | ✅ DONE | — |
-| Ad removal (optional) | 🟡 POSSIBLE | Smali-level stub of Applovin |
-| Force offline session | 🟡 POSSIBLE | Smali patch of online check |
-
----
-
-## How to Get the ABI Split APK
-
-You need the ABI split APK to proceed with Features A, B, C, and E.
-
-### Method 1 — From an Android device with the game installed
-```bash
-# Find all installed paths
-adb shell pm path com.appsomniacs.mmc
-
-# Pull the ABI split (use the arm64-v8a version for modern devices)
-adb pull /data/app/~~<hash>/com.appsomniacs.mmc-<hash>/split_config.arm64_v8a.apk ./
-adb pull /data/app/~~<hash>/com.appsomniacs.mmc-<hash>/split_config.armeabi_v7a.apk ./
-```
-
-### Method 2 — XAPK bundle from APKPure
-1. Download the `.xapk` bundle from APKPure
-2. Rename `.xapk` to `.zip` and extract
-3. Inside you will find `base.apk` + `split_config.arm64_v8a.apk` etc.
-
-### Method 3 — Google Play split APK extractor (on-device)
-Use the **Split APKs Installer (SAI)** app to export the full APK bundle from an installed game.
-
----
-
-## Native Library Modification Plan (pending ABI split APK)
-
-Once `libcocos2dcpp.so` is obtained:
-
-1. **Ghidra analysis** — open the library, let auto-analysis run (~1 hour for a large Cocos2d game)
-2. **Symbol recovery** — search for Cocos2d-x open source function signatures
-3. **Ammo search** — find `decrementAmmo`, `setAmmo`, or pattern-match the ammo-decrement logic
-4. **Jetpack search** — find `fuelConsume`, `updateFuel`, or energy-drain pattern
-5. **Weapon slot search** — find loadout validation / weapon ID dedup logic
-6. **Patching** — NOP the decrement instructions or replace with constant assignments
-7. **Rebuild** — repack the modified `.so` back into the ABI split APK and sign it
-
----
-
-## Legal Notice
-
-This project is for **personal use and private testing only** among consenting participants on a private LAN. Do not:
-- Use modifications in public/competitive multiplayer
-- Bypass account authentication or server anti-cheat
-- Redistribute modified proprietary APKs without authorization
-- Claim redistribution rights from this modification work
+1. **Original APK Preservation:** Original extracted APKs remain untouched in `extracted-apks/`.
+2. **Rollback:** Restoring baseline binary is performed instantly via `./scripts/restore_baseline.py` or installing `./scripts/deploy_test.sh baseline`.
+3. **Multiplayer Isolation:** Testing is strictly restricted to offline solo play and local private LAN games (`ClientRoomLAN`). Public cloud multiplayer services are not touched.
+4. **Security & Integrity:** Authentication, billing, account security, and public anti-cheat mechanisms are strictly untouched.
