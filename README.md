@@ -1,3 +1,15 @@
+# Mini Militia Classic — Universal gun pairs v1.0.0
+
+[GitHub tagged APK download](https://github.com/vaishnav12200/minimilitia-mod/releases/download/v1.0.0-universal-dual/MiniMilitiaClassic-Universal-Dual-v1.0.0.apk) · [release page](https://github.com/vaishnav12200/minimilitia-mod/releases/tag/v1.0.0-universal-dual) (private repository; sign-in required).
+
+Final single-file build: [MiniMilitiaClassic-Universal-Dual-v1.0.0.apk](builds/universal_dual_wield_final/MiniMilitiaClassic-Universal-Dual-v1.0.0.apk). [Release investigation, size explanation and tests](reports/universal-guns-release.md).
+
+22 held gun classes support all 484 same/mixed pairings through the shared Swap/Dual system. Working ammo, reload and jetpack patches are retained. The APK is **65.94 MiB**, reduced from 78.76 MiB by compressing the standalone native library; application assets and library length are unchanged.
+
+3,566 ARM64 case records and structural package checks pass. User confirms SPAS and sniper on a phone. Remaining gun/mixed visuals, broader regression and LAN are physically unverified, so the GitHub release is a pre-release. Install as an update without uninstalling or clearing data.
+
+Verify with `python3 scripts/build_universal_guns.py --verify`; test with `PYTHONPATH=/tmp/mmc-unicorn-tests:scripts python3 scripts/test_universal_guns_arm64.py`. Previous working builds are preserved. Earlier build history follows.
+
 # Mini Militia Classic — Phase 5 two-action pickup test
 
 [Two-action SPAS APK](builds/universal_dual_wield_ui_standalone/mmc-spas-two-action-pickup-experimental.apk) · [signed split set](builds/universal_dual_wield_ui_splits/) · [root cause, call graphs and test checklist](reports/dual-wield-ui-phase5.md).

@@ -1,0 +1,135 @@
+[
+  {
+    "path": "base.apk",
+    "bytes": 61421689,
+    "uncompressed_payload": 72151768,
+    "compressed_payload": 61278277,
+    "game_native": []
+  },
+  {
+    "path": "builds/duplicate_weapon_fixed_standalone/mmc-duplicate-weapon-fixed-experimental.apk",
+    "bytes": 82590367,
+    "uncompressed_payload": 94617954,
+    "compressed_payload": 82459155,
+    "game_native": [
+      {
+        "path": "lib/arm64-v8a/libcocos2dcpp.so",
+        "bytes": 20736920,
+        "zip_bytes": 20736920,
+        "compression": 0
+      }
+    ]
+  },
+  {
+    "path": "builds/fixed_ammo_dual_weapon_standalone/mmc-fixed-ammo-dual-weapon.apk",
+    "bytes": 82590367,
+    "uncompressed_payload": 94617954,
+    "compressed_payload": 82459153,
+    "game_native": [
+      {
+        "path": "lib/arm64-v8a/libcocos2dcpp.so",
+        "bytes": 20736920,
+        "zip_bytes": 20736920,
+        "compression": 0
+      }
+    ]
+  },
+  {
+    "path": "builds/fixed_ammo_jetpack_standalone/mmc-fixed-ammo-jetpack.apk",
+    "bytes": 82590367,
+    "uncompressed_payload": 94617954,
+    "compressed_payload": 82459154,
+    "game_native": [
+      {
+        "path": "lib/arm64-v8a/libcocos2dcpp.so",
+        "bytes": 20736920,
+        "zip_bytes": 20736920,
+        "compression": 0
+      }
+    ]
+  },
+  {
+    "path": "builds/phase4-standalone/mmc-phase4-duplicates-experimental.apk",
+    "bytes": 69491359,
+    "uncompressed_payload": 94617954,
+    "compressed_payload": 69368823,
+    "game_native": [
+      {
+        "path": "lib/arm64-v8a/libcocos2dcpp.so",
+        "bytes": 20736920,
+        "zip_bytes": 7646588,
+        "compression": 8
+      }
+    ]
+  },
+  {
+    "path": "builds/standalone/mmc-standalone-baseline-signed.apk",
+    "bytes": 69139103,
+    "uncompressed_payload": 94617954,
+    "compressed_payload": 69004616,
+    "game_native": [
+      {
+        "path": "lib/arm64-v8a/libcocos2dcpp.so",
+        "bytes": 20736920,
+        "zip_bytes": 7341545,
+        "compression": 8
+      }
+    ]
+  },
+  {
+    "path": "builds/standalone/mmc-standalone-combined-signed.apk",
+    "bytes": 69139103,
+    "uncompressed_payload": 94617954,
+    "compressed_payload": 69004639,
+    "game_native": [
+      {
+        "path": "lib/arm64-v8a/libcocos2dcpp.so",
+        "bytes": 20736920,
+        "zip_bytes": 7341567,
+        "compression": 8
+      }
+    ]
+  },
+  {
+    "path": "builds/universal_dual_wield_standalone/mmc-spas-true-dual-wield-phase-a.apk",
+    "bytes": 82590367,
+    "uncompressed_payload": 94617954,
+    "compressed_payload": 82459151,
+    "game_native": [
+      {
+        "path": "lib/arm64-v8a/libcocos2dcpp.so",
+        "bytes": 20736920,
+        "zip_bytes": 20736920,
+        "compression": 0
+      }
+    ]
+  },
+  {
+    "path": "builds/universal_dual_wield_ui_sniper_standalone/mmc-two-action-sniper-experimental.apk",
+    "bytes": 82590367,
+    "uncompressed_payload": 94617954,
+    "compressed_payload": 82459159,
+    "game_native": [
+      {
+        "path": "lib/arm64-v8a/libcocos2dcpp.so",
+        "bytes": 20736920,
+        "zip_bytes": 20736920,
+        "compression": 0
+      }
+    ]
+  },
+  {
+    "path": "builds/universal_dual_wield_ui_standalone/mmc-spas-two-action-pickup-experimental.apk",
+    "bytes": 82590367,
+    "uncompressed_payload": 94617954,
+    "compressed_payload": 82459154,
+    "game_native": [
+      {
+        "path": "lib/arm64-v8a/libcocos2dcpp.so",
+        "bytes": 20736920,
+        "zip_bytes": 20736920,
+        "compression": 0
+      }
+    ]
+  }
+]

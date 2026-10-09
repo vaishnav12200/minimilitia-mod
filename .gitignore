@@ -38,3 +38,6 @@ __pycache__/
 jadx.zip
 scripts/jadx-bin/
 backup/
+
+# Local read-only analysis log for the final gun compatibility audit
+reports/universal-guns-evidence/ghidra.log

@@ -1,0 +1,1210 @@
+{
+  "static_checks": "PASS",
+  "runtime_visual": "NOT TESTED",
+  "stage": "22 gun classes / 484 same and mixed pairs; broader physical regression pending",
+  "native_patch": {
+    "input_sha256": "a7a01b33290e7de4c8e0d799c310edf00e886b470bd8b745cbc2bdf3dfc2555f",
+    "output_sha256": "e57f7598839ff65dd6e71e354fd2fc02ab65f414be0a1c23f2aac4a1727c1cce",
+    "changes": [
+      {
+        "file_offset": "0x8e6990",
+        "original": "e00700b9a8835ef8aa035ff809e540f93f010aeb2006005409e940f93f010aebc005005409ed40f93f010aeb60050054e90740b949050036e0030aaa080040f9080143f900013fd6a0040037a8835ef809ed40f9290400b509e540f9e90300b4a0035ff8080040f9089142f900013fd6e00b00b9a8835ef800e540f9080040f9089142f900013fd6e90b40b91f240071610000543f250071c00000541f280071610000543f290071400000540b000014a0835ef8080040f9082142f9a1035ff800013fd681008052c85600b0086942f9000140f99f68ef97fb00001490000014a8835ef809e940f9090400b4",
+        "replacement": "e00700b9a8835ef8aa035ff809e540f93f010aeb8006005409e940f93f010aeb2006005409ed40f93f010aebc0050054e90740b9a9050036e0030aaa080040f9080143f900013fd600050037a8835ef809ed40f9890400b509e540f9490400b4a0035ff8080040f9089142f900013fd6e00b00b9a8835ef800e540f9080040f9089142f900013fd6e90b40b91f000171a20200543f010171620200540aff81d2eac5b7f20a14c0f20a00e0f24b25c09aab0100364b25c99a6b010036a0835ef8080040f9082142f9a1035ff800013fd681008052c85600b0086942f9000140f99c68ef97f80000148d000014",
+        "reason": "Same 22-gun mask drives explicit Dual acceptance and UI visibility; accepts every same/mixed gun pair, rejects nonguns",
+        "assembly": "\n str w0, [sp, #4]\n ldur x8, [x29, #-0x18]\n ldur x10, [x29, #-0x10]\n ldr x9, [x8, #0x1c8]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d0]\n cmp x9, x10\n b.eq done\n ldr x9, [x8, #0x1d8]\n cmp x9, x10\n b.eq done\n ldr w9, [sp, #4]\n tbz w9, #0, normal\n mov x0, x10\n ldr x8, [x0]\n ldr x8, [x8, #0x600]\n blr x8\n tbnz w0, #0, normal\n ldur x8, [x29, #-0x18]\n ldr x9, [x8, #0x1d8]\n cbnz x9, done\n ldr x9, [x8, #0x1c8]\n cbz x9, done\n ldur x0, [x29, #-0x10]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n str w0, [sp, #8]\n ldur x8, [x29, #-0x18]\n ldr x0, [x8, #0x1c8]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n ldr w9, [sp, #8]\ncmp w0, #64\nb.hs done\ncmp w9, #64\nb.hs done\nmovz x10, #4088, lsl #0\nmovk x10, #48687, lsl #16\nmovk x10, #160, lsl #32\nmovk x10, #0, lsl #48\nlsrv x11, x10, x0\ntbz w11, #0, done\nlsrv x11, x10, x9\ntbz w11, #0, done\nldur x0, [x29, #-0x18]\nldr x8, [x0]\nldr x8, [x8, #1088]\nldur x1, [x29, #-0x10]\nblr x8\n\n mov w1, #4\n adrp x8, 0x13bf000\n ldr x8, [x8, #0x4d0]\n ldr x0, [x8]\n bl 0x4c0ce0\n done:\n b 0x8e6e54\n normal:\n b 0x8e6cac\n",
+        "function": "_ZN22SoldierLocalController9addWeaponEP6Weapon",
+        "elf_virtual_address": "0x8e6990",
+        "disassembly": [
+          {
+            "address": "0x8e6990",
+            "instruction": "str w0, [sp, #4]"
+          },
+          {
+            "address": "0x8e6994",
+            "instruction": "ldur x8, [x29, #-0x18]"
+          },
+          {
+            "address": "0x8e6998",
+            "instruction": "ldur x10, [x29, #-0x10]"
+          },
+          {
+            "address": "0x8e699c",
+            "instruction": "ldr x9, [x8, #0x1c8]"
+          },
+          {
+            "address": "0x8e69a0",
+            "instruction": "cmp x9, x10"
+          },
+          {
+            "address": "0x8e69a4",
+            "instruction": "b.eq #0x8e6a74"
+          },
+          {
+            "address": "0x8e69a8",
+            "instruction": "ldr x9, [x8, #0x1d0]"
+          },
+          {
+            "address": "0x8e69ac",
+            "instruction": "cmp x9, x10"
+          },
+          {
+            "address": "0x8e69b0",
+            "instruction": "b.eq #0x8e6a74"
+          },
+          {
+            "address": "0x8e69b4",
+            "instruction": "ldr x9, [x8, #0x1d8]"
+          },
+          {
+            "address": "0x8e69b8",
+            "instruction": "cmp x9, x10"
+          },
+          {
+            "address": "0x8e69bc",
+            "instruction": "b.eq #0x8e6a74"
+          },
+          {
+            "address": "0x8e69c0",
+            "instruction": "ldr w9, [sp, #4]"
+          },
+          {
+            "address": "0x8e69c4",
+            "instruction": "tbz w9, #0, #0x8e6a78"
+          },
+          {
+            "address": "0x8e69c8",
+            "instruction": "mov x0, x10"
+          },
+          {
+            "address": "0x8e69cc",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x8e69d0",
+            "instruction": "ldr x8, [x8, #0x600]"
+          },
+          {
+            "address": "0x8e69d4",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x8e69d8",
+            "instruction": "tbnz w0, #0, #0x8e6a78"
+          },
+          {
+            "address": "0x8e69dc",
+            "instruction": "ldur x8, [x29, #-0x18]"
+          },
+          {
+            "address": "0x8e69e0",
+            "instruction": "ldr x9, [x8, #0x1d8]"
+          },
+          {
+            "address": "0x8e69e4",
+            "instruction": "cbnz x9, #0x8e6a74"
+          },
+          {
+            "address": "0x8e69e8",
+            "instruction": "ldr x9, [x8, #0x1c8]"
+          },
+          {
+            "address": "0x8e69ec",
+            "instruction": "cbz x9, #0x8e6a74"
+          },
+          {
+            "address": "0x8e69f0",
+            "instruction": "ldur x0, [x29, #-0x10]"
+          },
+          {
+            "address": "0x8e69f4",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x8e69f8",
+            "instruction": "ldr x8, [x8, #0x520]"
+          },
+          {
+            "address": "0x8e69fc",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x8e6a00",
+            "instruction": "str w0, [sp, #8]"
+          },
+          {
+            "address": "0x8e6a04",
+            "instruction": "ldur x8, [x29, #-0x18]"
+          },
+          {
+            "address": "0x8e6a08",
+            "instruction": "ldr x0, [x8, #0x1c8]"
+          },
+          {
+            "address": "0x8e6a0c",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x8e6a10",
+            "instruction": "ldr x8, [x8, #0x520]"
+          },
+          {
+            "address": "0x8e6a14",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x8e6a18",
+            "instruction": "ldr w9, [sp, #8]"
+          },
+          {
+            "address": "0x8e6a1c",
+            "instruction": "cmp w0, #0x40"
+          },
+          {
+            "address": "0x8e6a20",
+            "instruction": "b.hs #0x8e6a74"
+          },
+          {
+            "address": "0x8e6a24",
+            "instruction": "cmp w9, #0x40"
+          },
+          {
+            "address": "0x8e6a28",
+            "instruction": "b.hs #0x8e6a74"
+          },
+          {
+            "address": "0x8e6a2c",
+            "instruction": "mov x10, #0xff8"
+          },
+          {
+            "address": "0x8e6a30",
+            "instruction": "movk x10, #0xbe2f, lsl #16"
+          },
+          {
+            "address": "0x8e6a34",
+            "instruction": "movk x10, #0xa0, lsl #32"
+          },
+          {
+            "address": "0x8e6a38",
+            "instruction": "movk x10, #0, lsl #48"
+          },
+          {
+            "address": "0x8e6a3c",
+            "instruction": "lsr x11, x10, x0"
+          },
+          {
+            "address": "0x8e6a40",
+            "instruction": "tbz w11, #0, #0x8e6a74"
+          },
+          {
+            "address": "0x8e6a44",
+            "instruction": "lsr x11, x10, x9"
+          },
+          {
+            "address": "0x8e6a48",
+            "instruction": "tbz w11, #0, #0x8e6a74"
+          },
+          {
+            "address": "0x8e6a4c",
+            "instruction": "ldur x0, [x29, #-0x18]"
+          },
+          {
+            "address": "0x8e6a50",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x8e6a54",
+            "instruction": "ldr x8, [x8, #0x440]"
+          },
+          {
+            "address": "0x8e6a58",
+            "instruction": "ldur x1, [x29, #-0x10]"
+          },
+          {
+            "address": "0x8e6a5c",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x8e6a60",
+            "instruction": "mov w1, #4"
+          },
+          {
+            "address": "0x8e6a64",
+            "instruction": "adrp x8, #0x13bf000"
+          },
+          {
+            "address": "0x8e6a68",
+            "instruction": "ldr x8, [x8, #0x4d0]"
+          },
+          {
+            "address": "0x8e6a6c",
+            "instruction": "ldr x0, [x8]"
+          },
+          {
+            "address": "0x8e6a70",
+            "instruction": "bl #0x4c0ce0"
+          },
+          {
+            "address": "0x8e6a74",
+            "instruction": "b #0x8e6e54"
+          },
+          {
+            "address": "0x8e6a78",
+            "instruction": "b #0x8e6cac"
+          }
+        ]
+      },
+      {
+        "file_offset": "0x669d00",
+        "original": "a00359f8800600b4a98358f81f0009eb20060054a90358f81f0009ebc0050054a98357f81f0009eb60050054080040f9080143f900013fd620030037a98358f8890400b4a98357f8490400b5a00359f8080040f9089142f900013fd6e0af00b9a08358f8080040f9089142f900013fd6e9af40b91f240071610000543f250071c00000541f280071610000543f290071400000540f0000147b000014a08358f8a00000b4080040f908fd42f900013fd6e0000037a00358f8e00000b4080040f908fd42f900013fd660000036c2ffff17ed0000143a0100145f01006b81010054a80356f8",
+        "replacement": "a00359f8e00600b4a98358f81f0009eb80060054a90358f81f0009eb20060054a98357f81f0009ebc0050054080040f9080143f900013fd680030037a98358f8e90400b4a98357f8a90400b5a00359f8080040f9089142f900013fd6e0af00b9a08358f8080040f9089142f900013fd6e9af40b91f000171220300543f010171e20200540aff81d2eac5b7f20a14c0f20a00e0f24b25c09a2b0200364b25c99aeb01003678000014a08358f8a00000b4080040f908fd42f900013fd6e0000037a00358f8e00000b4080040f908fd42f900013fd660000036bfffff17ea00001437010014",
+        "reason": "Same 22-gun mask drives explicit Dual acceptance and UI visibility; accepts every same/mixed gun pair, rejects nonguns",
+        "assembly": "\n ldur x0, [x29, #-0x70]\n cbz x0, hidden\n ldur x9, [x29, #-0x78]\n cmp x0, x9\n b.eq hidden\n ldur x9, [x29, #-0x80]\n cmp x0, x9\n b.eq hidden\n ldur x9, [x29, #-0x88]\n cmp x0, x9\n b.eq hidden\n ldr x8, [x0]\n ldr x8, [x8, #0x600]\n blr x8\n tbnz w0, #0, utility\n ldur x9, [x29, #-0x78]\n cbz x9, single\n ldur x9, [x29, #-0x88]\n cbnz x9, single\n ldur x0, [x29, #-0x70]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n str w0, [sp, #172]\n ldur x0, [x29, #-0x78]\n ldr x8, [x0]\n ldr x8, [x8, #0x520]\n blr x8\n ldr w9, [sp, #172]\ncmp w0, #64\nb.hs single\ncmp w9, #64\nb.hs single\nmovz x10, #4088, lsl #0\nmovk x10, #48687, lsl #16\nmovk x10, #160, lsl #32\nmovk x10, #0, lsl #48\nlsrv x11, x10, x0\ntbz w11, #0, single\nlsrv x11, x10, x9\ntbz w11, #0, single\n b 0x669f84\n utility:\n ldur x0, [x29, #-0x78]\n cbz x0, secondary_utility\n ldr x8, [x0]\n ldr x8, [x8, #0x5f8]\n blr x8\n tbnz w0, #0, utility_visible\n secondary_utility:\n ldur x0, [x29, #-0x80]\n cbz x0, hidden\n ldr x8, [x0]\n ldr x8, [x8, #0x5f8]\n blr x8\n tbz w0, #0, hidden\n utility_visible:\n b 0x669cd4\n single:\n b 0x66a184\n hidden:\n b 0x66a2bc\n",
+        "function": "_ZN3HUD16weaponProxyStartEPN7cocos2d8CCObjectE",
+        "elf_virtual_address": "0x669d00",
+        "disassembly": [
+          {
+            "address": "0x669d00",
+            "instruction": "ldur x0, [x29, #-0x70]"
+          },
+          {
+            "address": "0x669d04",
+            "instruction": "cbz x0, #0x669de0"
+          },
+          {
+            "address": "0x669d08",
+            "instruction": "ldur x9, [x29, #-0x78]"
+          },
+          {
+            "address": "0x669d0c",
+            "instruction": "cmp x0, x9"
+          },
+          {
+            "address": "0x669d10",
+            "instruction": "b.eq #0x669de0"
+          },
+          {
+            "address": "0x669d14",
+            "instruction": "ldur x9, [x29, #-0x80]"
+          },
+          {
+            "address": "0x669d18",
+            "instruction": "cmp x0, x9"
+          },
+          {
+            "address": "0x669d1c",
+            "instruction": "b.eq #0x669de0"
+          },
+          {
+            "address": "0x669d20",
+            "instruction": "ldur x9, [x29, #-0x88]"
+          },
+          {
+            "address": "0x669d24",
+            "instruction": "cmp x0, x9"
+          },
+          {
+            "address": "0x669d28",
+            "instruction": "b.eq #0x669de0"
+          },
+          {
+            "address": "0x669d2c",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x669d30",
+            "instruction": "ldr x8, [x8, #0x600]"
+          },
+          {
+            "address": "0x669d34",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x669d38",
+            "instruction": "tbnz w0, #0, #0x669da8"
+          },
+          {
+            "address": "0x669d3c",
+            "instruction": "ldur x9, [x29, #-0x78]"
+          },
+          {
+            "address": "0x669d40",
+            "instruction": "cbz x9, #0x669ddc"
+          },
+          {
+            "address": "0x669d44",
+            "instruction": "ldur x9, [x29, #-0x88]"
+          },
+          {
+            "address": "0x669d48",
+            "instruction": "cbnz x9, #0x669ddc"
+          },
+          {
+            "address": "0x669d4c",
+            "instruction": "ldur x0, [x29, #-0x70]"
+          },
+          {
+            "address": "0x669d50",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x669d54",
+            "instruction": "ldr x8, [x8, #0x520]"
+          },
+          {
+            "address": "0x669d58",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x669d5c",
+            "instruction": "str w0, [sp, #0xac]"
+          },
+          {
+            "address": "0x669d60",
+            "instruction": "ldur x0, [x29, #-0x78]"
+          },
+          {
+            "address": "0x669d64",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x669d68",
+            "instruction": "ldr x8, [x8, #0x520]"
+          },
+          {
+            "address": "0x669d6c",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x669d70",
+            "instruction": "ldr w9, [sp, #0xac]"
+          },
+          {
+            "address": "0x669d74",
+            "instruction": "cmp w0, #0x40"
+          },
+          {
+            "address": "0x669d78",
+            "instruction": "b.hs #0x669ddc"
+          },
+          {
+            "address": "0x669d7c",
+            "instruction": "cmp w9, #0x40"
+          },
+          {
+            "address": "0x669d80",
+            "instruction": "b.hs #0x669ddc"
+          },
+          {
+            "address": "0x669d84",
+            "instruction": "mov x10, #0xff8"
+          },
+          {
+            "address": "0x669d88",
+            "instruction": "movk x10, #0xbe2f, lsl #16"
+          },
+          {
+            "address": "0x669d8c",
+            "instruction": "movk x10, #0xa0, lsl #32"
+          },
+          {
+            "address": "0x669d90",
+            "instruction": "movk x10, #0, lsl #48"
+          },
+          {
+            "address": "0x669d94",
+            "instruction": "lsr x11, x10, x0"
+          },
+          {
+            "address": "0x669d98",
+            "instruction": "tbz w11, #0, #0x669ddc"
+          },
+          {
+            "address": "0x669d9c",
+            "instruction": "lsr x11, x10, x9"
+          },
+          {
+            "address": "0x669da0",
+            "instruction": "tbz w11, #0, #0x669ddc"
+          },
+          {
+            "address": "0x669da4",
+            "instruction": "b #0x669f84"
+          },
+          {
+            "address": "0x669da8",
+            "instruction": "ldur x0, [x29, #-0x78]"
+          },
+          {
+            "address": "0x669dac",
+            "instruction": "cbz x0, #0x669dc0"
+          },
+          {
+            "address": "0x669db0",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x669db4",
+            "instruction": "ldr x8, [x8, #0x5f8]"
+          },
+          {
+            "address": "0x669db8",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x669dbc",
+            "instruction": "tbnz w0, #0, #0x669dd8"
+          },
+          {
+            "address": "0x669dc0",
+            "instruction": "ldur x0, [x29, #-0x80]"
+          },
+          {
+            "address": "0x669dc4",
+            "instruction": "cbz x0, #0x669de0"
+          },
+          {
+            "address": "0x669dc8",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x669dcc",
+            "instruction": "ldr x8, [x8, #0x5f8]"
+          },
+          {
+            "address": "0x669dd0",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x669dd4",
+            "instruction": "tbz w0, #0, #0x669de0"
+          },
+          {
+            "address": "0x669dd8",
+            "instruction": "b #0x669cd4"
+          },
+          {
+            "address": "0x669ddc",
+            "instruction": "b #0x66a184"
+          },
+          {
+            "address": "0x669de0",
+            "instruction": "b #0x66a2bc"
+          }
+        ]
+      },
+      {
+        "file_offset": "0x39fc38",
+        "original": "01010000920c0000",
+        "replacement": "010100009b860000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "MP5::dual configuration vtable",
+        "elf_virtual_address": "0x133c718",
+        "target": "_ZN3MP523setPrimaryConfigurationEv",
+        "item_type": 6
+      },
+      {
+        "file_offset": "0x39fb18",
+        "original": "01010000920c0000",
+        "replacement": "0101000012720000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "AK47::dual configuration vtable",
+        "elf_virtual_address": "0x1317ff8",
+        "target": "_ZN4AK4723setPrimaryConfigurationEv",
+        "item_type": 7
+      },
+      {
+        "file_offset": "0x39fbd8",
+        "original": "01010000920c0000",
+        "replacement": "01010000df3c0000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "M16::dual configuration vtable",
+        "elf_virtual_address": "0x13394c8",
+        "target": "_ZN3M1623setPrimaryConfigurationEv",
+        "item_type": 8
+      },
+      {
+        "file_offset": "0x39fd40",
+        "original": "01010000920c0000",
+        "replacement": "010100004b2d0000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "SMAW::dual configuration vtable",
+        "elf_virtual_address": "0x13500f8",
+        "target": "_ZN4SMAW23setPrimaryConfigurationEv",
+        "item_type": 11
+      },
+      {
+        "file_offset": "0x39fbc0",
+        "original": "01010000920c0000",
+        "replacement": "010100009e850000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "M14::dual configuration vtable",
+        "elf_virtual_address": "0x1338d98",
+        "target": "_ZN3M1423setPrimaryConfigurationEv",
+        "item_type": 16
+      },
+      {
+        "file_offset": "0x39fc68",
+        "original": "01010000920c0000",
+        "replacement": "01010000b7500000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "PHASR::dual configuration vtable",
+        "elf_virtual_address": "0x1341ec8",
+        "target": "_ZN5PHASR23setPrimaryConfigurationEv",
+        "item_type": 17
+      },
+      {
+        "file_offset": "0x39fb60",
+        "original": "01010000920c0000",
+        "replacement": "01010000dc0f0000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "FLAMETHROWER::dual configuration vtable",
+        "elf_virtual_address": "0x132f738",
+        "target": "_ZN12FLAMETHROWER23setPrimaryConfigurationEv",
+        "item_type": 19
+      },
+      {
+        "file_offset": "0x39fb30",
+        "original": "01010000920c0000",
+        "replacement": "0101000030720000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "EMP::dual configuration vtable",
+        "elf_virtual_address": "0x132be08",
+        "target": "_ZN3EMP23setPrimaryConfigurationEv",
+        "item_type": 21
+      },
+      {
+        "file_offset": "0x39fd10",
+        "original": "01010000920c0000",
+        "replacement": "0101000087320000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "SAWGUN::dual configuration vtable",
+        "elf_virtual_address": "0x134f298",
+        "target": "_ZN6SAWGUN23setPrimaryConfigurationEv",
+        "item_type": 25
+      },
+      {
+        "file_offset": "0x39fd58",
+        "original": "01010000920c0000",
+        "replacement": "01010000572a0000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "TAVOR::dual configuration vtable",
+        "elf_virtual_address": "0x1356468",
+        "target": "_ZN5TAVOR23setPrimaryConfigurationEv",
+        "item_type": 26
+      },
+      {
+        "file_offset": "0x39fc08",
+        "original": "01010000920c0000",
+        "replacement": "010100002b580000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "MINIGUN::dual configuration vtable",
+        "elf_virtual_address": "0x133b8b8",
+        "target": "_ZN7MINIGUN23setPrimaryConfigurationEv",
+        "item_type": 27
+      },
+      {
+        "file_offset": "0x39fcc8",
+        "original": "01010000920c0000",
+        "replacement": "01010000087a0000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "RG6::dual configuration vtable",
+        "elf_virtual_address": "0x134a6f8",
+        "target": "_ZN3RG623setPrimaryConfigurationEv",
+        "item_type": 29
+      },
+      {
+        "file_offset": "0x39fd88",
+        "original": "01010000920c0000",
+        "replacement": "0101000074000000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "XM8::dual configuration vtable",
+        "elf_virtual_address": "0x135b208",
+        "target": "_ZN3XM823setPrimaryConfigurationEv",
+        "item_type": 31
+      },
+      {
+        "file_offset": "0x39fb00",
+        "original": "01010000920c0000",
+        "replacement": "010100003a1b0000",
+        "reason": "Gun-scoped empty dual slot uses existing held transform",
+        "assembly": null,
+        "function": "AA12::dual configuration vtable",
+        "elf_virtual_address": "0x1317288",
+        "target": "_ZN4AA1223setPrimaryConfigurationEv",
+        "item_type": 37
+      },
+      {
+        "file_offset": "0x8e6b00",
+        "original": "290d42f9e00308aa20013fd6a8835ef8090140f9291942f9a1035ff8e00308aa20013fd6e1031e32c85600b0086942f9000140f96b68ef97c7000014a8835ef809e540f9290200b5a8835ef809ed40f9c90100b4a8035ff8090140f9290143f9e00308aa20013fd600010037a8835ef8090140f9291942f9a1035ff8e00308aa",
+        "replacement": "ff0301d1fd7b03a9fdc30091e01300f9e00f00bde81340f900e540f9400100b4e00b00f98c830194e00b40f9bd830194e00b40f9080040f9087d42f9e00f40bd00013fd6e81340f900ed40f9400100b4e00b00f980830194e00b40f9b1830194e00b40f9080040f9087d42f9e00f40bd00013fd6fd7b43a9ff030191c0035fd6",
+        "reason": "Use unreachable former pickup routing space for ABI-compliant active ammo refresh and one trigger call per weapon",
+        "assembly": "sub sp, sp, #0x40\nstp x29, x30, [sp, #0x30]\nadd x29, sp, #0x30\nstr x0, [sp, #0x20]\nstr s0, [sp, #0xc]\nprimary:\n ldr x8, [sp, #0x20]\n ldr x0, [x8, #456]\n cbz x0, dual\n str x0, [sp, #0x10]\n bl 0x947954\n ldr x0, [sp, #0x10]\n bl 0x947a20\n ldr x0, [sp, #0x10]\n ldr x8, [x0]\n ldr x8, [x8, #0x4f8]\n ldr s0, [sp, #0xc]\n blr x8\ndual:\n ldr x8, [sp, #0x20]\n ldr x0, [x8, #472]\n cbz x0, done\n str x0, [sp, #0x10]\n bl 0x947954\n ldr x0, [sp, #0x10]\n bl 0x947a20\n ldr x0, [sp, #0x10]\n ldr x8, [x0]\n ldr x8, [x8, #0x4f8]\n ldr s0, [sp, #0xc]\n blr x8\ndone:\n ldp x29, x30, [sp, #0x30]\n add sp, sp, #0x40\n ret\n",
+        "function": "SoldierLocalController::fire helper",
+        "elf_virtual_address": "0x8e6b00",
+        "disassembly": [
+          {
+            "address": "0x8e6b00",
+            "instruction": "sub sp, sp, #0x40"
+          },
+          {
+            "address": "0x8e6b04",
+            "instruction": "stp x29, x30, [sp, #0x30]"
+          },
+          {
+            "address": "0x8e6b08",
+            "instruction": "add x29, sp, #0x30"
+          },
+          {
+            "address": "0x8e6b0c",
+            "instruction": "str x0, [sp, #0x20]"
+          },
+          {
+            "address": "0x8e6b10",
+            "instruction": "str s0, [sp, #0xc]"
+          },
+          {
+            "address": "0x8e6b14",
+            "instruction": "ldr x8, [sp, #0x20]"
+          },
+          {
+            "address": "0x8e6b18",
+            "instruction": "ldr x0, [x8, #0x1c8]"
+          },
+          {
+            "address": "0x8e6b1c",
+            "instruction": "cbz x0, #0x8e6b44"
+          },
+          {
+            "address": "0x8e6b20",
+            "instruction": "str x0, [sp, #0x10]"
+          },
+          {
+            "address": "0x8e6b24",
+            "instruction": "bl #0x947954"
+          },
+          {
+            "address": "0x8e6b28",
+            "instruction": "ldr x0, [sp, #0x10]"
+          },
+          {
+            "address": "0x8e6b2c",
+            "instruction": "bl #0x947a20"
+          },
+          {
+            "address": "0x8e6b30",
+            "instruction": "ldr x0, [sp, #0x10]"
+          },
+          {
+            "address": "0x8e6b34",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x8e6b38",
+            "instruction": "ldr x8, [x8, #0x4f8]"
+          },
+          {
+            "address": "0x8e6b3c",
+            "instruction": "ldr s0, [sp, #0xc]"
+          },
+          {
+            "address": "0x8e6b40",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x8e6b44",
+            "instruction": "ldr x8, [sp, #0x20]"
+          },
+          {
+            "address": "0x8e6b48",
+            "instruction": "ldr x0, [x8, #0x1d8]"
+          },
+          {
+            "address": "0x8e6b4c",
+            "instruction": "cbz x0, #0x8e6b74"
+          },
+          {
+            "address": "0x8e6b50",
+            "instruction": "str x0, [sp, #0x10]"
+          },
+          {
+            "address": "0x8e6b54",
+            "instruction": "bl #0x947954"
+          },
+          {
+            "address": "0x8e6b58",
+            "instruction": "ldr x0, [sp, #0x10]"
+          },
+          {
+            "address": "0x8e6b5c",
+            "instruction": "bl #0x947a20"
+          },
+          {
+            "address": "0x8e6b60",
+            "instruction": "ldr x0, [sp, #0x10]"
+          },
+          {
+            "address": "0x8e6b64",
+            "instruction": "ldr x8, [x0]"
+          },
+          {
+            "address": "0x8e6b68",
+            "instruction": "ldr x8, [x8, #0x4f8]"
+          },
+          {
+            "address": "0x8e6b6c",
+            "instruction": "ldr s0, [sp, #0xc]"
+          },
+          {
+            "address": "0x8e6b70",
+            "instruction": "blr x8"
+          },
+          {
+            "address": "0x8e6b74",
+            "instruction": "ldp x29, x30, [sp, #0x30]"
+          },
+          {
+            "address": "0x8e6b78",
+            "instruction": "add sp, sp, #0x40"
+          },
+          {
+            "address": "0x8e6b7c",
+            "instruction": "ret "
+          }
+        ]
+      },
+      {
+        "file_offset": "0x8ec46c",
+        "original": "ffc300d1",
+        "replacement": "a5e9ff17",
+        "reason": "Local fire dispatch refreshes both live ammo fields for custom guns through working getters; original per-instance trigger/timing/projectile methods unchanged",
+        "assembly": "b 0x8e6b00",
+        "function": "_ZN22SoldierLocalController4fireEf",
+        "elf_virtual_address": "0x8ec46c",
+        "disassembly": [
+          {
+            "address": "0x8ec46c",
+            "instruction": "b #0x8e6b00"
+          }
+        ]
+      }
+    ],
+    "gun_classes": {
+      "3": "DEAGLE",
+      "4": "MAGNUM",
+      "5": "UZI",
+      "6": "MP5",
+      "7": "AK47",
+      "8": "M16",
+      "9": "SHOTGUN",
+      "10": "M93BA",
+      "11": "SMAW",
+      "16": "M14",
+      "17": "PHASR",
+      "18": "GDEAGLE",
+      "19": "FLAMETHROWER",
+      "21": "EMP",
+      "25": "SAWGUN",
+      "26": "TAVOR",
+      "27": "MINIGUN",
+      "28": "TEC9",
+      "29": "RG6",
+      "31": "XM8",
+      "37": "AA12",
+      "39": "M1881"
+    },
+    "gun_mask": "0xa0be2f0ff8",
+    "ordered_pairs": 484,
+    "renderers": [
+      {
+        "item_type": 3,
+        "gun": "DEAGLE",
+        "status": "Existing specialized/verified held dual transform preserved",
+        "target": "_ZN6DEAGLE20setDualConfigurationEv"
+      },
+      {
+        "item_type": 4,
+        "gun": "MAGNUM",
+        "status": "Existing specialized/verified held dual transform preserved",
+        "target": "_ZN6MAGNUM20setDualConfigurationEv"
+      },
+      {
+        "item_type": 5,
+        "gun": "UZI",
+        "status": "Existing specialized/verified held dual transform preserved",
+        "target": "_ZN3UZI20setDualConfigurationEv"
+      },
+      {
+        "item_type": 6,
+        "gun": "MP5",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN3MP523setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 7,
+        "gun": "AK47",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN4AK4723setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 8,
+        "gun": "M16",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN3M1623setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 9,
+        "gun": "SHOTGUN",
+        "status": "Existing specialized/verified held dual transform preserved",
+        "target": "_ZN7SHOTGUN23setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 10,
+        "gun": "M93BA",
+        "status": "Existing specialized/verified held dual transform preserved",
+        "target": "_ZN5M93BA23setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 11,
+        "gun": "SMAW",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN4SMAW23setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 16,
+        "gun": "M14",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN3M1423setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 17,
+        "gun": "PHASR",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN5PHASR23setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 18,
+        "gun": "GDEAGLE",
+        "status": "Existing specialized/verified held dual transform preserved",
+        "target": "_ZN7GDEAGLE20setDualConfigurationEv"
+      },
+      {
+        "item_type": 19,
+        "gun": "FLAMETHROWER",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN12FLAMETHROWER23setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 21,
+        "gun": "EMP",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN3EMP23setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 25,
+        "gun": "SAWGUN",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN6SAWGUN23setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 26,
+        "gun": "TAVOR",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN5TAVOR23setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 27,
+        "gun": "MINIGUN",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN7MINIGUN23setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 28,
+        "gun": "TEC9",
+        "status": "Existing specialized/verified held dual transform preserved",
+        "target": "_ZN4TEC920setDualConfigurationEv"
+      },
+      {
+        "item_type": 29,
+        "gun": "RG6",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN3RG623setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 31,
+        "gun": "XM8",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN3XM823setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 37,
+        "gun": "AA12",
+        "status": "Existing primary held transform reused for dual hand",
+        "target": "_ZN4AA1223setPrimaryConfigurationEv"
+      },
+      {
+        "item_type": 39,
+        "gun": "M1881",
+        "status": "Existing specialized/verified held dual transform preserved",
+        "target": "_ZN5M188120setDualConfigurationEv"
+      }
+    ],
+    "preserved_functions": [
+      {
+        "function": "_ZN6DEAGLE11triggerPullEf",
+        "sha256": "0fcd1eb939dd1d5b6c9c37f7aaae56674da2da969c273ab79ed80b788ddc8f4b"
+      },
+      {
+        "function": "_ZN6DEAGLE23setPrimaryConfigurationEv",
+        "sha256": "9eb5bb1f51495d2765c9c22d85f58362174bf225ab29efa6b97ab5d597ed5a9b"
+      },
+      {
+        "function": "_ZN6MAGNUM11triggerPullEf",
+        "sha256": "978e3b6793eb336575ab3b7bf591dd613a2fbeb0dea49a0a80b031c0046f98ee"
+      },
+      {
+        "function": "_ZN6MAGNUM23setPrimaryConfigurationEv",
+        "sha256": "02982eab540b36b5c627f1b58304e16429fe55648ece93cc705d40ba1bf823d4"
+      },
+      {
+        "function": "_ZN3UZI11triggerPullEf",
+        "sha256": "aaefa8cbc45d89af2c4f8a346a7287cbc8ef60e02024e51605372213dd090429"
+      },
+      {
+        "function": "_ZN3UZI23setPrimaryConfigurationEv",
+        "sha256": "5bceda3eb10eb33102422c901576a34db64ab4755ab55589ccd8ba249a791f14"
+      },
+      {
+        "function": "_ZN3MP511triggerPullEf",
+        "sha256": "f04f8477eedeba8be012dcf5800c5240b165bcef429af036c131aa076e87b3cc"
+      },
+      {
+        "function": "_ZN3MP523setPrimaryConfigurationEv",
+        "sha256": "76ffed2ae3f3d71f0f58ee56eccfd9f4c3964e8c2b3383742beb427a7f350f56"
+      },
+      {
+        "function": "_ZN4AK4711triggerPullEf",
+        "sha256": "91212001900bd9e46ee9058e95e0c274cfc1093b144e23b320e7ab742c9b5f9b"
+      },
+      {
+        "function": "_ZN4AK4723setPrimaryConfigurationEv",
+        "sha256": "5bb1d7dc59b456dcf5e8ba87abba6e77d30c9f37d7cdcfa44e2573ee5cf8d11a"
+      },
+      {
+        "function": "_ZN3M1611triggerPullEf",
+        "sha256": "16b099a63f5abff0f0e954c2fb34ddcc0e03115b89bc80fb65d94574af0c3c43"
+      },
+      {
+        "function": "_ZN3M1623setPrimaryConfigurationEv",
+        "sha256": "4573f5f3b682f7f2f562edb9b5b697c18012cc19095c3492ef0cd802470b3f66"
+      },
+      {
+        "function": "_ZN7SHOTGUN11triggerPullEf",
+        "sha256": "43166623edf29dd035f9ff5fada8b3938ee612da79948b108c72bb37b778c1a6"
+      },
+      {
+        "function": "_ZN7SHOTGUN23setPrimaryConfigurationEv",
+        "sha256": "081ab11e1fa3690a21104f11e6f8ebd6abc9d270e91b0d32b8d8dc80703d8566"
+      },
+      {
+        "function": "_ZN5M93BA11triggerPullEf",
+        "sha256": "144df7c0a32771d2286f70096740ed33f651bd0f6048c1834d86fda7daf40737"
+      },
+      {
+        "function": "_ZN5M93BA23setPrimaryConfigurationEv",
+        "sha256": "85640d08c8c4b5f096cef1b911958dd65267a4a403ac02e8d6dbcf94f6193fd6"
+      },
+      {
+        "function": "_ZN4SMAW11triggerPullEf",
+        "sha256": "0a5062529e16a49febb6414fbd9a85ed3d32f510a3aef139365ac5817fc7e470"
+      },
+      {
+        "function": "_ZN4SMAW23setPrimaryConfigurationEv",
+        "sha256": "14fdb95c68cbe93d1f0a9913ac3ceeb1c495f149291f872cd28411ce52ececbb"
+      },
+      {
+        "function": "_ZN3M1411triggerPullEf",
+        "sha256": "95801aa266d1cce20cddbc7f260e04f66c286819415ee80553416eba6e7e0fa6"
+      },
+      {
+        "function": "_ZN3M1423setPrimaryConfigurationEv",
+        "sha256": "996cb3191c148538b3a084fdbd20aa701b1bd3c3b5c7b4b28769c88674614db7"
+      },
+      {
+        "function": "_ZN5PHASR11triggerPullEf",
+        "sha256": "73a49f83c0b5b1a97cb7aabea2de4eb0ed344ce9f19e50d691efea02ba3622cf"
+      },
+      {
+        "function": "_ZN5PHASR23setPrimaryConfigurationEv",
+        "sha256": "8577cfb30cafde4ca0ed3f9e96bddb0b2b8be39ec2c0bb70e33ebe596e323b83"
+      },
+      {
+        "function": "_ZN7GDEAGLE11triggerPullEf",
+        "sha256": "9b6c295b3c3b66ec02e7e7f77e701965772b2886c983cdafadbdf565bc91e205"
+      },
+      {
+        "function": "_ZN7GDEAGLE23setPrimaryConfigurationEv",
+        "sha256": "2fd854c4c1753110de50e3f740906216eab0b037ed2b438f6fdc557fa3059903"
+      },
+      {
+        "function": "_ZN12FLAMETHROWER11triggerPullEf",
+        "sha256": "22f70b6bffebc4ba7df7f2397872d07ac96492bbd09d2c3f33c021426847db10"
+      },
+      {
+        "function": "_ZN12FLAMETHROWER23setPrimaryConfigurationEv",
+        "sha256": "334ac9b68333ee18a12982ea3568279e3da09ef5530c5563f904a7b95b12af4c"
+      },
+      {
+        "function": "_ZN3EMP11triggerPullEf",
+        "sha256": "d2bb47adab20f42957de854895c8d6cd8923268af4c413a1f8219da00b190d55"
+      },
+      {
+        "function": "_ZN3EMP23setPrimaryConfigurationEv",
+        "sha256": "ba248d890200884236f85c760760e6152db4091bbcb5a2f45f2db584ce60019a"
+      },
+      {
+        "function": "_ZN6SAWGUN11triggerPullEf",
+        "sha256": "a8f4bc8f551d2377957e6a1cf4036655a4fa46ebeb996980726079951eef4576"
+      },
+      {
+        "function": "_ZN6SAWGUN23setPrimaryConfigurationEv",
+        "sha256": "b0d8957391c3d3814f55b532ccde2a9d93677fc9319133d6c0d3f38a6b0793c1"
+      },
+      {
+        "function": "_ZN5TAVOR11triggerPullEf",
+        "sha256": "69b8b767aa4f1fd6c7c23d719a6cc0ef809179fcac1565fd37baba69b3b8d627"
+      },
+      {
+        "function": "_ZN5TAVOR23setPrimaryConfigurationEv",
+        "sha256": "fcbc28000959a5b6423a930dccbc9658533e934a5910494713a095ed46321758"
+      },
+      {
+        "function": "_ZN7MINIGUN11triggerPullEf",
+        "sha256": "7ae8cbba56de75552d48e71ed8b973288313c27918c2c4913f290debc500fcf4"
+      },
+      {
+        "function": "_ZN7MINIGUN23setPrimaryConfigurationEv",
+        "sha256": "02289b61a7be7a61c56922abfaba30cac5d6c4bfbe65137c8212e6e50369385b"
+      },
+      {
+        "function": "_ZN4TEC911triggerPullEf",
+        "sha256": "f9d482ff9586f71023c928edc9cea1d555ec02cc7992279bad6300ddc4221ac8"
+      },
+      {
+        "function": "_ZN4TEC923setPrimaryConfigurationEv",
+        "sha256": "b7f01e9aabbd0f7e3f4709da6953cd08a8382a926571608b6f4bbb0a0ca38ee3"
+      },
+      {
+        "function": "_ZN3RG611triggerPullEf",
+        "sha256": "bbb3cedc6cc76d52a6f33e67e06bc748ce1292d9e888fba5af16234e35c3d1b5"
+      },
+      {
+        "function": "_ZN3RG623setPrimaryConfigurationEv",
+        "sha256": "dc3d69cbc37eac76f8747c8aca70ad875cc1c19b01e5ecd7af05ddcc2f24382f"
+      },
+      {
+        "function": "_ZN3XM811triggerPullEf",
+        "sha256": "a13f3897284d6354739250ff39a0a63ebc7d240dc4ae6d7b2b953606922e568c"
+      },
+      {
+        "function": "_ZN3XM823setPrimaryConfigurationEv",
+        "sha256": "1ee2e483bf111d6e3c4d40ffac5fb9314340a11dd40466bae6f820d847ed54bb"
+      },
+      {
+        "function": "_ZN4AA1211triggerPullEf",
+        "sha256": "1fe192b504a4980c6b35b51fa45af1ab172fe16faf7473a61cc4ec9ed02a0aaf"
+      },
+      {
+        "function": "_ZN4AA1223setPrimaryConfigurationEv",
+        "sha256": "8045f48fae0190d3c4307cd9c1e7158091857fb2305fbf356a3f9f45cc0805a6"
+      },
+      {
+        "function": "_ZN5M188111triggerPullEf",
+        "sha256": "955475ab40d41f6e725123bad9a9a28475a59f6c605c6aca594117f6e7d9032e"
+      },
+      {
+        "function": "_ZN5M188123setPrimaryConfigurationEv",
+        "sha256": "fcad265f989a5728fe6857762aee0d10c5d2fb5f24e7ca8267c683468348b39c"
+      },
+      {
+        "function": "_ZN6Weapon7getClipEv",
+        "sha256": "5e482434c2908fd24f56be2811526dddee1f3cc1c82e3e4528c22edb96e0af04"
+      },
+      {
+        "function": "_ZN6Weapon7getAmmoEv",
+        "sha256": "b4e5dbdd338224a52136c32a8c3bd6fd7a9b1da72ee662eb0b485239fa7684fa"
+      },
+      {
+        "function": "_ZN6Weapon7subAmmoEi",
+        "sha256": "a0b92ed50c837ff0be186ef5ae78f50aca0ef16777ffe1aa159392c2937e4590"
+      },
+      {
+        "function": "_ZN22SoldierLocalController8getPowerEv",
+        "sha256": "337ae57d719a7577009787a1899b95bf8813cb52e5d3343ec2b46bd480b250cd"
+      }
+    ],
+    "stage": "Consolidated universal-gun build; SPAS/sniper physical PASS, remaining gun/mixed physical regression pending",
+    "ownership": "Confirmed distinct-instance/occupied-slot guards and normal Swap behavior preserved; dual replacement remains disabled",
+    "firing": "One original trigger per live gun; existing getter refresh before direct-ammo custom gun triggers; no projectile/damage/timer method edits"
+  },
+  "splits": [
+    {
+      "apk": "base.apk",
+      "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    },
+    {
+      "apk": "split_config.arm64_v8a.apk",
+      "sha256": "fed0d96b83c4af6669a1c67edbaf628068ed04cd31adb130e2d7203319a32b3e",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    },
+    {
+      "apk": "split_config.xxhdpi.apk",
+      "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    },
+    {
+      "apk": "split_config.en.apk",
+      "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+      "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+      "signature": "PASS",
+      "alignment": "PASS",
+      "crc": "PASS",
+      "non_native_application_payloads": "identical"
+    }
+  ],
+  "standalone": {
+    "apk": "MiniMilitiaClassic-Universal-Dual-v1.0.0.apk",
+    "sha256": "a3be60a39955042dd7c63fcfb384e180fbf345bf0fc06baa21b7eb01e5904e2a",
+    "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+    "signature": "PASS",
+    "alignment": "PASS",
+    "crc": "PASS",
+    "non_native_application_payloads": "identical"
+  },
+  "source_build": "universal_dual_wield_ui_sniper_splits; user confirms SPAS and sniper working"
+}

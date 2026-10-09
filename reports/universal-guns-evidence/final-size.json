@@ -1,0 +1,9 @@
+{
+  "apk_bytes": 69139103,
+  "previous_sniper_apk_bytes": 82590367,
+  "bytes_saved": 13451264,
+  "native_uncompressed_bytes": 20736920,
+  "native_zip_bytes": 7292331,
+  "apk_sha256": "a3be60a39955042dd7c63fcfb384e180fbf345bf0fc06baa21b7eb01e5904e2a",
+  "manifest_extract_native": true
+}
