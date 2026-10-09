@@ -12,4 +12,4 @@ Install the APK as an update without uninstalling or clearing app data. ARM64 on
 
 SHA-256: a3be60a39955042dd7c63fcfb384e180fbf345bf0fc06baa21b7eb01e5904e2a
 
-This private repository requires sign-in with repository access to download. The release contains one APK and SHA256SUMS.txt.
+The repository is public. The release contains one downloadable APK and SHA256SUMS.txt.

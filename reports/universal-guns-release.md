@@ -65,4 +65,4 @@ For manual installation, download the one APK and open it as an update. Existing
 
 Manual regression checklist: same-class rocket/automatic/energy/pistol pairs; sniper+rocket, SPAS+sniper, shotgun+pistol and automatic+energy mixed pairs; separate muzzle origins; facing and all aim directions; flight and zoom; reload; sustained ammo/fuel; drop/re-pickup; death/respawn; crashes. Only after offline tests pass should two consenting phones test private LAN representations and shots.
 
-GitHub release notes disclose the physical-test limits. The repository remains private; the user must sign in to a GitHub account with repository access to download the asset. Only the final standalone APK and its checksum are uploaded, not the split set or older intermediate APKs.
+GitHub release notes disclose the physical-test limits. The repository is now public and the release asset is available through the public download link. Only the final standalone APK and its checksum are uploaded, not the split set or older intermediate APKs.

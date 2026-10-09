@@ -1,114 +1,141 @@
-# Mini Militia Classic — Universal gun pairs v1.0.0
+# Mini Militia Classic — Universal Dual Wield
 
-[GitHub tagged APK download](https://github.com/vaishnav12200/minimilitia-mod/releases/download/v1.0.0-universal-dual/MiniMilitiaClassic-Universal-Dual-v1.0.0.apk) · [release page](https://github.com/vaishnav12200/minimilitia-mod/releases/tag/v1.0.0-universal-dual) (private repository; sign-in required).
+An unofficial modification and reverse-engineering project for **Mini Militia Classic 0.14.4 (88), ARM64**. It adds two distinct weapon pickup actions, enables same-gun and mixed-gun dual wielding, and retains the working unlimited ammo, manual reload, and jetpack changes.
 
-Final single-file build: [MiniMilitiaClassic-Universal-Dual-v1.0.0.apk](builds/universal_dual_wield_final/MiniMilitiaClassic-Universal-Dual-v1.0.0.apk). [Release investigation, size explanation and tests](reports/universal-guns-release.md).
+**[Download the single APK](https://github.com/vaishnav12200/minimilitia-mod/releases/download/v1.0.0-universal-dual/MiniMilitiaClassic-Universal-Dual-v1.0.0.apk)** · [Release page](https://github.com/vaishnav12200/minimilitia-mod/releases/tag/v1.0.0-universal-dual) · [SHA256 checksum file](https://github.com/vaishnav12200/minimilitia-mod/releases/download/v1.0.0-universal-dual/SHA256SUMS.txt)
 
-22 held gun classes support all 484 same/mixed pairings through the shared Swap/Dual system. Working ammo, reload and jetpack patches are retained. The APK is **65.94 MiB**, reduced from 78.76 MiB by compressing the standalone native library; application assets and library length are unchanged.
+The current release is **v1.0.0 Universal Dual**, a **65.94 MiB standalone APK**. The repository and download are public. The release is marked **pre-release** because the expanded gun roster and mixed-pair visuals still need manual phone testing.
 
-3,566 ARM64 case records and structural package checks pass. User confirms SPAS and sniper on a phone. Remaining gun/mixed visuals, broader regression and LAN are physically unverified, so the GitHub release is a pre-release. Install as an update without uninstalling or clearing data.
+## What we have built
 
-Verify with `python3 scripts/build_universal_guns.py --verify`; test with `PYTHONPATH=/tmp/mmc-unicorn-tests:scripts python3 scripts/test_universal_guns_arm64.py`. Previous working builds are preserved. Earlier build history follows.
+| Feature | How it works |
+|---|---|
+| Two pickup actions | **Swap** performs normal pickup; **Dual** keeps the active gun and equips the nearby gun in the other hand. |
+| Universal gun pairing | A shared eligibility policy enables all 22 supported gun classes, including identical and mixed pairs. |
+| Two actively held guns | Both held instances receive firing input through their original weapon methods. This goes beyond carrying two guns and switching between them. |
+| Duplicate carried weapons | The inventory routing preserves two distinct instances of a matching gun in the appropriate carried slots. |
+| Unlimited ammunition | Owned local weapons refill through their existing clip and reserve capacities. Special guns that read ammo fields directly refresh before firing. |
+| Manual reload fix | The original ammo subtraction routine is retained, correcting the earlier patch that broke firing after manual reload. |
+| Unlimited jetpack fuel | The local jetpack power getter supplies full power. |
+| One-file installation | The release bundles the required ARM64 payload into one signed APK. |
 
-# Mini Militia Classic — Phase 5 two-action pickup test
+Existing weapon sprites, maps, firing methods, cooldowns, and projectile routines are reused. This release does not add an ad-removal feature or change accounts, payments, authentication, or public-server validation.
 
-[Two-action SPAS APK](builds/universal_dual_wield_ui_standalone/mmc-spas-two-action-pickup-experimental.apk) · [signed split set](builds/universal_dual_wield_ui_splits/) · [root cause, call graphs and test checklist](reports/dual-wield-ui-phase5.md).
+## Install
 
-The user confirms the prior SPAS + SPAS held pair works. This candidate separates **Swap** (normal pickup) from **Dual** (keep the active SPAS and equip another in the opposite hand), reusing both stock icons and touch handlers. The verified SPAS rendering and ammo/reload/fuel code are preserved.
+1. Download **MiniMilitiaClassic-Universal-Dual-v1.0.0.apk** using the link above.
+2. Open the APK on an **ARM64 Android phone** and allow installation from the app you use to open it, if Android asks.
+3. Install it, launch the game, and test in an offline match first.
 
-176 ARM64 cases and structural package checks pass. Installed successfully; the installed ARM64 split matches the package and launch succeeded. **Physical SPAS Test A passed:** both actions work, both guns fire, buttons hide. This is not a completed universal build. [Sniper candidate APK](builds/universal_dual_wield_ui_sniper_standalone/mmc-two-action-sniper-experimental.apk) adds the M93BA sniper same-class pair using shared eligibility policy; mixed pairs and other classes are not enabled yet. Its 428 ARM64 checks and package verification pass. It has not been installed: ADB found the phone disconnected. See [sniper investigation and test checklist](reports/dual-wield-ui-sniper.md). When already dual wielding, Dual is disabled and Swap follows the existing drop rules.
+Only the single APK is needed; there is no separate split package to download. It can update earlier project builds that use the same signing certificate. An unrelated or official installation may have a different signature, which Android will reject as an update. Updating a compatible project build does not require uninstalling or clearing its data.
 
-Update using `./scripts/deploy_dual_wield_ui.sh 241266d60c20`. Roll back using `./scripts/deploy_true_dual_wield.sh 241266d60c20`. Neither script uninstalls or clears data. The exact working SPAS outputs are preserved in `backup/dual-wield-ui-20261008/`.
-
-Earlier build history follows.
-
-# Mini Militia Classic — simultaneous dual-wield experiment
-
-Latest requirement: two active held guns, one in each hand. A **Phase A SPAS-only candidate** is ready; universal compatibility and physical gameplay are not yet verified. The working carried-duplicate build is preserved.
-
-[Download SPAS Phase A APK](builds/universal_dual_wield_standalone/mmc-spas-true-dual-wield-phase-a.apk) · [split set](builds/universal_dual_wield_splits/) · [patch evidence and manual test sequence](reports/true-dual-wield-phase-a.md).
-
-127 ARM64 routing/fire-dispatch fixture cases and package checks pass. USB installation succeeded on the third attempt. The installed ARM64 split matches the build byte-for-byte, and the game launch command succeeded. Deployment script: `./scripts/deploy_true_dual_wield.sh 241266d60c20`. Ammo/reload/fuel code is unchanged. Pick up a second SPAS while a SPAS is active to exercise the new hand attachment. Physical SPAS validation is required before expanding to other guns.
-
-The prior carried-slot implementation and its history follow.
-
-# Mini Militia Classic — duplicate inventory test build
-
-Package `com.appsomniacs.mmc`, version 0.14.4 (88), ARM64, updated 2026-10-08.
-
-The user confirms `fixed_ammo_dual_weapon_splits` works for unlimited ammo, firing after manual reload, continuous boosting and offline play. Duplicate weapons still fail. That exact working build is preserved; the new inventory candidate changes only `SoldierLocalController::addWeapon` and retains all working ammo/reload/fuel bytes.
-
-## New candidate APK
-
-[mmc-duplicate-weapon-fixed-experimental.apk](builds/duplicate_weapon_fixed_standalone/mmc-duplicate-weapon-fixed-experimental.apk)
-
-SHA-256: `44dc2350fec0c1696fb18a879bcac84206cb4435dc50329ac35958134be7da66`.
-
-Matching four-split set: [duplicate_weapon_fixed_splits](builds/duplicate_weapon_fixed_splits/). Native SHA-256: `46e01584ccf9aafafe09c7d1601364ddc4d6158d762e14554830139550d23db4`.
-
-Static package checks and 128 ARM64 slot-routing/ownership fixture cases pass. **New duplicate gameplay is not yet verified.** The first USB update was refused for insufficient storage. After the user freed space, the retry succeeded; the new inventory build is installed and its installed ARM64 split matches the built APK byte-for-byte. The game launch command succeeded. Final deployment status and manual checks are recorded in [duplicate-inventory-tests.md](reports/duplicate-inventory-tests.md).
-
-## What changed
-
-The previous selection/pickup eligibility patch left actual equipment routing unchanged. With Sniper active + Pistol stowed, a second Sniper replaced the active Sniper, leaving Sniper + Pistol. The new ordinary-slot routine switches before that matching full-inventory replacement, so it drops the old stowed Pistol and retains two distinct Sniper instances. Matching-stowed pickups and unrelated pickups retain ordinary active-slot replacement. Empty slots still use stock add methods.
-
-Ordinary dual-capable firearms now use the two switchable inventory slots; dedicated dual-only equipment retains its existing guarded path. The same object pointer is never assigned again to another ordinary slot. Stock instance allocation, retain/release, UUIDs, rendering, firing, switching and respawn construction are preserved. This targets ordinary supported guns, not throwables/objective equipment. No payment, account, host validation, advertising, damage, projectile or map changes were added.
-
-The replacement is limited to one existing addWeapon branch and its 260-byte ordinary block. Full original/replacement bytes, verified mappings and calling convention are in each build's `verification.json`.
-
-## Install and test
-
-Free enough internal storage, unlock the phone, and approve the USB prompt. Update without uninstalling or clearing data:
+To verify your download, place the APK and `SHA256SUMS.txt` in the same folder and run:
 
 ```bash
-./scripts/deploy_duplicate_inventory.sh 241266d60c20
+sha256sum -c SHA256SUMS.txt
 ```
 
-Or copy/open the standalone APK on the phone, or install it via ADB:
+Expected APK SHA-256:
+
+```text
+a3be60a39955042dd7c63fcfb384e180fbf345bf0fc06baa21b7eb01e5904e2a
+```
+
+## Using Swap and Dual
+
+While holding one supported gun, move within pickup range of another gun:
+
+- **Swap** uses the normal pickup and inventory replacement path. It does not explicitly activate dual wielding.
+- **Dual** keeps your active gun and places the nearby gun in the opposite hand. Both guns then receive firing input, with each retaining its own firing behavior.
+
+For example, SPAS + SPAS uses two separate shotgun instances; sniper + rocket launcher uses each gun's own firing method. The same eligibility rules apply to both combinations.
+
+Both buttons appear for an eligible pickup when the second hand is available. They hide when there is no valid nearby candidate or you leave pickup range. With both hands occupied, Dual is unavailable; Swap follows the existing drop/replacement rules. Replacing only the second held gun is not implemented. The stowed, switchable weapon slot remains separate from the two active hand slots.
+
+### Supported guns
+
+The shared policy covers these **22 held gun classes**:
+
+| Group | Guns / native class names |
+|---|---|
+| Pistols | DEAGLE, MAGNUM, GDEAGLE, TEC9, M1881 |
+| Rifles and automatic guns | UZI, MP5, AK47, M16, M14, TAVOR, MINIGUN, XM8 |
+| Shotguns | SPAS / SHOTGUN, AA12 |
+| Sniper | M93BA |
+| Launchers and special guns | SMAW, RG6, PHASR, EMP, FLAMETHROWER, SAWGUN |
+
+That is **484 ordered pairings**: 22 identical-gun pairings and 462 mixed-gun pairings when left/right order is counted. This is the enabled policy coverage, not a claim that every combination has passed a physical gameplay test.
+
+Grenades, knives, shields, power-ups, objective items, and standalone projectile objects are excluded from the firearm policy. See the [technical gun roster](reports/universal-guns-release.md#recovered-gun-roster-and-policy) for exact ItemTypes and hand configuration details.
+
+## How the modification works
+
+The project patches the game's ARM64 native library, `libcocos2dcpp.so`, and repackages the application. It is not a rebuild of the original game's source code.
+
+1. **Pickup and HUD:** the existing Swap and Dual icons retain separate callbacks. A shared gun-type mask checks the active weapon and the nearby candidate before offering Dual.
+2. **Inventory:** normal pickup follows the preserved carried-weapon path. Explicit Dual attaches the incoming instance to the second active hand, with pointer checks and the original ownership handling.
+3. **Rendering:** existing specialized dual-hand configurations are preserved. Guns that inherited an empty dual configuration reuse their own primary held configuration.
+4. **Firing and ammo:** each live held gun receives one call to its original trigger method per firing update. Existing ammo getters refresh owned local instances before firing, including charge and spin-up guns that read ammo fields directly.
+5. **Packaging:** builders verify the expected input hashes, restrict native edits to the intended regions, repack, align, sign, and check the resulting APKs.
+
+The native library keeps its original file length. Exact patch bytes, preserved methods, package checks, and fixture results are recorded in the [release investigation](reports/universal-guns-release.md) and [evidence directory](reports/universal-guns-evidence/).
+
+## Why the APK size changed
+
+The earlier increase came from storing the **20.74 MB native game library without ZIP compression**, rather than from adding guns or graphics. The recent SPAS, two-action SPAS, and sniper builds were all the same **78.76 MiB** size.
+
+The final standalone APK compresses the library because its manifest permits Android to extract native libraries at installation. This reduces the APK to **65.94 MiB**, saving **12.83 MiB / 16.3%**, while keeping the application payloads and native library length intact. No new map or image assets were added for universal dual wielding.
+
+A standalone APK includes the ARM64 library that a base split alone omits. Android's installed size can also include extracted libraries, app data, and runtime caches, so it differs from the download size.
+
+## Validation and current limits
+
+| Check | Result |
+|---|---|
+| ARM64 policy, pickup, HUD, ownership, ammo, and fire-dispatch fixtures | **3,566 case records pass**, including all 484 ordered gun pairings |
+| APK signatures, alignment, ZIP CRC, exact native payload, and other application payloads | **Pass** |
+| Unlimited ammo, manual reload, jetpack, and offline play in earlier working builds | **User confirmed on a phone** |
+| SPAS two-action pickup | **User confirmed:** both actions work, both guns fire, and buttons hide |
+| Sniper dual wield | **User confirmed on a phone** |
+| Remaining gun classes, mixed-pair rendering, and broad gameplay regression | **Manual verification pending** |
+| Final universal build in private LAN matches | **Manual verification pending** |
+
+The ARM64 tests execute patched instructions with fixtures for ownership, Cocos, and projectile callbacks. They check control flow and ammo handling; they do not prove rendered Android gameplay or network synchronization. Earlier LAN use reported by the user does not validate the final universal build.
+
+For useful bug reports, include the two gun names, whether you pressed Swap or Dual, your phone/Android version, offline or LAN mode, and steps to reproduce. Helpful checks include both muzzle origins, aiming in both directions, reload, sustained firing and flight, drop/re-pickup, and death/respawn. Reports can be filed in [GitHub Issues](https://github.com/vaishnav12200/minimilitia-mod/issues).
+
+## Development and reproduction
+
+This repository contains patch scripts, build tooling, and investigation reports. Original APKs, native binaries, decoded assets, build outputs, and local signing keystores are excluded from Git. The downloadable APK is attached to the GitHub release.
+
+**Cloning the repository alone is not enough to rebuild the APK.** The current builder expects the exact confirmed sniper baseline split set and standalone APK in the paths defined in `scripts/build_universal_guns.py`, plus the local signing materials. Hash checks deliberately reject incompatible inputs and other game versions.
+
+Tooling requirements are Python 3 with `pyelftools`, `keystone-engine`, `capstone`, and `unicorn`, plus Java and Android SDK Build Tools. Existing scripts use Build Tools 35.0.0 and local SDK/signing paths; configure those for your environment. Ghidra was used for native investigation.
+
+Once the required inputs and tool paths are prepared:
 
 ```bash
-adb install --no-incremental -r builds/duplicate_weapon_fixed_standalone/mmc-duplicate-weapon-fixed-experimental.apk
+# Build isolated split and standalone outputs; existing outputs are not overwritten.
+python3 scripts/build_universal_guns.py
+
+# Verify the generated packages against their inputs and patch manifest.
+python3 scripts/build_universal_guns.py --verify
+
+# Execute the ARM64 fixture suite with Unicorn installed in your Python environment.
+python3 scripts/test_universal_guns_arm64.py
 ```
 
-Base.apk alone is insufficient for split installation. The deployment script verifies and installs all four components together with the same existing test certificate/version. If Android refuses installation, retain the working app and record the error. Do not uninstall or erase data as a workaround.
+| Path | Purpose |
+|---|---|
+| [scripts/patch_universal_guns.py](scripts/patch_universal_guns.py) | Shared gun policy, scoped hand configurations, and local firing helper |
+| [scripts/build_universal_guns.py](scripts/build_universal_guns.py) | Final package construction and verification |
+| [scripts/test_universal_guns_arm64.py](scripts/test_universal_guns_arm64.py) | Native ARM64 fixtures |
+| [scripts/deploy_universal_guns.sh](scripts/deploy_universal_guns.sh) | Verified split update through ADB for development |
+| [reports/universal-guns-release.md](reports/universal-guns-release.md) | Current architecture, roster, size audit, and test limits |
+| [reports/dual-wield-ui-phase5.md](reports/dual-wield-ui-phase5.md) | Separate pickup actions and SPAS verification history |
+| [reports/duplicate-inventory-root-cause.md](reports/duplicate-inventory-root-cause.md) | Why matching carried weapons were previously replaced |
+| [reports/reload-root-cause.md](reports/reload-root-cause.md) | Reload failure and corrected unlimited-ammo approach |
 
-Test offline first: Sniper + Sniper, Rocket + Rocket, Shotgun + Shotgun, Machine Gun + Machine Gun, Pistol + Pistol, and Sniper + Rocket. Verify both slots by switching and shooting; reload both, drop/pick up one independently, test full replacement, then die/respawn. Retest ammo and sustained boost. See the [detailed matrix](reports/duplicate-inventory-tests.md). MIUI previously blocked ADB taps; if still blocked, the user must perform these manually. Runtime PASS requires actual gameplay evidence.
+Earlier reports document intermediate builds and their status at the time. Use this README and the universal-guns release report for the current release.
 
-Private LAN is unverified. Test with two consenting physical phones only after local behavior is confirmed. Keep experiments out of public matches. Native code and application binaries remain local for personal testing; do not redistribute proprietary game assets/binaries without rights.
-
-## Reproduce and verify
-
-Requirements: existing Python pyelftools, Keystone and Capstone, Android SDK Build Tools 35.0.0 and local test keystore. Unicorn is needed only for ARM64 fixtures. Builders refuse overwrite; preserve/move the new candidate output aside before rebuilding, and keep the working source directories intact.
-
-```bash
-python3 scripts/audit_duplicate_inventory.py
-python3 scripts/patch_duplicate_inventory.py --output /tmp/mmc-duplicate-inventory.so
-python3 scripts/build_duplicate_inventory.py
-python3 scripts/build_duplicate_inventory.py --verify
-
-# If Unicorn is installed in the session's temporary location:
-PYTHONPATH=/tmp/mmc-unicorn-tests:scripts python3 scripts/test_duplicate_inventory_arm64.py
-PYTHONPATH=/tmp/mmc-unicorn-tests:scripts python3 scripts/test_duplicate_inventory_arm64.py --patched
-```
-
-The patch accepts only the exact confirmed working native hash (`8cac1bfb7c7c523bbfbb2c33ea3c446acb2d8db24d0a639799b04d74b8026f60`). It verifies original function bytes, executable PT_LOAD mappings, vtable targets and bounds, then checks whole-file mutation scope. All non-native APK payloads match the working containers. Split native entries are uncompressed and 4096-byte aligned.
-
-Read-only Ghidra exports reuse the existing project, using `ExportDuplicateInventory.java` and `ExportDuplicateParsers.java` in `native-analysis/ghidra_scripts/` with `-process libcocos2dcpp.so -noanalysis -readOnly`. Decompiled output is under `native-analysis/duplicate-*-decompiled.txt`; original and patched instruction listings and signature logs are under `reports/duplicate-inventory-evidence/`.
-
-## Rollback
-
-Reinstall the user-confirmed corrected-ammo/fuel build as an update:
-
-```bash
-./scripts/deploy_fixed_gameplay.sh 241266d60c20
-```
-
-Or use [mmc-fixed-ammo-dual-weapon.apk](builds/fixed_ammo_dual_weapon_standalone/mmc-fixed-ammo-dual-weapon.apk). Do not roll back to the obsolete combined RET-ammo variant, which retains the reload bug. No original/working APKs were overwritten. `backup/duplicate-inventory-20261008/` snapshots the working split/standalone files, earlier documents and patch script with a SHA-256 manifest. Earlier baseline/phase4 backups remain intact. Code rollback retains saved loadout data.
-
-## Reports
-
-- [Duplicate inventory root cause](reports/duplicate-inventory-root-cause.md): previous missed routes, ownership, parsers and spawn.
-- [Inventory verification](reports/duplicate-inventory-verification.md): exact bytes, hashes, package and emulation evidence.
-- [Device results/manual tests](reports/duplicate-inventory-tests.md): actual installation results and pending checks.
-- [Prior reload correction](reports/reload-root-cause.md): now user-confirmed working on the preserved build.
-- [General modification history](reports/modification-report.md) and [weapon analysis](reports/weapon-system-analysis.md).
+Mini Militia Classic belongs to its original developers. This project is unofficial and is not affiliated with them.
