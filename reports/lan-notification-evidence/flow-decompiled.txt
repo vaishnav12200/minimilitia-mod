@@ -1,0 +1,527 @@
+FUNCTION: WeaponStateObject::init @ 0065384c
+
+/* WeaponStateObject::init(ItemType, short, short) */
+
+void __thiscall
+WeaponStateObject::init
+          (WeaponStateObject *this,undefined4 param_2,undefined2 param_3,undefined2 param_4)
+
+{
+  *(undefined4 *)this = param_2;
+  *(undefined2 *)(this + 0x28) = param_3;
+  *(undefined2 *)(this + 0x2a) = param_4;
+  return;
+}
+
+
+FUNCTION: NetworkManager::sendWeaponCreate @ 00816748
+
+/* NetworkManager::sendWeaponCreate(cocos2d::CCObject*) */
+
+void __thiscall NetworkManager::sendWeaponCreate(NetworkManager *this,CCObject *param_1)
+
+{
+  undefined4 uVar1;
+  int iVar2;
+  CCInteger *this_00;
+  undefined8 uVar3;
+  NetworkMessageDispatcher *pNVar4;
+  CCData *this_01;
+  void *pvVar5;
+  
+  this_00 = (CCInteger *)cocos2d::CCArray::objectAtIndex((CCArray *)param_1,0);
+  uVar3 = cocos2d::CCArray::objectAtIndex((CCArray *)param_1,1);
+                    /* try { // try from 00816798 to 009167a3 has its CatchHandler @ 00816808 */
+  pNVar4 = *(NetworkMessageDispatcher **)(this + 0x408);
+  uVar1 = cocos2d::CCInteger::getValue(this_00);
+  this_01 = (CCData *)NetworkMessageDispatcher::getWeaponCreateData(pNVar4,uVar3,uVar1);
+  pvVar5 = (void *)cocos2d::extension::CCData::getBytes(this_01);
+  iVar2 = cocos2d::extension::CCData::getSize(this_01);
+  sendDataMessageToAll(this,pvVar5,iVar2,true);
+                    /* catch() { ... } // from try @ 00816798 with catch @ 00816808 */
+  return;
+}
+
+
+FUNCTION: ServerLAN::processPlayerMessage @ 009297fc
+
+/* ServerLAN::processPlayerMessage(RakNet::Packet*, char, char*, unsigned short, ClientEntry*) */
+
+undefined8
+ServerLAN::processPlayerMessage
+          (Packet *param_1,char param_2,char *param_3,ushort param_4,ClientEntry *param_5)
+
+{
+  uint uVar1;
+  long lVar2;
+  long lVar3;
+  undefined8 uVar4;
+  
+  lVar2 = tpidr_el0;
+                    /* catch() { ... } // from try @ 009293ec with catch @ 0092981c */
+  uVar1 = (byte)param_3 - 7;
+                    /* catch() { ... } // from try @ 00929740 with catch @ 00929840 */
+  if (uVar1 < 0x24 || (byte)param_3 == 0x2b) {
+                    /* WARNING: Could not emulate address calculation at 0x0092985c */
+                    /* WARNING: Treating indirect jump as call */
+    uVar4 = (*(code *)(&DAT_0118c3c0 + *(int *)(&DAT_0118c3c0 + (ulong)uVar1 * 4)))();
+    return uVar4;
+  }
+  lVar3 = tpidr_el0;
+  if (*(long *)(lVar3 + 0x28) == *(long *)(lVar2 + 0x28)) {
+    return 1;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+
+
+FUNCTION: LogWriter::logServerInfo @ 0092cccc
+
+/* LogWriter::logServerInfo(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>,
+   std::__ndk1::allocator<char> >, bool) */
+
+void LogWriter::logServerInfo(basic_string *param_1,byte param_2)
+
+{
+  long lVar1;
+  long *plVar2;
+  code *pcVar3;
+  basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> abStack_30 [24];
+  long local_18;
+  
+  lVar1 = tpidr_el0;
+  local_18 = *(long *)(lVar1 + 0x28);
+  if (*(long *)PTR_FileLogger_014bce10 != 0) {
+    plVar2 = *(long **)PTR_FileLogger_014bce10;
+    pcVar3 = *(code **)(*plVar2 + 0x20);
+                    /* try { // try from 0092cd2c to 00a2cdd7 has its CatchHandler @ 0092c384 */
+    std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+    basic_string(abStack_30,param_1);
+    (*pcVar3)(plVar2,abStack_30,param_2 & 1);
+    std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+    ~basic_string(abStack_30);
+  }
+  lVar1 = tpidr_el0;
+                    /* catch() { ... } // from try @ 0092cc8c with catch @ 0092cd78 */
+  if (*(long *)(lVar1 + 0x28) == local_18) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+
+
+FUNCTION: ClientRoom::SendClientAlert @ 0093aea8
+
+/* ClientRoom::SendClientAlert(ClientEntry*, std::__ndk1::basic_string<char,
+   std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >) */
+
+void __thiscall ClientRoom::SendClientAlert(ClientRoom *this,long param_1,byte *param_3)
+
+{
+  long lVar1;
+  size_t sVar2;
+  undefined8 *puVar3;
+  code *pcVar4;
+  long lVar5;
+  byte *local_f8;
+  
+  lVar5 = tpidr_el0;
+  lVar5 = *(long *)(lVar5 + 0x28);
+  memset(this + 0x18,0,0x800);
+  this[0x18] = (ClientRoom)0x88;
+  this[0x19] = (ClientRoom)0x9;
+                    /* try { // try from 0093af28 to 00a3af3b has its CatchHandler @ 0093af40 */
+                    /* catch() { ... } // from try @ 0093af28 with catch @ 0093af40 */
+  if ((*param_3 & 1) == 0) {
+    local_f8 = param_3 + 1;
+  }
+  else {
+    local_f8 = *(byte **)(param_3 + 0x10);
+  }
+  strcpy((char *)(this + 0x1a),(char *)local_f8);
+  puVar3 = *(undefined8 **)(this + 0x908);
+  pcVar4 = *(code **)*puVar3;
+  sVar2 = strlen((char *)(this + 0x18));
+  (*pcVar4)(puVar3,this + 0x18,sVar2 & 0xffffffff,*(undefined8 *)(param_1 + 0x80),
+            *(undefined8 *)(param_1 + 0x88));
+  lVar1 = tpidr_el0;
+  if (*(long *)(lVar1 + 0x28) == lVar5) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+
+
+FUNCTION: ClientRoomLAN::processPlayerMessage @ 0093d7fc
+
+/* ClientRoomLAN::processPlayerMessage(RakNet::Packet*, char, char*, unsigned short, ClientEntry*)
+    */
+
+bool __thiscall
+ClientRoomLAN::processPlayerMessage
+          (ClientRoomLAN *this,Packet *param_1,char param_2,char *param_3,ushort param_4,
+          ClientEntry *param_5)
+
+{
+  byte bVar1;
+  
+                    /* try { // try from 0093d834 to 00a3d83f has its CatchHandler @ 0093dbd0 */
+  bVar1 = ClientRoom::processPlayerMessage
+                    ((ClientRoom *)this,param_1,param_2,param_3,param_4,param_5);
+                    /* try { // try from 0093d840 to 00a3d95b has its CatchHandler @ 0093d5dc */
+  return (bVar1 & 1) != 0;
+}
+
+
+FUNCTION: ClientRoom::sendWeaponEvent @ 00949ad0
+
+/* WARNING: Restarted to delay deadcode elimination for space: stack */
+/* ClientRoom::sendWeaponEvent(ClientEntry*, PlayerWeaponEvent, std::__ndk1::basic_string<char,
+   std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >) */
+
+void __thiscall
+ClientRoom::sendWeaponEvent(ClientRoom *this,long param_1,ClientRoom param_3,byte *param_4)
+
+{
+  long lVar1;
+  size_t sVar2;
+  code *pcVar3;
+  long *plVar4;
+  byte *local_348;
+  byte *local_338;
+  byte *local_328;
+  byte *local_310;
+  ClientRoom local_2f8;
+  List<ClientEntry*> aLStack_50 [16];
+  undefined8 local_40;
+  undefined8 uStack_38;
+  long local_28;
+  
+  lVar1 = tpidr_el0;
+  local_28 = *(long *)(lVar1 + 0x28);
+  this[0x18] = (ClientRoom)0x88;
+  this[0x19] = (ClientRoom)0x47;
+  this[0x1a] = *(ClientRoom *)(param_1 + 0x90);
+  this[0x1b] = param_3;
+  if ((*param_4 & 1) == 0) {
+    local_2f8 = SUB41((int)(uint)*param_4 >> 1,0);
+  }
+  else {
+    local_2f8 = SUB81(*(undefined8 *)(param_4 + 8),0);
+  }
+  this[0x1c] = local_2f8;
+  if ((*param_4 & 1) == 0) {
+    local_310 = param_4 + 1;
+  }
+  else {
+    local_310 = *(byte **)(param_4 + 0x10);
+  }
+  if ((*param_4 & 1) == 0) {
+    local_328 = param_4 + 1;
+  }
+  else {
+    local_328 = *(byte **)(param_4 + 0x10);
+  }
+  sVar2 = strlen((char *)local_328);
+  memcpy(this + 0x1d,local_310,sVar2 + 1);
+  if ((*param_4 & 1) == 0) {
+    local_338 = param_4 + 1;
+  }
+  else {
+    local_338 = *(byte **)(param_4 + 0x10);
+  }
+  strlen((char *)local_338);
+  if ((*param_4 & 1) == 0) {
+    local_348 = param_4 + 1;
+  }
+  else {
+    local_348 = *(byte **)(param_4 + 0x10);
+  }
+  sVar2 = strlen((char *)local_348);
+  plVar4 = *(long **)(this + 0x908);
+  pcVar3 = *(code **)(*plVar4 + 0x18);
+  DataStructures::List<ClientEntry*>::List(aLStack_50,this + 0x818);
+  uStack_38 = *(undefined8 *)(param_1 + 0x88);
+  local_40 = *(undefined8 *)(param_1 + 0x80);
+  (*pcVar3)(plVar4,aLStack_50,this + 0x18,(int)sVar2 + 6,local_40,uStack_38,0);
+  DataStructures::List<ClientEntry*>::~List(aLStack_50);
+  lVar1 = tpidr_el0;
+  if (*(long *)(lVar1 + 0x28) == local_28) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+
+
+FUNCTION: ClientRoom::reduceMagazine @ 0094b164
+
+/* ClientRoom::reduceMagazine(WeaponStateObject*, int) */
+
+void __thiscall ClientRoom::reduceMagazine(ClientRoom *this,WeaponStateObject *param_1,int param_2)
+
+{
+  *(short *)(param_1 + 0x2a) = *(short *)(param_1 + 0x2a) - (short)param_2;
+  return;
+}
+
+
+FUNCTION: ClientRoom::processPlayerMessage @ 0095d370
+
+/* ClientRoom::processPlayerMessage(RakNet::Packet*, char, char*, unsigned short, ClientEntry*) */
+
+ulong __thiscall
+ClientRoom::processPlayerMessage
+          (ClientRoom *this,Packet *param_1,char param_2,char *param_3,ushort param_4,
+          ClientEntry *param_5)
+
+{
+  uint uVar1;
+  ulong uVar2;
+  byte local_11;
+  
+  if (param_2 == '6') {
+    (**(code **)(*(long *)this + 0x210))(this,param_3,param_5);
+    local_11 = 0;
+                    /* try { // try from 0095d3d0 to 00a5d3db has its CatchHandler @ 0095d448 */
+  }
+  else {
+    if (*(int *)(this + 0x930) == 1) {
+      if (*(int *)(param_5 + 0x1a8) == 0) {
+        uVar1 = (byte)param_2 - 0x17;
+        if (uVar1 < 0x35 || (byte)param_2 == 0x4c) {
+                    /* WARNING: Could not emulate address calculation at 0x0095d41c */
+                    /* WARNING: Treating indirect jump as call */
+          uVar2 = (*(code *)(&DAT_0118c564 + *(int *)(&DAT_0118c564 + (ulong)uVar1 * 4)))();
+          return uVar2;
+        }
+        local_11 = 0;
+        goto LAB_0095d764;
+      }
+      uVar1 = (byte)param_2 - 0xf;
+      if (uVar1 < 0x3d || (byte)param_2 == 0x4c) {
+                    /* WARNING: Could not emulate address calculation at 0x0095d4f8 */
+                    /* WARNING: Treating indirect jump as call */
+        uVar2 = (*(code *)(&DAT_0118c46c + *(int *)(&DAT_0118c46c + (ulong)uVar1 * 4)))();
+        return uVar2;
+      }
+    }
+    local_11 = 1;
+  }
+LAB_0095d764:
+  return (ulong)local_11;
+}
+
+
+FUNCTION: ClientRoom::printWeaponStats @ 0096f460
+
+/* ClientRoom::printWeaponStats(WeaponStateObject*, std::__ndk1::basic_string<char,
+   std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, bool) */
+
+void ClientRoom::printWeaponStats(void)
+
+{
+  return;
+}
+
+
+FUNCTION: WeaponStateObject::reload @ 0097bcbc
+
+/* WARNING: Restarted to delay deadcode elimination for space: stack */
+/* WeaponStateObject::reload(short) */
+
+void __thiscall WeaponStateObject::reload(WeaponStateObject *this,short param_1)
+
+{
+  short sVar1;
+  long lVar2;
+  double dVar3;
+  int *local_f0;
+  WeaponStateObject *local_e8;
+  int local_34 [2];
+  short local_2c [10];
+  long local_18;
+  
+  local_e8 = (WeaponStateObject *)local_2c;
+  lVar2 = tpidr_el0;
+  local_18 = *(long *)(lVar2 + 0x28);
+  dVar3 = 0.0;
+  if (0.0 <= (double)(int)*(short *)(this + 0x2a)) {
+    dVar3 = (double)(int)*(short *)(this + 0x2a);
+  }
+  *(short *)(this + 0x2a) = (short)(int)dVar3;
+  dVar3 = 0.0;
+  if (0.0 <= (double)((int)param_1 - (int)*(short *)(this + 0x2a))) {
+    dVar3 = (double)((int)param_1 - (int)*(short *)(this + 0x2a));
+  }
+  local_2c[0] = (short)(int)dVar3;
+  if (*(short *)(this + 0x28) < local_2c[0]) {
+    local_e8 = this + 0x28;
+  }
+  local_f0 = local_34 + 1;
+  sVar1 = *(short *)local_e8;
+  *(short *)(this + 0x2a) = *(short *)(this + 0x2a) + sVar1;
+  local_34[1] = 0;
+  local_34[0] = (int)*(short *)(this + 0x28) - (int)sVar1;
+  if (0 < local_34[0]) {
+    local_f0 = local_34;
+  }
+  *(short *)(this + 0x28) = (short)*local_f0;
+  *(undefined2 *)(this + 0x2c) = *(undefined2 *)(this + 0x2a);
+  lVar2 = tpidr_el0;
+  if (*(long *)(lVar2 + 0x28) != local_18) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+FUNCTION: RakNetLocalServer::processMessage @ 0098e42c
+
+/* RakNetLocalServer::processMessage(RakNet::Packet*, FClientEntry*, bool) */
+
+undefined1 __thiscall
+RakNetLocalServer::processMessage
+          (RakNetLocalServer *this,Packet *param_1,FClientEntry *param_2,bool param_3)
+
+{
+  long lVar1;
+  undefined2 uVar2;
+  undefined4 uVar3;
+  FClientEntry *local_80;
+  char local_78;
+  undefined1 local_51;
+  undefined2 local_24 [2];
+  undefined8 local_20;
+  long local_18;
+  
+  lVar1 = tpidr_el0;
+  local_18 = *(long *)(lVar1 + 0x28);
+  if (param_3) {
+    local_78 = *(char *)(*(long *)(param_1 + 0x30) + 2);
+    local_80 = (FClientEntry *)(*(long *)(param_1 + 0x30) + 3);
+  }
+  else {
+                    /* try { // try from 0098e470 to 00a8e57f has its CatchHandler @ 0098e470
+                       catch() { ... } // from try @ 0098e470 with catch @ 0098e470
+                       catch() { ... } // from try @ 0098e598 with catch @ 0098e470 */
+    local_78 = *(char *)(*(long *)(param_1 + 0x30) + 1);
+    local_80 = (FClientEntry *)(*(long *)(param_1 + 0x30) + 2);
+  }
+  if (local_78 != '\x04') {
+    if (local_78 == '\x05') {
+      printf("Peer %d failed to connect to %d :(\n",(ulong)(byte)param_2[0x10],
+             (ulong)(byte)*local_80);
+                    /* try { // try from 0098e580 to 00a8e597 has its CatchHandler @ 0098e59c */
+    }
+    else {
+      if (local_78 == '\a') {
+        local_24[0] = 0x788;
+                    /* try { // try from 0098e598 to 00a8e937 has its CatchHandler @ 0098e470 */
+                    /* catch() { ... } // from try @ 0098e580 with catch @ 0098e59c */
+        sendToClient(this,local_24,2,*(undefined8 *)param_2,*(undefined8 *)(param_2 + 8));
+        local_51 = 0;
+        goto LAB_0098e664;
+      }
+      if (local_78 == '\b') {
+        local_20 = 0x888;
+        uVar2 = DataStructures::
+                Map<RakNet::RakNetGUID,FClientEntry*,&(int_DataStructures::defaultMapKeyComparison<RakNet::RakNetGUID>(RakNet::RakNetGUID_const&,RakNet::RakNetGUID_const&))>
+                ::Size((Map<RakNet::RakNetGUID,FClientEntry*,&(int_DataStructures::defaultMapKeyComparison<RakNet::RakNetGUID>(RakNet::RakNetGUID_const&,RakNet::RakNetGUID_const&))>
+                        *)(this + 0x158));
+        local_20._0_4_ = CONCAT22(uVar2,(undefined2)local_20);
+        uVar3 = DataStructures::
+                Map<RakNet::RakNetGUID,FClientEntry*,&(int_DataStructures::defaultMapKeyComparison<RakNet::RakNetGUID>(RakNet::RakNetGUID_const&,RakNet::RakNetGUID_const&))>
+                ::Size((Map<RakNet::RakNetGUID,FClientEntry*,&(int_DataStructures::defaultMapKeyComparison<RakNet::RakNetGUID>(RakNet::RakNetGUID_const&,RakNet::RakNetGUID_const&))>
+                        *)(this + 0x158));
+        local_20 = CONCAT44(uVar3,(undefined4)local_20);
+        sendToClient(this,&local_20,8,*(undefined8 *)param_2,*(undefined8 *)(param_2 + 8));
+        local_51 = 0;
+        goto LAB_0098e664;
+      }
+      if ((local_78 != '/') && (local_78 == 'A')) {
+        processPlayerSpawnRequest((char *)this,local_80,(int)param_2);
+        local_51 = 0;
+        goto LAB_0098e664;
+      }
+    }
+  }
+  local_51 = 1;
+LAB_0098e664:
+  lVar1 = tpidr_el0;
+  if (*(long *)(lVar1 + 0x28) != local_18) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_51;
+}
+
+
+FUNCTION: Weapon::getWeaponStatus @ 00a492d8
+
+/* Weapon::getWeaponStatus() */
+
+undefined4 __thiscall Weapon::getWeaponStatus(Weapon *this)
+
+{
+  short sVar1;
+  ulong uVar2;
+  undefined4 local_14;
+  
+  if (((byte)this[0x2f4] & 1) == 0) {
+    local_14 = 0xffffffff;
+  }
+  else {
+    uVar2 = (**(code **)(*(long *)this + 0x5b8))(this);
+    if ((uVar2 & 1) == 0) {
+      sVar1 = getAmmo(this);
+      if (sVar1 < 1) {
+        sVar1 = getClip(this);
+        if (sVar1 < 1) {
+          local_14 = 2;
+        }
+        else {
+          local_14 = 3;
+        }
+      }
+      else {
+        local_14 = 0;
+      }
+    }
+    else {
+      local_14 = 1;
+    }
+  }
+  return local_14;
+}
+
+
+FUNCTION: WeaponManager::itemTrack @ 00a5552c
+
+/* WeaponManager::itemTrack(cocos2d::CCObject*) */
+
+void __thiscall WeaponManager::itemTrack(WeaponManager *this,CCObject *param_1)
+
+{
+  addItem(this,param_1,5);
+  return;
+}
+
+
+FUNCTION: WeaponManager::itemDrop @ 00a5559c
+
+/* WeaponManager::itemDrop(cocos2d::CCObject*) */
+
+void __thiscall WeaponManager::itemDrop(WeaponManager *this,CCObject *param_1)
+
+{
+                    /* try { // try from 00a555ac to 00b557bb has its CatchHandler @ 00a5584c */
+  addItem(this,param_1,2);
+  return;
+}
+
+

@@ -1,0 +1,13 @@
+{
+  "checked_date": "2026-10-12",
+  "adb_devices": [],
+  "reproduction": "not performed",
+  "logcat_capture": "not performed; no devices attached",
+  "internet_disabled_test": "not performed; user has not confirmed WAN isolation",
+  "user_report": {
+    "host": "friend using Play Store installation",
+    "client": "user using modified installation; exact installed artifact not measured",
+    "mode": "local LAN",
+    "online_joining": "user also reports inability to join online servers; cause undetermined"
+  }
+}

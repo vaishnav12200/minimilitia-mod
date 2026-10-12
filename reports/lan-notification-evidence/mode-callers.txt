@@ -1,0 +1,185 @@
+
+CALLER LobbyLayer::onSwitchToPeer2Peer() ELF 0x6abdd4
+006abd98 mov w1, #3
+006abd9c adrp x8, #0x13c1000
+006abda0 ldr x8, [x8, #0xc28]
+006abda4 mov w10, #4
+006abda8 adrp x9, #0x13c1000
+006abdac ldr x9, [x9, #0xb78]
+006abdb0 str w10, [x9]
+006abdb4 str w1, [x8]
+006abdb8 bl #0x4c88d0
+006abdbc mov w10, wzr
+006abdc0 and w1, w10, #1
+006abdc4 bl #0x4d8da0
+006abdc8 bl #0x4c88d0
+006abdcc mov w10, wzr
+006abdd0 mov w1, w10
+006abdd4 bl #0x4d3620
+006abdd8 bl #0x4d4380
+
+CALLER MenuLayer::init() ELF 0x6e4848
+006e480c mov x0, x9
+006e4810 bl #0x4f83c0
+006e4814 ldr x0, [sp, #0x5c0]
+006e4818 bl #0x4caa40
+006e481c bl #0x4ce890
+006e4820 tbnz w0, #0, #0x6e4830
+006e4824 mov w0, #1
+006e4828 bl #0x4cd030
+006e482c str w0, [sp, #0x14]
+006e4830 bl #0x4c88d0
+006e4834 mov w1, wzr
+006e4838 str w1, [sp, #0x10]
+006e483c bl #0x4d8da0
+006e4840 bl #0x4c88d0
+006e4844 ldr w1, [sp, #0x10]
+006e4848 bl #0x4d3620
+006e484c bl #0x4c88d0
+
+CALLER MenuLayer::onStartedMatchFromMMVC() ELF 0x6e834c
+006e8310 adrp x15, #0x13c0000
+006e8314 ldr x15, [x15, #0x638]
+006e8318 stur x0, [x29, #-8]
+006e831c strb wzr, [x15]
+006e8320 str w13, [x14]
+006e8324 str w11, [x12]
+006e8328 str w9, [x10]
+006e832c str wzr, [x8, #0xc]
+006e8330 bl #0x4c88d0
+006e8334 mov w9, wzr
+006e8338 and w1, w9, #1
+006e833c bl #0x4d8da0
+006e8340 bl #0x4c88d0
+006e8344 mov w9, wzr
+006e8348 mov w1, w9
+006e834c bl #0x4d3620
+006e8350 mov w1, #0xd
+
+CALLER NetworkManager::useGameCenterBT() ELF 0x7185c4
+00718598 sub sp, sp, #0x20
+0071859c stp x29, x30, [sp, #0x10]
+007185a0 add x29, sp, #0x10
+007185a4 mov w8, wzr
+007185a8 str x0, [sp, #8]
+007185ac ldr x0, [sp, #8]
+007185b0 str x0, [sp]
+007185b4 and w1, w8, #1
+007185b8 bl #0x4d8da0
+007185bc mov w1, #5
+007185c0 ldr x0, [sp]
+007185c4 bl #0x4d3620
+007185c8 ldr x0, [sp]
+
+CALLER NetworkManager::useGameCenter() ELF 0x718658
+0071862c sub sp, sp, #0x20
+00718630 stp x29, x30, [sp, #0x10]
+00718634 add x29, sp, #0x10
+00718638 mov w8, wzr
+0071863c str x0, [sp, #8]
+00718640 ldr x0, [sp, #8]
+00718644 str x0, [sp]
+00718648 and w1, w8, #1
+0071864c bl #0x4d8da0
+00718650 mov w1, #3
+00718654 ldr x0, [sp]
+00718658 bl #0x4d3620
+0071865c ldr x0, [sp]
+
+CALLER NetworkManager::useGooglePlay() ELF 0x7186a0
+00718674 sub sp, sp, #0x20
+00718678 stp x29, x30, [sp, #0x10]
+0071867c add x29, sp, #0x10
+00718680 mov w8, wzr
+00718684 str x0, [sp, #8]
+00718688 ldr x0, [sp, #8]
+0071868c str x0, [sp]
+00718690 and w1, w8, #1
+00718694 bl #0x4d8da0
+00718698 mov w1, #4
+0071869c ldr x0, [sp]
+007186a0 bl #0x4d3620
+007186a4 ldr x0, [sp]
+
+CALLER NetworkManager::useRakNetLAN() ELF 0x7186e8
+007186bc sub sp, sp, #0x20
+007186c0 stp x29, x30, [sp, #0x10]
+007186c4 add x29, sp, #0x10
+007186c8 mov w8, wzr
+007186cc str x0, [sp, #8]
+007186d0 ldr x0, [sp, #8]
+007186d4 str x0, [sp]
+007186d8 and w1, w8, #1
+007186dc bl #0x4d8da0
+007186e0 mov w1, #2
+007186e4 ldr x0, [sp]
+007186e8 bl #0x4d3620
+007186ec ldr x0, [sp]
+
+CALLER NetworkManager::useRakNetCustom() ELF 0x718760
+00718734 sub sp, sp, #0x20
+00718738 stp x29, x30, [sp, #0x10]
+0071873c add x29, sp, #0x10
+00718740 mov w8, #1
+00718744 str x0, [sp, #8]
+00718748 ldr x0, [sp, #8]
+0071874c str x0, [sp]
+00718750 and w1, w8, #1
+00718754 bl #0x4d8da0
+00718758 mov w1, #6
+0071875c ldr x0, [sp]
+00718760 bl #0x4d3620
+00718764 mov w8, #1
+
+CALLER NetworkManager::useRakNetQP() ELF 0x7187f4
+007187c8 sub sp, sp, #0x20
+007187cc stp x29, x30, [sp, #0x10]
+007187d0 add x29, sp, #0x10
+007187d4 mov w8, #1
+007187d8 str x0, [sp, #8]
+007187dc ldr x0, [sp, #8]
+007187e0 str x0, [sp]
+007187e4 and w1, w8, #1
+007187e8 bl #0x4d8da0
+007187ec mov w1, #1
+007187f0 ldr x0, [sp]
+007187f4 bl #0x4d3620
+007187f8 mov w8, wzr
+
+CALLER PlayOnlineLayer::onStartedMatchFromMMVC() ELF 0x7ac300
+007ac2c4 bl #0x4c0ce0
+007ac2c8 adrp x8, #0x13bf000
+007ac2cc ldr x8, [x8, #0xbc8]
+007ac2d0 mov w9, #1
+007ac2d4 adrp x10, #0x13be000
+007ac2d8 ldr x10, [x10, #0xde8]
+007ac2dc str w9, [x10]
+007ac2e0 str wzr, [x8, #0xc]
+007ac2e4 bl #0x4c88d0
+007ac2e8 mov w9, wzr
+007ac2ec and w1, w9, #1
+007ac2f0 bl #0x4d8da0
+007ac2f4 bl #0x4c88d0
+007ac2f8 mov w9, wzr
+007ac2fc mov w1, w9
+007ac300 bl #0x4d3620
+007ac304 bl #0x4d4380
+
+CALLER SplashLayer::onStartedMatchFromMMVC() ELF 0x903efc
+00903ec0 ldr x12, [x12, #0xc08]
+00903ec4 adrp x13, #0x13c0000
+00903ec8 ldr x13, [x13, #0x638]
+00903ecc stur x0, [x29, #-8]
+00903ed0 strb wzr, [x13]
+00903ed4 strb wzr, [x12]
+00903ed8 str w10, [x11]
+00903edc str w8, [x9]
+00903ee0 bl #0x4c88d0
+00903ee4 mov w8, wzr
+00903ee8 and w1, w8, #1
+00903eec bl #0x4d8da0
+00903ef0 bl #0x4c88d0
+00903ef4 mov w8, wzr
+00903ef8 mov w1, w8
+00903efc bl #0x4d3620
+00903f00 mov w1, #0xd

@@ -6,6 +6,10 @@ An unofficial modification and reverse-engineering project for **Mini Militia Cl
 
 The current release is **v1.0.0 Universal Dual**, a **65.94 MiB standalone APK**. The repository and download are public. The release is marked **pre-release** because the expanded gun roster and mixed-pair visuals still need manual phone testing.
 
+## Private LAN test candidate
+
+The modified client has been reported to show `L337H4X-WA` when joining a stock LAN host. A separate **[finite-LAN-ammo test APK](https://github.com/vaishnav12200/minimilitia-mod/releases/tag/v1.0.1-lan-ammo-test)** disables local ammo refill in RakNet LAN while retaining offline unlimited ammo, jetpack and custom dual controls. It is **not a verified LAN fix**; the exact failing runtime field and stock-host compatibility of custom pairs remain unconfirmed. The original download above is preserved. See the [feature-isolation evidence and manual test plan](reports/lan-feature-isolation.md).
+
 ## What we have built
 
 | Feature | How it works |

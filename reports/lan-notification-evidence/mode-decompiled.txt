@@ -1,0 +1,70 @@
+FUNCTION: NetworkManager::setConnectionType @ 00818608
+
+/* NetworkManager::setConnectionType(ConnectionType) */
+
+void __thiscall NetworkManager::setConnectionType(undefined8 param_1,undefined4 param_2)
+
+{
+  *(undefined4 *)PTR__currentConnectionType_014bf448 = param_2;
+  return;
+}
+
+
+FUNCTION: NetworkManager::useRakNetLAN @ 008186bc
+
+/* NetworkManager::useRakNetLAN() */
+
+void __thiscall NetworkManager::useRakNetLAN(NetworkManager *this)
+
+{
+  setUseHostedServer(this,false);
+  setConnectionType(this,2);
+  *(undefined8 *)(this + 0x3f8) = *(undefined8 *)(this + 0x3f0);
+  return;
+}
+
+
+FUNCTION: NetworkManager::isUsingHostedServer @ 0081d8ec
+
+/* NetworkManager::isUsingHostedServer() */
+
+byte __thiscall NetworkManager::isUsingHostedServer(NetworkManager *this)
+
+{
+  return (byte)this[0x418] & 1;
+}
+
+
+FUNCTION: NetworkManager::isConnected @ 0081efe0
+
+/* NetworkManager::isConnected() */
+
+byte __thiscall NetworkManager::isConnected(NetworkManager *this)
+
+{
+  byte local_11;
+  
+  if (((byte)this[0x418] & 1) == 0) {
+    local_11 = (**(code **)(**(long **)(this + 0x3f8) + 0x38))(*(long **)(this + 0x3f8));
+                    /* try { // try from 0081f034 to 0091f03f has its CatchHandler @ 0081f05c */
+  }
+  else {
+    local_11 = RakNetDelegate::isOnline();
+  }
+  local_11 = local_11 & 1;
+                    /* try { // try from 0081f040 to 0091f0af has its CatchHandler @ 0081ef38 */
+  return local_11;
+}
+
+
+FUNCTION: NetworkManager::getConnectionType @ 0081f61c
+
+/* NetworkManager::getConnectionType() */
+
+undefined4 NetworkManager::getConnectionType(void)
+
+{
+  return *(undefined4 *)PTR__currentConnectionType_014bf448;
+}
+
+

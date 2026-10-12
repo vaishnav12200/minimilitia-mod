@@ -10,7 +10,7 @@ def equivalent(a,b):
  for r in [a,b]:r['events']=[n for n in r['events'] if n not in ['get_type','dual_only']]
  return a==b
 
-def execute_fire(native,pt,it,slots=(True,True)):
+def execute_fire(native,pt,it,slots=(True,True),connection_type=None,finite_ammo=False):
  u=Uc(UC_ARCH_ARM64,UC_MODE_ARM);u.mem_map(0x400000,0x1100000);u.mem_map(S,0x10000);u.mem_map(STACK,0x11000);u.mem_map(STOP,0x1000)
  def q(a,v):u.mem_write(a,struct.pack('<Q',v))
  def short(a,v):u.mem_write(a,struct.pack('<h',v))
@@ -19,12 +19,16 @@ def execute_fire(native,pt,it,slots=(True,True)):
  q(S,SV);q(S+0x1c8,W[0] if slots[0] else 0);q(S+0x1d0,0);q(S+0x1d8,W[1] if slots[1] else 0);q(0x13bec80,S+0x7000);q(S+0x7000,S)
  for w in W[:2]:q(w,WV);short(w+0x362,0);short(w+0x360,0)
  caps={W[0]:(3+pt%7,70+pt),W[1]:(3+it%7,70+it)};calls=[]
+ if connection_type is not None:
+  q(0x13bf448,S+0x7200);u.mem_write(S+0x7200,struct.pack('<i',connection_type))
+ if finite_ammo:
+  for w in W[:2]:short(w+0x362,caps[w][0]);short(w+0x360,caps[w][1])
  # Capacities are modelled; the actual existing getters perform field refill.
  callbacks={STUB:lambda:u.reg_write(UC_ARM64_REG_W0,caps[u.reg_read(UC_ARM64_REG_X0)][0]),STUB+16:lambda:u.reg_write(UC_ARM64_REG_W0,caps[u.reg_read(UC_ARM64_REG_X0)][1])}
  def trigger():
-  w=u.reg_read(UC_ARM64_REG_X0);assert (readshort(w+0x362),readshort(w+0x360))==caps[w]
+  w=u.reg_read(UC_ARM64_REG_X0);expected=(caps[w][0]-calls.count(w),caps[w][1]) if finite_ammo else caps[w];assert (readshort(w+0x362),readshort(w+0x360))==expected
   assert u.reg_read(UC_ARM64_REG_S0)==0x3c888889
-  calls.append(w);short(w+0x362,caps[w][0]-1)
+  calls.append(w);short(w+0x362,readshort(w+0x362)-1)
  callbacks[STUB+32]=trigger
  for a in callbacks:u.mem_write(a,bytes.fromhex('c0035fd6'))
  for off,a in [(0x590,STUB),(0x588,STUB+16),(0x4f8,STUB+32)]:q(WV+off,a)

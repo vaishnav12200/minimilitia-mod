@@ -1,0 +1,219 @@
+FUNCTION: NetworkManager::sendDataMessageToAll @ 00818e48
+
+/* NetworkManager::sendDataMessageToAll(void const*, int, bool) */
+
+void __thiscall
+NetworkManager::sendDataMessageToAll(NetworkManager *this,void *param_1,int param_2,bool param_3)
+
+{
+  if (((byte)this[0x418] & 1) == 0) {
+    if (*(int *)PTR__currentConnectionType_014bf448 != 0) {
+      (**(code **)(**(long **)(this + 0x3f8) + 0x48))
+                (*(long **)(this + 0x3f8),param_1,param_2,param_3);
+    }
+  }
+  else {
+    RakNetDelegate::sendData(*(RakNetDelegate **)(this + 0x400),param_1,param_2,param_3);
+  }
+  return;
+}
+
+
+FUNCTION: RakNetDelegate::processMessage @ 0091c1c0
+
+/* WARNING: Restarted to delay deadcode elimination for space: stack */
+/* RakNetDelegate::processMessage(RakNet::Packet*, int) */
+
+undefined1 RakNetDelegate::processMessage(Packet *param_1,int param_2)
+
+{
+  long lVar1;
+  long *plVar2;
+  CCString *this;
+  undefined8 uVar3;
+  char *pcVar4;
+  ulong uVar5;
+  ulong uVar6;
+  long lVar7;
+  code *pcVar8;
+  undefined1 local_d9;
+  undefined8 local_88;
+  undefined8 local_80;
+  undefined8 local_78;
+  undefined8 local_70;
+  undefined8 local_68;
+  undefined8 local_60;
+  uint local_54;
+  AddressOrGUID aAStack_50 [48];
+  
+  plVar2 = DAT_014daa60;
+  uVar6 = (ulong)(uint)param_2;
+  lVar7 = tpidr_el0;
+  lVar7 = *(long *)(lVar7 + 0x28);
+  if (((**(char **)(uVar6 + 0x30) == -0x79) || (**(char **)(uVar6 + 0x30) == -0x74)) &&
+     (*(char *)(*(long *)(uVar6 + 0x30) + 1) == '\x03')) {
+    local_54 = (uint)*(byte *)(*(long *)(uVar6 + 0x30) + 2);
+    printf("Got MID_P2P_PEERID from %d!\n",(ulong)local_54);
+                    /* try { // try from 0091c258 to 00a1c2c7 has its CatchHandler @ 0091c31c */
+    this = (CCString *)cocos2d::CCString::createWithFormat("%d",(ulong)local_54);
+    uVar3 = NetworkManager::sharedNetworkManager();
+    pcVar4 = (char *)cocos2d::CCString::getCString(this);
+    local_60 = 0;
+    local_68 = 0;
+    local_70 = 0;
+    uVar5 = std::__ndk1::char_traits<char>::length(pcVar4);
+                    /* try { // try from 0091c2d0 to 00a1c2e3 has its CatchHandler @ 0091c32c */
+    std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+    __init((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+           &local_70,pcVar4,uVar5);
+                    /* catch() { ... } // from try @ 0091c10c with catch @ 0091c2fc */
+    local_78 = 0;
+    local_80 = 0;
+    local_88 = 0;
+                    /* catch() { ... } // from try @ 0091c128 with catch @ 0091c30c */
+                    /* catch() { ... } // from try @ 0091c258 with catch @ 0091c31c
+                       catch() { ... } // from try @ 0091c348 with catch @ 0091c31c */
+    uVar5 = std::__ndk1::char_traits<char>::length("");
+                    /* catch() { ... } // from try @ 0091c2d0 with catch @ 0091c32c */
+    std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+    __init((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+           &local_88,"",uVar5);
+                    /* try { // try from 0091c348 to 00a1c357 has its CatchHandler @ 0091c31c */
+    NetworkManager::addPlayer(uVar3,&local_70,&local_88);
+    std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+    ~basic_string((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+                  &local_88);
+                    /* try { // try from 0091c35c to 00a1c367 has its CatchHandler @ 0091c420 */
+    std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+    ~basic_string((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+                  &local_70);
+                    /* try { // try from 0091c36c to 00a1c377 has its CatchHandler @ 0091c430 */
+    DataStructures::
+    Map<int,RakNet::RakNetGUID,&(int_DataStructures::defaultMapKeyComparison<int>(int_const&,int_const&))>
+    ::Set((Map<int,RakNet::RakNetGUID,&(int_DataStructures::defaultMapKeyComparison<int>(int_const&,int_const&))>
+           *)&DAT_014da970,(int *)&local_54,(RakNetGUID *)(uVar6 + 0x18));
+    local_d9 = 0;
+  }
+  else {
+    if ((**(char **)(uVar6 + 0x30) == -0x78) && (*(char *)(*(long *)(uVar6 + 0x30) + 1) == '\0')) {
+      pcVar8 = *(code **)(*DAT_014daa60 + 0xe0);
+      RakNet::AddressOrGUID::AddressOrGUID(aAStack_50,(RakNetGUID *)(uVar6 + 0x18));
+                    /* catch() { ... } // from try @ 0091c35c with catch @ 0091c420 */
+      (*pcVar8)(plVar2,aAStack_50,1,0,3);
+    }
+                    /* catch() { ... } // from try @ 0091c36c with catch @ 0091c430 */
+    local_d9 = 1;
+  }
+  lVar1 = tpidr_el0;
+                    /* catch() { ... } // from try @ 0091c384 with catch @ 0091c44c */
+  if (*(long *)(lVar1 + 0x28) == lVar7) {
+    return local_d9;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+
+
+FUNCTION: ServerState::Send @ 009281fc
+
+/* ServerState::Send(unsigned char*, int, RakNet::RakNetGUID) */
+
+void ServerState::Send(long param_1,long param_2,int param_3,undefined8 param_4,undefined8 param_5)
+
+{
+  long lVar1;
+  undefined4 uVar2;
+  long *plVar3;
+  code *pcVar4;
+  undefined8 local_50;
+  undefined8 local_48;
+  AddressOrGUID aAStack_40 [40];
+  long local_18;
+  
+  lVar1 = tpidr_el0;
+  local_18 = *(long *)(lVar1 + 0x28);
+                    /* try { // try from 00928210 to 00a285f7 has its CatchHandler @ 00928210
+                       catch() { ... } // from try @ 00928210 with catch @ 00928210
+                       catch() { ... } // from try @ 009286e4 with catch @ 00928210
+                       catch() { ... } // from try @ 009287fc with catch @ 00928210 */
+  local_50 = param_4;
+  local_48 = param_5;
+  if ((param_2 != 0) && (0 < param_3)) {
+    plVar3 = *(long **)(param_1 + 0x10);
+    pcVar4 = *(code **)(*plVar3 + 0xa8);
+    uVar2 = FUN_0092eaa8(param_2);
+    RakNet::AddressOrGUID::AddressOrGUID(aAStack_40,(RakNetGUID *)&local_50);
+    (*pcVar4)(plVar3,param_2,param_3,1,uVar2,0,aAStack_40,0,0);
+  }
+  lVar1 = tpidr_el0;
+  if (*(long *)(lVar1 + 0x28) == local_18) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+
+
+FUNCTION: ServerState::ProcessMessage @ 009358d8
+
+/* ServerState::ProcessMessage(RakNet::Packet*, ClientEntry*, bool) */
+
+undefined1 __thiscall
+ServerState::ProcessMessage(ServerState *this,Packet *param_1,ClientEntry *param_2,bool param_3)
+
+{
+  long *plVar1;
+  byte local_4c;
+  short local_44;
+  long local_40;
+  undefined1 local_38;
+  undefined1 local_11;
+  
+  if (param_2 == (ClientEntry *)0x0) {
+    local_11 = 0;
+  }
+  else if (param_1 == (Packet *)0x0) {
+    local_11 = 0;
+  }
+  else if (*(long *)(param_1 + 0x30) == 0) {
+    local_11 = 0;
+  }
+  else if (*(int *)(param_1 + 0x28) == 0) {
+                    /* try { // try from 00935944 to 00a35afb has its CatchHandler @ 00935b34 */
+    local_11 = 0;
+  }
+  else {
+    if (param_3) {
+      local_38 = *(undefined1 *)(*(long *)(param_1 + 0x30) + 2);
+      local_40 = *(long *)(param_1 + 0x30) + 3;
+      local_44 = (short)*(undefined4 *)(param_1 + 0x28) + -3;
+    }
+    else {
+      local_38 = *(undefined1 *)(*(long *)(param_1 + 0x30) + 1);
+      local_40 = *(long *)(param_1 + 0x30) + 2;
+      local_44 = (short)*(undefined4 *)(param_1 + 0x28) + -2;
+    }
+    local_4c = (**(code **)(*(long *)this + 0x98))(this,param_1,local_38,local_40,local_44,param_2);
+    local_4c = local_4c & 1;
+    if (local_4c == 0) {
+      local_11 = 0;
+    }
+    else {
+      plVar1 = (long *)GetRoom((ClientEntry *)this);
+      if (plVar1 != (long *)0x0) {
+        local_4c = (**(code **)(*plVar1 + 0x170))(plVar1,param_1,local_38,local_40,local_44,param_2)
+        ;
+        local_4c = local_4c & 1;
+      }
+      if (local_4c == 0) {
+        local_11 = 0;
+      }
+      else {
+        local_11 = 1;
+      }
+    }
+  }
+  return local_11;
+}
+
+

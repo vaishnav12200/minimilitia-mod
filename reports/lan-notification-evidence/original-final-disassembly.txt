@@ -1,0 +1,100 @@
+drop guard (identical original/final; ELF virtual addresses)
+0084309c e8837939 ldrb w8, [sp, #0xe60]
+008430a0 1f090071 cmp w8, #2
+008430a4 c1e60054 b.ne #0x844d7c
+008430a8 e82347f9 ldr x8, [sp, #0xe40]
+008430ac 289300b4 cbz x8, #0x844310
+008430b0 e82347f9 ldr x8, [sp, #0xe40]
+008430b4 093d40b9 ldr w9, [x8, #0x3c]
+008430b8 e84f47f9 ldr x8, [sp, #0xe98]
+008430bc 0a414239 ldrb w10, [x8, #0x90]
+008430c0 3f010a6b cmp w9, w10
+008430c4 61920054 b.ne #0x844310
+008430c8 e82347f9 ldr x8, [sp, #0xe40]
+008430cc 090140b9 ldr w9, [x8]
+008430d0 ea1bdd79 ldrsh w10, [sp, #0xe8c]
+008430d4 3f010a6b cmp w9, w10
+008430d8 c1910054 b.ne #0x844310
+008430dc e82347f9 ldr x8, [sp, #0xe40]
+008430e0 09c9c079 ldrsh w9, [x8, #0x64]
+008430e4 e82347f9 ldr x8, [sp, #0xe40]
+008430e8 0acdc079 ldrsh w10, [x8, #0x66]
+008430ec 3f010a6b cmp w9, w10
+008430f0 8c000054 b.gt #0x843100
+008430f4 e82347f9 ldr x8, [sp, #0xe40]
+008430f8 0955c079 ldrsh w9, [x8, #0x2a]
+008430fc a94cf836 tbz w9, #0x1f, #0x843a90
+WA send alert (identical original/final; ELF virtual addresses)
+0084387c e00747f9 ldr x0, [sp, #0xe08]
+00843880 1e0040f9 ldr x30, [x0]
+00843884 de6b40f9 ldr x30, [x30, #0xd0]
+00843888 e84f47f9 ldr x8, [sp, #0xe98]
+0084388c e90b4091 add x9, sp, #2, lsl #12
+00843890 29813691 add x9, x9, #0xda0
+00843894 ea0b47f9 ldr x10, [sp, #0xe10]
+00843898 49790bf9 str x9, [x10, #0x16f0]
+0084389c 494200d0 adrp x9, #0x108d000
+008438a0 297d0391 add x9, x9, #0xdf
+008438a4 49750bf9 str x9, [x10, #0x16e8]
+008438a8 49794bf9 ldr x9, [x10, #0x16f0]
+008438ac 497d0bf9 str x9, [x10, #0x16f8]
+008438b0 49810bf9 str x9, [x10, #0x1700]
+008438b4 49850bf9 str x9, [x10, #0x1708]
+008438b8 eb031faa mov x11, xzr
+008438bc 2b0900f9 str x11, [x9, #0x10]
+008438c0 2b0500f9 str x11, [x9, #8]
+008438c4 2b0100f9 str x11, [x9]
+008438c8 4b754bf9 ldr x11, [x10, #0x16e8]
+008438cc e0030baa mov x0, x11
+008438d0 eba701f9 str x11, [sp, #0x348]
+008438d4 fea301f9 str x30, [sp, #0x340]
+008438d8 e89f01f9 str x8, [sp, #0x338]
+008438dc e99b01f9 str x9, [sp, #0x330]
+008438e0 ec7bf297 bl #0x4e2890
+008438e4 e89b41f9 ldr x8, [sp, #0x330]
+008438e8 e09701f9 str x0, [sp, #0x328]
+008438ec e00308aa mov x0, x8
+008438f0 e1a741f9 ldr x1, [sp, #0x348]
+008438f4 e29741f9 ldr x2, [sp, #0x328]
+008438f8 7a2ff297 bl #0x4cf6e0
+008438fc 01000014 b #0x843900
+00843900 01000014 b #0x843904
+00843904 e20b4091 add x2, sp, #2, lsl #12
+00843908 42803691 add x2, x2, #0xda0
+0084390c e00747f9 ldr x0, [sp, #0xe08]
+00843910 e19f41f9 ldr x1, [sp, #0x338]
+00843914 e8a341f9 ldr x8, [sp, #0x340]
+00843918 00013fd6 blr x8
+0084391c 01000014 b #0x843920
+00843920 e00b4091 add x0, sp, #2, lsl #12
+00843924 00803691 add x0, x0, #0xda0
+00843928 56b3f297 bl #0x4f0680
+0084392c e00747f9 ldr x0, [sp, #0xe08]
+00843930 1e0840f9 ldr x30, [x0, #0x10]
+00843934 e1031eaa mov x1, x30
+host reduceMagazine (identical original/final; ELF virtual addresses)
+0084b164 ff8300d1 sub sp, sp, #0x20
+0084b168 e00f00f9 str x0, [sp, #0x18]
+0084b16c e10b00f9 str x1, [sp, #0x10]
+0084b170 e20f00b9 str w2, [sp, #0xc]
+0084b174 e00b40f9 ldr x0, [sp, #0x10]
+0084b178 0254c079 ldrsh w2, [x0, #0x2a]
+0084b17c e80f40b9 ldr w8, [sp, #0xc]
+0084b180 4800084b sub w8, w2, w8
+0084b184 e00b40f9 ldr x0, [sp, #0x10]
+0084b188 08540079 strh w8, [x0, #0x2a]
+0084b18c ff830091 add sp, sp, #0x20
+0084b190 c0035fd6 ret 
+room dispatch message 0x1d (identical original/final; ELF virtual addresses)
+0085d658 e82340f9 ldr x8, [sp, #0x40]
+0085d65c 090140f9 ldr x9, [x8]
+0085d660 29c140f9 ldr x9, [x9, #0x180]
+0085d664 a1835df8 ldur x1, [x29, #-0x28]
+0085d668 a2435d78 ldurh w2, [x29, #-0x2c]
+0085d66c a3835cf8 ldur x3, [x29, #-0x38]
+0085d670 e00308aa mov x0, x8
+0085d674 20013fd6 blr x9
+0085d678 00000012 and w0, w0, #1
+0085d67c a0f31f38 sturb w0, [x29, #-1]
+0085d680 39000014 b #0x85d764
+room jump table: message 0x1d -> 0x85d658 -> vtable +0x180

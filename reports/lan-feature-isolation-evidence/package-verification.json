@@ -1,0 +1,307 @@
+{
+  "status": "PACKAGE CHECKS ONLY; LAN runtime NOT TESTED",
+  "candidate_patch": {
+    "input_sha256": "e57f7598839ff65dd6e71e354fd2fc02ab65f414be0a1c23f2aac4a1727c1cce",
+    "output_sha256": "2c7da19a929d2d5306b0bb6138ae616fac06739c0add8885aa940091d32a1082",
+    "changes": [
+      {
+        "function": "_ZN6Weapon7getClipEv",
+        "elf_va": "0x947954",
+        "file_offset": "0x947954",
+        "original": "f37bbfa9f30300aaa85300f0084146f9080140f9680200b409e540f93f0113ebe000005409e940f93f0113eb8000005409ed40f93f0113eb41010054680240f908c942f9e00313aa00013fd6003c00131f0000716d00005460c606790400001460c6c6791f00007100c09f1af37bc1a8c0035fd61f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d5",
+        "replacement": "f37bbfa9f30300aac8530090082542f9480300b4080140b91f090071e0020054a85300f0084146f9080140f9680200b409e540f93f0113ebe000005409e940f93f0113eb8000005409ed40f93f0113eb41010054680240f908c942f9e00313aa00013fd6003c00131f0000716d00005460c606790400001460c6c6791f00007100c09f1af37bc1a8c0035fd61f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d5",
+        "assembly": "\n stp x19, x30, [sp, #-16]!\n mov x19, x0\n adrp x8, 20705280\n ldr x8, [x8, #1096]\n cbz x8, stock\n ldr w8, [x8]\n cmp w8, #2\n b.eq stock\n adrp x8, 20701184\n ldr x8, [x8, #3200]\n ldr x8, [x8]\n cbz x8, stock\n ldr x9, [x8, #0x1c8]\n cmp x9, x19\n b.eq refill\n ldr x9, [x8, #0x1d0]\n cmp x9, x19\n b.eq refill\n ldr x9, [x8, #0x1d8]\n cmp x9, x19\n b.ne stock\nrefill:\n ldr x8, [x19]\n ldr x8, [x8, #1424]\n mov x0, x19\n blr x8\n sxth w0, w0\n cmp w0, #0\n b.le stock\n strh w0, [x19, #866]\n b done\nstock:\n ldrsh w0, [x19, #866]\n cmp w0, #0\n csel w0, w0, wzr, gt\n done:\n ldp x19, x30, [sp], #16\n ret\n",
+        "code_bytes": 140
+      },
+      {
+        "function": "_ZN6Weapon7getAmmoEv",
+        "elf_va": "0x947a20",
+        "file_offset": "0x947a20",
+        "original": "f37bbfa9f30300aaa85300f0084146f9080140f9680200b409e540f93f0113ebe000005409e940f93f0113eb8000005409ed40f93f0113eb41010054680240f908c542f9e00313aa00013fd6003c00131f0000716d00005460c206790400001460c2c6791f00007100c09f1af37bc1a8c0035fd61f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d5",
+        "replacement": "f37bbfa9f30300aac8530090082542f9480300b4080140b91f090071e0020054a85300f0084146f9080140f9680200b409e540f93f0113ebe000005409e940f93f0113eb8000005409ed40f93f0113eb41010054680240f908c542f9e00313aa00013fd6003c00131f0000716d00005460c206790400001460c2c6791f00007100c09f1af37bc1a8c0035fd61f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d5",
+        "assembly": "\n stp x19, x30, [sp, #-16]!\n mov x19, x0\n adrp x8, 20705280\n ldr x8, [x8, #1096]\n cbz x8, stock\n ldr w8, [x8]\n cmp w8, #2\n b.eq stock\n adrp x8, 20701184\n ldr x8, [x8, #3200]\n ldr x8, [x8]\n cbz x8, stock\n ldr x9, [x8, #0x1c8]\n cmp x9, x19\n b.eq refill\n ldr x9, [x8, #0x1d0]\n cmp x9, x19\n b.eq refill\n ldr x9, [x8, #0x1d8]\n cmp x9, x19\n b.ne stock\nrefill:\n ldr x8, [x19]\n ldr x8, [x8, #1416]\n mov x0, x19\n blr x8\n sxth w0, w0\n cmp w0, #0\n b.le stock\n strh w0, [x19, #864]\n b done\nstock:\n ldrsh w0, [x19, #864]\n cmp w0, #0\n csel w0, w0, wzr, gt\n done:\n ldp x19, x30, [sp], #16\n ret\n",
+        "code_bytes": 140
+      }
+    ],
+    "policy": "ConnectionType 2: original clamped reads, no local refills; other modes retain existing behavior; missing mode pointer fails to finite reads",
+    "mode_evidence": "NetworkManager::useRakNetLAN at 0x7186bc calls setConnectionType(2); GOT relocation identifies _currentConnectionType",
+    "status": "UNVERIFIED LAN candidate; exact runtime triggering field unknown",
+    "unchanged": "Every byte outside the two getter bodies, including fuel, dual policy, firing helper, host validation, networking, security, projectile and reload methods"
+  },
+  "preserved_offline_apk_sha256": "a3be60a39955042dd7c63fcfb384e180fbf345bf0fc06baa21b7eb01e5904e2a",
+  "variants": {
+    "A_original": {
+      "native_sha256": "2ee486729d9fb12599c6b56070c935b7a24757463191ce725a28592aef8df401",
+      "notes": "Original native gameplay, re-signed with project test certificate; not the official Play Store signature.",
+      "splits": [
+        {
+          "apk": "base.apk",
+          "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.arm64_v8a.apk",
+          "sha256": "15a164ca9b98e90a3f33ee1129eccefb864d2c15a0e512af0b7613c8a9dd2600",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.xxhdpi.apk",
+          "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.en.apk",
+          "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        }
+      ],
+      "runtime": "NOT TESTED",
+      "base_version": "0.14.4 (88)"
+    },
+    "B_jetpack_only": {
+      "native_sha256": "5de4d96b061fb4b2c66323da39b987e2957f144e2f61bd1b5dd34db2e6891de4",
+      "notes": "Original native plus existing eight-byte unlimited jetpack patch.",
+      "splits": [
+        {
+          "apk": "base.apk",
+          "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.arm64_v8a.apk",
+          "sha256": "3ba650e1f8703ce5f4f992667b4435b77528cecc4a9d0e0822225c7f93447f71",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.xxhdpi.apk",
+          "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.en.apk",
+          "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        }
+      ],
+      "runtime": "NOT TESTED",
+      "base_version": "0.14.4 (88)"
+    },
+    "C_ammo_getters_only": {
+      "native_sha256": "e35cd1e0cf533b6aa4883a841e8ef99393df0ca24b98a553997402f423b89691",
+      "notes": "Original native plus corrected unlimited getClip/getAmmo; E direct-ammo fire helper is excluded because its code space is live in original inventory. Use ordinary guns first; this is a getter-component isolation, not full special-gun equivalence with E.",
+      "splits": [
+        {
+          "apk": "base.apk",
+          "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.arm64_v8a.apk",
+          "sha256": "f939df4955924d4e2f358c3ee67dbe01d2b28119095ca4ddc755b17a1c769e50",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.xxhdpi.apk",
+          "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.en.apk",
+          "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        }
+      ],
+      "runtime": "NOT TESTED",
+      "base_version": "0.14.4 (88)"
+    },
+    "D_dual_only": {
+      "native_sha256": "c4f22c218af71f98a994206d46281ccb696838ac520052750ff8a6375b84c038",
+      "notes": "Custom inventory/pickup/UI and 22-gun hand transforms; original finite ammo, original fuel and original two-slot firing dispatcher. Second-hand finite-ammo initialization remains a runtime test item.",
+      "splits": [
+        {
+          "apk": "base.apk",
+          "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.arm64_v8a.apk",
+          "sha256": "4d4956f95beca9eb4bc54402be10b80d5d648e7554e69e613a975f5b88a0e62a",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.xxhdpi.apk",
+          "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.en.apk",
+          "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        }
+      ],
+      "runtime": "NOT TESTED",
+      "base_version": "0.14.4 (88)"
+    },
+    "E_combined": {
+      "native_sha256": "e57f7598839ff65dd6e71e354fd2fc02ab65f414be0a1c23f2aac4a1727c1cce",
+      "notes": "Native byte-identical to preserved working offline universal-dual release.",
+      "splits": [
+        {
+          "apk": "base.apk",
+          "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.arm64_v8a.apk",
+          "sha256": "35d6d093f3de016ae4acac1e402c1001ae776679f4ee07646fdaba939059f5d1",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.xxhdpi.apk",
+          "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.en.apk",
+          "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        }
+      ],
+      "runtime": "NOT TESTED",
+      "base_version": "0.14.4 (88)"
+    },
+    "F_lan_ammo_candidate": {
+      "native_sha256": "2c7da19a929d2d5306b0bb6138ae616fac06739c0add8885aa940091d32a1082",
+      "notes": "E with only two ammo getters gated for verified LAN ConnectionType 2; fuel and custom dual behavior retained. Not a verified LAN fix.",
+      "splits": [
+        {
+          "apk": "base.apk",
+          "sha256": "bf33a125d50f6331350f796d6598027815bd817620d1368bcecdf9abbf1ced22",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.arm64_v8a.apk",
+          "sha256": "5773a7b5af9be90ea8c4ac137c705f5c6560c8b9701eb49f6f5edb2df8a864ee",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.xxhdpi.apk",
+          "sha256": "9926027a7a1a01a916cf8e68954801a7f49cea642b945d0cf441caa6c7937661",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        },
+        {
+          "apk": "split_config.en.apk",
+          "sha256": "934937eee813a34522e653bf02bc01778f3bf02117197190e14bdab77c0c5bb1",
+          "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+          "signature": "PASS",
+          "alignment": "PASS",
+          "crc": "PASS",
+          "non_native_application_payloads": "identical"
+        }
+      ],
+      "runtime": "NOT TESTED",
+      "base_version": "0.14.4 (88)"
+    }
+  },
+  "candidate_standalone": {
+    "apk": "MiniMilitiaClassic-LAN-Ammo-Compatibility-Test.apk",
+    "sha256": "d526fbaa7d53b1b1e0c8bcfee2b98ea676de21961626bf0f875110b69860b7e5",
+    "certificate_sha256": "a19c717feeee28b67070bfd3e1f6f519785d804c68e39e55be59710e55451f5e",
+    "signature": "PASS",
+    "alignment": "PASS",
+    "crc": "PASS",
+    "non_native_application_payloads": "identical"
+  }
+}

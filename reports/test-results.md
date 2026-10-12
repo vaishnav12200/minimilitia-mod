@@ -1,3 +1,9 @@
+# LAN compatibility candidate — 2026-10-12
+
+The user confirms stock private LAN works and the modified client reports WA. The user deferred device capture and requested an APK for later manual testing. Six signed feature-isolation/candidate split sets and one single candidate APK are prepared. Candidate F disables local ammo refill only for the original RakNet LAN connection type 2; offline ammo, jetpack and dual behavior are retained at instruction/package level. **No two-device gameplay PASS or exact triggering field is claimed.** See [LAN feature isolation and test plan](lan-feature-isolation.md).
+
+Earlier results below are historical.
+
 USB installation update: the user-requested retry succeeded. The new duplicate inventory build is installed; its ARM64 split was read back and matches the verified build exactly. The launch command succeeded. Gameplay and LAN remain pending manual verification. Earlier storage failures below are historical.
 
 # Latest user results and inventory candidate — 2026-10-08

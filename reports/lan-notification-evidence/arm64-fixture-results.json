@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "build": "original",
+      "test": "actual drop guard",
+      "clip": 1,
+      "stid": 0,
+      "soid": 0,
+      "owner": 1,
+      "destination": "0x843a90"
+    },
+    {
+      "build": "original",
+      "test": "actual drop guard",
+      "clip": 0,
+      "stid": 0,
+      "soid": 0,
+      "owner": 1,
+      "destination": "0x843a90"
+    },
+    {
+      "build": "original",
+      "test": "actual drop guard",
+      "clip": -1,
+      "stid": 0,
+      "soid": 0,
+      "owner": 1,
+      "destination": "0x843100"
+    },
+    {
+      "build": "original",
+      "test": "actual drop guard",
+      "clip": 1,
+      "stid": 2,
+      "soid": 1,
+      "owner": 1,
+      "destination": "0x843100"
+    },
+    {
+      "build": "original",
+      "test": "actual drop guard",
+      "clip": 1,
+      "stid": 1,
+      "soid": 2,
+      "owner": 1,
+      "destination": "0x843a90"
+    },
+    {
+      "build": "original",
+      "test": "actual drop guard",
+      "clip": -1,
+      "stid": 2,
+      "soid": 1,
+      "owner": 1,
+      "destination": "0x843100"
+    },
+    {
+      "build": "original",
+      "test": "actual drop guard",
+      "clip": -1,
+      "stid": 0,
+      "soid": 0,
+      "owner": 2,
+      "destination": "0x844310"
+    },
+    {
+      "build": "original",
+      "test": "actual host reduceMagazine 7 minus 8",
+      "clip": -1,
+      "drop_guard": "WA branch"
+    },
+    {
+      "build": "original",
+      "test": "actual local ammo getters",
+      "clip": 0,
+      "reserve": 5,
+      "stored_reserve": 5,
+      "stored_clip": 0
+    },
+    {
+      "build": "final",
+      "test": "actual drop guard",
+      "clip": 1,
+      "stid": 0,
+      "soid": 0,
+      "owner": 1,
+      "destination": "0x843a90"
+    },
+    {
+      "build": "final",
+      "test": "actual drop guard",
+      "clip": 0,
+      "stid": 0,
+      "soid": 0,
+      "owner": 1,
+      "destination": "0x843a90"
+    },
+    {
+      "build": "final",
+      "test": "actual drop guard",
+      "clip": -1,
+      "stid": 0,
+      "soid": 0,
+      "owner": 1,
+      "destination": "0x843100"
+    },
+    {
+      "build": "final",
+      "test": "actual drop guard",
+      "clip": 1,
+      "stid": 2,
+      "soid": 1,
+      "owner": 1,
+      "destination": "0x843100"
+    },
+    {
+      "build": "final",
+      "test": "actual drop guard",
+      "clip": 1,
+      "stid": 1,
+      "soid": 2,
+      "owner": 1,
+      "destination": "0x843a90"
+    },
+    {
+      "build": "final",
+      "test": "actual drop guard",
+      "clip": -1,
+      "stid": 2,
+      "soid": 1,
+      "owner": 1,
+      "destination": "0x843100"
+    },
+    {
+      "build": "final",
+      "test": "actual drop guard",
+      "clip": -1,
+      "stid": 0,
+      "soid": 0,
+      "owner": 2,
+      "destination": "0x844310"
+    },
+    {
+      "build": "final",
+      "test": "actual host reduceMagazine 7 minus 8",
+      "clip": -1,
+      "drop_guard": "WA branch"
+    },
+    {
+      "build": "final",
+      "test": "actual local ammo getters",
+      "clip": 7,
+      "reserve": 29,
+      "stored_reserve": 29,
+      "stored_clip": 7
+    }
+  ],
+  "scope": "Real ARM64 instruction fixtures; capacities/ownership are fixtures. No LAN match reproduced."
+}

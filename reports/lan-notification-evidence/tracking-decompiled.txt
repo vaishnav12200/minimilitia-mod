@@ -1,0 +1,596 @@
+FUNCTION: NetworkMessageDispatcher::getWeaponCreateData @ 00880ac4
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* NetworkMessageDispatcher::getWeaponCreateData(Weapon*, ItemEquipAction) */
+
+CCData * __thiscall
+NetworkMessageDispatcher::getWeaponCreateData
+          (undefined8 param_1_00,Weapon *param_1,undefined1 param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  undefined2 uVar4;
+  undefined2 uVar5;
+  undefined2 uVar6;
+  uint uVar7;
+  uint uVar8;
+  CCData *pCVar9;
+  float *pfVar10;
+  long lVar11;
+  void *__src;
+  size_t __n;
+  float fVar12;
+  double dVar13;
+  double dVar14;
+  undefined1 local_290;
+  ulong local_220;
+  uchar *local_208;
+  basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> local_40;
+  uchar auStack_3f [7];
+  ulong local_38;
+  uchar *local_30;
+  long local_28;
+  
+                    /* try { // try from 00880acc to 00980ad7 has its CatchHandler @ 00883790 */
+  lVar11 = tpidr_el0;
+  local_28 = *(long *)(lVar11 + 0x28);
+  (**(code **)(*(long *)param_1 + 0x428))(&local_40,param_1);
+  pCVar9 = operator_new(0x28);
+                    /* try { // try from 00880b4c to 00980b63 has its CatchHandler @ 008835c0 */
+  if (((byte)local_40 & 1) == 0) {
+    local_208 = auStack_3f;
+  }
+  else {
+    local_208 = local_30;
+  }
+  if (((byte)local_40 & 1) == 0) {
+    local_220 = (ulong)((int)(uint)(byte)local_40 >> 1);
+  }
+  else {
+    local_220 = local_38;
+  }
+  cocos2d::extension::CCData::CCData(pCVar9,local_208,local_220);
+  cocos2d::CCObject::autorelease((CCObject *)pCVar9);
+  uVar4 = Weapon::getAmmoType(param_1);
+  uVar5 = Weapon::getClip(param_1);
+  uVar6 = Weapon::getAmmo(param_1);
+  pfVar10 = (float *)(**(code **)(*(long *)param_1 + 0xa0))(param_1);
+  fVar12 = *pfVar10;
+                    /* try { // try from 00880d28 to 00980d33 has its CatchHandler @ 008837b0 */
+  lVar11 = (**(code **)(*(long *)param_1 + 0xa0))(param_1);
+  dVar14 = (double)*(float *)(lVar11 + 4);
+                    /* try { // try from 00880d4c to 00980d53 has its CatchHandler @ 008835c0 */
+  dVar13 = (double)FUN_00871914((double)fVar12);
+  bVar1 = (**(code **)(*(long *)param_1 + 0x440))(param_1);
+                    /* try { // try from 00880d84 to 0098357f has its CatchHandler @ 008837d0 */
+  uVar7 = (**(code **)(*(long *)param_1 + 0x338))(param_1);
+  bVar2 = (**(code **)(*(long *)param_1 + 0x340))(param_1);
+  uVar8 = (**(code **)(*(long *)param_1 + 0x350))(param_1);
+  bVar3 = (**(code **)(*(long *)param_1 + 0x400))(param_1);
+  DAT_014d9845._1_1_ = bVar3 & 1;
+  if (((uVar7 & 1) == 0) || ((uVar8 & 1) == 0)) {
+    DAT_014d9843._1_1_ = (uVar7 & 1) != 0;
+  }
+  else {
+    DAT_014d9843._1_1_ = 2;
+  }
+  DAT_014d9838 = 0x1d;
+  _DAT_014d983f = (undefined2)*(undefined4 *)(param_1 + 0x298);
+  unique0x00074b00 = (undefined2)*(undefined4 *)(param_1 + 0x29c);
+  DAT_014d9847 = (undefined2)(int)dVar13;
+  _DAT_014d9849 = (undefined2)(int)dVar14;
+  if (((byte)local_40 & 1) == 0) {
+    local_290 = (undefined1)((int)(uint)(byte)local_40 >> 1);
+  }
+  else {
+    local_290 = (undefined1)local_38;
+  }
+  DAT_014d984c = local_290;
+  _DAT_014d9839 = uVar4;
+  _DAT_014d983b = uVar5;
+  _DAT_014d983d = uVar6;
+  DAT_014d9843._0_1_ = bVar1 & 1;
+  DAT_014d9845._0_1_ = bVar2 & 1;
+  DAT_014d984a._1_1_ = param_3;
+  __src = (void *)cocos2d::extension::CCData::getBytes(pCVar9);
+  __n = cocos2d::extension::CCData::getSize(pCVar9);
+  memcpy(&DAT_014d984d,__src,__n);
+  lVar11 = cocos2d::extension::CCData::getSize(pCVar9);
+  pCVar9 = operator_new(0x28);
+  cocos2d::extension::CCData::CCData(pCVar9,&DAT_014d9838,lVar11 + 0x15);
+  cocos2d::CCObject::autorelease((CCObject *)pCVar9);
+  std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+  ~basic_string(&local_40);
+  lVar11 = tpidr_el0;
+  if (*(long *)(lVar11 + 0x28) != local_28) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return pCVar9;
+}
+
+
+FUNCTION: ServerLAN::Update @ 0092a20c
+
+/* ServerLAN::Update() */
+
+void __thiscall ServerLAN::Update(ServerLAN *this)
+
+{
+  uint uVar1;
+  uint uVar2;
+  undefined8 *puVar3;
+  int local_34;
+  uint local_1c;
+  
+  ServerState::Update((ServerState *)this);
+  uVar2 = *(uint *)(this + 200);
+                    /* try { // try from 0092a23c to 00a2a247 has its CatchHandler @ 0092a264 */
+  uVar1 = DataStructures::
+          Map<RakNet::RakNetGUID,ClientEntry*,&(int_DataStructures::defaultMapKeyComparison<RakNet::RakNetGUID>(RakNet::RakNetGUID_const&,RakNet::RakNetGUID_const&))>
+          ::Size((Map<RakNet::RakNetGUID,ClientEntry*,&(int_DataStructures::defaultMapKeyComparison<RakNet::RakNetGUID>(RakNet::RakNetGUID_const&,RakNet::RakNetGUID_const&))>
+                  *)(this + 0x18));
+                    /* try { // try from 0092a248 to 00a2a2e3 has its CatchHandler @ 0092a1a0 */
+  if ((uVar2 < uVar1) && (-1 < *(int *)(this + 200))) {
+                    /* catch() { ... } // from try @ 0092a23c with catch @ 0092a264 */
+    screenClient(this,*(int *)(this + 200));
+  }
+  uVar2 = *(uint *)(this + 200);
+  uVar1 = DataStructures::
+          Map<RakNet::RakNetGUID,ClientEntry*,&(int_DataStructures::defaultMapKeyComparison<RakNet::RakNetGUID>(RakNet::RakNetGUID_const&,RakNet::RakNetGUID_const&))>
+          ::Size((Map<RakNet::RakNetGUID,ClientEntry*,&(int_DataStructures::defaultMapKeyComparison<RakNet::RakNetGUID>(RakNet::RakNetGUID_const&,RakNet::RakNetGUID_const&))>
+                  *)(this + 0x18));
+  if (uVar2 < uVar1) {
+    local_34 = *(int *)(this + 200) + 1;
+  }
+  else {
+    local_34 = 0;
+  }
+  *(int *)(this + 200) = local_34;
+  local_1c = 0;
+  while( true ) {
+    uVar2 = DataStructures::List<ClientRoom*>::Size((List<ClientRoom*> *)(this + 0x48));
+    if (uVar2 <= local_1c) break;
+                    /* try { // try from 0092a2e4 to 00a2a2f3 has its CatchHandler @ 0092a3d0 */
+    puVar3 = (undefined8 *)
+             DataStructures::List<ClientRoom*>::operator[]
+                       ((List<ClientRoom*> *)(this + 0x48),local_1c);
+                    /* try { // try from 0092a2f4 to 00a2a36f has its CatchHandler @ 0092a1a0 */
+    (**(code **)(*(long *)*puVar3 + 0x90))((long *)*puVar3,local_1c);
+    local_1c = local_1c + 1;
+  }
+  return;
+}
+
+
+FUNCTION: ClientRoom::settleWeaponShotCounters @ 0094b194
+
+/* WARNING: Restarted to delay deadcode elimination for space: stack */
+/* ClientRoom::settleWeaponShotCounters(WeaponStateObject*) */
+
+void __thiscall ClientRoom::settleWeaponShotCounters(ClientRoom *this,WeaponStateObject *param_1)
+
+{
+  int iVar1;
+  long lVar2;
+  ulong uVar3;
+  int *local_158;
+  undefined8 local_68;
+  undefined8 local_60;
+  undefined8 local_58;
+  int local_50;
+  int local_4c;
+  undefined8 local_48;
+  undefined8 local_40;
+  undefined8 local_38;
+  long local_28;
+  
+  lVar2 = tpidr_el0;
+  local_28 = *(long *)(lVar2 + 0x28);
+  local_38 = 0;
+  local_40 = 0;
+  local_48 = 0;
+  uVar3 = std::__ndk1::char_traits<char>::length("BEFORE SETTLE");
+  std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+  __init((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)&local_48
+         ,"BEFORE SETTLE",uVar3);
+  printWeaponStats(this,param_1,
+                   (basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *
+                   )&local_48,0);
+  std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+  ~basic_string((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+                &local_48);
+  local_158 = &local_4c;
+  local_4c = (int)*(short *)(param_1 + 100);
+  local_50 = (int)*(short *)(param_1 + 0x66);
+  if (local_4c < local_50) {
+    local_158 = &local_50;
+  }
+  iVar1 = *local_158;
+  *(short *)(param_1 + 100) = (short)iVar1;
+  *(short *)(param_1 + 0x66) = (short)iVar1;
+  local_58 = 0;
+  local_60 = 0;
+  local_68 = 0;
+  uVar3 = std::__ndk1::char_traits<char>::length("AFTER SETTLE");
+                    /* try { // try from 0094b350 to 00a4b35b has its CatchHandler @ 0094b390 */
+                    /* try { // try from 0094b35c to 00a4b3b3 has its CatchHandler @ 0094b0d0 */
+  std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+  __init((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)&local_68
+         ,"AFTER SETTLE",uVar3);
+  printWeaponStats(this,param_1,
+                   (basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *
+                   )&local_68,0);
+  std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+  ~basic_string((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+                &local_68);
+  lVar2 = tpidr_el0;
+                    /* catch() { ... } // from try @ 0094b350 with catch @ 0094b390 */
+  if (*(long *)(lVar2 + 0x28) != local_28) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+FUNCTION: ClientRoomLAN::validateBallistics @ 009596c8
+
+/* ClientRoomLAN::validateBallistics(WeaponStateObject*, ItemType) */
+
+undefined8 ClientRoomLAN::validateBallistics(void)
+
+{
+  return 1;
+}
+
+
+FUNCTION: ClientRoom::processPlayerLocation @ 00964e5c
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* WARNING: Restarted to delay deadcode elimination for space: stack */
+/* ClientRoom::processPlayerLocation(char, char*, int, ClientEntry*) */
+
+void __thiscall
+ClientRoom::processPlayerLocation
+          (ClientRoom *this,char param_1,char *param_2,int param_3,ClientEntry *param_4)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  short sVar4;
+  short sVar5;
+  ushort uVar6;
+  long lVar7;
+  double dVar8;
+  ClientEntry CVar9;
+  long lVar10;
+  double dVar11;
+  undefined8 uVar12;
+  undefined8 uVar13;
+  float __x;
+  double dVar14;
+  double dVar15;
+  float fVar16;
+  
+  lVar10 = tpidr_el0;
+  lVar10 = *(long *)(lVar10 + 0x28);
+  if (((byte)this[0x934] & 1) == 0) {
+    sVar4 = *(short *)param_2;
+    sVar5 = *(short *)(param_2 + 2);
+    uVar6 = *(ushort *)(param_2 + 8);
+    CVar9 = *(ClientEntry *)(param_2 + 0xb);
+                    /* try { // try from 00964f54 to 00a64f8b has its CatchHandler @ 00964f54
+                       catch() { ... } // from try @ 00964f54 with catch @ 00964f54
+                       catch() { ... } // from try @ 00964f90 with catch @ 00964f54 */
+                    /* try { // try from 00964f8c to 00a64f8f has its CatchHandler @ 00964fa0 */
+                    /* try { // try from 00964f90 to 00a64fbb has its CatchHandler @ 00964f54 */
+                    /* catch() { ... } // from try @ 00964f8c with catch @ 00964fa0 */
+    dVar14 = (double)((int)*(short *)(param_2 + 6) / 10);
+    dVar11 = (double)FUN_0092f004((double)((int)*(short *)(param_2 + 4) / 10));
+                    /* try { // try from 00964fbc to 00a650d3 has its CatchHandler @ 00964fbc
+                       catch() { ... } // from try @ 00964fbc with catch @ 00964fbc
+                       catch() { ... } // from try @ 009650ec with catch @ 00964fbc */
+    fVar16 = DAT_014c22c0 * (float)uVar6;
+    dVar15 = (double)(int)sVar5;
+    uVar12 = FUN_0092f004((double)(int)sVar4);
+    *(undefined8 *)(param_4 + 0x238) = *(undefined8 *)(param_4 + 0x230);
+    uVar13 = FUN_0092e864();
+    *(undefined8 *)(param_4 + 0x230) = uVar13;
+    param_4[0x267] = (ClientEntry)((char)CVar9 - (char)param_4[0x266]);
+    param_4[0x266] = CVar9;
+    *(float *)(param_4 + 0x26c) = fVar16;
+    CVar9 = param_4[0x270];
+    param_4[0x270] = (ClientEntry)(param_1 == '\x11' || param_1 == '\x12');
+                    /* try { // try from 009650d4 to 00a650eb has its CatchHandler @ 009650f0 */
+    if ((((byte)param_4[0x270] & 1) != 0) && (((byte)CVar9 & 1) == 0)) {
+      uVar13 = FUN_0092e864();
+      *(undefined8 *)(param_4 + 0x4f0) = uVar13;
+    }
+                    /* try { // try from 009650ec to 00a6519b has its CatchHandler @ 00964fbc */
+                    /* catch() { ... } // from try @ 009650d4 with catch @ 009650f0 */
+    CVar9 = (ClientEntry)0x1;
+    if ((((byte)param_4[0x270] & 1) == 0) && (CVar9 = (ClientEntry)0x1, param_1 != '\x14')) {
+      CVar9 = (ClientEntry)(param_1 == '\x13');
+    }
+    param_4[0x271] = CVar9;
+    param_4[0x25c] = (ClientEntry)(param_1 == '\x16' || param_1 == '\x15');
+    if ((((param_1 == '\x10') || (param_1 == '\x12')) || (param_1 == '\x14')) || (param_1 == '\x16')
+       ) {
+      bVar1 = param_2[0xe];
+      bVar2 = param_2[0xf];
+      bVar3 = param_2[0x11];
+      *(float *)(param_4 + 0x254) = (float)(byte)param_2[0x12];
+      if ((*(int *)(param_4 + 0x1a8) == 1) &&
+         (5.0 < ABS(*(float *)(param_4 + 0x250) - (float)bVar3))) {
+        (**(code **)(*(long *)this + 0x218))(this,param_4,param_4[0x90],0,0);
+      }
+      NEON_ucvtf((uint)bVar1);
+      fVar16 = (float)NEON_ucvtf((uint)bVar2);
+      __x = DAT_014c22c8 * fVar16 * DAT_01184a18;
+                    /* try { // try from 00965310 to 00a6541b has its CatchHandler @ 00965310
+                       catch() { ... } // from try @ 00965310 with catch @ 00965310
+                       catch() { ... } // from try @ 00965434 with catch @ 00965310 */
+      fVar16 = cosf(__x);
+      sinf(__x);
+      uVar13 = FUN_0092f004((double)fVar16);
+      FUN_00931834(uVar13);
+    }
+    dVar8 = _UNK_0117eb78;
+    *(float *)(param_4 + 0x1f0) = (float)_DAT_0117eb70;
+    *(float *)(param_4 + 500) = (float)dVar8;
+    *(float *)(param_4 + 0x1e8) = (float)dVar11;
+    *(float *)(param_4 + 0x1ec) = (float)dVar14;
+    (**(code **)(*(long *)param_4 + 0x10))((float)(int)sVar4,(float)(int)sVar5,param_4);
+                    /* try { // try from 0096541c to 00a65433 has its CatchHandler @ 00965438 */
+    FUN_009699f4(*(undefined8 *)(this + 0x900),param_4);
+                    /* try { // try from 00965434 to 00a654df has its CatchHandler @ 00965310 */
+                    /* catch() { ... } // from try @ 0096541c with catch @ 00965438 */
+    (**(code **)(*(long *)this + 0x68))(uVar12,dVar15,this,param_4);
+    if (((sVar5 < DAT_014c22cc) || (DAT_014c22d0 < sVar5)) ||
+       ((DAT_014c22d4 < sVar4 || (sVar4 < DAT_014c22d8)))) {
+      addDamageToClient(this,(ClientEntry *)0x0,param_4,5.0,-1,true,false);
+    }
+    (**(code **)(*(long *)this + 0x88))(uVar12,dVar15,dVar11,dVar14,this,param_4,param_1);
+    if ((((byte)param_4[0x25c] & 1) == 0) && (2 < *(int *)(param_4 + 0x1a8))) {
+      spawnPlayer(this,param_4);
+    }
+  }
+  lVar7 = tpidr_el0;
+  if (*(long *)(lVar7 + 0x28) != lVar10) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+FUNCTION: ClientRoom::updateWeaponTracking @ 0096e88c
+
+/* WARNING: Restarted to delay deadcode elimination for space: stack */
+/* ClientRoom::updateWeaponTracking(WeaponStateObject*, short, short) */
+
+void __thiscall
+ClientRoom::updateWeaponTracking
+          (ClientRoom *this,WeaponStateObject *param_1,short param_2,short param_3)
+
+{
+  int iVar1;
+  long lVar2;
+  ulong uVar3;
+  int *local_2c0;
+  int *local_2b8;
+  int *local_2b0;
+  int *local_288;
+  undefined8 local_d0;
+  undefined8 local_c8;
+  undefined8 local_c0;
+  int local_b8;
+  int local_b4;
+  int local_b0;
+  int local_ac;
+  int local_a8 [3];
+  int local_9c;
+  undefined8 local_98;
+  undefined8 local_90;
+  undefined8 local_88;
+  WeaponAttributeModel aWStack_60 [24];
+  ushort local_48;
+  long local_28;
+  
+                    /* try { // try from 0096e88c to 00a6e8a3 has its CatchHandler @ 0096ee2c */
+  lVar2 = tpidr_el0;
+  local_28 = *(long *)(lVar2 + 0x28);
+                    /* try { // try from 0096e8a8 to 00a6e8b3 has its CatchHandler @ 0096ee3c */
+                    /* try { // try from 0096e8b8 to 00a6e8cb has its CatchHandler @ 0096ee4c */
+  local_88 = 0;
+  local_90 = 0;
+  local_98 = 0;
+  uVar3 = std::__ndk1::char_traits<char>::length("BEFORE TRACKING UPDATE");
+  std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+  __init((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)&local_98
+         ,"BEFORE TRACKING UPDATE",uVar3);
+  printWeaponStats(this,param_1,
+                   (basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *
+                   )&local_98,0);
+  std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+  ~basic_string((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+                &local_98);
+  local_9c = 1;
+  FUN_0096ece0(aWStack_60,*(undefined4 *)param_1);
+  local_288 = &local_9c;
+  local_a8[2] = (int)local_48;
+  if (local_9c < local_a8[2]) {
+    local_288 = local_a8 + 2;
+  }
+  iVar1 = *local_288;
+  WeaponAttributeModel::~WeaponAttributeModel(aWStack_60);
+                    /* try { // try from 0096ea00 to 00a6ea13 has its CatchHandler @ 0096ea18 */
+  local_2b0 = local_a8 + 1;
+                    /* catch() { ... } // from try @ 0096ea00 with catch @ 0096ea18 */
+  local_a8[1] = 0;
+  local_a8[0] = 0;
+  if (iVar1 != 0) {
+    local_a8[0] = (int)(float)(int)(float)((int)param_2 - (int)*(short *)(param_1 + 0x66)) / iVar1;
+  }
+  if (0 < local_a8[0]) {
+    local_2b0 = local_a8;
+  }
+  (**(code **)(*(long *)this + 0x1b8))(this,param_1,*local_2b0);
+  local_2b8 = &local_ac;
+  local_ac = (int)param_2;
+  local_b0 = (int)*(short *)(param_1 + 0x66);
+  if (local_ac < local_b0) {
+    local_2b8 = &local_b0;
+                    /* try { // try from 0096eb3c to 00a6eb43 has its CatchHandler @ 0096ee2c */
+  }
+  local_2c0 = &local_b4;
+  *(short *)(param_1 + 0x66) = (short)*local_2b8;
+  local_b4 = (int)param_3;
+  local_b8 = (int)*(short *)(param_1 + 100);
+                    /* try { // try from 0096eb84 to 00a6ed7b has its CatchHandler @ 0096ee2c */
+  if (local_b4 < local_b8) {
+    local_2c0 = &local_b8;
+  }
+  *(short *)(param_1 + 100) = (short)*local_2c0;
+  local_c0 = 0;
+  local_c8 = 0;
+  local_d0 = 0;
+  uVar3 = std::__ndk1::char_traits<char>::length("AFTER TRACKING UPDATE");
+  std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+  __init((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)&local_d0
+         ,"AFTER TRACKING UPDATE",uVar3);
+  printWeaponStats(this,param_1,
+                   (basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *
+                   )&local_d0,0);
+  std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+  ~basic_string((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+                &local_d0);
+  lVar2 = tpidr_el0;
+  if (*(long *)(lVar2 + 0x28) != local_28) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+FUNCTION: WeaponManager::addItem @ 00a5828c
+
+/* WeaponManager::addItem(Item*, ItemEquipAction) */
+
+void __thiscall WeaponManager::addItem(WeaponManager *this,CCObject *param_1,int param_3)
+
+{
+  long lVar1;
+  bool bVar2;
+  bool bVar3;
+  uint uVar4;
+  CCString *this_00;
+  char *pcVar5;
+  ulong uVar6;
+  CCObject *pCVar7;
+  CCNotificationCenter *pCVar8;
+  CCDictionary *this_01;
+  code *pcVar9;
+  undefined1 *local_1f8;
+  long local_1e0;
+  basic_string abStack_88 [24];
+  undefined8 local_70;
+  undefined8 local_68;
+  undefined8 local_60;
+  basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> local_58;
+  undefined1 auStack_57 [15];
+  undefined1 *local_48;
+  basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> local_40 [8];
+  long local_38;
+  long local_28;
+  
+  lVar1 = tpidr_el0;
+  local_28 = *(long *)(lVar1 + 0x28);
+  if (param_1 != (CCObject *)0x0) {
+    bVar2 = false;
+    bVar3 = true;
+    if (param_3 != 1) {
+      (**(code **)(*(long *)param_1 + 0x428))(local_40,param_1);
+      bVar2 = true;
+      if (((byte)local_40[0] & 1) == 0) {
+        local_1e0 = (long)((int)(uint)(byte)local_40[0] >> 1);
+      }
+      else {
+        local_1e0 = local_38;
+      }
+      bVar3 = local_1e0 == 0;
+    }
+    if (bVar2) {
+      std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+      ~basic_string(local_40);
+    }
+    if (bVar3) {
+      *(int *)(this + 0x3c) = *(int *)(this + 0x3c) + 1;
+      (**(code **)(*(long *)param_1 + 0x438))(&local_58,param_1);
+      if (((byte)local_58 & 1) == 0) {
+        local_1f8 = auStack_57;
+      }
+      else {
+        local_1f8 = local_48;
+      }
+      this_00 = (CCString *)
+                cocos2d::CCString::createWithFormat("%s:%d",local_1f8,(ulong)*(uint *)(this + 0x3c))
+      ;
+      std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+      ~basic_string(&local_58);
+      pcVar9 = *(code **)(*(long *)param_1 + 0x420);
+      pcVar5 = (char *)cocos2d::CCString::getCString(this_00);
+                    /* try { // try from 00a584ec to 00b584ff has its CatchHandler @ 00a58594 */
+      local_60 = 0;
+      local_68 = 0;
+                    /* try { // try from 00a58510 to 00b58523 has its CatchHandler @ 00a585a4 */
+      local_70 = 0;
+                    /* try { // try from 00a58524 to 00b585d7 has its CatchHandler @ 00a57d3c */
+      uVar6 = std::__ndk1::char_traits<char>::length(pcVar5);
+      std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+      __init((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+             &local_70,pcVar5,uVar6);
+      (*pcVar9)(param_1,(basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>
+                         *)&local_70);
+      std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+      ~basic_string((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>
+                     *)&local_70);
+    }
+                    /* catch() { ... } // from try @ 00a58510 with catch @ 00a585a4 */
+    (**(code **)(*(long *)param_1 + 0x478))(param_1,0);
+    pcVar9 = *(code **)(*(long *)param_1 + 0x448);
+                    /* try { // try from 00a585d8 to 00b58aa3 has its CatchHandler @ 00a585d8
+                       catch() { ... } // from try @ 00a585d8 with catch @ 00a585d8
+                       catch() { ... } // from try @ 00a58ab8 with catch @ 00a585d8 */
+    uVar4 = (**(code **)(**(long **)PTR_localSoldier_014bec80 + 0x4b8))();
+    (*pcVar9)(param_1,uVar4 & 1);
+    (**(code **)(*(long *)param_1 + 0x370))(param_1,0);
+    (**(code **)(*(long *)param_1 + 0x4b0))(param_1);
+    pCVar7 = (CCObject *)cocos2d::CCInteger::create(param_3);
+    pCVar7 = (CCObject *)cocos2d::CCArray::create(pCVar7,param_1,0);
+    pCVar8 = (CCNotificationCenter *)cocos2d::CCNotificationCenter::sharedNotificationCenter();
+    cocos2d::CCNotificationCenter::postNotification(pCVar8,"WeaponCreated",pCVar7);
+    this_01 = *(CCDictionary **)(this + 0x18);
+    (**(code **)(*(long *)param_1 + 0x428))(abStack_88,param_1);
+    cocos2d::CCDictionary::setObject(this_01,param_1,abStack_88);
+    std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::
+    ~basic_string((basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>> *)
+                  abStack_88);
+    pCVar8 = (CCNotificationCenter *)cocos2d::CCNotificationCenter::sharedNotificationCenter();
+    cocos2d::CCNotificationCenter::postNotification(pCVar8,"WeaponDropAdded",param_1);
+    addItemToWorld(this,(Item *)param_1,true);
+  }
+  lVar1 = tpidr_el0;
+  if (*(long *)(lVar1 + 0x28) != local_28) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
